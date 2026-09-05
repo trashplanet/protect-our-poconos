@@ -15,6 +15,10 @@ Open http://localhost:4173. Stop with Ctrl+C. In GitHub Desktop, add this folder
 ## Files
 
 - `index.html`: homepage content and semantic sections.
+- `news.html`: curated news, featured stories, sourced dates, WVIA series and an outside case study.
+- `assets/data/news.json`: news metadata, summaries, source URLs and visible context notes.
+- `scripts/render-news.py`: dependency-free authoring helper that updates the committed static news sections.
+- `assets/css/news.css` and `assets/js/news.js`: responsive news layout, topic/type/search filters and progressive browsing.
 - `projects.html`: seven project / infrastructure / watchlist entries, category legend, local policy context and source links.
 - `assets/css/projects.css`: tracker layouts and responsive card styles.
 - `assets/js/projects.js`: category/county filters, sorting, shareable filter URLs and direct project links.
@@ -68,3 +72,13 @@ Project imagery reuses supplied illustrations and landscapes; captions explicitl
 `Share a tip` intentionally displays a not-open-yet notice, per the owner's request. Replace its href and remove the two `data-notice` attributes once a real contact destination is provided.
 
 Validated at 1440, 1024, 768, 390 and 320 pixels: no overflow/broken images; category/county combinations; empty/reset states; sorting; URL restoration; project deep links; homepage navigation; mobile menu; tip notice; native details with JavaScript disabled.
+
+## Maintaining news
+
+Edit `assets/data/news.json`, then run `python3 scripts/render-news.py` and commit both the dataset and `news.html`. This is an authoring helper only: preview and GitHub Pages serve the already-generated HTML with no build or runtime data service. Every article remains available without JavaScript.
+
+Keep `title`, `source`, ISO `date`, `type`, `categories`, `relatedProject` (tracker ID or null), `summary`, `contextNote`, and `url` together. Source types are distinct from topics. The first three dataset entries are the featured stories; WVIA entries carry `series` and `seriesPart`. The final entry supplies the elsewhere feature. Update the introductory article total if adding or removing entries. Keep summaries concise and preserve the visible stale-plan, proposed-legislation and unverified-community context notes. Article links open at their publishers in new tabs; access or subscriptions are controlled by those publishers.
+
+Meeting dates and their sources are edited directly in `news.html`. The reviewed date is editorial, not automatically refreshed. Dates that have elapsed are labeled as past using the America/New_York timezone; their outcomes require a source check. Tip submissions remain explicitly unavailable.
+
+News checks: `python3 scripts/render-news.py`, `node --check assets/js/news.js`, and `git diff --check`. Verify filters, empty/reset, six-at-a-time browsing, URL restoration, no-JavaScript access and mobile navigation. Updates navigation and the homepage View all updates button now link to `news.html`.

@@ -1,0 +1,273 @@
+[
+  {
+    "id": "story-1",
+    "title": "Coming to some of Pennsylvania’s most picturesque places: data centers",
+    "source": "Spotlight PA / Inside Climate News",
+    "date": "2026-08-05",
+    "type": "External Reporting",
+    "categories": [
+      "Local Projects",
+      "Monroe County",
+      "Forests & Land Use",
+      "Community Response"
+    ],
+    "relatedProject": "pennsylvania-glacial-till",
+    "summary": "Reporting from the Tobyhanna area explores how proposed data centers could affect forests, waterways and the Poconos’ rural character.",
+    "contextNote": "",
+    "url": "https://www.spotlightpa.org/news/2026/08/pocono-mountains-data-centers-pennsylvania-environment/"
+  },
+  {
+    "id": "story-2",
+    "title": "Pike County, PA DEP inviting comments on substation transmission line project",
+    "source": "Pike County Courier",
+    "date": "2026-08-11",
+    "type": "External Reporting",
+    "categories": [
+      "Pike County",
+      "Transmission & Grid",
+      "Forests & Land Use"
+    ],
+    "relatedProject": "shawnee-walker",
+    "summary": "DEP’s stormwater-permit review covers the Bushkill Falls–Birchwood Lakes transmission segment through Lehman and Delaware townships, with stream, wetland and land-disturbance concerns.",
+    "contextNote": "",
+    "url": "https://www.pikecountycourier.com/news/local-news/pike-county-pa-dep-inviting-comments-on-substation-transmission-line-project-BD6104928"
+  },
+  {
+    "id": "story-3",
+    "title": "What we know about Smithfield Gateway data center proposal",
+    "source": "Pocono Record / MonroeCountyPA.com",
+    "date": "2026-03-12",
+    "type": "External Reporting",
+    "categories": [
+      "Local Projects",
+      "Monroe County"
+    ],
+    "relatedProject": "smithfield-gateway",
+    "summary": "An early look at the Smithfield Gateway data center proposal, including how data-center development became part of the long-planned commercial site and what the initial concept looked like when it reached local review.",
+    "contextNote": "Plans have changed since this article was published. Its earlier two-building concept was superseded by the August 2026 revision: one two-story building, approximately 500,000 sq. ft. total, a 250,000 sq. ft. footprint and proposed 250 MW load. See the current project record below.",
+    "url": "https://monroecountypa.com/news/what-we-know-about-smithfield-gateway-data-center-proposal"
+  },
+  {
+    "id": "story-4",
+    "title": "What Shapiro’s new data center order does — and doesn’t — force developers to do",
+    "source": "Spotlight PA",
+    "date": "2026-08-25",
+    "type": "Explainer",
+    "categories": [
+      "Pennsylvania",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "summary": "An explainer of Pennsylvania’s new data-center executive order: what it requires of developers, where discretion remains, and what is still unresolved.",
+    "contextNote": "",
+    "url": "https://www.spotlightpa.org/news/2026/08/pennsylvania-data-center-executive-order-shapiro-explainer-environment/"
+  },
+  {
+    "id": "story-5",
+    "title": "DATA CENTERS: Residents fear negative impacts on water resources as data centers are proposed across Northeast Pa.",
+    "source": "WVIA",
+    "date": "2026-02-04",
+    "type": "Explainer",
+    "categories": [
+      "Water & Wells",
+      "Local Projects",
+      "Monroe County"
+    ],
+    "relatedProject": "pennsylvania-glacial-till",
+    "summary": "WVIA examines private wells, groundwater and cooling demand. Water use depends on the cooling system and site design; facilities do not all have the same needs.",
+    "contextNote": "",
+    "url": "https://www.wvia.org/news/local/2026-02-04/data-centers-residents-fear-negative-impacts-on-water-resources-as-data-centers-are-proposed-across-northeast-pa",
+    "series": "Data Centers: Deal or Dilemma?",
+    "seriesPart": "Water"
+  },
+  {
+    "id": "story-6",
+    "title": "DATA CENTERS: Industry’s power consumption worries NEPA residents concerned about property values, electric rates",
+    "source": "WVIA",
+    "date": "2026-02-05",
+    "type": "Explainer",
+    "categories": [
+      "Transmission & Grid",
+      "Jobs & Economy"
+    ],
+    "relatedProject": null,
+    "summary": "Who pays for new power demand? WVIA explores residents’ concerns, utility perspectives and the uncertainty around rates and grid upgrades.",
+    "contextNote": "",
+    "url": "https://www.wvia.org/news/local/2026-02-05/data-centers-industrys-power-consumption-worries-nepa-residents-concerned-about-property-values-electric-rates",
+    "series": "Data Centers: Deal or Dilemma?",
+    "seriesPart": "Electric Grid"
+  },
+  {
+    "id": "story-7",
+    "title": "DATA CENTERS: Local governments, residents at odds with NEPA projects despite promises of economic growth",
+    "source": "WVIA",
+    "date": "2026-02-06",
+    "type": "Explainer",
+    "categories": [
+      "Jobs & Economy",
+      "Community Response",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "summary": "Jobs and tax revenue meet local concerns in the final installment of WVIA’s series on Northeast Pennsylvania’s data-center debate.",
+    "contextNote": "",
+    "url": "https://www.wvia.org/news/local/2026-02-06/data-centers-local-governments-residents-at-odds-with-nepa-projects-despite-promises-of-economic-growth",
+    "series": "Data Centers: Deal or Dilemma?",
+    "seriesPart": "Local Response"
+  },
+  {
+    "id": "story-8",
+    "title": "FirstEnergy’s Shawnee-Walker 69kV transmission-line project",
+    "source": "Pike County Courier",
+    "date": "2026-04-29",
+    "type": "External Reporting",
+    "categories": [
+      "Pike County",
+      "Transmission & Grid",
+      "Community Response"
+    ],
+    "relatedProject": "shawnee-walker",
+    "summary": "Pike County residents gathered in Delaware Township to organize opposition to FirstEnergy’s Shawnee–Walker transmission project, circulate petitions, and raise concerns about property impacts, land clearing, eminent domain, and the project’s necessity.",
+    "contextNote": "This is reporting on community opposition. Claims by organizers are attributed to them, not independently verified here.",
+    "url": "https://www.pikecountycourier.com/news/local-news/community-gathers-to-discuss-opposition-to-firstenergy-s-shawnee-walker-69kv-transmission-line-project-YJ5803054"
+  },
+  {
+    "id": "story-9",
+    "title": "Pike County Commissioners address proposed 69kV transmission line",
+    "source": "Pike County Courier",
+    "date": "2026-05-12",
+    "type": "External Reporting",
+    "categories": [
+      "Pike County",
+      "Transmission & Grid"
+    ],
+    "relatedProject": "shawnee-walker",
+    "summary": "Pike County commissioners weighed the need for electrical reliability and future economic development against resident concerns about property impacts, routing, and eminent domain associated with the Shawnee–Walker transmission project.",
+    "contextNote": "",
+    "url": "https://www.pikecountycourier.com/news/local-news/pike-county-commissioners-address-proposed-69kv-transmission-line-JM5842496"
+  },
+  {
+    "id": "story-10",
+    "title": "Board of Supervisors discusses proposed FirstEnergy transmission line project",
+    "source": "Pike County Courier",
+    "date": "2026-04-08",
+    "type": "External Reporting",
+    "categories": [
+      "Pike County",
+      "Transmission & Grid",
+      "Community Response"
+    ],
+    "relatedProject": "shawnee-walker",
+    "summary": "Dingman Township supervisors heard resident concerns about the Shawnee–Walker project, including possible effects on private property, environmental resources, electricity rates, and questions from residents about whether future industrial or data-center development could benefit from the added capacity.",
+    "contextNote": "Residents’ speculation about future warehouses or AI facilities is not evidence that Shawnee–Walker was designed specifically for data centers.",
+    "url": "https://www.pikecountycourier.com/news/local-news/board-of-supervisors-discusses-proposed-firstenergy-transmission-line-project-GA5741329"
+  },
+  {
+    "id": "story-11",
+    "title": "Possible Data Center in Pike?",
+    "source": "PikePA.net",
+    "date": "2026-04-23",
+    "type": "Community Report",
+    "categories": [
+      "Pike County",
+      "Watchlist / Unverified"
+    ],
+    "relatedProject": "dingman-towne-center",
+    "summary": "A community post raised questions about whether a large DEPG-owned property near Route 739 in Dingman Township could someday be repurposed for data-center development, particularly as new electrical infrastructure is considered nearby.",
+    "contextNote": "Community report · Unverified. This post republishes Facebook speculation. No public application, announced operator or confirmed data-center plan was identified in the sources reviewed for this property.",
+    "url": "https://pikepa.net/news/possible-data-center-pike"
+  },
+  {
+    "id": "story-12",
+    "title": "Majority of Monroe County municipalities have data center ordinances",
+    "source": "Pocono Record / MonroeCountyPA.com",
+    "date": "2026-07-16",
+    "type": "External Reporting",
+    "categories": [
+      "Monroe County",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "summary": "A countywide look at municipalities adopting or considering data-center ordinances as development proposals move through local planning.",
+    "contextNote": "",
+    "url": "https://monroecountypa.com/news/majority-monroe-county-municipalities-have-data-center-ordinances"
+  },
+  {
+    "id": "story-13",
+    "title": "Pennsylvania governor signs order imposing new rules to set up AI data centers in state",
+    "source": "Reuters",
+    "date": "2026-08-18",
+    "type": "External Reporting",
+    "categories": [
+      "Pennsylvania",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "summary": "Reuters reports on Gov. Shapiro’s executive order and its intended environmental, community-participation and energy-accountability measures.",
+    "contextNote": "",
+    "url": "https://www.reuters.com/legal/government/pennsylvania-governor-signs-order-imposing-new-rules-set-up-ai-data-centers-2026-08-18/"
+  },
+  {
+    "id": "story-14",
+    "title": "Data centers are ‘redefining’ midterm races across Pennsylvania",
+    "source": "Spotlight PA",
+    "date": "2026-08-21",
+    "type": "External Reporting",
+    "categories": [
+      "Pennsylvania",
+      "Community Response"
+    ],
+    "relatedProject": null,
+    "summary": "Data-center development has rapidly become a major Pennsylvania political issue, with candidates across competitive races taking positions on electricity costs, local authority, environmental protections, and the pace of new development.",
+    "contextNote": "",
+    "url": "https://www.spotlightpa.org/news/2026/08/data-center-midterm-legislative-elections-voters-shapiro-garrity-polls/"
+  },
+  {
+    "id": "story-15",
+    "title": "Committee votes on Sen. Brown’s statewide data center moratorium amendment",
+    "source": "Times Leader",
+    "date": "2026-06-30",
+    "type": "External Reporting",
+    "categories": [
+      "Pennsylvania",
+      "Monroe County",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "summary": "State Sen. Rosemary Brown proposed a three-year statewide moratorium on hyperscale data-center development, arguing that Pennsylvania needs time to address unresolved questions involving energy demand, water use, infrastructure, environmental impacts, and community planning.",
+    "contextNote": "The proposed three-year moratorium amendment failed 2–9 in committee, according to this report. It did not become a statewide moratorium.",
+    "url": "https://www.timesleader.com/news/1747582/committee-votes-on-sen-browns-statewide-data-center-moratorium-amendment"
+  },
+  {
+    "id": "story-16",
+    "title": "Bresnahan’s proposed legislation aims to keep control local over data center development decisions",
+    "source": "WVIA",
+    "date": "2026-06-11",
+    "type": "External Reporting",
+    "categories": [
+      "Pennsylvania",
+      "Policy & Zoning",
+      "Jobs & Economy"
+    ],
+    "relatedProject": null,
+    "summary": "U.S. Rep. Rob Bresnahan introduced legislation aimed at protecting municipalities that reject data-center proposals from costly federal litigation while also encouraging local workforce commitments when projects are approved.",
+    "contextNote": "Proposed federal legislation; this is not a statement that these protections are already law.",
+    "url": "https://www.wvia.org/news/local/2026-06-11/bresnahans-proposed-legislation-aims-to-keep-control-local-over-data-center-development-decisions"
+  },
+  {
+    "id": "story-17",
+    "title": "Is this the future of America?",
+    "source": "The Verge",
+    "date": "2026-09-02",
+    "type": "External Feature",
+    "categories": [
+      "Lessons From Elsewhere",
+      "Jobs & Economy",
+      "Community Response"
+    ],
+    "relatedProject": null,
+    "summary": "Loudoun County’s data-center growth brought major tax benefits—and debate over noise, power lines and development pressure. A look at the tradeoffs after years of expansion.",
+    "contextNote": "Outside case study: Loudoun County, Virginia. This is context for the Poconos, not a local project report.",
+    "url": "https://www.theverge.com/cs/features/975597/loudoun-county-virginia-data-center-backlash"
+  }
+]
