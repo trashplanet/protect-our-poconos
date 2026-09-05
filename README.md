@@ -29,15 +29,15 @@ Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/using-c
 
 ## Content still needed
 
-This is the first homepage implementation, not a verified news publication. Project statuses, figures, and 2025 headlines are copied from the mockup and need source checks. A visible draft note identifies them. The old September 18 meeting date was removed rather than advertised as upcoming.
+Homepage copy was revised against linked public records on September 5, 2026. Smithfield figures come from the August resubmission, Lehman adoption from the November 20, 2025 minutes, and the September 9 hearing from the township August newsletter. Project/news cards now link to those records. Eagle Village remains explicitly unconfirmed. The old September 18 Pike County meeting date was removed rather than advertised as upcoming.
 
 - Actual project and news photos: the export's seven image slots were empty; they remain clearly marked placeholders.
-- Source documents and real article/project destinations.
+- Dedicated article/project pages; verified cards currently link directly to public source documents.
 - A newsletter signup provider or hosted form URL; no email collection or fake success state is implemented.
 - Current meeting calendar, officials directory, public-comment instructions, research library, and social/contact links.
 - Privacy text should be updated when services are added. Google Fonts is currently the only external frontend dependency; Foundation and images are local.
 
-Unfinished links open an explanatory dialog. Replace their `href` and remove `data-notice` / `data-notice-title` once the destination exists. The mockup's fake search button was removed. Share uses the browser share sheet or clipboard, with a visible fallback.
+Remaining unfinished links open an explanatory dialog. Replace their `href` and remove `data-notice` / `data-notice-title` once the destination exists. The mockup's fake search button was removed. Share uses the browser share sheet or clipboard, with a visible fallback.
 
 ## Later WordPress migration
 
