@@ -34,7 +34,7 @@ Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/using-c
 
 Homepage copy was revised against linked public records on September 5, 2026. Smithfield figures come from the August resubmission, Lehman adoption from the November 20, 2025 minutes, and the September 9 hearing from the township August newsletter. Project/news cards now link to those records. Eagle Village remains explicitly unconfirmed. The old September 18 Pike County meeting date was removed rather than advertised as upcoming.
 
-- Actual project and news photos: the export's seven image slots were empty; they remain clearly marked placeholders.
+- Actual project photography: homepage cards reuse the supplied illustration and regional landscapes with clear captions. News cards are text-only and open source links in new tabs.
 - Dedicated article/project pages; verified cards currently link directly to public source documents.
 - A newsletter signup provider or hosted form URL; no email collection or fake success state is implemented.
 - Current meeting calendar, officials directory, public-comment instructions, research library, and social/contact links.
