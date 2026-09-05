@@ -119,3 +119,6 @@ svg { flex-shrink: 0; }
     rgba(18,36,29,.972) 90%,
     #12241d 100%);
 }
+
+/* One selected-page treatment for every shared navigation bar. */
+.primary-navigation [aria-current="page"] { border-radius: 0; box-shadow: 0 2px #34a184; font-weight: 700; }

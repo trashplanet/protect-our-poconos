@@ -11,7 +11,6 @@
 .news-page main a { color: #245c45; text-underline-offset: 4px; }
 .news-page main a:hover { text-decoration: underline; }
 .news-page [hidden] { display: none !important; }
-.news-page [aria-current="page"] { box-shadow: 0 2px #34a184; }
 .news-hero { color: #fff; background: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains.png') center 48%/cover; }
 .news-hero .news-wrap { padding-block: 68px 34px; }
 .news-hero h1 { font-size: clamp(48px,6vw,76px); margin: 0 0 24px; letter-spacing: -.035em; }

@@ -79,7 +79,6 @@
 .issues-page main { color:#dbe7e0; background:#0f1f18; }
 .issues-page main a { color:#8fd4bf; text-underline-offset:4px; }
 .issues-page main a:hover { text-decoration:underline; }
-.issues-page [aria-current="page"] { box-shadow:0 2px #34a184; }
 .issues-page .issue-columns > * { min-width:0; }
 .issues-page .issue-image { position:relative; margin:0; }
 .issue-image figcaption { position:absolute; bottom:0; left:0; right:0; padding:9px 14px; background:#0f241de8; color:#d4e5db; font-size:11px; line-height:1.5; }
