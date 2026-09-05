@@ -1,4 +1,4 @@
-name: Deploy static homepage to GitHub Pages
+name: Deploy static site to GitHub Pages
 
 # Run manually when the draft content and destination links are ready.
 on:
@@ -25,7 +25,7 @@ jobs:
       - name: Stage public files only
         run: |
           mkdir _site
-          cp index.html .nojekyll _site/
+          cp index.html projects.html .nojekyll _site/
           cp -R assets _site/assets
       - uses: actions/upload-pages-artifact@v3
         with:

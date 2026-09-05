@@ -43,7 +43,7 @@ notice.addEventListener('click', (event) => {
   }
 });
 
-document.querySelector('[data-share]').addEventListener('click', async (event) => {
+document.querySelector('[data-share]')?.addEventListener('click', async (event) => {
   event.preventDefault();
   const url = new URL(location.href);
   url.hash = '';
