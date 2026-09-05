@@ -52,6 +52,7 @@ class ProjectSyncTests(unittest.TestCase):
             script = root / 'scripts/sync-projects.py'
             script.write_text(SCRIPT.read_text())
             (root / 'projects.html').write_text(self.tracker)
+            (root / 'issues.html').write_text((ROOT / 'issues.html').read_text())
             (root / 'index.html').write_text(self.home.replace('250,000 SQ FT', '999,000 SQ FT'))
             def run(*args):
                 return subprocess.run(['python3', str(script), *args], capture_output=True, text=True)

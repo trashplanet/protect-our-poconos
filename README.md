@@ -98,3 +98,13 @@ The dependency-free sync updates explicitly marked homepage project titles, loca
 `data-project-source` marks a visible canonical fact in the tracker. `data-project-text`, `data-project-href` and `data-project-src` mark generated references; optional `data-project-format` supplies surrounding text. Edit the source, not a generated reference. Missing sources fail visibly instead of silently retaining stale content. The homepage remains a selected overview, not a second copy of all seven tracker entries.
 
 GitHub runs a consistency check on pushes and pull requests. Manual Pages deployment also runs the sync before staging, so published shared references come from the current tracker. These checks synchronize the reviewed content; they do not discover new filings, verify sources or reassess editorial claims. Homepage issue explanations, historical news headlines and imagery presentation still need editorial review when a proposal fundamentally changes.
+
+## Explore the issues
+
+`issues.html` adapts the supplied Design (15) issues page, using Foundation and shared navigation/dialog behavior. `assets/css/issues.css` contains the scoped export styles and mobile overrides. The six `assets/issue-*.png` images are supplied illustrations, clearly labeled rather than presented as project photography. No export runtime or additional frontend dependency is loaded.
+
+The six stable deep links are `issues.html#i-forests`, `#i-water`, `#i-power`, `#i-noise`, `#i-community` and `#i-jobs`; the health section is `#health`. Each section includes source or related-project/reporting links. Edit explanatory content directly in `issues.html`; shared project figures and marked local-context summaries are populated by `python3 scripts/sync-projects.py`. Pages deployment includes this page and regenerates its bindings.
+
+Homepage concern cards and The Risks / About the Issue / Key Concerns links now open the issues page. What’s Happening and Local Projects open the tracker; Updates opens news. The meeting action links to the news calendar. Destinations without a completed equivalent, including signup, contacts and the full research library, retain their existing behavior. The source review clarifies cooling-system differences and keeps general health evidence separate from site-specific exposure.
+
+Validated at 1440, 1024, 768, 390 and 320 pixels, including images, mobile navigation, deep links and no-JavaScript content. `python3 -m unittest discover -s tests` also checks internal destinations and all six homepage issue links.

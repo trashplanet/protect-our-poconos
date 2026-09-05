@@ -142,7 +142,7 @@ def main():
     args = parser.parse_args()
     values = values_from(Document((ROOT / 'projects.html').read_text()))
     stale = []
-    for filename in ['index.html', 'projects.html']:
+    for filename in ['index.html', 'projects.html', 'issues.html']:
         path = ROOT / filename
         before = path.read_text()
         after = synchronize(before, values)
