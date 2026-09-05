@@ -61,7 +61,7 @@ Check the homepage at desktop, tablet, and mobile widths, including mobile menu,
 
 ## Maintaining the project tracker
 
-Edit card content directly in `projects.html`; no build step or browser-rendered data feed is required. Each `article.tracker-card` has a stable project `id`, `data-category`, space-separated `data-county`, numeric `data-rank`, and optional ISO `data-deadline`. Update visible card text, stat values, milestone details and source links together. Keep homepage summary counts and tracker overview/filter counts in sync if entries are added or removed.
+Edit card content directly in `projects.html`; no build step or browser-rendered data feed is required. Each `article.tracker-card` has a stable project `id`, `data-category`, space-separated `data-county`, numeric `data-rank`, and optional ISO `data-deadline`. Update visible card text, stat values, milestone details and source links together. Run `python3 scripts/sync-projects.py` after tracker edits. Homepage project references and homepage/tracker project counts are generated from the tracker cards.
 
 `Most relevant` preserves editorial order, `Next deadline` brings future dated milestones forward, and `Project name` sorts alphabetically. Past deadlines are not silently presented as open actions. Reviewed dates are editorial dates, not automatically changed to today. No background monitoring is implemented.
 
@@ -82,3 +82,19 @@ Keep `title`, `source`, ISO `date`, `type`, `categories`, `relatedProject` (trac
 Meeting dates and their sources are edited directly in `news.html`. The reviewed date is editorial, not automatically refreshed. Dates that have elapsed are labeled as past using the America/New_York timezone; their outcomes require a source check. Tip submissions remain explicitly unavailable.
 
 News checks: `python3 scripts/render-news.py`, `node --check assets/js/news.js`, and `git diff --check`. Verify filters, empty/reset, six-at-a-time browsing, URL restoration, no-JavaScript access and mobile navigation. Updates navigation and the homepage View all updates button now link to `news.html`.
+
+## Homepage / tracker consistency
+
+`projects.html` is the canonical source for the shared project content. After editing it, run:
+
+```sh
+python3 scripts/sync-projects.py
+python3 scripts/sync-projects.py --check
+python3 -m unittest discover -s tests
+```
+
+The dependency-free sync updates explicitly marked homepage project titles, locations, summaries, status labels, image URLs/captions, project links, Lehman policy copy, Smithfield scale figures and the Smithfield hearing date/source. It computes homepage totals and tracker category counts from the actual tracker cards. It preserves static HTML, existing page layouts and no-JavaScript access.
+
+`data-project-source` marks a visible canonical fact in the tracker. `data-project-text`, `data-project-href` and `data-project-src` mark generated references; optional `data-project-format` supplies surrounding text. Edit the source, not a generated reference. Missing sources fail visibly instead of silently retaining stale content. The homepage remains a selected overview, not a second copy of all seven tracker entries.
+
+GitHub runs a consistency check on pushes and pull requests. Manual Pages deployment also runs the sync before staging, so published shared references come from the current tracker. These checks synchronize the reviewed content; they do not discover new filings, verify sources or reassess editorial claims. Homepage issue explanations, historical news headlines and imagery presentation still need editorial review when a proposal fundamentally changes.

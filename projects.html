@@ -87,7 +87,7 @@
       </p>
       <div class="tracker-overview">
        <a data-quick-filter="data-centers" href="#project-list">
-        <strong>
+        <strong data-project-text="counts.data-centers">
          3
         </strong>
         <span>
@@ -95,7 +95,7 @@
         </span>
        </a>
        <a data-quick-filter="infrastructure" href="#project-list">
-        <strong>
+        <strong data-project-text="counts.infrastructure">
          2
         </strong>
         <span>
@@ -103,7 +103,7 @@
         </span>
        </a>
        <a data-quick-filter="watched" href="#project-list">
-        <strong>
+        <strong data-project-text="counts.watched">
          2
         </strong>
         <span>
@@ -111,7 +111,7 @@
         </span>
        </a>
        <a href="#local-rules">
-        <strong>
+        <strong data-project-text="counts.policies">
          4
         </strong>
         <span>
@@ -193,37 +193,37 @@
         </legend>
         <button aria-pressed="true" data-filter="all" type="button">
          All Projects
-         <span class="filter-count">
+         <span class="filter-count" data-project-format="({})" data-project-text="counts.all">
           (7)
          </span>
         </button>
         <button aria-pressed="false" data-filter="data-centers" type="button">
          Data Centers
-         <span class="filter-count">
+         <span class="filter-count" data-project-format="({})" data-project-text="counts.data-centers">
           (3)
          </span>
         </button>
         <button aria-pressed="false" data-filter="infrastructure" type="button">
          Infrastructure
-         <span class="filter-count">
+         <span class="filter-count" data-project-format="({})" data-project-text="counts.infrastructure">
           (2)
          </span>
         </button>
         <button aria-pressed="false" data-filter="watchlist" type="button">
          Watchlist
-         <span class="filter-count">
+         <span class="filter-count" data-project-format="({})" data-project-text="counts.watchlist">
           (1)
          </span>
         </button>
         <button aria-pressed="false" data-filter="rumors" type="button">
          Rumors
-         <span class="filter-count">
+         <span class="filter-count" data-project-format="({})" data-project-text="counts.rumors">
           (1)
          </span>
         </button>
         <button aria-pressed="false" data-filter="watched" hidden="" type="button">
          Watchlist &amp; Rumors
-         <span class="filter-count">
+         <span class="filter-count" data-project-format="({})" data-project-text="counts.watched">
           (2)
          </span>
         </button>
@@ -260,7 +260,7 @@
        </div>
       </form>
       <div class="tracker-results">
-       <p aria-atomic="true" aria-live="polite" id="result-count" role="status">
+       <p aria-atomic="true" aria-live="polite" data-project-text="counts.all" data-project-format="Showing all {} projects and sites" id="result-count" role="status">
         Showing all 7 projects and sites
        </p>
        <button hidden="" id="clear-filters" type="button">
@@ -269,7 +269,7 @@
       </div>
       <noscript>
        <p class="no-js-note">
-        All seven entries are shown below. Enable JavaScript to filter and sort them.
+        All entries are shown below. Enable JavaScript to filter and sort them.
        </p>
       </noscript>
       <div class="tracker-grid">
@@ -295,7 +295,15 @@
           Smithfield Township, Monroe County
          </p>
          <p class="project-summary">
-          One proposed two-story building with 500,000 sq. ft. of total floor area and a 250,000-sq.-ft. ground footprint. Conditional use is not construction approval.
+          One proposed two-story building with
+          <span data-project-source="smithfield.floor-area">
+           500,000
+          </span>
+          sq. ft. of total floor area and a ground footprint of
+          <span data-project-source="smithfield.footprint">
+           250,000
+          </span>
+          sq. ft. Conditional use is not construction approval.
          </p>
          <dl class="project-stats">
           <div>
@@ -1517,14 +1525,14 @@
        Zoning rules provide context. They are not additional data-center projects or permission to start construction.
       </p>
       <div class="policy-grid">
-       <article>
+       <article id="lehman-policy">
         <p class="eyebrow">
          Lehman Township
         </p>
-        <h3>
+        <h3 data-project-source="lehman.title">
          Ordinance 155
         </h3>
-        <p>
+        <p data-project-source="lehman.summary">
          Adopted November 20, 2025. Township-wide data-center regulations; not evidence of an Eagle Village proposal.
         </p>
         <a href="https://www.lehmantownship.com/wp-content/uploads/2025/12/November-20-2025.pdf">
