@@ -110,3 +110,13 @@ Homepage concern cards and The Risks / About the Issue / Key Concerns links now 
 Validated at 1440, 1024, 768, 390 and 320 pixels, including images, mobile navigation, deep links and no-JavaScript content. `python3 -m unittest discover -s tests` also checks internal destinations and all six homepage issue links.
 
 The homepage hero event card now highlights the September 9, 2026 Smithfield Gateway conditional-use hearing at 6 PM, J.T. Lambert Intermediate School. Its project title, date and township-notice URL sync from the tracker. The compact copy fits within the original card dimensions.
+
+## Take Action / Your Voice Matters
+
+`take-action.html` adapts Design (16), with the supplied `assets/take-action-hero.png`, scoped `assets/css/action.css`, and shared navigation and dialogs. Sections include current hearings (`#attention`), ways to help (`#help`), public office contacts (`#contacts`), public-comment guidance (`#comment`), and meeting preparation (`#attend`). Homepage actions and Take Action navigation across all pages now lead here.
+
+The Smithfield hearing date and official notice link are generated from the tracker by `python3 scripts/sync-projects.py`, including the date used by `assets/js/action.js` to label past events. The continuation date, venue, participation guidance, office records and editorial review dates remain manually maintained against official sources. Past-date labels do not establish an outcome or reschedule a hearing; update the cards after checking current notices.
+
+Contact links use official government websites, public office email addresses and click-to-call phone links. Signup, sharing and tips remain not configured and open explanatory dialogs. There is no form submission, email sending or data collection. All content and ordinary links remain available without JavaScript.
+
+Verified at 1440, 1024, 768, 390 and 320 pixels, including deep links, active navigation, placeholder dialogs, external targets and past-event labeling with a simulated later date. Static link tests cover all five pages; the sync regression also checks the Take Action event date.

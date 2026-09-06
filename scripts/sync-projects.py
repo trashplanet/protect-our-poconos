@@ -96,6 +96,10 @@ def values_from(tracker):
         deadline = card.attrs.get('data-deadline')
         if deadline:
             d = date.fromisoformat(deadline)
+            fields['deadline-iso'] = deadline
+            fields['deadline-month'] = d.strftime('%b').upper()
+            fields['deadline-day'] = str(d.day)
+            fields['deadline-year'] = str(d.year)
             fields['deadline-label'] = f'{d.strftime("%b").upper()} {d.day}, {d.year}'
         milestone = card.first(cls='project-milestone')
         links = [n for n in milestone.descendants() if n.tag == 'a']
@@ -123,8 +127,8 @@ def synchronize(source, values):
             leading = re.match(r'\s*', old)[0]
             trailing = re.search(r'\s*$', old)[0] if old.strip() else ''
             edits.append((node.inner, node.end, leading + escape(value) + trailing))
-        for attr in ['href', 'src']:
-            key = node.attrs.get('data-project-' + attr)
+        for binding, attr in [('href', 'href'), ('src', 'src'), ('date', 'data-event-date')]:
+            key = node.attrs.get('data-project-' + binding)
             if key:
                 old = source[node.start:node.inner]
                 new, count = re.subn(r'(?<![\w-])' + attr + r'="[^"]*"', lambda _: f'{attr}="{escape(values[key], quote=True)}"', old)
@@ -142,7 +146,7 @@ def main():
     args = parser.parse_args()
     values = values_from(Document((ROOT / 'projects.html').read_text()))
     stale = []
-    for filename in ['index.html', 'projects.html', 'issues.html']:
+    for filename in ['index.html', 'projects.html', 'issues.html', 'take-action.html']:
         path = ROOT / filename
         before = path.read_text()
         after = synchronize(before, values)

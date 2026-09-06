@@ -31,6 +31,9 @@ class ProjectSyncTests(unittest.TestCase):
         self.assertIn('275,000 SQ FT', result)
         self.assertIn('275,000 sq ft', result)
         self.assertIn('OCT 14, 2026 · SMITHFIELD', result)
+        action = sync.synchronize((ROOT / 'take-action.html').read_text(), sync.values_from(sync.Document(changed)))
+        self.assertIn('data-event-date="2026-10-14"', action)
+        self.assertNotIn('data-event-date="2026-09-09"', action)
 
     def test_categories_change_derived_totals(self):
         changed = self.tracker.replace('data-category="rumors"', 'data-category="data-centers"')
@@ -53,6 +56,7 @@ class ProjectSyncTests(unittest.TestCase):
             script.write_text(SCRIPT.read_text())
             (root / 'projects.html').write_text(self.tracker)
             (root / 'issues.html').write_text((ROOT / 'issues.html').read_text())
+            (root / 'take-action.html').write_text((ROOT / 'take-action.html').read_text())
             (root / 'index.html').write_text(self.home.replace('250,000 SQ FT', '999,000 SQ FT'))
             def run(*args):
                 return subprocess.run(['python3', str(script), *args], capture_output=True, text=True)
