@@ -24,11 +24,8 @@ jobs:
       - name: Synchronize project content
         run: python3 scripts/sync-projects.py
       - uses: actions/configure-pages@v5
-      - name: Stage public files only
-        run: |
-          mkdir _site
-          cp index.html projects.html news.html issues.html take-action.html .nojekyll _site/
-          cp -R assets _site/assets
+      - name: Build clean URLs and search metadata
+        run: python3 scripts/build-site.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

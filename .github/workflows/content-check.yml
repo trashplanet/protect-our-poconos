@@ -1,4 +1,4 @@
-name: Check project content consistency
+name: Check site content and public build
 on:
   push:
   pull_request:
@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify shared project content
         run: python3 scripts/sync-projects.py --check
-      - name: Test synchronization safeguards
+      - name: Test content, clean URLs, sitemap and metadata
         run: python3 -m unittest discover -s tests

@@ -120,3 +120,23 @@ The Smithfield hearing date and official notice link are generated from the trac
 Contact links use official government websites, public office email addresses and click-to-call phone links. Signup, sharing and tips remain not configured and open explanatory dialogs. There is no form submission, email sending or data collection. All content and ordinary links remain available without JavaScript.
 
 Verified at 1440, 1024, 768, 390 and 320 pixels, including deep links, active navigation, placeholder dialogs, external targets and past-event labeling with a simulated later date. Static link tests cover all five pages; the sync regression also checks the Take Action event date.
+
+
+## Public URLs, search metadata and analytics
+
+Production domain: https://protectourpoconos.com/. Edit the existing root HTML files as before; **do not edit `_site/`**. Run:
+
+```sh
+python3 scripts/sync-projects.py
+python3 scripts/build-site.py
+python3 -m unittest discover -s tests
+python3 -m http.server 4174 --directory _site
+```
+
+The production build generates `/`, `/news/`, `/projects/`, `/issues/`, and `/take-action/`, rewrites internal links/assets, and creates static redirects for old `.html` links, preserving queries and anchors when JavaScript is enabled. GitHub Pages does not provide custom HTTP 301 rules, so these use immediate meta refresh plus JavaScript. Root HTML files remain authoring previews; use port 4174 for the actual published layout and URLs.
+
+`scripts/build-site.py` owns the route registry, canonical domain, social preview metadata, WebSite/Organization/page/breadcrumb structured data, robots.txt and XML sitemap. Add future pages to its `PAGES` registry. Every manual Pages deployment rebuilds these files. Submit **https://protectourpoconos.com/sitemap.xml** to Search Console after deployment. Last-modified dates are deliberately omitted rather than reporting inaccurate build dates. Schema describes the actual site and does not promise special search or AI results.
+
+Google Analytics 4 measurement ID `G-XR259KZ2L9` is loaded by `assets/js/analytics.js` only on the public domain (including www). Local and GitHub-hostname previews do not send analytics. This is a Google tag, not a Google Tag Manager container. The privacy notice on each page describes analytics cookies, collected usage/device/referrer information, and Google Fonts. Keep those notices accurate when changing tracking. Email signup and tip forms remain unavailable.
+
+Deployment stays manual; pushing commits alone does not publish the site.

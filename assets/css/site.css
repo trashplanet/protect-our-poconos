@@ -122,3 +122,8 @@ svg { flex-shrink: 0; }
 
 /* One selected-page treatment for every shared navigation bar. */
 .primary-navigation [aria-current="page"] { border-radius: 0; box-shadow: 0 2px #34a184; font-weight: 700; }
+
+/* Keep the closing headline in two intentional phrases. */
+.closing-style-167 { line-height: 1.16; margin-bottom: 22px; text-wrap: balance; }
+.closing-style-167 > span { display: block; }
+.closing-style-167 > span + span { margin-top: 4px; }
