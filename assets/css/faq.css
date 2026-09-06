@@ -248,3 +248,26 @@
 .faq-page .faq-design-12:hover,.faq-page .faq-design-230:hover {background:#5bc5a7;color:#07160f;}
 .faq-page .faq-design-14:hover,.faq-page .faq-design-232:hover {background:rgba(255,255,255,.16);color:#fff;}
 @media(max-width:760px){.faq-page .faq-closing .faq-design-229{flex-shrink:1;}.faq-page .faq-closing a{padding:14px 20px;}}
+
+/* One pale surface across the FAQ topics; fade scenery at both section edges. */
+.faq-page #main-content > section[id] {background:#eef4ef;}
+.faq-page #main-content > section[id] > img {
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
+}
+/* Use the homepage's muted forest tones, easing into and out of the transition. */
+.faq-page .faq-stance {
+  background:linear-gradient(180deg,#eef4ef 0%,#e9efea 8%,#d4dfd7 20%,#adbeb2 35%,#7d9386 50%,#4f695b 65%,#2c4839 78%,#192e24 90%,#12241d 100%);
+}
+.faq-page .faq-stance > [aria-hidden="true"] {background:none;}
+.faq-page .faq-stance > img,
+.faq-page .faq-closing > img {
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
+}
+.faq-page .faq-stance {
+  background-color:#12241d;
+  background-size:100% 360px;
+  background-repeat:no-repeat;
+}
+@media(max-width:760px){.faq-page .faq-stance{background-size:100% 300px;}}
