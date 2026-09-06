@@ -22,7 +22,7 @@
 .top-style-11:hover, .top-style-11:focus-visible { background:#4bb99a; }
 .top-style-12 { font-size:14px; }
 .layout-style-13 { position:relative;overflow:hidden; }
-.hero-style-14 { position:relative;min-height:640px;display:flex;align-items:center;background-image:linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.28) 100%),url('../hero-waterfall.png');background-size:cover;background-position:center; }
+.hero-style-14 { position:relative;min-height:640px;display:flex;align-items:center;background-image:linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.28) 100%),url('../hero-waterfall.webp');background-size:cover;background-position:center; }
 .hero-style-15 { position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:84px 40px 72px;width:100%; }
 .hero-style-16 { max-width:520px; }
 .hero-style-17 { font-size:12px;letter-spacing:0.22em;font-weight:600;color:#8fd4bf;margin:0 0 20px; }
@@ -65,7 +65,7 @@
 .happening-style-50 { font-family:'Newsreader';font-size:38px;font-weight:600;color:#07160f;line-height:0.9; }
 .happening-style-51 { font-size:11px;font-weight:700;letter-spacing:0.07em;color:#0a2419;margin-bottom:5px; }
 .happening-style-52 { font-size:12px;color:#0e2c20;line-height:1.4; }
-.layout-style-53 { position:relative;background:linear-gradient(to bottom,#eef4f0 0%,rgba(238,244,240,0.74) 30%,rgba(238,244,240,0.22) 60%,rgba(238,244,240,0) 92%),url('../misty-forest.png') bottom center/cover;overflow:hidden; }
+.layout-style-53 { position:relative;background:linear-gradient(to bottom,#eef4f0 0%,rgba(238,244,240,0.74) 30%,rgba(238,244,240,0.22) 60%,rgba(238,244,240,0) 92%),url('../misty-forest.webp') bottom center/cover;overflow:hidden; }
 .projects-style-54 { position:relative;max-width:1200px;margin:0 auto;padding:66px 40px 130px; }
 .projects-style-55 { display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:38px; }
 .projects-style-56 { max-width:620px; }
@@ -89,7 +89,7 @@
 .projects-style-71 { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#bf8a2e;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
 .projects-style-72 { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#5c86a0;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
 .projects-style-73 { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#647f70;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
-.layout-style-74 { position:relative;background-image:linear-gradient(180deg,rgba(9,18,13,0.55) 0%,rgba(9,18,13,0.42) 34%,rgba(9,18,13,0.6) 74%,rgba(14,29,22,0.94) 100%),url('../forest-dark.png');background-size:cover;background-position:center;background-color:#0e1d16;overflow:hidden; }
+.layout-style-74 { position:relative;background-image:linear-gradient(180deg,rgba(9,18,13,0.55) 0%,rgba(9,18,13,0.42) 34%,rgba(9,18,13,0.6) 74%,rgba(14,29,22,0.94) 100%),url('../forest-dark.webp');background-size:cover;background-position:center;background-color:#0e1d16;overflow:hidden; }
 .risks-style-75 { position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(to top,#0e1d16,transparent);pointer-events:none; }
 .risks-style-76 { position:relative;max-width:1200px;margin:0 auto;padding:100px 40px 128px; }
 .risks-style-77 { display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:38px;flex-wrap:wrap; }
@@ -184,7 +184,7 @@
 .updates-style-160 { width:38px;height:38px;flex-shrink:0;border-radius:10px;background:rgba(143,212,191,0.14);display:inline-flex;align-items:center;justify-content:center;color:#a7dcc9; }
 .updates-style-161 { flex:1; }
 .updates-style-162 { color:#7fbfa9;font-size:18px; }
-.layout-style-163 { position:relative;background-image:linear-gradient(rgba(9,18,13,0.28) 0%,rgba(9,18,13,0.5) 55%,rgba(9,18,13,0.72) 100%),url('../mountains-sunset.png');background-size:cover;background-position:center 22%;padding:130px 40px 96px; }
+.layout-style-163 { position:relative;background-image:linear-gradient(rgba(9,18,13,0.28) 0%,rgba(9,18,13,0.5) 55%,rgba(9,18,13,0.72) 100%),url('../mountains-sunset.webp');background-size:cover;background-position:center 22%;padding:130px 40px 96px; }
 .closing-style-164 { max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap; }
 .closing-style-165 { max-width:640px; }
 .closing-style-166 { font-size:12px;letter-spacing:0.2em;font-weight:600;color:#8fd4bf;margin:0 0 14px; }

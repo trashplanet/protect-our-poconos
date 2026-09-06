@@ -52,9 +52,13 @@ def build():
                 {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
                 {'@type': 'ListItem', 'position': 2, 'name': title.split('|')[0].strip(), 'item': canonical}]})
         metadata = f'<link rel="canonical" href="{canonical}"/>\n'
-        for prop, value in {'og:type': 'website', 'og:site_name': 'Protect Our Poconos', 'og:title': title, 'og:description': description, 'og:url': canonical, 'og:image': BASE + '/assets/mountains-sunset.png', 'og:image:alt': 'Forested Pocono mountains at sunset'}.items():
+        for prop, value in {'og:type': 'website', 'og:site_name': 'Protect Our Poconos', 'og:title': title, 'og:description': description, 'og:url': canonical, 'og:image': BASE + '/assets/mountains-sunset.webp', 'og:image:alt': 'Forested Pocono mountains at sunset'}.items():
             metadata += f'<meta property="{prop}" content="{html.escape(value, quote=True)}"/>\n'
         metadata += '<meta name="twitter:card" content="summary_large_image"/>\n'
+        for name, value in {'twitter:title': title, 'twitter:description': description, 'twitter:image': BASE + '/assets/mountains-sunset.webp', 'twitter:image:alt': 'Forested Pocono mountains at sunset'}.items():
+            metadata += f'<meta name="{name}" content="{html.escape(value, quote=True)}"/>\n'
+        if source == 'index.html':
+            metadata += '<link rel="preload" as="image" href="/assets/hero-waterfall.webp" fetchpriority="high"/>\n'
         metadata += '<script type="application/ld+json">' + json.dumps(schema).replace('<', '\\u003c') + '</script>\n'
         page = re.sub(r'(?<![\w-])(href|src)="([^"]*)"', rewrite, page)
         page = page.replace('</head>', metadata + '</head>')

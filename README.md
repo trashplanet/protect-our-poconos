@@ -149,3 +149,9 @@ Edit `resources.html` for the Research and Sources page, with its scoped styles 
 `llms.txt` is the concise public site guide. Update its page list when adding or removing canonical pages; the build publishes it alongside the sitemap. The standard-library tests check these links. Google Fonts use `display=optional` to avoid late font swaps moving content; on slow first visits the browser may retain the fallback font until a later navigation. This does not add WebMCP or change site features.
 
 For an optional independent audit (no project dependency): `npx lighthouse https://protectourpoconos.com/ --chrome-flags="--headless" --output=json --output-path=/tmp/poconos-lighthouse.json`. Agentic Browsing evaluates applicable audits; record the actual result and CLS, rather than assuming a fixed score on every device or run.
+
+## Image delivery
+
+Pages use WebP copies of the supplied raster assets; original PNGs remain available for editing. Keep WebP variants updated when replacing artwork (current encoding: Pillow WebP quality 82, method 6). Content images have dimensions and lazy loading; the homepage hero is preloaded. The inline head script establishes the JavaScript-enabled menu state before first paint, preventing a late mobile navigation collapse. Do not move it back into the deferred script alone.
+
+GitHub Pages controls HTTP cache lifetimes; CSS/JS content versions invalidate changed files but do not change the host's cache policy. Performance results should be compared using a fresh public-site audit, not a local uncompressed development server.
