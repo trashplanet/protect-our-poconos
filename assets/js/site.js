@@ -42,18 +42,3 @@ notice.addEventListener('click', (event) => {
         event.clientY < bounds.top || event.clientY > bounds.bottom) notice.close();
   }
 });
-
-document.querySelector('[data-share]')?.addEventListener('click', async (event) => {
-  event.preventDefault();
-  const url = new URL(location.href);
-  url.hash = '';
-  try {
-    if (navigator.share) await navigator.share({ title: document.title, url: url.href });
-    else {
-      await navigator.clipboard.writeText(url.href);
-      showNotice('Link copied', 'The homepage link is copied. Share it with your community.');
-    }
-  } catch (error) {
-    if (error.name !== 'AbortError') showNotice('Share this page', url.href);
-  }
-});

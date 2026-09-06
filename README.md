@@ -44,7 +44,7 @@ Homepage copy was revised against linked public records on September 5, 2026. Sm
 - Current meeting calendar, officials directory, public-comment instructions, research library, and social/contact links.
 - Privacy text should be updated when services are added. Google Fonts is currently the only external frontend dependency; Foundation and images are local.
 
-Remaining unfinished links open an explanatory dialog. Replace their `href` and remove `data-notice` / `data-notice-title` once the destination exists. The mockup's fake search button was removed. Share uses the browser share sheet or clipboard, with a visible fallback.
+Remaining unfinished links open an explanatory dialog. Replace their `href` and remove `data-notice` / `data-notice-title` once the destination exists. The mockup's fake search button was removed. Share opens a not-configured notice until a public sharing destination is provided; it does not share the current preview or GitHub URL.
 
 ## Later WordPress migration
 
@@ -108,3 +108,5 @@ The six stable deep links are `issues.html#i-forests`, `#i-water`, `#i-power`, `
 Homepage concern cards and The Risks / About the Issue / Key Concerns links now open the issues page. What’s Happening and Local Projects open the tracker; Updates opens news. The meeting action links to the news calendar. Destinations without a completed equivalent, including signup, contacts and the full research library, retain their existing behavior. The source review clarifies cooling-system differences and keeps general health evidence separate from site-specific exposure.
 
 Validated at 1440, 1024, 768, 390 and 320 pixels, including images, mobile navigation, deep links and no-JavaScript content. `python3 -m unittest discover -s tests` also checks internal destinations and all six homepage issue links.
+
+The homepage hero event card now highlights the September 9, 2026 Smithfield Gateway conditional-use hearing at 6 PM, J.T. Lambert Intermediate School. Its project title, date and township-notice URL sync from the tracker. The compact copy fits within the original card dimensions.
