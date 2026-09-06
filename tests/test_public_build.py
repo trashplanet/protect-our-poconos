@@ -61,3 +61,21 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(page.count('<details '), 3)
         self.assertIn('Tip submissions are not available yet', page)
         self.assertIn('id="glossary"', page)
+
+    def test_faq_schema_and_navigation(self):
+        page = (build.OUT / 'faq/index.html').read_text()
+        graph = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])['@graph']
+        faq = graph[2]
+        self.assertEqual(faq['@type'], 'FAQPage')
+        self.assertEqual(len(faq['mainEntity']), 26)
+        self.assertEqual(page.count('<details '), 25)
+        self.assertNotIn('—', page)
+        for question in faq['mainEntity']:
+            self.assertTrue(question['acceptedAnswer']['text'])
+        for route in build.PAGES.values():
+            html = (build.OUT / route.strip('/') / 'index.html').read_text()
+            self.assertIn('href="/faq/"', html)
+            self.assertRegex(html, r'class="top-style-11" href="/take-action/"')
+        issues = (build.OUT / 'issues/index.html').read_text()
+        self.assertNotIn('class="issue-design-3"', issues)
+        self.assertIn('BreadcrumbList', issues)

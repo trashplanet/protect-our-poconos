@@ -144,3 +144,11 @@ footer .resources-style-182:focus-visible { color:#0a1712; background:#b8e8d8; b
 footer .resources-style-182:focus-visible { outline:2px solid #b8e8d8; outline-offset:4px; }
 
 .closing .closing-style-169:focus-visible { outline:2px solid #b8e8d8; outline-offset:4px; }
+
+/* A single measured offset prevents section margins from doubling the jump. */
+html {scroll-padding-top:calc(var(--header-height,93px) + var(--jump-height,0px));}
+body main [id] {scroll-margin-top:0!important;}
+.mobile-action {display:none!important;}
+@media(max-width:800px){.mobile-action{display:inline-flex!important;}}
+body[class] main a:hover, body[class] main a:focus-visible {text-decoration:none;}
+@media(min-width:1101px){body.resources-page nav.research-design-14 {top:var(--header-height,93px);}}

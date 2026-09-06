@@ -26,11 +26,11 @@ Open http://localhost:4173. Stop with Ctrl+C. In GitHub Desktop, add this folder
 - `assets/css/site.css`: responsive layouts, mobile navigation, accessibility, and small visual fixes.
 - `assets/js/site.js`: menu, accessible dialogs for unfinished destinations, and sharing.
 - `assets/vendor/`: local Foundation CSS and its MIT license. Foundation XY grid container/cell classes are used alongside the mockup's custom column ratios.
-- `.github/workflows/pages.yml`: manual GitHub Pages deployment, uploading public files only.
+- `.github/workflows/pages.yml`: automatic GitHub Pages deployment, uploading public files only.
 
 ## GitHub Pages
 
-In the GitHub repository, select **Settings → Pages → Build and deployment → Source: GitHub Actions**. When ready, select **Actions → Deploy static site to GitHub Pages → Run workflow**. Deployment is manual so pushing design changes does not automatically publish draft content. Relative asset paths work on a project Pages URL or a custom domain.
+In the GitHub repository, select **Settings → Pages → Build and deployment → Source: GitHub Actions**. When ready, select **Actions → Deploy static site to GitHub Pages → Run workflow**. Pushes to main deploy automatically; manual runs remain available. Relative asset paths work on a project Pages URL or a custom domain.
 
 Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
@@ -135,11 +135,11 @@ python3 -m http.server 4174 --directory _site
 
 The production build generates `/`, `/news/`, `/projects/`, `/issues/`, and `/take-action/`, rewrites internal links/assets, and creates static redirects for old `.html` links, preserving queries and anchors when JavaScript is enabled. GitHub Pages does not provide custom HTTP 301 rules, so these use immediate meta refresh plus JavaScript. Root HTML files remain authoring previews; use port 4174 for the actual published layout and URLs.
 
-`scripts/build-site.py` owns the route registry, canonical domain, social preview metadata, WebSite/Organization/page/breadcrumb structured data, robots.txt and XML sitemap. Add future pages to its `PAGES` registry. Every manual Pages deployment rebuilds these files. Submit **https://protectourpoconos.com/sitemap.xml** to Search Console after deployment. Last-modified dates are deliberately omitted rather than reporting inaccurate build dates. Schema describes the actual site and does not promise special search or AI results.
+`scripts/build-site.py` owns the route registry, canonical domain, social preview metadata, WebSite/Organization/page/breadcrumb structured data, robots.txt and XML sitemap. Add future pages to its `PAGES` registry. Every Pages deployment rebuilds these files. Submit **https://protectourpoconos.com/sitemap.xml** to Search Console after deployment. Last-modified dates are deliberately omitted rather than reporting inaccurate build dates. Schema describes the actual site and does not promise special search or AI results.
 
 Google Analytics 4 measurement ID `G-XR259KZ2L9` is loaded by `assets/js/analytics.js` only on the public domain (including www). Local and GitHub-hostname previews do not send analytics. This is a Google tag, not a Google Tag Manager container. The privacy notice on each page describes analytics cookies, collected usage/device/referrer information, and Google Fonts. Keep those notices accurate when changing tracking. Email signup and tip forms remain unavailable.
 
-Deployment stays manual; pushing commits alone does not publish the site.
+Pushes to main now publish the site, including subtitle edits made through GitHub.
 
 
 ## Resources and agentic browsing
@@ -155,3 +155,7 @@ For an optional independent audit (no project dependency): `npx lighthouse https
 Pages use WebP copies of the supplied raster assets; original PNGs remain available for editing. Keep WebP variants updated when replacing artwork (current encoding: Pillow WebP quality 82, method 6). Content images have dimensions and lazy loading; the homepage hero is preloaded. The inline head script establishes the JavaScript-enabled menu state before first paint, preventing a late mobile navigation collapse. Do not move it back into the deferred script alone.
 
 GitHub Pages controls HTTP cache lifetimes; CSS/JS content versions invalidate changed files but do not change the host's cache policy. Performance results should be compared using a fresh public-site audit, not a local uncompressed development server.
+
+### FAQ and section navigation
+
+Edit `faq.html` for questions and answers. The build generates FAQPage structured data from native details answers and the visible stance section, alongside the sitemap and breadcrumb graph. No separate schema copy needs maintenance. Shared jump offsets measure the header and any sticky topic bar once, without extra section margins.

@@ -1,7 +1,9 @@
 name: Deploy static site to GitHub Pages
 
-# Run manually when the draft content and destination links are ready.
+# Publish repository edits automatically; manual runs remain available.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

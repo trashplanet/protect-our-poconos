@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('project_sync', ROOT / 'scripts/sync-projects.py')
 sync = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(sync)
-PAGES = ['index.html', 'projects.html', 'news.html', 'issues.html', 'take-action.html', 'resources.html']
+PAGES = ['index.html', 'projects.html', 'news.html', 'issues.html', 'take-action.html', 'resources.html', 'faq.html']
 
 class SiteLinksTests(unittest.TestCase):
     def test_local_links_and_assets(self):

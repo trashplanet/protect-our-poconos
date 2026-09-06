@@ -1,5 +1,6 @@
 """Build clean public routes, metadata, redirects and sitemap. No dependencies."""
 import html
+import importlib.util
 import hashlib
 import json
 import re
@@ -11,7 +12,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://protectourpoconos.com'
 PAGES = {'index.html': '/', 'news.html': '/news/', 'projects.html': '/projects/',
-         'resources.html': '/resources/', 'issues.html': '/issues/', 'take-action.html': '/take-action/'}
+         'faq.html': '/faq/', 'resources.html': '/resources/', 'issues.html': '/issues/', 'take-action.html': '/take-action/'}
 OUT = ROOT / '_site'
 
 
@@ -46,6 +47,21 @@ def build():
             {'@type': 'Organization', '@id': BASE + '/#organization', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'logo': BASE + '/assets/logo.svg'},
             {'@type': 'WebSite', '@id': BASE + '/#website', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'publisher': {'@id': BASE + '/#organization'}, 'inLanguage': 'en-US'},
             {'@type': 'CollectionPage' if source in ['news.html', 'projects.html', 'resources.html'] else 'WebPage', '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US'}]}
+        if source == 'faq.html':
+            spec = importlib.util.spec_from_file_location('content', ROOT / 'scripts/sync-projects.py')
+            content = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(content)
+            doc = content.Document(page)
+            questions = []
+            for node in doc.root.descendants():
+                if node.has_class('faq-item'):
+                    questions.append({'@type': 'Question', 'name': node.first(tag='summary').text(),
+                        'acceptedAnswer': {'@type': 'Answer', 'text': node.first(cls='faq-ans').text()}})
+                elif 'data-faq-stance' in node.attrs:
+                    paragraphs = [n.text() for n in node.descendants() if n.tag == 'p'][1:]
+                    questions.append({'@type': 'Question', 'name': node.first(tag='h2').text(),
+                        'acceptedAnswer': {'@type': 'Answer', 'text': ' '.join(paragraphs)}})
+            schema['@graph'][2].update({'@type': 'FAQPage', 'mainEntity': questions})
         if route != '/':
             schema['@graph'][-1]['breadcrumb'] = {'@id': canonical + '#breadcrumb'}
             schema['@graph'].append({'@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', 'itemListElement': [

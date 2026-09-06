@@ -16,3 +16,5 @@ The site focuses on Pike and Monroe counties. Project records distinguish docume
 ## Optional
 
 - [XML sitemap](https://protectourpoconos.com/sitemap.xml): Canonical page inventory, regenerated with each publication.
+
+- [FAQ](https://protectourpoconos.com/faq/): Answers about local proposals, power, water, jobs and participation.
