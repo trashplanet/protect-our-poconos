@@ -238,7 +238,7 @@
 .faq-item[open] summary::after {content:'−';}
 .faq-item summary:hover {background:#f6faf7;}
 .faq-item summary:focus-visible {outline:3px solid #34a184;outline-offset:-4px;}
-.faq-page .faq-stance {background:linear-gradient(180deg,#eef4ef 0%,#dce8df 10%,#afc8b9 24%,#719884 40%,#3d6552 56%,#203e30 73%,#12241d 91%);padding-top:220px;}
+.faq-page .faq-stance {padding-top:220px;}
 .faq-page .faq-closing {background:#12241d;}
 .faq-page .faq-jump {top:var(--header-height,93px);}
 @media(max-width:1100px){.faq-page .faq-jump{position:relative;top:auto;}}
@@ -255,19 +255,20 @@
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
 }
-/* Use the homepage's muted forest tones, easing into and out of the transition. */
-.faq-page .faq-stance {
-  background:linear-gradient(180deg,#eef4ef 0%,#e9efea 8%,#d4dfd7 20%,#adbeb2 35%,#7d9386 50%,#4f695b 65%,#2c4839 78%,#192e24 90%,#12241d 100%);
-}
 .faq-page .faq-stance > [aria-hidden="true"] {background:none;}
 .faq-page .faq-stance > img,
 .faq-page .faq-closing > img {
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
 }
-.faq-page .faq-stance {
-  background-color:#12241d;
-  background-size:100% 360px;
-  background-repeat:no-repeat;
+/* A single 860px fade spans the final questions and the stance section.
+   Both backgrounds show adjacent parts of the same image, even when answers open. */
+.faq-page {
+  --faq-transition:linear-gradient(180deg,#eef4ef 0%,#e8eee9 10%,#d7e0d9 22%,#b7c5bc 36%,#8eA296 50%,#647e6f 64%,#3f5c4c 77%,#223d2e 90%,#12241d 100%);
 }
-@media(max-width:760px){.faq-page .faq-stance{background-size:100% 300px;}}
+.faq-page #main-content > #zoning {
+  background:#eef4ef var(--faq-transition) center calc(100% + 340px) / 100% 860px no-repeat;
+}
+.faq-page .faq-stance {
+  background:#12241d var(--faq-transition) center -520px / 100% 860px no-repeat;
+}
