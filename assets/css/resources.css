@@ -285,3 +285,79 @@
  .resources-page main a { overflow-wrap:anywhere; }
 }
 
+
+.resources-page .homeowner-design-0 {position:relative;background:linear-gradient(180deg,#eaf2ec 0%,#f3f6f2 55%);overflow:hidden;scroll-margin-top:80px;}
+.resources-page .homeowner-design-1 {position:relative;max-width:1200px;margin:0 auto;padding:64px 40px;}
+.resources-page .homeowner-design-2 {font-size:12px;letter-spacing:0.2em;font-weight:600;color:#6a8579;margin:0 0 8px;}
+.resources-page .homeowner-design-3 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0 0 8px;color:#16281f;}
+.resources-page .homeowner-design-4 {font-size:15px;line-height:1.65;color:#5a6b61;max-width:660px;margin:0 0 16px;}
+.resources-page .homeowner-design-5 {display:flex;gap:10px;align-items:flex-start;background:#eef4f0;border:1px solid #d8e4dc;border-radius:12px;padding:13px 16px;max-width:660px;margin:0 0 34px;}
+.resources-page .homeowner-design-6 {flex-shrink:0;margin-top:2px;}
+.resources-page .homeowner-design-7 {font-size:12.5px;line-height:1.55;color:#5a6b61;}
+.resources-page .homeowner-design-8 {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.resources-page .homeowner-design-9 {background:#fff;border:1px solid #dbe6de;border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05);}
+.resources-page .homeowner-design-10 {width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:#2f7d63;margin-bottom:16px;}
+.resources-page .homeowner-design-11 {font-size:11px;letter-spacing:0.08em;font-weight:700;color:#6a8579;margin-bottom:6px;}
+.resources-page .homeowner-design-12 {font-family:'Newsreader';font-weight:600;font-size:20px;line-height:1.2;margin:0 0 10px;color:#16281f;}
+.resources-page .homeowner-design-13 {font-size:13.5px;line-height:1.6;color:#5c6d63;margin:0 0 18px;flex:1;}
+.resources-page .homeowner-design-14 {font-size:12px;font-weight:700;letter-spacing:0.03em;color:#2f7d63;display:inline-flex;align-items:center;gap:6px;}
+.resources-page .homeowner-design-14:hover {color:#266a54;}
+.resources-page .homeowner-design-15 {background:#fff;border:1px solid #dbe6de;border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05);}
+.resources-page .homeowner-design-16 {width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:#2f7d63;margin-bottom:16px;}
+.resources-page .homeowner-design-17 {font-size:11px;letter-spacing:0.08em;font-weight:700;color:#6a8579;margin-bottom:6px;}
+.resources-page .homeowner-design-18 {font-family:'Newsreader';font-weight:600;font-size:20px;line-height:1.2;margin:0 0 10px;color:#16281f;}
+.resources-page .homeowner-design-19 {font-size:13.5px;line-height:1.6;color:#5c6d63;margin:0 0 18px;flex:1;}
+.resources-page .homeowner-design-20 {font-size:12px;font-weight:700;letter-spacing:0.03em;color:#2f7d63;display:inline-flex;align-items:center;gap:6px;}
+.resources-page .homeowner-design-20:hover {color:#266a54;}
+.resources-page .homeowner-design-21 {background:#fff;border:1px solid #dbe6de;border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05);}
+.resources-page .homeowner-design-22 {width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:#2f7d63;margin-bottom:16px;}
+.resources-page .homeowner-design-23 {font-size:11px;letter-spacing:0.08em;font-weight:700;color:#6a8579;margin-bottom:6px;}
+.resources-page .homeowner-design-24 {font-family:'Newsreader';font-weight:600;font-size:20px;line-height:1.2;margin:0 0 10px;color:#16281f;}
+.resources-page .homeowner-design-25 {font-size:13.5px;line-height:1.6;color:#5c6d63;margin:0 0 18px;flex:1;}
+.resources-page .homeowner-design-26 {font-size:12px;font-weight:700;letter-spacing:0.03em;color:#2f7d63;display:inline-flex;align-items:center;gap:6px;}
+.resources-page .homeowner-design-26:hover {color:#266a54;}
+.resources-page .homeowner-design-27 {background:#fff;border:1px solid #dbe6de;border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05);}
+.resources-page .homeowner-design-28 {width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:#2f7d63;margin-bottom:16px;}
+.resources-page .homeowner-design-29 {font-size:11px;letter-spacing:0.08em;font-weight:700;color:#6a8579;margin-bottom:6px;}
+.resources-page .homeowner-design-30 {font-family:'Newsreader';font-weight:600;font-size:20px;line-height:1.2;margin:0 0 10px;color:#16281f;}
+.resources-page .homeowner-design-31 {font-size:13.5px;line-height:1.6;color:#5c6d63;margin:0 0 18px;flex:1;}
+.resources-page .homeowner-design-32 {font-size:12px;font-weight:700;letter-spacing:0.03em;color:#2f7d63;display:inline-flex;align-items:center;gap:6px;}
+.resources-page .homeowner-design-32:hover {color:#266a54;}
+.resources-page .homeowner-design-33 {background:#fff;border:1px solid #dbe6de;border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05);}
+.resources-page .homeowner-design-34 {width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:#2f7d63;margin-bottom:16px;}
+.resources-page .homeowner-design-35 {font-size:11px;letter-spacing:0.08em;font-weight:700;color:#6a8579;margin-bottom:6px;}
+.resources-page .homeowner-design-36 {font-family:'Newsreader';font-weight:600;font-size:20px;line-height:1.2;margin:0 0 10px;color:#16281f;}
+.resources-page .homeowner-design-37 {font-size:13.5px;line-height:1.6;color:#5c6d63;margin:0 0 12px;}
+.resources-page .homeowner-design-38 {display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px;}
+.resources-page .homeowner-design-39 {font-size:11px;font-weight:600;color:#3f6153;background:#e6efe9;border-radius:6px;padding:3px 9px;}
+.resources-page .homeowner-design-40 {font-size:11px;font-weight:600;color:#3f6153;background:#e6efe9;border-radius:6px;padding:3px 9px;}
+.resources-page .homeowner-design-41 {font-size:11px;font-weight:600;color:#3f6153;background:#e6efe9;border-radius:6px;padding:3px 9px;}
+.resources-page .homeowner-design-42 {font-size:11px;font-weight:600;color:#3f6153;background:#e6efe9;border-radius:6px;padding:3px 9px;}
+.resources-page .homeowner-design-43 {font-size:11px;font-weight:600;color:#3f6153;background:#e6efe9;border-radius:6px;padding:3px 9px;}
+.resources-page .homeowner-design-44 {margin-top:auto;display:flex;flex-direction:column;gap:8px;}
+.resources-page .homeowner-design-45 {font-size:12px;font-weight:700;letter-spacing:0.03em;color:#2f7d63;display:inline-flex;align-items:center;gap:6px;}
+.resources-page .homeowner-design-45:hover {color:#266a54;}
+.resources-page .homeowner-design-46 {font-size:12px;font-weight:600;color:#6a8579;display:inline-flex;align-items:center;gap:6px;}
+.resources-page .homeowner-design-46:hover {color:#2f7d63;}
+.resources-page .homeowner-design-47 {background:#fff;border:1px solid #dbe6de;border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05);}
+.resources-page .homeowner-design-48 {width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:#2f7d63;margin-bottom:16px;}
+.resources-page .homeowner-design-49 {font-size:11px;letter-spacing:0.08em;font-weight:700;color:#6a8579;margin-bottom:6px;}
+.resources-page .homeowner-design-50 {font-family:'Newsreader';font-weight:600;font-size:20px;line-height:1.2;margin:0 0 10px;color:#16281f;}
+.resources-page .homeowner-design-51 {font-size:13.5px;line-height:1.6;color:#5c6d63;margin:0 0 18px;flex:1;}
+.resources-page .homeowner-design-52 {font-size:12px;font-weight:700;letter-spacing:0.03em;color:#2f7d63;display:inline-flex;align-items:center;gap:6px;}
+.resources-page .homeowner-design-52:hover {color:#266a54;}
+
+/* The jump bar belongs on wide screens; hide it on phones. */
+.resources-page nav.research-design-14 { position:sticky; top:93px; }
+.resources-page #homeowners { background:linear-gradient(180deg,rgba(234,242,236,.92),rgba(243,246,242,.86) 55%,#f3f6f2),url('../misty-forest.png') center top / cover; }
+.resources-page #homeowners [class^="homeowner-design-"] { min-width:0; }
+@media(max-width:1100px) { .resources-page nav.research-design-14 { position:relative; top:auto; } }
+@media(max-width:900px) { .resources-page .homeowner-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:760px) {
+ .resources-page nav.research-design-14 { display:none; }
+ .resources-page .homeowner-grid { grid-template-columns:minmax(0,1fr); }
+ .resources-page .homeowner-container { padding:44px 20px; }
+}
+
+
+@media(min-width:1101px) { .resources-page main > section[id] { scroll-margin-top:165px; } }
