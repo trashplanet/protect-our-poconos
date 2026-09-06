@@ -49,3 +49,15 @@ class PublicBuildTests(unittest.TestCase):
                 self.assertIn('location.search + location.hash', stub)
                 self.assertIn(f'content="0;url={route}"', stub)
         self.assertIn(build.BASE + '/sitemap.xml', (build.OUT / 'robots.txt').read_text())
+
+    def test_resources_and_agent_guide(self):
+        guide = (build.OUT / 'llms.txt').read_text()
+        self.assertTrue(guide.startswith('# Protect Our Poconos\n'))
+        for route in build.PAGES.values():
+            self.assertIn('(' + build.BASE + route + ')', guide)
+        page = (build.OUT / 'resources/index.html').read_text()
+        for marker in ['{{', '<sc-for', '<sc-if', 'support.js', 'doc-page.js']:
+            self.assertNotIn(marker, page)
+        self.assertEqual(page.count('<details '), 3)
+        self.assertIn('Tip submissions are not available yet', page)
+        self.assertIn('id="glossary"', page)

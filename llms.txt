@@ -1,0 +1,18 @@
+# Protect Our Poconos
+
+> Community information about data-center proposals, transmission projects, local planning decisions, and public participation in Pennsylvania's Pocono region.
+
+The site focuses on Pike and Monroe counties. Project records distinguish documented proposals, related infrastructure, watchlist sites, and unverified community rumors. A documented proposal is not necessarily approved or under construction. Review each page's linked original records and dates; project details and meeting schedules can change. Official government and utility records take precedence over reporting and explicitly labeled community sources. Tip submissions and email signup are not currently available.
+
+## Main pages
+
+- [Home](https://protectourpoconos.com/): Overview of local development, issues, and participation.
+- [Local Projects](https://protectourpoconos.com/projects/): Project records, evidence categories, source links, and milestones.
+- [Resources](https://protectourpoconos.com/resources/): Official documents, township records, glossary, and agency directory.
+- [The Issues](https://protectourpoconos.com/issues/): Forests, water, power, noise, community character, and jobs; established facts and project-specific uncertainties.
+- [What's Happening](https://protectourpoconos.com/news/): Curated external reporting and updates, labeled by source.
+- [Take Action](https://protectourpoconos.com/take-action/): Meetings, officials, and public participation guidance. Confirm dates with the official source before attending.
+
+## Optional
+
+- [XML sitemap](https://protectourpoconos.com/sitemap.xml): Canonical page inventory, regenerated with each publication.

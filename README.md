@@ -140,3 +140,12 @@ The production build generates `/`, `/news/`, `/projects/`, `/issues/`, and `/ta
 Google Analytics 4 measurement ID `G-XR259KZ2L9` is loaded by `assets/js/analytics.js` only on the public domain (including www). Local and GitHub-hostname previews do not send analytics. This is a Google tag, not a Google Tag Manager container. The privacy notice on each page describes analytics cookies, collected usage/device/referrer information, and Google Fonts. Keep those notices accurate when changing tracking. Email signup and tip forms remain unavailable.
 
 Deployment stays manual; pushing commits alone does not publish the site.
+
+
+## Resources and agentic browsing
+
+Edit `resources.html` for the Research and Sources page, with its scoped styles in `assets/css/resources.css`. Its shared header/footer come from the homepage; keep those shells consistent. Township records use native `details`/`summary` disclosures, so the links are available without JavaScript. Prefer specific official documents over homepage links, and label meeting minutes as minutes rather than implying they are an ordinance's full text. Tip submissions remain unavailable.
+
+`llms.txt` is the concise public site guide. Update its page list when adding or removing canonical pages; the build publishes it alongside the sitemap. The standard-library tests check these links. Google Fonts use `display=optional` to avoid late font swaps moving content; on slow first visits the browser may retain the fallback font until a later navigation. This does not add WebMCP or change site features.
+
+For an optional independent audit (no project dependency): `npx lighthouse https://protectourpoconos.com/ --chrome-flags="--headless" --output=json --output-path=/tmp/poconos-lighthouse.json`. Agentic Browsing evaluates applicable audits; record the actual result and CLS, rather than assuming a fixed score on every device or run.

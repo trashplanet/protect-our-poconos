@@ -11,7 +11,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://protectourpoconos.com'
 PAGES = {'index.html': '/', 'news.html': '/news/', 'projects.html': '/projects/',
-         'issues.html': '/issues/', 'take-action.html': '/take-action/'}
+         'resources.html': '/resources/', 'issues.html': '/issues/', 'take-action.html': '/take-action/'}
 OUT = ROOT / '_site'
 
 
@@ -34,6 +34,7 @@ def build():
     OUT.mkdir(exist_ok=True)
     shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
     (OUT / '.nojekyll').touch()
+    shutil.copy2(ROOT / 'llms.txt', OUT / 'llms.txt')
     (OUT / 'CNAME').write_text('protectourpoconos.com\n')
     sitemap = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
     for source, route in PAGES.items():
@@ -44,7 +45,7 @@ def build():
         schema = {'@context': 'https://schema.org', '@graph': [
             {'@type': 'Organization', '@id': BASE + '/#organization', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'logo': BASE + '/assets/logo.svg'},
             {'@type': 'WebSite', '@id': BASE + '/#website', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'publisher': {'@id': BASE + '/#organization'}, 'inLanguage': 'en-US'},
-            {'@type': 'CollectionPage' if source in ['news.html', 'projects.html'] else 'WebPage', '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US'}]}
+            {'@type': 'CollectionPage' if source in ['news.html', 'projects.html', 'resources.html'] else 'WebPage', '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US'}]}
         if route != '/':
             schema['@graph'][-1]['breadcrumb'] = {'@id': canonical + '#breadcrumb'}
             schema['@graph'].append({'@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', 'itemListElement': [
@@ -68,7 +69,7 @@ def build():
     ET.indent(sitemap)
     ET.ElementTree(sitemap).write(OUT / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
     (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: ' + BASE + '/sitemap.xml\n')
-    print('Built five canonical pages, legacy redirects, robots.txt and sitemap.xml in _site/')
+    print('Built canonical pages, legacy redirects, robots.txt and sitemap.xml in _site/')
 
 
 if __name__ == '__main__':
