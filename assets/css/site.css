@@ -129,3 +129,13 @@ svg { flex-shrink: 0; }
 .closing-style-167 { line-height: 1.16; margin-bottom: 22px; text-wrap: balance; }
 .closing-style-167 > span { display: block; }
 .closing-style-167 > span + span { margin-top: 4px; }
+
+/* Shared CTA states: preserve dark labels against mint backgrounds. */
+.site-header .top-style-11,
+footer .resources-style-182 { transition: background-color .18s ease, box-shadow .18s ease; }
+.site-header .top-style-11:hover,
+.site-header .top-style-11:focus-visible { color:#07160f; background:#5bc5a7; box-shadow:0 3px 10px #123e2926; text-decoration:none; }
+footer .resources-style-182:hover,
+footer .resources-style-182:focus-visible { color:#0a1712; background:#b8e8d8; box-shadow:0 3px 12px #0003; text-decoration:none; }
+.site-header .top-style-11:focus-visible { outline:2px solid #123e29; outline-offset:3px; }
+footer .resources-style-182:focus-visible { outline:2px solid #b8e8d8; outline-offset:4px; }
