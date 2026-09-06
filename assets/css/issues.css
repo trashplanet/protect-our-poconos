@@ -115,7 +115,7 @@
 /* Balance the introduction and topic cards as one spacious hero area. */
 .issues-page .issue-hero .issue-inner { padding-top:56px; padding-bottom:32px; }
 .issues-page .issue-hero .issue-design-7 { max-width:740px; }
-.issues-page .issue-hero h1 { font-size:var(--hero-heading-size); margin-bottom:24px; }
+.issues-page .issue-hero h1 { font-size:var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); margin-bottom:24px; }
 .issues-page .issue-hero .issue-design-10 { max-width:650px; }
 .issues-page .issue-overview .issue-inner { padding-top:32px; padding-bottom:76px; }
 .issues-page .issue-jump-grid { gap:18px; }

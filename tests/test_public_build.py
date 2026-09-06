@@ -22,7 +22,7 @@ class PublicBuildTests(unittest.TestCase):
             page = (build.OUT / route.strip('/') / 'index.html').read_text()
             self.assertEqual(page.count('rel="canonical"'), 1)
             self.assertIn(f'href="{build.BASE}{route}"', page)
-            self.assertEqual(page.count('src="/assets/js/analytics.js"'), 1)
+            self.assertEqual(page.count('src="/assets/js/analytics.js?v='), 1)
             schema = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])
             self.assertEqual(schema['@graph'][2]['url'], build.BASE + route)
             nav = re.search(r'<nav\b.*?</nav>', page, re.S)[0]

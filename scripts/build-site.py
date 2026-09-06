@@ -1,5 +1,6 @@
 """Build clean public routes, metadata, redirects and sitemap. No dependencies."""
 import html
+import hashlib
 import json
 import re
 import shutil
@@ -21,7 +22,12 @@ def rewrite(match):
         return match[0]
     path = url.path.removeprefix('./')
     path = PAGES.get(path, '/' + path)
-    return f'{attribute}="{html.escape(path + ("?" + url.query if url.query else "") + ("#" + url.fragment if url.fragment else ""), quote=True)}"'
+    query = url.query
+    asset = ROOT / path.lstrip('/')
+    if path.startswith('/assets/') and asset.suffix in {'.css', '.js'} and asset.is_file():
+        version = hashlib.sha256(asset.read_bytes()).hexdigest()[:12]
+        query = (query + '&' if query else '') + 'v=' + version
+    return f'{attribute}="{html.escape(path + ("?" + query if query else "") + ("#" + url.fragment if url.fragment else ""), quote=True)}"'
 
 
 def build():
