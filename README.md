@@ -25,6 +25,8 @@ Open http://localhost:4173. Stop with Ctrl+C. In GitHub Desktop, add this folder
 - `assets/css/design.css`: exact dark mockup styling extracted from the export and deduplicated. Section-prefixed selectors map back to HTML.
 - `assets/css/site.css`: responsive layouts, mobile navigation, accessibility, and small visual fixes.
 - `assets/js/site.js`: menu, accessible dialogs for unfinished destinations, and sharing.
+- `partials/`: the header, navigation and footer that repeat on every page, kept in one place.
+- `scripts/render-partials.py`: dependency-free authoring helper that renders the partials into each committed page.
 - `assets/vendor/`: local Foundation CSS and its MIT license. Foundation XY grid container/cell classes are used alongside the mockup's custom column ratios.
 - `.github/workflows/pages.yml`: automatic GitHub Pages deployment, uploading public files only.
 
@@ -54,10 +56,23 @@ Keep these CSS and image files. Split the header/footer into theme templates, mo
 
 ```sh
 node --check assets/js/site.js
+python3 scripts/render-partials.py --check
 git diff --check
 ```
 
 Check the homepage at desktop, tablet, and mobile widths, including mobile menu, keyboard focus, Escape dismissal, image loading, and anchor navigation.
+
+## Maintaining the shared header and footer
+
+The site header, its navigation and the footer repeat on every page, so they live once in `partials/`:
+
+- `partials/site-header.html`: the header — logo, mobile menu button, navigation and the Take Action button.
+- `partials/primary-nav.html`: the navigation links. The same list is the top bar on desktop and, when the menu button is toggled, the mobile menu drawer; `assets/css/site.css` and `assets/js/site.js` handle the responsive switch.
+- `partials/footer.html`: the footer.
+
+Edit the partial, then run `python3 scripts/render-partials.py` to write the assembled header and footer back into every page and commit the results. Preview and GitHub Pages keep serving the generated static HTML with no request-time build. The deploy workflow renders the partials before publishing, and `--check` fails CI if a committed page has drifted from them.
+
+Only two things differ between pages, so they are the only template variables: `{{home_href}}` (the logo and footer "Home" target, `#top` on the homepage and `index.html#top` elsewhere) and `{{active_*}}` (adds `aria-current="page"` to the current page's navigation link). The per-page values live in the `PAGES` table at the top of `scripts/render-partials.py`; add a new page there when you create one.
 
 ## Maintaining the project tracker
 
