@@ -27,7 +27,9 @@ Open http://localhost:4173. Stop with Ctrl+C. In GitHub Desktop, add this folder
 - `assets/js/site.js`: menu, accessible dialogs for unfinished destinations, and sharing.
 - `partials/`: the header, navigation and footer that repeat on every page, kept in one place.
 - `scripts/render-partials.py`: dependency-free authoring helper that renders the partials into each committed page.
-- `assets/vendor/`: local Foundation CSS and its MIT license. Foundation XY grid container/cell classes are used alongside the mockup's custom column ratios.
+- `assets/css/foundation-subset.css`: the ~13 KB slice of Foundation the pages actually load (global base plus the `grid-container`, `grid-x`, `cell`, `button` and `show-for-sr` classes). This is what pages link, in place of the full library.
+- `scripts/subset-foundation.py`: regenerates `foundation-subset.css` from the vendored Foundation build; re-run only after upgrading Foundation.
+- `assets/vendor/`: the full local Foundation CSS (source for the subset) and its MIT license. Foundation XY grid container/cell classes are used alongside the mockup's custom column ratios. The full file is no longer linked by any page.
 - `.github/workflows/pages.yml`: automatic GitHub Pages deployment, uploading public files only.
 
 ## GitHub Pages
@@ -73,6 +75,15 @@ The site header, its navigation and the footer repeat on every page, so they liv
 Edit the partial, then run `python3 scripts/render-partials.py` to write the assembled header and footer back into every page and commit the results. Preview and GitHub Pages keep serving the generated static HTML with no request-time build. The deploy workflow renders the partials before publishing, and `--check` fails CI if a committed page has drifted from them.
 
 Only two things differ between pages, so they are the only template variables: `{{home_href}}` (the logo and footer "Home" target, `#top` on the homepage and `index.html#top` elsewhere) and `{{active_*}}` (adds `aria-current="page"` to the current page's navigation link). The per-page values live in the `PAGES` table at the top of `scripts/render-partials.py`; add a new page there when you create one.
+
+## Stylesheets
+
+Each page loads a shared base — `foundation-subset.css`, `design.css`, `site.css`, `layout.css`, `fonts.css` — plus one page-specific file (`resources.css`, `faq.css`, and so on). Edit the CSS files directly; they are plain source.
+
+Two build-time efficiencies keep the payload down without changing how you author:
+
+- **Foundation subset.** The pages only use Foundation's global base and five classes, so `scripts/subset-foundation.py` extracts just those into `assets/css/foundation-subset.css` (~13 KB instead of 131 KB). Pages link the subset; the full library stays in `assets/vendor/` as its source. Re-run the script only after upgrading Foundation.
+- **Minification.** `scripts/build-site.py` strips comments and collapses whitespace in every `assets/css/*.css` file as it copies them into `_site/`. The committed source stays readable; only the published copy is minified. (GitHub Pages also gzips responses, so this mostly shrinks the uncompressed files; the Foundation subset is the change that meaningfully cuts transfer size.)
 
 ## Maintaining the project tracker
 

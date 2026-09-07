@@ -29,6 +29,19 @@ BREADCRUMB_NAMES = {'news.html': "News & Updates", 'projects.html': 'Local Proje
 OUT = ROOT / '_site'
 
 
+def minify_css(text):
+    """Conservatively minify CSS: drop comments and collapse whitespace, leaving
+    string literals and combinators intact so values like calc() are unchanged."""
+    literals = []
+    text = re.sub(r'"(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\'',
+                  lambda m: literals.append(m[0]) or f'\x00{len(literals) - 1}\x00', text)
+    text = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
+    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r'\s*([{};,])\s*', r'\1', text)
+    text = re.sub(r';\}', '}', text).strip()
+    return re.sub(r'\x00(\d+)\x00', lambda m: literals[int(m[1])], text)
+
+
 def rewrite(match):
     attribute, value = match.groups()
     url = urlsplit(html.unescape(value))
@@ -47,6 +60,8 @@ def rewrite(match):
 def build():
     OUT.mkdir(exist_ok=True)
     shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
+    for stylesheet in (OUT / 'assets/css').glob('*.css'):
+        stylesheet.write_text(minify_css(stylesheet.read_text()))
     (OUT / '.nojekyll').touch()
     shutil.copy2(ROOT / 'llms.txt', OUT / 'llms.txt')
     (OUT / 'CNAME').write_text('protectourpoconos.com\n')

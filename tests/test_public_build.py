@@ -17,6 +17,21 @@ class PublicBuildTests(unittest.TestCase):
     def setUpClass(cls):
         build.build()
 
+    def test_css_foundation_subset_and_minification(self):
+        for route in build.PAGES.values():
+            page = (build.OUT / route.strip('/') / 'index.html').read_text()
+            self.assertRegex(page, r'href="/assets/css/foundation-subset\.css\?v=')
+            self.assertNotIn('vendor/foundation.min.css', page)
+        subset = (build.OUT / 'assets/css/foundation-subset.css').read_text()
+        self.assertIn('.grid-container', subset)
+        self.assertIn('.button{', subset)
+        for dropped in ['.reveal', '.dropdown', '.accordion', '.small-6', '.grid-margin']:
+            self.assertNotIn(dropped, subset)
+        for name in ['design', 'resources']:
+            built = (build.OUT / f'assets/css/{name}.css').read_text()
+            self.assertNotIn('/*', built)
+            self.assertLess(len(built), len((build.ROOT / f'assets/css/{name}.css').read_text()))
+
     def test_routes_metadata_and_internal_targets(self):
         for route in build.PAGES.values():
             page = (build.OUT / route.strip('/') / 'index.html').read_text()
