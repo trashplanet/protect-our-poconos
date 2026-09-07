@@ -23,7 +23,7 @@ PAGE_IMAGES = {
     'faq.html': ('faq-hero.webp', 1916, 821, 'Sunset over forested Pocono mountain ridges'),
     'take-action.html': ('take-action-hero.webp', 1916, 821, 'Pocono scenery accompanying community participation information'),
 }
-BREADCRUMB_NAMES = {'news.html': "What's Happening", 'projects.html': 'Local Projects',
+BREADCRUMB_NAMES = {'news.html': "News & Updates", 'projects.html': 'Local Projects',
                     'issues.html': 'The Risks', 'resources.html': 'Resources',
                     'faq.html': 'FAQ', 'take-action.html': 'Take Action'}
 OUT = ROOT / '_site'

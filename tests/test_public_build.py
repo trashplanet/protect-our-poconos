@@ -29,7 +29,7 @@ class PublicBuildTests(unittest.TestCase):
             schema = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])
             self.assertEqual(schema['@graph'][2]['url'], build.BASE + route)
             nav = re.search(r'<nav\b.*?</nav>', page, re.S)[0]
-            self.assertEqual(nav.count("What's Happening"), 1)
+            self.assertEqual(nav.count("News &amp; Updates"), 1)
             self.assertNotRegex(nav, r'>\s*Updates\s*<')
             self.assertIn('href="/news/"', nav)
             for target in re.findall(r'(?<![\w-])(?:href|src)="([^"]+)"', page):
