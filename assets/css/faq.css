@@ -259,17 +259,17 @@
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 65%,transparent 100%);
 }
-/* A single 860px fade spans the final questions and the stance section.
+/* A single 1100px eased fade spans the final questions and the stance section.
    Both backgrounds show adjacent parts of the same image, even when answers open. */
 .faq-page {
-  --faq-transition:linear-gradient(180deg,#eef4ef 0%,#e8eee9 10%,#d7e0d9 22%,#b7c5bc 36%,#8eA296 50%,#647e6f 64%,#3f5c4c 77%,#223d2e 88%,#192f24 93%,#14271f 97%,#12241d 100%);
+  --faq-transition:linear-gradient(180deg,#eef4ef 0%,#edf3ee 5%,#e9efea 10%,#e2e9e4 15%,#d9e0db 20%,#ced6d0 25%,#c1c9c4 30%,#b2bbb6 35%,#a2aca6 40%,#919c96 45%,#808c86 50%,#6f7c76 55%,#5e6c66 60%,#4e5d56 65%,#3f4f48 70%,#32423c 75%,#273831 80%,#1e2f28 85%,#172922 90%,#13251e 95%,#12241d 100%);
 }
 .faq-page #main-content > #zoning {
   /* Ease in from the pale section even when collapsed questions shorten this section. */
   background:
     linear-gradient(180deg,#eef4ef 0%,rgba(238,244,239,.96) 18%,rgba(238,244,239,.7) 42%,rgba(238,244,239,.25) 72%,rgba(238,244,239,0) 100%) center top / 100% 240px no-repeat,
-    var(--faq-transition) center calc(100% + 180px) / 100% 860px no-repeat #eef4ef;
+    var(--faq-transition) center calc(100% + 320px) / 100% 1100px no-repeat #eef4ef;
 }
 .faq-page .faq-stance {
-  background:#12241d var(--faq-transition) center -680px / 100% 860px no-repeat;
+  background:#12241d var(--faq-transition) center -780px / 100% 1100px no-repeat;
 }
