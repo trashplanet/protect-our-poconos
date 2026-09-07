@@ -119,9 +119,15 @@ class PublicBuildTests(unittest.TestCase):
         page = (build.OUT / '404.html').read_text()
         self.assertIn('content="noindex"', page)
         self.assertIn('class="site-header', page)
+        self.assertIn('notfound-hero', page)
         self.assertRegex(page, r'href="/assets/css/foundation-subset\.css\?v=')
         self.assertNotIn('href="assets/', page)
         self.assertNotIn('src="./assets', page)
+        # the 404 hero reuses the interior-page treatment (serif heading, forest background)
+        site_css = (build.OUT / 'assets/css/site.css').read_text()
+        self.assertIn('.notfound-hero', site_css)
+        self.assertIn('Newsreader', site_css)
+        self.assertIn('forest-dark.webp', site_css)
 
     def test_sitemap_and_redirects(self):
         locs = [n.text for n in ET.parse(build.OUT / 'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
