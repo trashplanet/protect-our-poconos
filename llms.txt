@@ -12,6 +12,7 @@ The site focuses on Pike and Monroe counties. Project records distinguish docume
 - [The Issues](https://protectourpoconos.com/issues/): Forests, water, power, noise, community character, and jobs; established facts and project-specific uncertainties.
 - [News & Updates](https://protectourpoconos.com/news/): Curated external reporting and updates, labeled by source.
 - [Take Action](https://protectourpoconos.com/take-action/): Meetings, officials, and public participation guidance. Confirm dates with the official source before attending.
+- [About](https://protectourpoconos.com/about/): What this project is, how information is verified, and how project statuses are defined.
 
 ## Optional
 

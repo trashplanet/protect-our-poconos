@@ -15,6 +15,7 @@ Open http://localhost:4173. Stop with Ctrl+C. In GitHub Desktop, add this folder
 ## Files
 
 - `index.html`: homepage content and semantic sections.
+- `about.html` and `assets/css/about.css`: the About page (mission, how information is verified, project-status definitions) and its scoped styles. Marked up as an `AboutPage` whose `mainEntity` is the organization.
 - `news.html`: curated news, featured stories, sourced dates, WVIA series and an outside case study.
 - `assets/data/news.json`: news metadata, summaries, source URLs and visible context notes.
 - `scripts/render-news.py`: dependency-free authoring helper that updates the committed static news sections.

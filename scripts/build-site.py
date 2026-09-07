@@ -37,7 +37,8 @@ ORGANIZATION = {
                    {'@type': 'Thing', 'name': 'Electric power transmission', 'sameAs': 'https://en.wikipedia.org/wiki/Electric_power_transmission'}],
 }
 PAGES = {'index.html': '/', 'news.html': '/news/', 'projects.html': '/projects/',
-         'faq.html': '/faq/', 'resources.html': '/resources/', 'issues.html': '/issues/', 'take-action.html': '/take-action/'}
+         'faq.html': '/faq/', 'resources.html': '/resources/', 'issues.html': '/issues/',
+         'take-action.html': '/take-action/', 'about.html': '/about/'}
 # Existing landscape artwork, unique to each page; dimensions are native pixels.
 PAGE_IMAGES = {
     'index.html': ('hero-waterfall.webp', 1672, 941, 'Waterfall surrounded by forest in the Poconos'),
@@ -47,10 +48,11 @@ PAGE_IMAGES = {
     'resources.html': ('resources-hero.webp', 2172, 724, 'Pocono landscape accompanying community research resources'),
     'faq.html': ('faq-hero.webp', 1916, 821, 'Sunset over forested Pocono mountain ridges'),
     'take-action.html': ('take-action-hero.webp', 1916, 821, 'Pocono scenery accompanying community participation information'),
+    'about.html': ('mountains-sunset.webp', 2172, 724, 'Sunset over the Pocono mountains'),
 }
 BREADCRUMB_NAMES = {'news.html': "News & Updates", 'projects.html': 'Local Projects',
                     'issues.html': 'The Risks', 'resources.html': 'Resources',
-                    'faq.html': 'FAQ', 'take-action.html': 'Take Action'}
+                    'faq.html': 'FAQ', 'take-action.html': 'Take Action', 'about.html': 'About'}
 OUT = ROOT / '_site'
 
 
@@ -140,11 +142,14 @@ def build():
         schema = {'@context': 'https://schema.org', '@graph': [
             ORGANIZATION,
             {'@type': 'WebSite', '@id': BASE + '/#website', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'publisher': {'@id': BASE + '/#organization'}, 'inLanguage': 'en-US'},
-            {'@type': 'CollectionPage' if source in ['news.html', 'projects.html', 'resources.html'] else 'WebPage', '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US', 'datePublished': published, 'dateModified': modified, 'about': ABOUT_ENTITIES}]}
+            {'@type': {'news.html': 'CollectionPage', 'projects.html': 'CollectionPage', 'resources.html': 'CollectionPage', 'about.html': 'AboutPage'}.get(source, 'WebPage'), '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US', 'datePublished': published, 'dateModified': modified, 'about': ABOUT_ENTITIES}]}
         schema['@graph'][2]['primaryImageOfPage'] = {
             '@type': 'ImageObject', '@id': canonical + '#primaryimage',
             'url': image_url, 'contentUrl': image_url, 'width': image_width,
             'height': image_height, 'caption': image_alt}
+        if source == 'about.html':
+            # The About page is about the organization itself.
+            schema['@graph'][2]['mainEntity'] = {'@id': BASE + '/#organization'}
         if source == 'news.html':
             stories = json.loads((ROOT / 'assets/data/news.json').read_text())
             schema['@graph'][2]['mainEntity'] = {'@type': 'ItemList', 'itemListElement': [

@@ -34,6 +34,7 @@ PAGES = {
     'resources.html': ('index.html#top', 'resources'),
     'faq.html': ('index.html#top', 'faq'),
     'take-action.html': ('index.html#top', None),
+    'about.html': ('index.html#top', None),
     '404.html': ('index.html#top', None),
 }
 NAV_KEYS = ['news', 'issues', 'projects', 'resources', 'faq']
