@@ -85,6 +85,16 @@ Two build-time efficiencies keep the payload down without changing how you autho
 - **Foundation subset.** The pages only use Foundation's global base and five classes, so `scripts/subset-foundation.py` extracts just those into `assets/css/foundation-subset.css` (~13 KB instead of 131 KB). Pages link the subset; the full library stays in `assets/vendor/` as its source. Re-run the script only after upgrading Foundation.
 - **Minification.** `scripts/build-site.py` strips comments and collapses whitespace in every `assets/css/*.css` file as it copies them into `_site/`. The committed source stays readable; only the published copy is minified. (GitHub Pages also gzips responses, so this mostly shrinks the uncompressed files; the Foundation subset is the change that meaningfully cuts transfer size.)
 
+## Search metadata, feed and 404
+
+`scripts/build-site.py` generates the crawlable extras at publish time:
+
+- **Per-page JSON-LD** (Organization, WebSite, WebPage/CollectionPage, breadcrumbs, FAQ). Each page carries `datePublished`/`dateModified` taken from its git history, and `about`/`areaServed`/`knowsAbout` entities linked by `sameAs` to Wikipedia so the data-center / Poconos / Pennsylvania topic is stated for search and answer engines rather than inferred. The News page adds an `ItemList` of its stories. Because the dates come from git, both workflows check out with `fetch-depth: 0`.
+- **`sitemap.xml`** with a `<lastmod>` per URL, **`robots.txt`**, and **`feed.xml`** — an RSS feed of the News items, advertised with a `<link rel="alternate">` on the home and News pages.
+- **`404.html`** — GitHub Pages serves it for any unknown path. It is authored like any page (shared header/footer via the partials) and built with absolute links and `noindex`; its scoped styles live under `.notfound-*` in `site.css`. Re-run `render-partials.py` if you change it.
+
+Re-validate structured data (Rich Results Test / Search Console) after changing the schema in `build-site.py`.
+
 ## Maintaining the project tracker
 
 Edit card content directly in `projects.html`; no build step or browser-rendered data feed is required. Each `article.tracker-card` has a stable project `id`, `data-category`, space-separated `data-county`, numeric `data-rank`, and optional ISO `data-deadline`. Update visible card text, stat values, milestone details and source links together. Run `python3 scripts/sync-projects.py` after tracker edits. Homepage project references and homepage/tracker project counts are generated from the tracker cards.

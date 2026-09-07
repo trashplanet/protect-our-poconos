@@ -1,16 +1,41 @@
-"""Build clean public routes, metadata, redirects and sitemap. No dependencies."""
+"""Build clean public routes, metadata, redirects, sitemap and news feed. No dependencies."""
 import html
 import importlib.util
 import hashlib
 import json
 import re
 import shutil
+import subprocess
+from datetime import date, datetime, timezone
+from email.utils import format_datetime
 from pathlib import Path
 from urllib.parse import urlsplit
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://protectourpoconos.com'
+BUILD_DATE = date.today().isoformat()
+
+# Entities that ground the site's topic and geography for search and answer engines;
+# sameAs resolves each to Wikipedia (and thence Wikidata). Reused across pages so the
+# "Poconos means Pennsylvania" relationship is stated explicitly rather than inferred.
+DATA_CENTER = {'@type': 'Thing', 'name': 'Data center', 'sameAs': 'https://en.wikipedia.org/wiki/Data_center'}
+POCONOS = {'@type': 'Place', 'name': 'Pocono Mountains', 'sameAs': 'https://en.wikipedia.org/wiki/Pocono_Mountains'}
+PIKE = {'@type': 'AdministrativeArea', 'name': 'Pike County, Pennsylvania', 'sameAs': 'https://en.wikipedia.org/wiki/Pike_County,_Pennsylvania'}
+MONROE = {'@type': 'AdministrativeArea', 'name': 'Monroe County, Pennsylvania', 'sameAs': 'https://en.wikipedia.org/wiki/Monroe_County,_Pennsylvania'}
+PENNSYLVANIA = {'@type': 'State', 'name': 'Pennsylvania', 'sameAs': 'https://en.wikipedia.org/wiki/Pennsylvania'}
+ABOUT_ENTITIES = [DATA_CENTER, POCONOS, PIKE, MONROE, PENNSYLVANIA]
+ORGANIZATION = {
+    '@type': 'Organization', '@id': BASE + '/#organization', 'name': 'Protect Our Poconos',
+    'url': BASE + '/', 'logo': BASE + '/assets/logo.svg',
+    'description': 'Community information about data-center proposals, transmission projects, '
+                   'and land-use decisions in the Pocono region of Pennsylvania, focused on '
+                   'Pike and Monroe counties.',
+    'areaServed': [PIKE, MONROE, POCONOS],
+    'knowsAbout': [DATA_CENTER,
+                   {'@type': 'Thing', 'name': 'Land-use planning', 'sameAs': 'https://en.wikipedia.org/wiki/Land-use_planning'},
+                   {'@type': 'Thing', 'name': 'Electric power transmission', 'sameAs': 'https://en.wikipedia.org/wiki/Electric_power_transmission'}],
+}
 PAGES = {'index.html': '/', 'news.html': '/news/', 'projects.html': '/projects/',
          'faq.html': '/faq/', 'resources.html': '/resources/', 'issues.html': '/issues/', 'take-action.html': '/take-action/'}
 # Existing landscape artwork, unique to each page; dimensions are native pixels.
@@ -57,6 +82,44 @@ def rewrite(match):
     return f'{attribute}="{html.escape(path + ("?" + query if query else "") + ("#" + url.fragment if url.fragment else ""), quote=True)}"'
 
 
+def page_dates(source):
+    """(datePublished, dateModified) for a page, from git history. Needs full history
+    (the deploy checkout uses fetch-depth: 0); falls back to the build date otherwise."""
+    def git(*args):
+        try:
+            result = subprocess.run(['git', 'log', *args, '--', source], cwd=ROOT,
+                                    capture_output=True, text=True, check=True)
+            return result.stdout.split()
+        except (subprocess.SubprocessError, OSError):
+            return []
+    modified = git('-1', '--format=%cI')
+    published = git('--diff-filter=A', '--format=%cI')
+    latest = modified[0] if modified else BUILD_DATE
+    return (published[-1] if published else latest), latest
+
+
+def build_feed():
+    """RSS 2.0 feed of the curated news items, for readers and freshness discovery."""
+    items = json.loads((ROOT / 'assets/data/news.json').read_text())
+    rss = ET.Element('rss', version='2.0')
+    channel = ET.SubElement(rss, 'channel')
+    ET.SubElement(channel, 'title').text = 'Protect Our Poconos — News & Updates'
+    ET.SubElement(channel, 'link').text = BASE + '/news/'
+    ET.SubElement(channel, 'description').text = 'Curated reporting and updates on data-center proposals and land-use decisions in the Pocono region of Pennsylvania.'
+    ET.SubElement(channel, 'language').text = 'en-US'
+    for item in items:
+        entry = ET.SubElement(channel, 'item')
+        ET.SubElement(entry, 'title').text = item['title']
+        ET.SubElement(entry, 'link').text = item['url']
+        ET.SubElement(entry, 'description').text = item['summary']
+        ET.SubElement(entry, 'source', url=BASE + '/news/').text = item['source']
+        published = datetime.fromisoformat(item['date']).replace(tzinfo=timezone.utc)
+        ET.SubElement(entry, 'pubDate').text = format_datetime(published)
+        ET.SubElement(entry, 'guid', isPermaLink='true').text = item['url']
+    ET.indent(rss)
+    ET.ElementTree(rss).write(OUT / 'feed.xml', encoding='utf-8', xml_declaration=True)
+
+
 def build():
     OUT.mkdir(exist_ok=True)
     shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
@@ -73,14 +136,20 @@ def build():
         canonical = BASE + route
         image_file, image_width, image_height, image_alt = PAGE_IMAGES[source]
         image_url = BASE + '/assets/' + image_file
+        published, modified = page_dates(source)
         schema = {'@context': 'https://schema.org', '@graph': [
-            {'@type': 'Organization', '@id': BASE + '/#organization', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'logo': BASE + '/assets/logo.svg'},
+            ORGANIZATION,
             {'@type': 'WebSite', '@id': BASE + '/#website', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'publisher': {'@id': BASE + '/#organization'}, 'inLanguage': 'en-US'},
-            {'@type': 'CollectionPage' if source in ['news.html', 'projects.html', 'resources.html'] else 'WebPage', '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US'}]}
+            {'@type': 'CollectionPage' if source in ['news.html', 'projects.html', 'resources.html'] else 'WebPage', '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US', 'datePublished': published, 'dateModified': modified, 'about': ABOUT_ENTITIES}]}
         schema['@graph'][2]['primaryImageOfPage'] = {
             '@type': 'ImageObject', '@id': canonical + '#primaryimage',
             'url': image_url, 'contentUrl': image_url, 'width': image_width,
             'height': image_height, 'caption': image_alt}
+        if source == 'news.html':
+            stories = json.loads((ROOT / 'assets/data/news.json').read_text())
+            schema['@graph'][2]['mainEntity'] = {'@type': 'ItemList', 'itemListElement': [
+                {'@type': 'ListItem', 'position': position, 'url': story['url'], 'name': story['title']}
+                for position, story in enumerate(stories, 1)]}
         if source == 'faq.html':
             spec = importlib.util.spec_from_file_location('content', ROOT / 'scripts/sync-projects.py')
             content = importlib.util.module_from_spec(spec)
@@ -110,13 +179,17 @@ def build():
             metadata += f'<meta name="{name}" content="{html.escape(value, quote=True)}"/>\n'
         if source == 'index.html':
             metadata += '<link rel="preload" as="image" href="/assets/hero-waterfall.webp" fetchpriority="high"/>\n'
+        if source in ('index.html', 'news.html'):
+            metadata += '<link rel="alternate" type="application/rss+xml" title="Protect Our Poconos — News &amp; Updates" href="/feed.xml"/>\n'
         metadata += '<script type="application/ld+json">' + json.dumps(schema).replace('<', '\\u003c') + '</script>\n'
         page = re.sub(r'(?<![\w-])(href|src)="([^"]*)"', rewrite, page)
         page = page.replace('</head>', metadata + '</head>')
         dest = OUT / route.strip('/') / 'index.html' if route != '/' else OUT / 'index.html'
         dest.parent.mkdir(exist_ok=True)
         dest.write_text(page)
-        ET.SubElement(ET.SubElement(sitemap, 'url'), 'loc').text = canonical
+        url_node = ET.SubElement(sitemap, 'url')
+        ET.SubElement(url_node, 'loc').text = canonical
+        ET.SubElement(url_node, 'lastmod').text = modified[:10]
         if source != 'index.html':
             # GitHub Pages has no custom HTTP redirect rules. Instant meta refresh
             # plus JS preserves existing filter queries and section anchors.
@@ -124,7 +197,15 @@ def build():
     ET.indent(sitemap)
     ET.ElementTree(sitemap).write(OUT / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
     (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: ' + BASE + '/sitemap.xml\n')
-    print('Built canonical pages, legacy redirects, robots.txt and sitemap.xml in _site/')
+    build_feed()
+    notfound = ROOT / '404.html'
+    if notfound.exists():
+        # GitHub Pages serves /404.html for any unknown path, so its links must be
+        # absolute; the shared rewrite makes them so. Keep it out of the index and sitemap.
+        page = re.sub(r'(?<![\w-])(href|src)="([^"]*)"', rewrite, notfound.read_text())
+        page = page.replace('</head>', '<meta name="robots" content="noindex"/>\n</head>')
+        (OUT / '404.html').write_text(page)
+    print('Built canonical pages, legacy redirects, robots.txt, sitemap.xml, feed.xml and 404 in _site/')
 
 
 if __name__ == '__main__':

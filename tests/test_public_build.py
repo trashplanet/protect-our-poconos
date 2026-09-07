@@ -81,6 +81,48 @@ class PublicBuildTests(unittest.TestCase):
                     {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': build.BASE + '/'},
                     {'@type': 'ListItem', 'position': 2, 'name': build.BREADCRUMB_NAMES[source], 'item': build.BASE + route}])
 
+    def graph(self, page):
+        return json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])['@graph']
+
+    def test_freshness_dates_and_news_feed(self):
+        from datetime import datetime
+        for route in build.PAGES.values():
+            webpage = self.graph((build.OUT / route.strip('/') / 'index.html').read_text())[2]
+            for key in ('datePublished', 'dateModified'):
+                datetime.fromisoformat(webpage[key])  # raises if not a valid ISO date
+        ns = '{http://www.sitemaps.org/schemas/sitemap/0.9}'
+        urls = list(ET.parse(build.OUT / 'sitemap.xml').iter(ns + 'url'))
+        self.assertEqual(len(urls), len(build.PAGES))
+        for url in urls:
+            self.assertRegex(url.find(ns + 'lastmod').text, r'^\d{4}-\d{2}-\d{2}$')
+        stories = json.loads((build.ROOT / 'assets/data/news.json').read_text())
+        feed = ET.parse(build.OUT / 'feed.xml').getroot()
+        self.assertEqual(len(feed.findall('./channel/item')), len(stories))
+        self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
+
+    def test_entity_grounding(self):
+        graph = self.graph((build.OUT / 'index.html').read_text())
+        org = graph[0]
+        self.assertEqual(org['@type'], 'Organization')
+        self.assertTrue(any('Pennsylvania' in area['name'] for area in org['areaServed']))
+        self.assertTrue(org.get('knowsAbout') and org.get('description'))
+        about = {entity['name']: entity['sameAs'] for entity in graph[2]['about']}
+        self.assertIn('Pennsylvania', about)
+        self.assertIn('Data center', about)
+        for target in about.values():
+            self.assertTrue(target.startswith('https://en.wikipedia.org/'))
+        news_page = self.graph((build.OUT / 'news/index.html').read_text())[2]
+        self.assertEqual(news_page['mainEntity']['@type'], 'ItemList')
+        self.assertTrue(news_page['mainEntity']['itemListElement'])
+
+    def test_custom_404(self):
+        page = (build.OUT / '404.html').read_text()
+        self.assertIn('content="noindex"', page)
+        self.assertIn('class="site-header', page)
+        self.assertRegex(page, r'href="/assets/css/foundation-subset\.css\?v=')
+        self.assertNotIn('href="assets/', page)
+        self.assertNotIn('src="./assets', page)
+
     def test_sitemap_and_redirects(self):
         locs = [n.text for n in ET.parse(build.OUT / 'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
         self.assertEqual(set(locs), {build.BASE + p for p in build.PAGES.values()})

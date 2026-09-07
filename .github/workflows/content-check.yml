@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so build-site.py can date pages from git
       - name: Verify shared header and footer
         run: python3 scripts/render-partials.py --check
       - name: Verify shared project content
