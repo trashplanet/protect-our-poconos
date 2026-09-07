@@ -17,7 +17,6 @@
 .tracker-overview strong { font-size: 34px; font-weight: 600; }
 .tracker-overview span { max-width: 150px; font-size: 13px; line-height: 1.4; }
 .tracker-overview a:hover { color: #a6deca; }
-.tracker-reviewed { text-align: right; font-size: 12px; color: #d0e4d6; margin: 20px 0 0; }
 .tracker-content { padding-top: 22px; padding-bottom: 64px; }
 .project-legend { border-radius: 10px; background: #e8f1eb; padding: 24px; margin-bottom: 28px; }
 .project-legend h2 { font-family: 'Public Sans',sans-serif; font-weight: 700; font-size: 17px; margin-bottom: 20px; }
@@ -125,7 +124,6 @@
  .tracker-overview a { border: 0; padding: 0; gap: 12px; }
  .tracker-overview strong { font-size: 30px; }
  .tracker-overview span { font-size: 12px; }
- .tracker-reviewed { text-align: left; }
  .legend-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
  .legend-grid > div + div { border: 0; padding-left: 0; }
  .legend-grid > div:last-child { grid-column: 1 / -1; }

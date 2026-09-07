@@ -7,8 +7,6 @@
 .faq-page .faq-design-6 {font-size:12px;letter-spacing:0.22em;font-weight:600;color:#8fd4bf;margin:0 0 16px;}
 .faq-page .faq-design-7 {font-family:'Newsreader';font-weight:500;font-size:58px;line-height:1.0;letter-spacing:-0.01em;margin:0 0 20px;color:#f4faf6;}
 .faq-page .faq-design-8 {font-size:17px;line-height:1.62;color:#c8d8cf;max-width:600px;margin:0 0 22px;}
-.faq-page .faq-design-9 {display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 28px;}
-.faq-page .faq-design-10 {display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:#bfeeda;background:rgba(52,161,132,0.16);border:1px solid rgba(143,212,191,0.4);border-radius:999px;padding:6px 14px;}
 .faq-page .faq-design-11 {display:flex;gap:14px;flex-wrap:wrap;}
 .faq-page .faq-design-12 {display:inline-flex;align-items:center;gap:10px;background:#34a184;color:#07160f;font-size:14px;font-weight:700;padding:14px 26px;border-radius:9px;box-shadow:0 12px 30px rgba(52,161,132,0.3);}
 .faq-page .faq-design-13 {font-size:16px;}
@@ -239,7 +237,7 @@
 .faq-item summary:hover {background:#f6faf7;}
 .faq-item summary:focus-visible {outline:3px solid #34a184;outline-offset:-4px;}
 .faq-page .faq-stance {padding-top:60px;}
-.faq-page .faq-closing {background:#12241d;}
+.faq-page .faq-closing {background:#12241d;border-top:1px solid #3b5345;}
 .faq-page .faq-jump {top:var(--header-height,93px);}
 @media(max-width:1100px){.faq-page .faq-jump{position:relative;top:auto;}}
 @media(max-width:760px){.faq-page main section>div{padding-left:22px;padding-right:22px;}.faq-page .faq-stance{padding-top:40px;}}
@@ -267,7 +265,10 @@
   --faq-transition:linear-gradient(180deg,#eef4ef 0%,#e8eee9 10%,#d7e0d9 22%,#b7c5bc 36%,#8eA296 50%,#647e6f 64%,#3f5c4c 77%,#223d2e 88%,#192f24 93%,#14271f 97%,#12241d 100%);
 }
 .faq-page #main-content > #zoning {
-  background:#eef4ef var(--faq-transition) center calc(100% + 180px) / 100% 860px no-repeat;
+  /* Ease in from the pale section even when collapsed questions shorten this section. */
+  background:
+    linear-gradient(180deg,#eef4ef 0%,rgba(238,244,239,.96) 18%,rgba(238,244,239,.7) 42%,rgba(238,244,239,.25) 72%,rgba(238,244,239,0) 100%) center top / 100% 240px no-repeat,
+    var(--faq-transition) center calc(100% + 180px) / 100% 860px no-repeat #eef4ef;
 }
 .faq-page .faq-stance {
   background:#12241d var(--faq-transition) center -680px / 100% 860px no-repeat;
