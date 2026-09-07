@@ -138,3 +138,20 @@
  .issues-page .issue-jump-grid { gap:12px; }
  .issues-page .issue-jump-grid > a { padding:24px 12px 28px; }
 }
+
+/* Background treatments from the approved September 7 design export. */
+.issues-page .issue-hero {background-image:linear-gradient(180deg,rgba(9,18,13,0.62) 0%,rgba(9,18,13,0.5) 40%,rgba(9,18,13,0.72) 78%,#0f1f18 100%),url('../forest-dark.webp');background-size:cover;background-position:center;overflow:hidden;}
+.issues-page .issue-overview {background:linear-gradient(180deg,#0f1f18 0%,#0f1f18 62%,#13261d 100%);}
+.issues-page #i-forests {background:linear-gradient(180deg,#13261d 0%,#172c22 22%,#172c22 78%,#13261d 100%);}
+.issues-page #i-water {background:linear-gradient(180deg,#13261d 0%,#0f1f18 22%,#0f1f18 78%,#13261d 100%);}
+.issues-page #i-power {background:linear-gradient(180deg,#13261d 0%,#172c22 22%,#172c22 78%,#13261d 100%);}
+.issues-page #i-noise {background:linear-gradient(180deg,#13261d 0%,#0f1f18 22%,#0f1f18 78%,#13261d 100%);}
+.issues-page #i-community {background:linear-gradient(180deg,#13261d 0%,#172c22 22%,#172c22 78%,#13261d 100%);}
+.issues-page #i-jobs {background:linear-gradient(180deg,#13261d 0%,#0f1f18 22%,#0f1f18 78%,#13261d 100%);}
+.issues-page #health {background:linear-gradient(180deg,#13261d 0%,#11221a 46%,#0f1f18 80%,#0a1712 100%);overflow:hidden;}
+.issues-page #health::before {content:"";position:absolute;bottom:0;left:0;width:100%;height:100%;opacity:0.24;pointer-events:none;-webkit-mask-image:linear-gradient(to top,#000 30%,transparent 82%),linear-gradient(to right,#000 4%,transparent 38%,transparent 62%,#000 96%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to top,#000 30%,transparent 82%),linear-gradient(to right,#000 4%,transparent 38%,transparent 62%,#000 96%);mask-composite:intersect;background:url('../forest-silhouette.webp') bottom center/cover no-repeat;}
+.issues-page #health > div {position:relative;}
+.issues-page #health {border-top:1px solid rgba(224,240,232,.14);}
+.issues-page #health::after {content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 50% 8%,rgba(52,161,132,.12),transparent 55%);pointer-events:none;}
+.issues-page #health > div {z-index:1;}
+.issues-page .issue-closing {background-image:linear-gradient(rgba(9,18,13,0.34) 0%,rgba(9,18,13,0.55) 55%,rgba(9,18,13,0.78) 100%),url('../mountains-sunset.webp');background-size:cover;background-position:center 30%;}
