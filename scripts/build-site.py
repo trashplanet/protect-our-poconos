@@ -13,6 +13,19 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://protectourpoconos.com'
 PAGES = {'index.html': '/', 'news.html': '/news/', 'projects.html': '/projects/',
          'faq.html': '/faq/', 'resources.html': '/resources/', 'issues.html': '/issues/', 'take-action.html': '/take-action/'}
+# Existing landscape artwork, unique to each page; dimensions are native pixels.
+PAGE_IMAGES = {
+    'index.html': ('hero-waterfall.webp', 1672, 941, 'Waterfall surrounded by forest in the Poconos'),
+    'news.html': ('misty-mountains.webp', 2172, 724, 'Misty mountain ridges and forests in the Pocono region'),
+    'projects.html': ('issue-community.webp', 1672, 941, 'Illustration of the Pocono landscape and community character'),
+    'issues.html': ('forest-dark.webp', 1916, 821, 'Forested Pocono mountains'),
+    'resources.html': ('resources-hero.webp', 2172, 724, 'Pocono landscape accompanying community research resources'),
+    'faq.html': ('faq-hero.webp', 1916, 821, 'Sunset over forested Pocono mountain ridges'),
+    'take-action.html': ('take-action-hero.webp', 1916, 821, 'Pocono scenery accompanying community participation information'),
+}
+BREADCRUMB_NAMES = {'news.html': "What's Happening", 'projects.html': 'Local Projects',
+                    'issues.html': 'The Risks', 'resources.html': 'Resources',
+                    'faq.html': 'FAQ', 'take-action.html': 'Take Action'}
 OUT = ROOT / '_site'
 
 
@@ -43,10 +56,16 @@ def build():
         title = html.unescape(re.search(r'<title>\s*(.*?)\s*</title>', page, re.S)[1])
         description = html.unescape(re.search(r'<meta content="([^"]*)" name="description"', page)[1])
         canonical = BASE + route
+        image_file, image_width, image_height, image_alt = PAGE_IMAGES[source]
+        image_url = BASE + '/assets/' + image_file
         schema = {'@context': 'https://schema.org', '@graph': [
             {'@type': 'Organization', '@id': BASE + '/#organization', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'logo': BASE + '/assets/logo.svg'},
             {'@type': 'WebSite', '@id': BASE + '/#website', 'name': 'Protect Our Poconos', 'url': BASE + '/', 'publisher': {'@id': BASE + '/#organization'}, 'inLanguage': 'en-US'},
             {'@type': 'CollectionPage' if source in ['news.html', 'projects.html', 'resources.html'] else 'WebPage', '@id': canonical + '#webpage', 'url': canonical, 'name': title, 'description': description, 'isPartOf': {'@id': BASE + '/#website'}, 'inLanguage': 'en-US'}]}
+        schema['@graph'][2]['primaryImageOfPage'] = {
+            '@type': 'ImageObject', '@id': canonical + '#primaryimage',
+            'url': image_url, 'contentUrl': image_url, 'width': image_width,
+            'height': image_height, 'caption': image_alt}
         if source == 'faq.html':
             spec = importlib.util.spec_from_file_location('content', ROOT / 'scripts/sync-projects.py')
             content = importlib.util.module_from_spec(spec)
@@ -66,12 +85,13 @@ def build():
             schema['@graph'][-1]['breadcrumb'] = {'@id': canonical + '#breadcrumb'}
             schema['@graph'].append({'@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', 'itemListElement': [
                 {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
-                {'@type': 'ListItem', 'position': 2, 'name': title.split('|')[0].strip(), 'item': canonical}]})
+                {'@type': 'ListItem', 'position': 2, 'name': BREADCRUMB_NAMES[source], 'item': canonical}]})
         metadata = f'<link rel="canonical" href="{canonical}"/>\n'
-        for prop, value in {'og:type': 'website', 'og:site_name': 'Protect Our Poconos', 'og:title': title, 'og:description': description, 'og:url': canonical, 'og:image': BASE + '/assets/mountains-sunset.webp', 'og:image:alt': 'Forested Pocono mountains at sunset'}.items():
+        metadata += '<meta name="robots" content="max-image-preview:large"/>\n'
+        for prop, value in {'og:type': 'website', 'og:site_name': 'Protect Our Poconos', 'og:title': title, 'og:description': description, 'og:url': canonical, 'og:image': image_url, 'og:image:alt': image_alt, 'og:image:width': str(image_width), 'og:image:height': str(image_height), 'og:image:type': 'image/webp'}.items():
             metadata += f'<meta property="{prop}" content="{html.escape(value, quote=True)}"/>\n'
         metadata += '<meta name="twitter:card" content="summary_large_image"/>\n'
-        for name, value in {'twitter:title': title, 'twitter:description': description, 'twitter:image': BASE + '/assets/mountains-sunset.webp', 'twitter:image:alt': 'Forested Pocono mountains at sunset'}.items():
+        for name, value in {'twitter:title': title, 'twitter:description': description, 'twitter:image': image_url, 'twitter:image:alt': image_alt}.items():
             metadata += f'<meta name="{name}" content="{html.escape(value, quote=True)}"/>\n'
         if source == 'index.html':
             metadata += '<link rel="preload" as="image" href="/assets/hero-waterfall.webp" fetchpriority="high"/>\n'

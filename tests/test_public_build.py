@@ -43,6 +43,29 @@ class PublicBuildTests(unittest.TestCase):
                 if url.fragment and dest.suffix == '.html':
                     self.assertIn(f'id="{url.fragment}"', dest.read_text())
 
+    def test_page_images_and_breadcrumbs(self):
+        images = set()
+        for source, route in build.PAGES.items():
+            page = (build.OUT / route.strip('/') / 'index.html').read_text()
+            self.assertIn('name="robots" content="max-image-preview:large"', page)
+            image = re.search(r'property="og:image" content="([^"]+)"', page)[1]
+            self.assertNotIn(image, images)
+            images.add(image)
+            self.assertTrue(image.startswith(build.BASE + '/assets/'))
+            self.assertTrue((build.OUT / urlsplit(image).path.lstrip('/')).is_file())
+            width = int(re.search(r'property="og:image:width" content="(\d+)"', page)[1])
+            height = int(re.search(r'property="og:image:height" content="(\d+)"', page)[1])
+            self.assertGreaterEqual(width, 1200)
+            self.assertGreater(width, height)
+            graph = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])['@graph']
+            self.assertEqual(graph[2]['primaryImageOfPage']['url'], image)
+            crumbs = [node for node in graph if node['@type'] == 'BreadcrumbList']
+            self.assertEqual(len(crumbs), int(route != '/'))
+            if crumbs:
+                self.assertEqual(crumbs[0]['itemListElement'], [
+                    {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': build.BASE + '/'},
+                    {'@type': 'ListItem', 'position': 2, 'name': build.BREADCRUMB_NAMES[source], 'item': build.BASE + route}])
+
     def test_sitemap_and_redirects(self):
         locs = [n.text for n in ET.parse(build.OUT / 'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
         self.assertEqual(set(locs), {build.BASE + p for p in build.PAGES.values()})
