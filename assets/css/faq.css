@@ -238,11 +238,11 @@
 .faq-item[open] summary::after {content:'−';}
 .faq-item summary:hover {background:#f6faf7;}
 .faq-item summary:focus-visible {outline:3px solid #34a184;outline-offset:-4px;}
-.faq-page .faq-stance {padding-top:220px;}
+.faq-page .faq-stance {padding-top:60px;}
 .faq-page .faq-closing {background:#12241d;}
 .faq-page .faq-jump {top:var(--header-height,93px);}
 @media(max-width:1100px){.faq-page .faq-jump{position:relative;top:auto;}}
-@media(max-width:760px){.faq-page .faq-jump{display:none;}.faq-page main section>div{padding-left:22px;padding-right:22px;}.faq-page .faq-stance{padding-top:160px;}}
+@media(max-width:760px){.faq-page main section>div{padding-left:22px;padding-right:22px;}.faq-page .faq-stance{padding-top:40px;}}
 .faq-page .faq-jump a:hover {background:#1c3a2c;color:#fff;border-color:#1c3a2c;}
 .faq-page .faq-ans a:hover {color:#1c4636;}
 .faq-page .faq-design-12:hover,.faq-page .faq-design-230:hover {background:#5bc5a7;color:#07160f;}
@@ -264,11 +264,11 @@
 /* A single 860px fade spans the final questions and the stance section.
    Both backgrounds show adjacent parts of the same image, even when answers open. */
 .faq-page {
-  --faq-transition:linear-gradient(180deg,#eef4ef 0%,#e8eee9 10%,#d7e0d9 22%,#b7c5bc 36%,#8eA296 50%,#647e6f 64%,#3f5c4c 77%,#223d2e 90%,#12241d 100%);
+  --faq-transition:linear-gradient(180deg,#eef4ef 0%,#e8eee9 10%,#d7e0d9 22%,#b7c5bc 36%,#8eA296 50%,#647e6f 64%,#3f5c4c 77%,#223d2e 88%,#192f24 93%,#14271f 97%,#12241d 100%);
 }
 .faq-page #main-content > #zoning {
-  background:#eef4ef var(--faq-transition) center calc(100% + 340px) / 100% 860px no-repeat;
+  background:#eef4ef var(--faq-transition) center calc(100% + 180px) / 100% 860px no-repeat;
 }
 .faq-page .faq-stance {
-  background:#12241d var(--faq-transition) center -520px / 100% 860px no-repeat;
+  background:#12241d var(--faq-transition) center -680px / 100% 860px no-repeat;
 }

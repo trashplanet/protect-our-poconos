@@ -4,7 +4,7 @@
 .tracker-page [hidden] { display: none !important; }
 .tracker-page h1, .tracker-page h2 { font-family: Newsreader, Georgia, serif; }
 .tracker-page h3 { font-family: 'Public Sans', sans-serif; }
-.tracker-page .site-header { background: rgba(249,251,249,.96); }
+
 .tracker-page .eyebrow { font-size: 12px; letter-spacing: .15em; font-weight: 700; margin: 0 0 12px; color: #52776a; text-transform: uppercase; }
 .tracker-hero { color: #fff; background: linear-gradient(90deg,rgba(8,32,23,.87),rgba(8,32,23,.32)), url('../misty-forest.webp') center 48% / cover; }
 .tracker-hero > div { padding-top: 52px; padding-bottom: 24px; }

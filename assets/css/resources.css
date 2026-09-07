@@ -347,14 +347,14 @@
 .resources-page .homeowner-design-52 {font-size:12px;font-weight:700;letter-spacing:0.03em;color:#2f7d63;display:inline-flex;align-items:center;gap:6px;}
 .resources-page .homeowner-design-52:hover {color:#266a54;}
 
-/* The jump bar belongs on wide screens; hide it on phones. */
+/* Sticky on wide screens; compact scrolling navigation on phones. */
 .resources-page nav.research-design-14 { position:sticky; top:93px; }
 .resources-page #homeowners { background:linear-gradient(180deg,rgba(234,242,236,.92),rgba(243,246,242,.86) 55%,#f3f6f2),url('../misty-forest.webp') center top / cover; }
 .resources-page #homeowners [class^="homeowner-design-"] { min-width:0; }
 @media(max-width:1100px) { .resources-page nav.research-design-14 { position:relative; top:auto; } }
 @media(max-width:900px) { .resources-page .homeowner-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:760px) {
- .resources-page nav.research-design-14 { display:none; }
+
  .resources-page .homeowner-grid { grid-template-columns:minmax(0,1fr); }
  .resources-page .homeowner-container { padding:44px 20px; }
 }

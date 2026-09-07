@@ -1,0 +1,39 @@
+/* Shared outer gutters and hero inset. Narrow reading columns remain intentional. */
+:root {--page-width:1240px;--page-gutter:40px;--hero-top:72px;}
+@media(max-width:1000px){:root{--page-gutter:28px;}}
+@media(max-width:760px){:root{--page-gutter:20px;--hero-top:48px;}}
+body :is(.section-inner,.tracker-container,.news-wrap,.action-page .action-design-3,.action-page .action-design-17,.action-page .action-design-46,.action-page .action-design-60,.action-page .action-design-123,.resources-page .research-design-4,.resources-page .research-design-15,.resources-page .research-design-23,.resources-page .research-design-178,.resources-page .research-design-217,.resources-page .homeowner-design-1,.issues-page .issue-design-2,.issues-page .issue-design-12,.issues-page .issue-design-19,.issues-page .issue-design-39,.issues-page .issue-design-59,.faq-page .faq-design-4,.faq-page .faq-design-17,.faq-page .faq-design-224) {
+  width:100%;max-width:var(--page-width);margin-inline:auto;
+  padding-left:var(--page-gutter);padding-right:var(--page-gutter);
+}
+/* Override page-specific responsive hero rules at the shared layout boundary. */
+body :is(.hero-content,.tracker-hero > div,.news-hero .news-wrap,.issue-hero .issue-inner,.action-design-3,.research-design-4,.faq-design-4){padding-top:var(--hero-top)!important;}
+body :is(.hero-scene,.action-design-2,.research-design-1,.faq-design-1){align-items:flex-start!important;padding-inline:0;}
+
+/* The same pale green header on every page, independent of the page beneath it. */
+html body .site-header {background:#c3cfc8;}
+html body a:focus, html body a:active {color:#6fc4ac;}
+html body a.cta-teal:is(:hover,:focus,:active) {color:#07160f!important;background:#5bc5a7;text-decoration:none;}
+html body a.cta-teal span {color:inherit;}
+html body .faq-design-1 {padding-inline:0!important;}
+/* Enough room for the intended desktop titles with the actual Newsreader font. */
+@media(min-width:1101px){
+  .hero-content > .hero-style-16 {max-width:600px;}
+  .faq-page .faq-design-5 {max-width:800px;}
+}
+/* Compact, horizontally scrollable topic navigation remains available on phones. */
+@media(max-width:760px){
+  html body :is(.faq-jump,nav.research-design-14){display:block;position:relative;top:auto;}
+  html body :is(.faq-jump,nav.research-design-14)>div {
+    display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding:12px 20px;
+    scrollbar-width:thin;
+  }
+  html body :is(.faq-jump,nav.research-design-14) a {flex:0 0 auto;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;}
+  html body :is(.faq-jump,nav.research-design-14)>div>span{flex:0 0 auto;white-space:nowrap;}
+  .hero .home-hero-context {position:relative;isolation:isolate;text-shadow:0 2px 5px #07160fcc;}
+  .hero .home-hero-context::before {
+    content:'';position:absolute;inset:-24px -14px;z-index:-1;pointer-events:none;
+    background:radial-gradient(ellipse at center,rgba(6,20,14,.55) 15%,rgba(6,20,14,.28) 65%,transparent 100%);
+    filter:blur(12px);
+  }
+}

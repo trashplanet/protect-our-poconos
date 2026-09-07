@@ -159,3 +159,5 @@ GitHub Pages controls HTTP cache lifetimes; CSS/JS content versions invalidate c
 ### FAQ and section navigation
 
 Edit `faq.html` for questions and answers. The build generates FAQPage structured data from native details answers and the visible stance section, alongside the sitemap and breadcrumb graph. No separate schema copy needs maintenance. Shared jump offsets measure the header and any sticky topic bar once, without extra section margins.
+
+Shared gutters, hero insets, header color and CTA states live in `assets/css/layout.css`. Fonts are self-hosted in `assets/fonts` under their included OFL licenses and preloaded on every page; `font-display: swap` replaces the previous optional-font behavior. FAQ and Resources topic bars scroll horizontally on mobile and remain sticky on desktop.

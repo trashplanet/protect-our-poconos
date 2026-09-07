@@ -21,6 +21,9 @@ class PublicBuildTests(unittest.TestCase):
         for route in build.PAGES.values():
             page = (build.OUT / route.strip('/') / 'index.html').read_text()
             self.assertEqual(page.count('rel="canonical"'), 1)
+            self.assertNotIn('fonts.googleapis.com', page)
+            self.assertIn('href="/assets/fonts/newsreader-normal.woff2"', page)
+            self.assertIn('href="/assets/css/layout.css?v=', page)
             self.assertIn(f'href="{build.BASE}{route}"', page)
             self.assertEqual(page.count('src="/assets/js/analytics.js?v='), 1)
             schema = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])
@@ -75,7 +78,7 @@ class PublicBuildTests(unittest.TestCase):
         for route in build.PAGES.values():
             html = (build.OUT / route.strip('/') / 'index.html').read_text()
             self.assertIn('href="/faq/"', html)
-            self.assertRegex(html, r'class="top-style-11" href="/take-action/"')
+            self.assertRegex(html, r'class="top-style-11[^"]*" href="/take-action/"')
         issues = (build.OUT / 'issues/index.html').read_text()
         self.assertNotIn('class="issue-design-3"', issues)
         self.assertIn('BreadcrumbList', issues)
