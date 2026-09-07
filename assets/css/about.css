@@ -2,8 +2,10 @@
    treatment, and the closing-CTA band treatment used on issues.html. Sections share one
    continuously blended background (no hard edges); the only divider is above the CTA. */
 
+/* Solid body so the hero's gradient fades seamlessly into the content below
+   (a tonal page gradient here left a hard step at the hero/body edge). */
 .about-page main {
-  background: linear-gradient(180deg, #0f1f18 0%, #0b1912 50%, #0f1f18 100%);
+  background: #0f1f18;
 }
 .about-page .about-inner {
   max-width: var(--page-width, 1240px);
