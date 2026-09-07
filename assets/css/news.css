@@ -9,7 +9,9 @@
 .news-page main p { line-height: 1.65; }
 .news-page .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .2em; color: #4c7360; margin: 0 0 12px; }
 .news-page main a { color: #245c45; text-underline-offset: 4px; }
-.news-page main a:hover { text-decoration: underline; }
+/* Match the site's color-only link feedback on light and dark surfaces. */
+html body.news-page main a:is(:hover,:focus-visible,:active) { color:#2f7d63; text-decoration:none; }
+html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.elsewhere-band) a:is(:hover,:focus-visible,:active) { color:#f4faf6; }
 .news-page [hidden] { display: none !important; }
 .news-hero { color: #fff; background: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains.webp') center 48%/cover; }
 .news-hero .news-wrap { padding-block: 68px 34px; }
