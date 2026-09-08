@@ -89,21 +89,19 @@
 }
 .about-page .about-prose p:last-child { margin-bottom: 0; }
 
-/* Inline arrow link (View resources, Contact us) */
+/* Inline arrow link (View resources, Contact us) — matches the News/Home link style. */
 .about-page .about-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-top: 24px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
   color: #8fd4bf;
   text-decoration: none;
 }
 .about-page .about-link:hover,
-.about-page .about-link:focus-visible { color: #b7e6d6; }
+.about-page .about-link:focus-visible { color: #ffffff; }
 
 /* Closing call to action: forest background, text left, buttons stacked right.
    The top border is the single deliberate divider on the page. */

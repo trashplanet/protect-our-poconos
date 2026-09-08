@@ -155,3 +155,7 @@
 .issues-page #health::after {content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 50% 8%,rgba(52,161,132,.12),transparent 55%);pointer-events:none;}
 .issues-page #health > div {z-index:1;}
 .issues-page .issue-closing {background-image:linear-gradient(rgba(9,18,13,0.34) 0%,rgba(9,18,13,0.55) 55%,rgba(9,18,13,0.78) 100%),url('../mountains-sunset.webp');background-size:cover;background-position:center 30%;}
+
+/* Source links: a touch larger, with a clear hover (they were unstyled links). */
+.issue-sources a { font-size: 14px; font-weight: 600; color: #8fd4bf; }
+.issue-sources a:hover, .issue-sources a:focus-visible { color: #ffffff; }
