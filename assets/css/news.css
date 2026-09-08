@@ -9,9 +9,9 @@
 .news-page h3 { font-size: 25px; }
 .news-page main p { line-height: 1.65; }
 .news-page .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .2em; color: #4c7360; margin: 0 0 12px; }
-.news-page main a { color: #245c45; text-underline-offset: 4px; }
+.news-page main a { color: var(--link); text-underline-offset: 4px; }
 /* Match the site's color-only link feedback on light and dark surfaces. */
-html body.news-page main a:is(:hover,:focus-visible,:active) { color:var(--link); text-decoration:none; }
+html body.news-page main a:is(:hover,:focus-visible,:active) { color:var(--green-dark); }
 html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.elsewhere-band) a:is(:hover,:focus-visible,:active) { color:var(--heading); }
 .news-page [hidden] { display: none !important; }
 .news-hero { color: #fff; background: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains.webp') center 48%/cover; }
@@ -46,7 +46,7 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .news-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 14px; padding: 20px; background: #e5eee7; border-radius: 12px; }
 .news-filters label { flex: 1 1 190px; font-size: 12px; font-weight: 700; color: #365844; }.news-filters select,.news-filters input { margin: 6px 0 0; height: 44px; border: 1px solid #b9ccbf; border-radius: 6px; box-shadow: none; font-size: 13px; }
 .news-filters button { height: 44px; color: #245c45; font-size: 12px; text-decoration: none; }
-.news-filters button:is(:hover,:focus-visible,:active) { color:var(--green-dark); text-decoration:none; }
+.news-filters button:is(:hover,:focus-visible,:active) { color:var(--green-dark); }
 #news-count { margin: 18px 0; color: #52675a; font-size: 12px; }
 .news-button { display: inline-block; background: var(--green-dark); color: #fff; border: 1px solid #446651; border-radius: 9px; padding: 15px 24px; font-size: 13px; font-weight: 700; }
 #news-more { display: block; margin: 28px auto 0; }

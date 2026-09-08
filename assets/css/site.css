@@ -112,8 +112,8 @@ svg { flex-shrink: 0; }
 .local-scale-detail { margin-bottom: 20px; }
 .scale-labels .scale-style-118 { white-space: normal; }
 .source-note { font-size: 12px; line-height: 1.7; color: var(--text); margin: 20px 0 0; }
-.source-note a { color: #245c45; text-decoration: underline; text-underline-offset: 3px; }
-.source-note a:is(:hover, :focus-visible) { color: var(--ink); text-decoration: none !important; }
+.source-note a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+.source-note a:is(:hover, :focus-visible) { color: var(--green-dark); }
 #facts .scale-style-139 { color: var(--text); }
 .scale-style-121 > .source-note { background: #edf4ef; border-radius: 9px; padding: 12px 16px; }
 
@@ -184,7 +184,10 @@ body main [id] {scroll-margin-top:0!important;}
 @media(max-width:800px){.mobile-action{display:inline-flex!important;}}
 @media(max-width:800px){.editorial-closing{padding:56px 24px;}.editorial-closing .editorial-closing-inner{padding-inline:0;display:block;}.editorial-closing-actions{margin-top:28px;}.editorial-closing-primary{width:100%;}}
 @media(max-width:480px){.editorial-closing{padding-inline:20px;}.editorial-closing h2{font-size:34px;}}
-body[class] main a:hover, body[class] main a:focus-visible {text-decoration:none;}
+/* Prose links (inside body paragraphs) are underlined at rest so they're
+   findable in running text; standalone links stay underline-free. Colour-only
+   on hover (the underline is kept). Buttons and arrow links are excluded. */
+main p a:not(.cta-teal):not(.cta-ghost):not(.link-arrow) { text-decoration: underline; text-underline-offset: 3px; }
 @media(min-width:1101px){body.resources-page nav.research-design-14 {top:var(--header-height,93px);}}
 
 /* 404 page (scoped: only affects 404.html via .notfound-* classes).
