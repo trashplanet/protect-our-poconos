@@ -12,8 +12,8 @@ body :is(.hero-scene,.action-design-2,.research-design-1,.faq-design-1){align-it
 
 /* The same pale green header on every page, independent of the page beneath it. */
 html body .site-header {background:#c3cfc8;}
-html body a:focus, html body a:active {color:#6fc4ac;}
-html body a.cta-teal:is(:hover,:focus,:active) {color:#07160f!important;background:#5bc5a7;text-decoration:none;}
+html body a:focus, html body a:active {color:var(--link-dark);}
+html body a.cta-teal:is(:hover,:focus,:active) {color:var(--ink-btn)!important;background:#5bc5a7;text-decoration:none;}
 html body a.cta-teal span {color:inherit;}
 html body .faq-design-1 {padding-inline:0!important;}
 /* Enough room for the intended desktop titles with the actual Newsreader font. */

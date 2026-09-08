@@ -1,5 +1,5 @@
 /* News export art direction, with editorial cards and a static accessible feed. */
-.news-page { background: #12241d; color: var(--ink); font-family: 'Public Sans', sans-serif; }
+.news-page { background: var(--bg-dark); color: var(--ink); font-family: 'Public Sans', sans-serif; }
 /* Near-white behind the top stories, fading into the green base (matches Projects). */
 .news-page main { background: linear-gradient(180deg, #f7faf8 0px, #f7faf8 1400px, #eef3ef 2300px); background-repeat: no-repeat; }
 .news-wrap { max-width: 1280px; padding-inline: 40px; margin-inline: auto; }
@@ -11,7 +11,7 @@
 .news-page .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .2em; color: #4c7360; margin: 0 0 12px; }
 .news-page main a { color: #245c45; text-underline-offset: 4px; }
 /* Match the site's color-only link feedback on light and dark surfaces. */
-html body.news-page main a:is(:hover,:focus-visible,:active) { color:#2f7d63; text-decoration:none; }
+html body.news-page main a:is(:hover,:focus-visible,:active) { color:var(--link); text-decoration:none; }
 html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.elsewhere-band) a:is(:hover,:focus-visible,:active) { color:var(--heading); }
 .news-page [hidden] { display: none !important; }
 .news-hero { color: #fff; background: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains.webp') center 48%/cover; }
@@ -49,7 +49,7 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .news-filters button { height: 44px; color: #245c45; font-size: 12px; text-decoration: underline; }
 .news-filters button:hover { text-decoration: none; }
 #news-count { margin: 18px 0; color: #52675a; font-size: 12px; }
-.news-button { display: inline-block; background: #1c3a2c; color: #fff; border: 1px solid #446651; border-radius: 8px; padding: 15px 24px; font-size: 13px; font-weight: 700; }
+.news-button { display: inline-block; background: var(--green-dark); color: #fff; border: 1px solid #446651; border-radius: 8px; padding: 15px 24px; font-size: 13px; font-weight: 700; }
 #news-more { display: block; margin: 28px auto 0; }
 .editor-note { border-top: 1px solid #ccdacf; padding-top: 22px; margin: 32px 0 0; font-size: 12px; color: #52675a; }
 .series-band { background: linear-gradient(#10291eed,#10291eed),url('../forest-dark.webp') center/cover; color: #e2eee6; }

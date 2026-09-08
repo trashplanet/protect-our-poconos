@@ -1,7 +1,23 @@
 /* Shared editorial hero scale; layouts remain page-specific. */
 :root { --hero-heading-size: clamp(40px, 4.6vw, 64px); }
 /* Site behavior and responsive adjustments. Keep desktop art direction in design.css. */
-:root { --forest: #0f1f18; --mint: #8fd4bf; --ink: #16281f; --teal: #34a184; --heading: #f4faf6; }
+:root {
+  --forest: #0f1f18; --mint: #8fd4bf; --ink: #16281f; --teal: #34a184; --heading: #f4faf6;
+  /* Reused brand palette (Phase 2). One token per literal colour. */
+  --link: #2f7d63;        /* primary green link / accent on light */
+  --link-dark: #6fc4ac;   /* green link on dark surfaces */
+  --line: #dbe6de;        /* light hairline / border */
+  --text: #46584e;        /* body text on light */
+  --text-strong: #26382f; /* strong dark text */
+  --text-soft: #c8d8cf;   /* soft light text on dark */
+  --muted: #6a8579;       /* muted text on light */
+  --muted-dark: #9db3a8;  /* muted text on dark surfaces */
+  --muted-light: #a9c1b6; /* light muted text on dark */
+  --heading-soft: #f2f8f4;/* near-white heading on dark */
+  --bg-dark: #12241d;     /* dark page / section background */
+  --green-dark: #1c3a2c;  /* dark green surface / border */
+  --ink-btn: #07160f;     /* dark button label */
+}
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { line-height: normal; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -18,12 +34,12 @@ svg { flex-shrink: 0; }
 .draft-note, .scale-note { font-size: 12px; color: #53675b; line-height: 1.6; }
 .scale-visual { margin: 0; min-width: 0; }
 .scale-note { margin: 12px 0 0; text-align: left; }
-#site-notice { border: 1px solid #48745e; border-radius: 18px; padding: 40px; max-width: 500px; width: calc(100% - 32px); background: #12241d; color: #dbe7e0; box-shadow: 0 24px 80px #0007; }
+#site-notice { border: 1px solid #48745e; border-radius: 18px; padding: 40px; max-width: 500px; width: calc(100% - 32px); background: var(--bg-dark); color: #dbe7e0; box-shadow: 0 24px 80px #0007; }
 #site-notice::backdrop { background: #06110bcc; backdrop-filter: blur(4px); }
 #site-notice h2 { font-family: Newsreader, Georgia, serif; color: #fff; font-size: 30px; line-height: 1.1; margin: 0 0 16px; }
 #site-notice p { line-height: 1.6; }
-.notice-close { position: absolute; right: 14px; top: 10px; color: #c8d8cf; font-size: 30px; width: 36px; height: 36px; }
-.notice-done.button { background: var(--teal); color: #07160f; border-radius: 7px; font-weight: 700; margin: 8px 0 0; }
+.notice-close { position: absolute; right: 14px; top: 10px; color: var(--text-soft); font-size: 30px; width: 36px; height: 36px; }
+.notice-done.button { background: var(--teal); color: var(--ink-btn); border-radius: 7px; font-weight: 700; margin: 8px 0 0; }
 @media (max-width: 1150px) {
   .header-inner { gap: 12px; padding-inline: 24px; }
   .primary-navigation { order: 3; flex-basis: 100%; justify-content: center; }
@@ -119,7 +135,7 @@ svg { flex-shrink: 0; }
     rgba(18,36,29,.784) 70%,
     rgba(18,36,29,.896) 80%,
     rgba(18,36,29,.972) 90%,
-    #12241d 100%);
+    var(--bg-dark) 100%);
 }
 
 /* One selected-page treatment for every shared navigation bar. */
@@ -137,7 +153,7 @@ footer .resources-style-182 { transition: background-color .18s ease, box-shadow
 .closing .closing-style-169:hover,
 .closing .closing-style-169:focus-visible,
 .site-header .top-style-11:hover,
-.site-header .top-style-11:focus-visible { color:#07160f; background:#5bc5a7; box-shadow:0 3px 10px #123e2926; text-decoration:none; }
+.site-header .top-style-11:focus-visible { color:var(--ink-btn); background:#5bc5a7; box-shadow:0 3px 10px #123e2926; text-decoration:none; }
 footer .resources-style-182:hover,
 footer .resources-style-182:focus-visible { color:#0a1712; background:#b8e8d8; box-shadow:0 3px 12px #0003; text-decoration:none; }
 .site-header .top-style-11:focus-visible { outline:2px solid #123e29; outline-offset:3px; }
@@ -154,8 +170,8 @@ footer .resources-style-182:focus-visible { outline:2px solid #b8e8d8; outline-o
 .editorial-closing h2 { font-family:'Newsreader'; font-weight:500; font-size:38px; color:#fff; margin:0 0 14px; line-height:1.08; }
 .editorial-closing-copy > p:last-child { font-size:15.5px; line-height:1.6; color:#dceae2; max-width:520px; margin:0; }
 .editorial-closing-actions { display:flex; flex-direction:column; gap:12px; flex-shrink:0; }
-.editorial-closing-primary { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--teal); color:#07160f; font-family:'Public Sans',system-ui,sans-serif; font-size:15px; font-weight:700; line-height:1.55; text-align:center; padding:16px 32px; border-radius:9px; box-shadow:0 12px 30px rgba(52,161,132,.35); border:0; text-decoration:none; }
-.editorial-closing-primary:hover,.editorial-closing-primary:focus-visible { background:#4bb99a; color:#07160f; text-decoration:none; }
+.editorial-closing-primary { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--teal); color:var(--ink-btn); font-family:'Public Sans',system-ui,sans-serif; font-size:15px; font-weight:700; line-height:1.55; text-align:center; padding:16px 32px; border-radius:9px; box-shadow:0 12px 30px rgba(52,161,132,.35); border:0; text-decoration:none; }
+.editorial-closing-primary:hover,.editorial-closing-primary:focus-visible { background:#4bb99a; color:var(--ink-btn); text-decoration:none; }
 
 /* A single measured offset prevents section margins from doubling the jump. */
 html {scroll-padding-top:calc(var(--header-height,93px) + var(--jump-height,0px));}
@@ -176,7 +192,7 @@ body[class] main a:hover, body[class] main a:focus-visible {text-decoration:none
   padding: var(--hero-top, 72px) var(--page-gutter, 40px) 72px; }
 .notfound-eyebrow { margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--mint); }
 .notfound-title { max-width: 740px; margin: 0 0 24px; font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-weight: 500; font-size: var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); line-height: 1.03; letter-spacing: -0.01em; color: var(--heading); text-wrap: balance; }
-.notfound-lead { max-width: 650px; margin: 0 0 32px; font-size: 17px; line-height: 1.65; color: #c8d8cf; }
+.notfound-lead { max-width: 650px; margin: 0 0 32px; font-size: 17px; line-height: 1.65; color: var(--text-soft); }
 .notfound-actions { margin: 0 0 40px; }
 .notfound-links { display: flex; flex-wrap: wrap; gap: 12px 28px; max-width: 740px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); }
 .notfound-links a { font-weight: 600; }

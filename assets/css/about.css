@@ -85,7 +85,7 @@
   margin: 0 0 18px;
   font-size: 17px;
   line-height: 1.7;
-  color: #c8d8cf;
+  color: var(--text-soft);
 }
 .about-page .about-prose p:last-child { margin-bottom: 0; }
 
