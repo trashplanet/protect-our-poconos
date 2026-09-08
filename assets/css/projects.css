@@ -33,12 +33,12 @@
 .status-legal { background: #a5283a; color: #fff; }
 .tracker-controls { display: flex; gap: 20px; justify-content: space-between; align-items: flex-end; margin: 0; }
 .type-filters { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 7px; }
-.type-filters button, #clear-filters { font-size: 12px; font-weight: 600; line-height: 1.4; padding: 10px 13px; border: 1px solid #bdcfc4; border-radius: 8px; background: #fff; color: #18342a; min-height: 42px; }
+.type-filters button, #clear-filters { font-size: 12px; font-weight: 600; line-height: 1.4; padding: 10px 13px; border: 1px solid #bdcfc4; border-radius: 9px; background: #fff; color: #18342a; min-height: 42px; }
 .type-filters button[aria-pressed="true"] { background: #183b2c; border-color: #183b2c; color: #fff; }
 .type-filters button:hover { border-color: #27785b; }
 .filter-selects { display: flex; gap: 12px; flex-shrink: 0; }
 .filter-selects label { font-size: 11px; color: #436153; font-weight: 600; }
-.filter-selects select { font-size: 12px; border: 1px solid #bdcfc4; border-radius: 8px; color: #18342a; background-color: #fff; margin: 3px 0 0; min-width: 135px; height: 42px; padding: 8px 28px 8px 12px; }
+.filter-selects select { font-size: 12px; border: 1px solid #bdcfc4; border-radius: 9px; color: #18342a; background-color: #fff; margin: 3px 0 0; min-width: 135px; height: 42px; padding: 8px 28px 8px 12px; }
 .tracker-results { display: flex; align-items: center; gap: 14px; min-height: 42px; margin-bottom: 12px; }
 .tracker-results p { font-size: 12px; color: var(--text-muted); margin: 0; }
 #clear-filters { padding: 5px 8px; border: 0; min-height: 32px; background: transparent; text-decoration: underline; }
@@ -100,7 +100,7 @@
 .policy-grid h3 { font-size: 15px; line-height: 1.4; font-weight: 700; margin: 0 0 12px; }
 .policy-grid p:not(.eyebrow) { color: #526e5e; font-size: 12px; line-height: 1.6; }
 .policy-grid a { margin-top: auto; font-size: 11px; color: #286247; text-decoration: underline; text-underline-offset: 3px; }
-.empty-results .button { border-radius: 8px; background: #173d2c; color: #fff; font-weight: 700; font-size: 12px; padding: 15px 22px; }
+.empty-results .button { border-radius: 9px; background: #173d2c; color: #fff; font-weight: 700; font-size: 12px; padding: 15px 22px; }
 .editorial-closing { margin-top: 64px; }
 .empty-results { text-align: center; padding: 48px 24px; border-radius: 10px; background: #e8f1eb; }
 .empty-results h2 { font-size: 28px; }
