@@ -9,7 +9,7 @@
 .tracker-page .eyebrow { font-size: 12px; letter-spacing: .15em; font-weight: 700; margin: 0 0 12px; color: #52776a; text-transform: uppercase; }
 .tracker-hero { color: #fff; background: linear-gradient(90deg,rgba(8,32,23,.87),rgba(8,32,23,.32)), url('../misty-forest.webp') center 48% / cover; }
 .tracker-hero > div { padding-top: 52px; padding-bottom: 24px; }
-.tracker-hero .eyebrow { color: #a6deca; }
+.tracker-hero .eyebrow { color: #a7dcc9; }
 .tracker-hero h1 { color: #fff; font-size: var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); line-height: 1.08; font-weight: 500; letter-spacing: -.01em; margin: 0 0 24px; text-wrap: balance; }
 .tracker-intro { max-width: 650px; font-size: 17px; line-height: 1.6; color: #dfede5; margin-bottom: 32px; }
 .tracker-overview { display: grid; grid-template-columns: repeat(4,1fr); max-width: 1000px; gap: 20px; }
@@ -17,7 +17,7 @@
 .tracker-overview a:last-child { border: 0; }
 .tracker-overview strong { font-size: 34px; font-weight: 600; }
 .tracker-overview span { max-width: 150px; font-size: 13px; line-height: 1.4; }
-.tracker-overview a:hover { color: #a6deca; }
+.tracker-overview a:hover { color: #a7dcc9; }
 .tracker-content { padding-top: 22px; padding-bottom: 0; }
 .project-legend { border-radius: 10px; background: #e8f1eb; padding: 24px; margin-bottom: 28px; }
 .project-legend h2 { font-family: 'Public Sans',sans-serif; font-weight: 700; font-size: 17px; margin-bottom: 20px; }
@@ -40,7 +40,7 @@
 .filter-selects label { font-size: 11px; color: #436153; font-weight: 600; }
 .filter-selects select { font-size: 12px; border: 1px solid #bdcfc4; border-radius: 8px; color: #18342a; background-color: #fff; margin: 3px 0 0; min-width: 135px; height: 42px; padding: 8px 28px 8px 12px; }
 .tracker-results { display: flex; align-items: center; gap: 14px; min-height: 42px; margin-bottom: 12px; }
-.tracker-results p { font-size: 12px; color: #587164; margin: 0; }
+.tracker-results p { font-size: 12px; color: var(--text-muted); margin: 0; }
 #clear-filters { padding: 5px 8px; border: 0; min-height: 32px; background: transparent; text-decoration: underline; }
 .tracker-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; align-items: start; }
 .tracker-card { background: #fff; border: 1px solid #e2e9e4; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px #0c342909; scroll-margin-top: 130px; }
@@ -49,7 +49,7 @@
 .tracker-card-image img { width: 100%; height: 100%; object-fit: cover; }
 .tracker-card-image.illustration img { object-fit: contain; padding: 8px 24px 24px; mix-blend-mode: multiply; }
 .tracker-card-image > span { position: absolute; bottom: 0; left: 0; width: 100%; font-size: 9px; letter-spacing: .03em; padding: 4px 12px; background: #112b22d9; color: #e4f2e9; }
-.tracker-card-image.illustration > span { background: #dde9e2; color: #405d4e; }
+.tracker-card-image.illustration > span { background: #dde9e2; color: var(--text); }
 .tracker-card-body { padding: 18px; }
 .status-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
 .status { display: inline-block; padding: 4px 9px; border-radius: 20px; font-size: 9px; letter-spacing: .025em; font-weight: 700; text-transform: uppercase; line-height: 1.4; }
@@ -61,7 +61,7 @@
 .project-stats { display: flex; gap: 12px; margin: 0 0 20px; }
 .project-stats > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; flex: 1; border-right: 1px solid #dae5de; padding-right: 8px; min-width: 0; }
 .project-stats > div:last-child { border: 0; padding: 0; }
-.project-stats dt { font-size: 10px; line-height: 1.4; font-weight: 400; margin: 4px 0 0; color: #587064; }
+.project-stats dt { font-size: 10px; line-height: 1.4; font-weight: 400; margin: 4px 0 0; color: var(--text-muted); }
 .project-stats dd { font-size: 15px; line-height: 1.25; font-weight: 700; margin: 0; }
 .project-milestone { border-radius: 7px; background: #edf4ef; padding: 14px; margin-bottom: 6px; font-size: 12px; }
 .project-milestone strong { color: #215b43; font-size: 12px; }
