@@ -70,8 +70,12 @@
   buttons.forEach(button => button.addEventListener('click', () => { category = button.dataset.filter; applyFilters(); }));
   county.addEventListener('change', () => applyFilters());
   sort.addEventListener('change', () => applyFilters());
-  clear.addEventListener('click', reset);
-  document.querySelector('[data-reset-filters]').addEventListener('click', () => { reset(); buttons[0].focus(); });
+  function resetFromControl() {
+    reset();
+    buttons[0].focus();
+  }
+  clear.addEventListener('click', resetFromControl);
+  document.querySelector('[data-reset-filters]').addEventListener('click', resetFromControl);
   document.querySelectorAll('[data-quick-filter]').forEach(link => link.addEventListener('click', () => {
     category = link.dataset.quickFilter; county.value = 'all'; applyFilters();
   }));
