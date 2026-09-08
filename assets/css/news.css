@@ -63,3 +63,6 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 @media(max-width:700px) { .news-wrap { padding-inline: 20px; }.news-section { padding-block: 44px; }.news-hero .news-wrap { padding-block: 48px 24px; }.featured-grid,.coverage-grid,.series-grid,.elsewhere-grid { grid-template-columns: minmax(0,1fr); }.story-card { padding: 24px; }.deadline-strip { grid-template-columns: minmax(0,1fr); padding: 24px; }.deadline { padding-top: 16px; padding-left: 0; border-left: 0; border-top: 1px solid #b9cfbf; }.series-grid { gap: 16px; }.series-number { margin-bottom: 8px; }.news-filters label { flex-basis: 100%; }.elsewhere-art { padding: 24px; } }
 
 .news-page .hero-deck {margin-bottom:22px;}
+
+/* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
+@media (max-width:800px) { .news-hero { background-image: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains-mobile.webp'); } }

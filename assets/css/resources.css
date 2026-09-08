@@ -361,3 +361,6 @@
 
 
 @media(min-width:1101px) { .resources-page main > section[id] { scroll-margin-top:165px; } }
+
+/* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
+@media (max-width:800px) { .resources-page .research-design-1 { background-image: linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.6) 46%,rgba(12,32,24,0.28) 100%),url('../resources-hero-mobile.webp'); } }

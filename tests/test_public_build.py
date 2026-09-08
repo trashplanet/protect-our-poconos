@@ -20,7 +20,10 @@ class PublicBuildTests(unittest.TestCase):
     def test_css_foundation_subset_and_minification(self):
         for route in build.PAGES.values():
             page = (build.OUT / route.strip('/') / 'index.html').read_text()
-            self.assertRegex(page, r'href="/assets/css/foundation-subset\.css\?v=')
+            # CSS is inlined (no render-blocking stylesheet links); the subset ships in it.
+            self.assertNotIn('rel="stylesheet"', page)
+            self.assertIn('<style>', page)
+            self.assertIn('.grid-container', page)
             self.assertNotIn('vendor/foundation.min.css', page)
         subset = (build.OUT / 'assets/css/foundation-subset.css').read_text()
         self.assertIn('.grid-container', subset)
@@ -38,7 +41,7 @@ class PublicBuildTests(unittest.TestCase):
             self.assertEqual(page.count('rel="canonical"'), 1)
             self.assertNotIn('fonts.googleapis.com', page)
             self.assertIn('href="/assets/fonts/newsreader-normal.woff2"', page)
-            self.assertIn('href="/assets/css/layout.css?v=', page)
+            self.assertIn('/assets/fonts/public-sans-normal.woff2', page)  # inlined @font-face url
             self.assertIn(f'href="{build.BASE}{route}"', page)
             self.assertEqual(page.count('src="/assets/js/analytics.js?v='), 1)
             schema = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])
@@ -120,7 +123,8 @@ class PublicBuildTests(unittest.TestCase):
         self.assertIn('content="noindex"', page)
         self.assertIn('class="site-header', page)
         self.assertIn('notfound-hero', page)
-        self.assertRegex(page, r'href="/assets/css/foundation-subset\.css\?v=')
+        self.assertNotIn('rel="stylesheet"', page)  # CSS inlined here too
+        self.assertIn('<style>', page)
         self.assertNotIn('href="assets/', page)
         self.assertNotIn('src="./assets', page)
         # the 404 hero reuses the interior-page treatment (serif heading, forest background)
@@ -158,7 +162,9 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(faq['@type'], 'FAQPage')
         self.assertEqual(len(faq['mainEntity']), 26)
         self.assertEqual(page.count('<details '), 25)
-        self.assertNotIn('—', page)
+        # No em-dashes in the visible copy (ignore the inlined <style>, whose Foundation
+        # base includes a cite:before em-dash that never renders without a <cite>).
+        self.assertNotIn('—', re.sub(r'<style>.*?</style>', '', page, flags=re.S))
         for question in faq['mainEntity']:
             self.assertTrue(question['acceptedAnswer']['text'])
         for route in build.PAGES.values():

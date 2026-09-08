@@ -81,10 +81,15 @@ Only two things differ between pages, so they are the only template variables: `
 
 Each page loads a shared base — `foundation-subset.css`, `design.css`, `site.css`, `layout.css`, `fonts.css` — plus one page-specific file (`resources.css`, `faq.css`, and so on). Edit the CSS files directly; they are plain source.
 
-Two build-time efficiencies keep the payload down without changing how you author:
+Build-time efficiencies keep the payload down without changing how you author:
 
 - **Foundation subset.** The pages only use Foundation's global base and five classes, so `scripts/subset-foundation.py` extracts just those into `assets/css/foundation-subset.css` (~13 KB instead of 131 KB). Pages link the subset; the full library stays in `assets/vendor/` as its source. Re-run the script only after upgrading Foundation.
-- **Minification.** `scripts/build-site.py` strips comments and collapses whitespace in every `assets/css/*.css` file as it copies them into `_site/`. The committed source stays readable; only the published copy is minified. (GitHub Pages also gzips responses, so this mostly shrinks the uncompressed files; the Foundation subset is the change that meaningfully cuts transfer size.)
+- **Minification.** `scripts/build-site.py` strips comments and collapses whitespace in every `assets/css/*.css` file as it copies them into `_site/`. The committed source stays readable; only the published copy is minified.
+- **Inlining.** At publish time `build-site.py` also folds each page's stylesheets into a single inline `<style>` (rewriting `url(../…)` to absolute paths), so pages paint without waiting on separate render-blocking CSS requests. Edit the `.css` files as normal — the inlining happens only in `_site/`.
+
+## Images
+
+Hero backgrounds are heavy at full resolution and phones render them small, so `scripts/optimize-images.py` generates `-mobile.webp` variants (~1024 px wide) with `cwebp`, and each page's CSS swaps to them under `@media (max-width: 800px)` (the homepage additionally preloads the matching variant per breakpoint). Re-run the script after replacing a source hero image and commit the regenerated variants. `assets/js/analytics.js` also loads Google Analytics lazily (first interaction or idle) so it stays off the critical path.
 
 ## Search metadata, feed and 404
 

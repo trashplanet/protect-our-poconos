@@ -47,8 +47,11 @@ notice.addEventListener('click', (event) => {
 const stickyHeader = document.querySelector('.site-header');
 const jumpBar = document.querySelector('.research-design-14, .faq-jump');
 function measureStickyAreas() {
-  document.documentElement.style.setProperty('--header-height', stickyHeader.getBoundingClientRect().height + 'px');
+  // Read both heights before writing either custom property, so setting the first
+  // does not force a synchronous reflow before the second is measured.
+  const headerHeight = stickyHeader.getBoundingClientRect().height;
   const jumpHeight = jumpBar && getComputedStyle(jumpBar).position === 'sticky' ? jumpBar.getBoundingClientRect().height : 0;
+  document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
   document.documentElement.style.setProperty('--jump-height', jumpHeight + 'px');
 }
 const stickyObserver = new ResizeObserver(measureStickyAreas);

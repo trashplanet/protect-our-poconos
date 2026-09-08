@@ -156,3 +156,6 @@
  .tracker-card[data-category="rumors"] .tracker-card-image { height: 100%; min-height: 260px; }
  .tracker-card[data-category="rumors"] .project-stats { max-width: 400px; }
 }
+
+/* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
+@media (max-width:800px) { .tracker-hero { background-image: linear-gradient(90deg,rgba(8,32,23,.87),rgba(8,32,23,.32)),url('../misty-forest-mobile.webp'); } }

@@ -273,3 +273,6 @@
 .faq-page .faq-stance {
   background:#12241d var(--faq-transition) center -780px / 100% 1100px no-repeat;
 }
+
+/* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
+@media (max-width:800px) { .faq-page .faq-design-1 { background-image: linear-gradient(88deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.2) 100%),url('../faq-hero-mobile.webp'); } }

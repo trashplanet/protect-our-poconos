@@ -69,6 +69,25 @@ def minify_css(text):
     return re.sub(r'\x00(\d+)\x00', lambda m: literals[int(m[1])], text)
 
 
+STYLESHEET = re.compile(r'[ \t]*<link\b[^>]*rel="stylesheet"[^>]*>\n?')
+
+
+def inline_stylesheets(page):
+    """Replace the render-blocking <link rel="stylesheet"> tags with one inline <style>.
+    The page then paints without waiting on separate CSS requests. Relative url(../…)
+    references are made absolute so they still resolve from the inlined position."""
+    links = list(STYLESHEET.finditer(page))
+    if not links:
+        return page
+    css = ''
+    for link in links:
+        href = re.search(r'href="([^"]+)"', link[0])[1]
+        source = minify_css((ROOT / href.lstrip('/')).read_text())
+        css += re.sub(r"url\((['\"]?)\.\./", r'url(\1/assets/', source)
+    page = page[:links[0].start()] + '<style>' + css + '</style>\n' + page[links[0].end():]
+    return STYLESHEET.sub('', page)
+
+
 def rewrite(match):
     attribute, value = match.groups()
     url = urlsplit(html.unescape(value))
@@ -183,10 +202,14 @@ def build():
         for name, value in {'twitter:title': title, 'twitter:description': description, 'twitter:image': image_url, 'twitter:image:alt': image_alt}.items():
             metadata += f'<meta name="{name}" content="{html.escape(value, quote=True)}"/>\n'
         if source == 'index.html':
-            metadata += '<link rel="preload" as="image" href="/assets/hero-waterfall.webp" fetchpriority="high"/>\n'
+            # Preload the hero (the LCP image), matching the responsive background so
+            # phones fetch only the smaller variant instead of both.
+            metadata += '<link rel="preload" as="image" href="/assets/hero-waterfall.webp" media="(min-width:801px)" fetchpriority="high"/>\n'
+            metadata += '<link rel="preload" as="image" href="/assets/hero-waterfall-mobile.webp" media="(max-width:800px)" fetchpriority="high"/>\n'
         if source in ('index.html', 'news.html'):
             metadata += '<link rel="alternate" type="application/rss+xml" title="Protect Our Poconos — News &amp; Updates" href="/feed.xml"/>\n'
         metadata += '<script type="application/ld+json">' + json.dumps(schema).replace('<', '\\u003c') + '</script>\n'
+        page = inline_stylesheets(page)
         page = re.sub(r'(?<![\w-])(href|src)="([^"]*)"', rewrite, page)
         page = page.replace('</head>', metadata + '</head>')
         dest = OUT / route.strip('/') / 'index.html' if route != '/' else OUT / 'index.html'
@@ -207,7 +230,7 @@ def build():
     if notfound.exists():
         # GitHub Pages serves /404.html for any unknown path, so its links must be
         # absolute; the shared rewrite makes them so. Keep it out of the index and sitemap.
-        page = re.sub(r'(?<![\w-])(href|src)="([^"]*)"', rewrite, notfound.read_text())
+        page = re.sub(r'(?<![\w-])(href|src)="([^"]*)"', rewrite, inline_stylesheets(notfound.read_text()))
         page = page.replace('</head>', '<meta name="robots" content="noindex"/>\n</head>')
         (OUT / '404.html').write_text(page)
     print('Built canonical pages, legacy redirects, robots.txt, sitemap.xml, feed.xml and 404 in _site/')

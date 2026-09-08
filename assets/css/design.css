@@ -212,3 +212,6 @@
 .resources-style-185 { font-size:12px;color:#5f7a6d; }
 .resources-style-186 { display:flex;gap:22px; }
 .resources-style-185:hover, .resources-style-185:focus-visible { color:#9fb8ad }
+
+/* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
+@media (max-width:800px) { .hero-style-14 { background-image: linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.28) 100%),url('../hero-waterfall-mobile.webp'); } }
