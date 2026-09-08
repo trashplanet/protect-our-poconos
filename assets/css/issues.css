@@ -24,12 +24,12 @@
 .issues-page .issue-design-24{font-size:15px;line-height:1.68;color:var(--muted-light);margin:0 0 24px;max-width:480px;}
 .issues-page .issue-design-25{display:flex;flex-direction:column;gap:16px;margin:0 0 26px;max-width:490px;}
 .issues-page .issue-design-26{border-left:2px solid var(--link-dark);padding-left:14px;}
-.issues-page .issue-design-27{font-size:10.5px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:4px;}
+.issues-page .issue-design-27{font-size:12px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:4px;}
 .issues-page .issue-design-28{font-size:14px;line-height:1.5;color:#c2d4ca;}
 .issues-page .issue-design-29{border-left:2px solid #d9ad55;padding-left:14px;}
-.issues-page .issue-design-30{font-size:10.5px;letter-spacing:0.12em;font-weight:700;color:#d9ad55;margin-bottom:4px;}
+.issues-page .issue-design-30{font-size:12px;letter-spacing:0.12em;font-weight:700;color:#d9ad55;margin-bottom:4px;}
 .issues-page .issue-design-31{border-left:2px solid #9fc2d4;padding-left:14px;}
-.issues-page .issue-design-32{font-size:10.5px;letter-spacing:0.12em;font-weight:700;color:#9fc2d4;margin-bottom:4px;}
+.issues-page .issue-design-32{font-size:12px;letter-spacing:0.12em;font-weight:700;color:#9fc2d4;margin-bottom:4px;}
 .issues-page .issue-design-33{display:inline-flex;align-items:center;gap:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:14px 20px;}
 .issues-page .issue-design-34{font-family:'Newsreader';font-size:34px;font-weight:600;color:var(--mint);line-height:0.9;}
 .issues-page .issue-design-35{font-size:12.5px;line-height:1.4;color:var(--muted-light);}
@@ -83,7 +83,7 @@
 .issues-page .issue-image { position:relative; margin:0; }
 .issue-image figcaption { position:absolute; bottom:0; left:0; right:0; padding:9px 14px; background:#0f241de8; color:#d4e5db; font-size:11px; line-height:1.5; }
 .issue-sources { display:flex; flex-direction:column; gap:10px; margin-top:24px; padding-top:18px; border-top:1px solid #ffffff26; font-size:12px; line-height:1.5; }
-.issue-sources p { font-size:10px; letter-spacing:.12em; color:#9fc2d4; margin:0 0 2px; }
+.issue-sources p { font-size:12px; letter-spacing:.12em; color:#9fc2d4; margin:0 0 2px; }
 .issues-page .issue-design-33 { max-width:100%; }
 .issues-page .issue-design-33 > span { min-width:0; }
 @media(max-width:1100px) {

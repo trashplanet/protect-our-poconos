@@ -45,7 +45,7 @@ html body a.cta-ghost:is(:hover,:focus,:active) { background:rgba(255,255,255,0.
 .hero-style-22 { font-size:16px; }
 .hero-style-24 { position:absolute;z-index:2;right:40px;top:56px;max-width:252px;background:rgba(9,18,13,0.5);backdrop-filter:blur(10px);border:1px solid rgba(143,212,191,0.32);border-radius:14px;padding:16px 18px;color:#fff;box-shadow:0 16px 34px rgba(6,14,10,0.4); }
 .hero-style-24:hover, .hero-style-24:focus-visible { background:rgba(9,18,13,0.68);border-color:rgba(143,212,191,0.6); }
-.hero-style-25 { display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.13em;font-weight:700;color:var(--mint);margin-bottom:11px; }
+.hero-style-25 { display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:0.13em;font-weight:700;color:var(--mint);margin-bottom:11px; }
 .hero-style-26 { width:7px;height:7px;border-radius:50%;background:#5cd6b3;box-shadow:0 0 0 3px rgba(92,214,179,0.3);flex-shrink:0; }
 .hero-style-27 { font-family:'Newsreader';font-size:var(--fs-card);font-weight:600;line-height:1.15;margin-bottom:9px; }
 .hero-style-28 { font-size:12px;color:var(--text-soft);line-height:1.5;margin-bottom:13px; }
@@ -178,7 +178,7 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 .updates-style-147:hover, .updates-style-147:focus-visible { transform:translateY(-3px);border-color:rgba(143,212,191,0.4); }
 .updates-style-148 { width:132px;height:92px;flex-shrink:0; }
 .updates-style-149 { flex:1;min-width:0; }
-.updates-style-150 { font-size:10.5px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:6px; }
+.updates-style-150 { font-size:12px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:6px; }
 .updates-style-151 { font-family:'Newsreader';font-weight:600;font-size:var(--fs-card);line-height:1.2;margin:0 0 8px;color:var(--heading-soft); }
 .updates-style-152 { display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--mint); }
 .updates-style-153 { display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:0.06em;color:var(--mint);margin-top:24px; }
