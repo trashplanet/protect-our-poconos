@@ -1,5 +1,6 @@
 /* Project tracker. Shared header, footer and Foundation base stay in the site styles. */
-.tracker-page { background: radial-gradient(120% 42% at 85% 0%, rgba(122,196,168,0.13), transparent 58%), radial-gradient(110% 38% at 12% 100%, rgba(122,196,168,0.10), transparent 58%), #eef3ef; background-repeat: no-repeat; color: #18342a; line-height: 1.55; }
+/* Near-white behind the top cards so their edges read, fading down into the green base. */
+.tracker-page { background: linear-gradient(180deg, #f7faf8 0px, #f7faf8 1400px, #eef3ef 2300px); background-repeat: no-repeat; color: #18342a; line-height: 1.55; }
 .tracker-container { max-width: 1240px; padding-inline: 32px; }
 .tracker-page [hidden] { display: none !important; }
 .tracker-page h1, .tracker-page h2 { font-family: Newsreader, Georgia, serif; }
