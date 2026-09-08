@@ -62,9 +62,9 @@
 .issues-page .issue-design-62{font-family:'Newsreader';font-weight:500;font-size:38px;color:#fff;margin:0 0 14px;line-height:1.08;}
 .issues-page .issue-design-63{font-size:15.5px;line-height:1.6;color:#dceae2;max-width:520px;margin:0;}
 .issues-page .issue-design-64{display:flex;flex-direction:column;gap:12px;flex-shrink:0;}
-.issues-page .issue-design-65{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--teal);color:#07160f;font-size:15px;font-weight:700;padding:16px 32px;border-radius:9px;box-shadow:0 12px 30px rgba(52,161,132,0.35);}
+.issues-page 
 .issues-page .issue-design-66{font-size:16px;}
-.issues-page .issue-design-67{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,0.08);backdrop-filter:blur(4px);color:#fff;font-size:15px;font-weight:600;padding:16px 32px;border-radius:9px;border:1px solid rgba(255,255,255,0.4);}
+.issues-page 
 .issues-page .issue-hover-67:hover{color:#fff;}
 .issues-page .issue-hover-68:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
 .issues-page .issue-hover-69:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
@@ -72,13 +72,13 @@
 .issues-page .issue-hover-71:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
 .issues-page .issue-hover-72:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
 .issues-page .issue-hover-73:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
-.issues-page .issue-hover-74:hover{background:#4bb99a;}
-.issues-page .issue-hover-75:hover{background:rgba(255,255,255,0.16);}
+.issues-page 
+.issues-page 
 /* Shared site behavior plus responsive versions of the supplied issues design. */
 .issues-page { background:var(--forest); color:#dbe7e0; font-family:'Public Sans',system-ui,sans-serif; }
 .issues-page main { color:#dbe7e0; background:var(--forest); }
-.issues-page main a { color:var(--mint); text-underline-offset:4px; }
-.issues-page main a:hover { text-decoration:underline; }
+.issues-page main a:not(.cta-teal):not(.cta-ghost) { color:var(--mint); text-underline-offset:4px; }
+.issues-page main a:not(.cta-teal):not(.cta-ghost):hover { text-decoration:underline; }
 .issues-page .issue-columns > * { min-width:0; }
 .issues-page .issue-image { position:relative; margin:0; }
 .issue-image figcaption { position:absolute; bottom:0; left:0; right:0; padding:9px 14px; background:#0f241de8; color:#d4e5db; font-size:11px; line-height:1.5; }
