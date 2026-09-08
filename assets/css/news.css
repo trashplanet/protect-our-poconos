@@ -19,7 +19,7 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .news-hero h1 { font-size: var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); margin: 0 0 24px; letter-spacing: -.035em; }
 .news-hero h1 em { color: #b7dfcb; }
 .news-hero .eyebrow { color: #a5dbc6; }
-.hero-deck { max-width: 620px; font-size: 18px; color: #d4e5db; }
+.hero-deck { max-width: 620px; font-size: 17px; color: #d4e5db; }
 .section-deck { color: #52675a; max-width: 750px; margin-bottom: 28px; }
 .featured-grid,.coverage-grid,.series-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
 .story-card { background: #fff; border: 1px solid #d5e0d8; border-radius: 14px; padding: 26px; display: flex; flex-direction: column; min-width: 0; box-shadow: 0 5px 18px #1b372607; }

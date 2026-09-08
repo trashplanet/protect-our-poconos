@@ -11,7 +11,7 @@
 .tracker-hero > div { padding-top: 52px; padding-bottom: 24px; }
 .tracker-hero .eyebrow { color: #a6deca; }
 .tracker-hero h1 { color: #fff; font-size: var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); line-height: 1.08; font-weight: 500; letter-spacing: -.01em; margin: 0 0 24px; text-wrap: balance; }
-.tracker-intro { max-width: 650px; font-size: 16px; line-height: 1.6; color: #dfede5; margin-bottom: 32px; }
+.tracker-intro { max-width: 650px; font-size: 17px; line-height: 1.6; color: #dfede5; margin-bottom: 32px; }
 .tracker-overview { display: grid; grid-template-columns: repeat(4,1fr); max-width: 1000px; gap: 20px; }
 .tracker-overview a { color: #e4f2e9; display: flex; align-items: center; gap: 14px; border-right: 1px solid #bfdac13b; padding-right: 24px; }
 .tracker-overview a:last-child { border: 0; }
