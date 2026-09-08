@@ -21,15 +21,23 @@ html body .faq-design-1 {padding-inline:0!important;}
   .hero-content > .hero-style-16 {max-width:600px;}
   .faq-page .faq-design-5 {max-width:800px;}
 }
-/* Compact, horizontally scrollable topic navigation remains available on phones. */
-@media(max-width:760px){
-  html body :is(.faq-jump,nav.research-design-14){display:block;position:relative;top:auto;}
-  html body :is(.faq-jump,nav.research-design-14)>div {
+/* Below the sticky-desktop breakpoint the topic nav is a compact, swipeable
+   strip (not sticky). Pills get a white fill + firmer border so they read
+   against the section background, and stay on one scrollable row. */
+@media(max-width:1100px){
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14){display:block;position:relative;top:auto;}
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14)>div {
     display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding:12px 20px;
-    scrollbar-width:thin;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
   }
-  html body :is(.faq-jump,nav.research-design-14) a {flex:0 0 auto;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;}
-  html body :is(.faq-jump,nav.research-design-14)>div>span{flex:0 0 auto;white-space:nowrap;}
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14)>div::-webkit-scrollbar{display:none;}
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14) a {
+    flex:0 0 auto;white-space:nowrap;min-height:38px;display:inline-flex;align-items:center;
+    font-size:12.5px;padding:7px 14px;background:#fff;border-color:#c2d2c9;
+  }
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14)>div>span{flex:0 0 auto;white-space:nowrap;}
+}
+@media(max-width:760px){
   .hero .home-hero-context {position:relative;isolation:isolate;text-shadow:0 2px 5px #07160fcc;}
   .hero .home-hero-context::before {
     content:'';position:absolute;inset:-24px -14px;z-index:-1;pointer-events:none;
