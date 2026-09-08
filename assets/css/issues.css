@@ -17,10 +17,10 @@
 .issues-page .issue-design-17{font-size:12px;font-weight:600;color:#7fbfa9;display:inline-flex;align-items:center;gap:5px;}
 .issues-page .issue-design-18{position:relative;background:var(--bg-dark);scroll-margin-top:88px;}
 .issues-page .issue-design-19{max-width:1200px;margin:0 auto;padding:66px 40px;display:grid;grid-template-columns:1.05fr 1fr;gap:52px;align-items:center;}
-.issues-page .issue-design-20{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
-.issues-page .issue-design-21{width:56px;height:56px;border-radius:50%;background:rgba(111,196,172,0.1);border:1px solid rgba(143,212,191,0.24);display:inline-flex;align-items:center;justify-content:center;color:#a7dcc9;flex-shrink:0;}
-.issues-page .issue-design-22{font-size:12px;letter-spacing:0.16em;font-weight:700;color:var(--link-dark);}
-.issues-page .issue-design-23{font-family:'Newsreader';font-weight:500;font-size:34px;line-height:1.1;margin:0 0 16px;color:var(--heading-soft);}
+.issues-page .issue-design-20{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
+.issues-page .issue-design-21{width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28);}
+.issues-page .issue-design-22{font-family:'Newsreader';font-weight:500;font-size:34px;line-height:1.05;color:var(--heading-soft);margin:0;}
+.issues-page .issue-design-23{font-family:'Public Sans',system-ui,sans-serif;font-weight:700;font-size:20px;line-height:1.3;margin:0 0 16px;color:var(--heading-soft);}
 .issues-page .issue-design-24{font-size:15px;line-height:1.68;color:var(--muted-light);margin:0 0 24px;max-width:480px;}
 .issues-page .issue-design-25{display:flex;flex-direction:column;gap:16px;margin:0 0 26px;max-width:490px;}
 .issues-page .issue-design-26{border-left:2px solid var(--link-dark);padding-left:14px;}
@@ -106,7 +106,7 @@
  .issues-page .issue-jump-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
  .issues-page .issue-jump-grid > a { padding:20px 10px; }
  .issues-page .issue-hero h1 { font-size:40px; }
- .issues-page .issue-detail h2 { font-size:30px; }
+ .issues-page .issue-detail h2 { font-size:20px; }
  .issues-page .issue-design-33 { flex-wrap:wrap; }
  .issues-page .issue-closing { padding-inline:20px; }
  .issues-page .issue-closing a { padding-inline:20px; }
