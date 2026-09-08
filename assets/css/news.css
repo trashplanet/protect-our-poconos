@@ -1,6 +1,6 @@
 /* News export art direction, with editorial cards and a static accessible feed. */
 .news-page { background: #12241d; color: var(--ink); font-family: 'Public Sans', sans-serif; }
-.news-page main { background: #f3f6f2; }
+.news-page main { background: radial-gradient(120% 42% at 85% 0%, rgba(122,196,168,0.13), transparent 58%), radial-gradient(110% 38% at 12% 100%, rgba(122,196,168,0.10), transparent 58%), #eef3ef; background-repeat: no-repeat; }
 .news-wrap { max-width: 1280px; padding-inline: 40px; margin-inline: auto; }
 .news-section { padding-block: 64px; }
 .news-page h1, .news-page h2, .news-page h3 { font-family: Newsreader, Georgia, serif; font-weight: 500; line-height: 1.12; }
