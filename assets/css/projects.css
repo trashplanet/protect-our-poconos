@@ -99,7 +99,7 @@
 .policy-grid h3 { font-size: 15px; line-height: 1.4; font-weight: 700; margin: 0 0 12px; }
 .policy-grid p:not(.eyebrow) { color: #526e5e; font-size: 12px; line-height: 1.6; }
 .policy-grid a { margin-top: auto; font-size: 11px; color: #286247; text-decoration: underline; text-underline-offset: 3px; }
-.tip-panel { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center; margin-top: 40px; padding: 32px; border-radius: 12px; background: #e5f0e8; }
+.tip-panel { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center; margin-top: 40px; padding: 32px; border-radius: 12px; background: #e5f0e8; border: 1px solid #cadfd1; }
 .tip-panel p { color: #466453; font-size: 14px; line-height: 1.6; margin: 0; }
 .tip-panel .eyebrow { margin-bottom: 12px; font-size: 10px; }
 .tip-panel .button, .empty-results .button { border-radius: 8px; background: #173d2c; color: #fff; font-weight: 700; font-size: 12px; padding: 15px 22px; }
