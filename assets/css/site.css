@@ -91,7 +91,7 @@ svg { flex-shrink: 0; }
 .scale-labels .scale-style-118 { white-space: normal; }
 .source-note { font-size: 12px; line-height: 1.7; color: #46574d; margin: 20px 0 0; }
 .source-note a { color: #245c45; text-decoration: underline; text-underline-offset: 3px; }
-.source-note a:hover { color: var(--ink); }
+.source-note a:is(:hover, :focus-visible) { color: var(--ink); text-decoration: none !important; }
 #facts .scale-style-127 { align-items: flex-start; }
 #facts .scale-style-129 { line-height: 1.2; }
 #facts .scale-style-139 { color: #46574d; }
