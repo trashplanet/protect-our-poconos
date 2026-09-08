@@ -4,11 +4,11 @@
 .faq-page .faq-design-3 {position:absolute;inset:0;background:radial-gradient(90% 120% at 10% 34%,rgba(52,161,132,0.28) 0%,rgba(52,161,132,0) 55%);pointer-events:none;}
 .faq-page .faq-design-4 {position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:76px 40px;width:100%;}
 .faq-page .faq-design-5 {max-width:680px;}
-.faq-page .faq-design-6 {font-size:12px;letter-spacing:0.22em;font-weight:600;color:#8fd4bf;margin:0 0 16px;}
-.faq-page .faq-design-7 {font-family:'Newsreader';font-weight:500;font-size:58px;line-height:1.0;letter-spacing:-0.01em;margin:0 0 20px;color:#f4faf6;}
+.faq-page .faq-design-6 {font-size:12px;letter-spacing:0.22em;font-weight:600;color:var(--mint);margin:0 0 16px;}
+.faq-page .faq-design-7 {font-family:'Newsreader';font-weight:500;font-size:58px;line-height:1.0;letter-spacing:-0.01em;margin:0 0 20px;color:var(--heading);}
 .faq-page .faq-design-8 {font-size:17px;line-height:1.62;color:#c8d8cf;max-width:600px;margin:0 0 22px;}
 .faq-page .faq-design-11 {display:flex;gap:14px;flex-wrap:wrap;}
-.faq-page .faq-design-12 {display:inline-flex;align-items:center;gap:10px;background:#34a184;color:#07160f;font-size:14px;font-weight:700;padding:14px 26px;border-radius:9px;box-shadow:0 12px 30px rgba(52,161,132,0.3);}
+.faq-page .faq-design-12 {display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#07160f;font-size:14px;font-weight:700;padding:14px 26px;border-radius:9px;box-shadow:0 12px 30px rgba(52,161,132,0.3);}
 .faq-page .faq-design-13 {font-size:16px;}
 .faq-page .faq-design-14 {display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.08);backdrop-filter:blur(4px);color:#fff;font-size:14px;font-weight:600;padding:14px 26px;border-radius:9px;border:1px solid rgba(255,255,255,0.4);}
 .faq-page .faq-design-15 {font-size:16px;}
@@ -24,9 +24,9 @@
 .faq-page .faq-design-25 {position:absolute;top:0;left:0;width:100%;height:400px;object-fit:cover;object-position:center top;opacity:0.20;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent);}
 .faq-page .faq-design-26 {position:relative;max-width:940px;margin:0 auto;padding:64px 40px 40px;}
 .faq-page .faq-design-27 {display:flex;align-items:center;gap:16px;margin:0 0 26px;}
-.faq-page .faq-design-28 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:#8fd4bf;box-shadow:0 8px 22px rgba(28,70,54,0.28);}
+.faq-page .faq-design-28 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28);}
 .faq-page .faq-design-29 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:#6a8579;margin:0 0 4px;}
-.faq-page .faq-design-30 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:#16281f;line-height:1.05;}
+.faq-page .faq-design-30 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:var(--ink);line-height:1.05;}
 .faq-page .faq-design-31 {display:flex;flex-direction:column;gap:12px;}
 .faq-page .faq-design-32 {background:#fff;border:1px solid #dbe6de;border-radius:14px;overflow:hidden;box-shadow:0 4px 12px rgba(20,40,30,0.04);}
 .faq-page .faq-design-33 {padding:0 26px 24px;}
@@ -82,7 +82,7 @@
 .faq-page .faq-design-83 {display:flex;align-items:center;gap:16px;margin:0 0 26px;}
 .faq-page .faq-design-84 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#264a5e;display:inline-flex;align-items:center;justify-content:center;color:#9fd0e0;box-shadow:0 8px 22px rgba(38,74,94,0.28);}
 .faq-page .faq-design-85 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:#6a8579;margin:0 0 4px;}
-.faq-page .faq-design-86 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:#16281f;line-height:1.05;}
+.faq-page .faq-design-86 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:var(--ink);line-height:1.05;}
 .faq-page .faq-design-87 {display:flex;flex-direction:column;gap:12px;}
 .faq-page .faq-design-88 {background:#fff;border:1px solid #dbe6de;border-radius:14px;overflow:hidden;box-shadow:0 4px 12px rgba(20,40,30,0.04);}
 .faq-page .faq-design-89 {padding:0 26px 24px;}
@@ -114,9 +114,9 @@
 .faq-page .faq-design-115 {position:absolute;top:0;left:0;width:100%;height:380px;object-fit:cover;object-position:center top;opacity:0.16;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent);}
 .faq-page .faq-design-116 {position:relative;max-width:940px;margin:0 auto;padding:56px 40px 40px;}
 .faq-page .faq-design-117 {display:flex;align-items:center;gap:16px;margin:0 0 26px;}
-.faq-page .faq-design-118 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:#8fd4bf;box-shadow:0 8px 22px rgba(28,70,54,0.28);}
+.faq-page .faq-design-118 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28);}
 .faq-page .faq-design-119 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:#6a8579;margin:0 0 4px;}
-.faq-page .faq-design-120 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:#16281f;line-height:1.05;}
+.faq-page .faq-design-120 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:var(--ink);line-height:1.05;}
 .faq-page .faq-design-121 {display:flex;flex-direction:column;gap:12px;}
 .faq-page .faq-design-122 {background:#fff;border:1px solid #dbe6de;border-radius:14px;overflow:hidden;box-shadow:0 4px 12px rgba(20,40,30,0.04);}
 .faq-page .faq-design-123 {padding:0 26px 24px;}
@@ -159,7 +159,7 @@
 .faq-page .faq-design-160 {display:flex;align-items:center;gap:16px;margin:0 0 26px;}
 .faq-page .faq-design-161 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#2b4a3c;display:inline-flex;align-items:center;justify-content:center;color:#a7d0bf;box-shadow:0 8px 22px rgba(43,74,60,0.28);}
 .faq-page .faq-design-162 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:#6a8579;margin:0 0 4px;}
-.faq-page .faq-design-163 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:#16281f;line-height:1.05;}
+.faq-page .faq-design-163 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:var(--ink);line-height:1.05;}
 .faq-page .faq-design-164 {display:flex;flex-direction:column;gap:12px;}
 .faq-page .faq-design-165 {background:#fff;border:1px solid #dbe6de;border-radius:14px;overflow:hidden;box-shadow:0 4px 12px rgba(20,40,30,0.04);}
 .faq-page .faq-design-166 {padding:0 26px 24px;}
@@ -177,9 +177,9 @@
 .faq-page .faq-design-178 {position:absolute;top:0;left:0;width:100%;height:360px;object-fit:cover;object-position:center top;opacity:0.14;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent);}
 .faq-page .faq-design-179 {position:relative;max-width:940px;margin:0 auto;padding:56px 40px 40px;}
 .faq-page .faq-design-180 {display:flex;align-items:center;gap:16px;margin:0 0 26px;}
-.faq-page .faq-design-181 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:#8fd4bf;box-shadow:0 8px 22px rgba(28,70,54,0.28);}
+.faq-page .faq-design-181 {width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28);}
 .faq-page .faq-design-182 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:#6a8579;margin:0 0 4px;}
-.faq-page .faq-design-183 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:#16281f;line-height:1.05;}
+.faq-page .faq-design-183 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0;color:var(--ink);line-height:1.05;}
 .faq-page .faq-design-184 {display:flex;flex-direction:column;gap:12px;}
 .faq-page .faq-design-185 {background:#fff;border:1px solid #dbe6de;border-radius:14px;overflow:hidden;box-shadow:0 4px 12px rgba(20,40,30,0.04);}
 .faq-page .faq-design-186 {padding:0 26px 24px;}
@@ -214,28 +214,28 @@
 .faq-page .faq-design-215 {position:absolute;bottom:0;right:0;width:56%;height:100%;object-fit:cover;object-position:bottom right;opacity:0.12;pointer-events:none;-webkit-mask-image:linear-gradient(to left,#000,transparent);mask-image:linear-gradient(to left,#000,transparent);}
 .faq-page .faq-design-216 {position:absolute;inset:0;background:radial-gradient(80% 100% at 12% 20%,rgba(52,161,132,0.16) 0%,rgba(52,161,132,0) 55%);pointer-events:none;}
 .faq-page .faq-design-217 {position:relative;max-width:840px;margin:0 auto;padding:70px 40px;}
-.faq-page .faq-design-218 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:#8fd4bf;margin:0 0 14px;}
-.faq-page .faq-design-219 {font-family:'Newsreader';font-weight:500;font-size:34px;line-height:1.1;margin:0 0 22px;color:#f4faf6;}
+.faq-page .faq-design-218 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:var(--mint);margin:0 0 14px;}
+.faq-page .faq-design-219 {font-family:'Newsreader';font-weight:500;font-size:34px;line-height:1.1;margin:0 0 22px;color:var(--heading);}
 .faq-page .faq-design-220 {font-family:'Newsreader';font-size:22px;line-height:1.5;color:#dcefe5;margin:0 0 20px;}
 .faq-page .faq-design-221 {font-size:15.5px;line-height:1.7;color:#a9c1b6;margin:0;}
 .faq-page .faq-design-222 {position:relative;background:#0e2018;overflow:hidden;}
 .faq-page .faq-design-223 {position:absolute;bottom:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.2;pointer-events:none;}
 .faq-page .faq-design-224 {position:relative;max-width:1200px;margin:0 auto;padding:56px 40px;display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;}
 .faq-page .faq-design-225 {max-width:660px;}
-.faq-page .faq-design-226 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:#8fd4bf;margin:0 0 12px;}
+.faq-page .faq-design-226 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:var(--mint);margin:0 0 12px;}
 .faq-page .faq-design-227 {font-family:'Newsreader';font-weight:500;font-size:31px;line-height:1.12;margin:0 0 10px;color:#fff;}
 .faq-page .faq-design-228 {font-size:14.5px;line-height:1.55;color:#bcd2c8;margin:0;}
 .faq-page .faq-design-229 {display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0;}
-.faq-page .faq-design-230 {display:inline-flex;align-items:center;gap:10px;background:#34a184;color:#07160f;font-size:14px;font-weight:700;padding:15px 28px;border-radius:9px;box-shadow:0 12px 30px rgba(52,161,132,0.32);}
+.faq-page .faq-design-230 {display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#07160f;font-size:14px;font-weight:700;padding:15px 28px;border-radius:9px;box-shadow:0 12px 30px rgba(52,161,132,0.32);}
 .faq-page .faq-design-231 {font-size:16px;}
 .faq-page .faq-design-232 {display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.08);color:#fff;font-size:14px;font-weight:600;padding:15px 28px;border-radius:9px;border:1px solid rgba(255,255,255,0.4);}
 .faq-page h1 {font-size:var(--hero-heading-size)!important;line-height:1.08!important;}
-.faq-item summary {padding:22px 26px;cursor:pointer;font-family:Newsreader,Georgia,serif;font-size:21px;font-weight:600;color:#16281f;list-style:none;display:flex;justify-content:space-between;gap:20px;}
+.faq-item summary {padding:22px 26px;cursor:pointer;font-family:Newsreader,Georgia,serif;font-size:21px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:20px;}
 .faq-item summary::-webkit-details-marker {display:none;}
 .faq-item summary::after {content:'+';color:#2f7d63;}
 .faq-item[open] summary::after {content:'−';}
 .faq-item summary:hover {background:#f6faf7;}
-.faq-item summary:focus-visible {outline:3px solid #34a184;outline-offset:-4px;}
+.faq-item summary:focus-visible {outline:3px solid var(--teal);outline-offset:-4px;}
 .faq-page .faq-stance {padding-top:60px;}
 .faq-page .faq-closing {background:#12241d;border-top:1px solid #3b5345;}
 .faq-page .faq-jump {top:var(--header-height,93px);}

@@ -65,17 +65,19 @@ git diff --check
 
 Check the homepage at desktop, tablet, and mobile widths, including mobile menu, keyboard focus, Escape dismissal, image loading, and anchor navigation.
 
-## Maintaining the shared header and footer
+## Maintaining the shared page regions
 
-The site header, its navigation and the footer repeat on every page, so they live once in `partials/`:
+The parts that repeat on every page live once in `partials/`, and `scripts/render-partials.py` writes them back into each committed page:
 
+- `partials/head.html`: the document `<head>` — meta, base CSS/JS links, font preloads.
 - `partials/site-header.html`: the header — logo, mobile menu button, navigation and the Take Action button.
 - `partials/primary-nav.html`: the navigation links. The same list is the top bar on desktop and, when the menu button is toggled, the mobile menu drawer; `assets/css/site.css` and `assets/js/site.js` handle the responsive switch.
 - `partials/footer.html`: the footer.
+- `partials/notice.html`: the shared "not ready yet" dialog.
 
-Edit the partial, then run `python3 scripts/render-partials.py` to write the assembled header and footer back into every page and commit the results. Preview and GitHub Pages keep serving the generated static HTML with no request-time build. The deploy workflow renders the partials before publishing, and `--check` fails CI if a committed page has drifted from them.
+Edit a partial, then run `python3 scripts/render-partials.py` to write the assembled regions back into every page and commit the results. Preview and GitHub Pages keep serving the generated static HTML with no request-time build. The deploy workflow renders the partials before publishing, and `--check` fails CI if a committed page has drifted from them.
 
-Only two things differ between pages, so they are the only template variables: `{{home_href}}` (the logo and footer "Home" target, `#top` on the homepage and `index.html#top` elsewhere) and `{{active_*}}` (adds `aria-current="page"` to the current page's navigation link). The per-page values live in the `PAGES` table at the top of `scripts/render-partials.py`; add a new page there when you create one.
+Per-page differences are handled without leaving the HTML: `{{title}}` / `{{description}}` and any page-specific `{{page_css}}` / `{{page_js}}` are read back out of each page (so titles and descriptions stay authored in the HTML), while `{{home_href}}` (the logo/footer "Home" target) and `{{active_*}}` (the `aria-current="page"` nav link) come from the `PAGES` table at the top of `scripts/render-partials.py`. Note that canonical, Open Graph, Twitter and JSON-LD are **not** in the head partial — `build-site.py` generates those per page at publish time.
 
 ## Stylesheets
 
@@ -84,8 +86,8 @@ Each page loads a shared base — `foundation-subset.css`, `design.css`, `site.c
 Build-time efficiencies keep the payload down without changing how you author:
 
 - **Foundation subset.** The pages only use Foundation's global base and five classes, so `scripts/subset-foundation.py` extracts just those into `assets/css/foundation-subset.css` (~13 KB instead of 131 KB). Pages link the subset; the full library stays in `assets/vendor/` as its source. Re-run the script only after upgrading Foundation.
-- **Minification.** `scripts/build-site.py` strips comments and collapses whitespace in every `assets/css/*.css` file as it copies them into `_site/`. The committed source stays readable; only the published copy is minified.
-- **Inlining.** At publish time `build-site.py` also folds each page's stylesheets into a single inline `<style>` (rewriting `url(../…)` to absolute paths), so pages paint without waiting on separate render-blocking CSS requests. Edit the `.css` files as normal — the inlining happens only in `_site/`.
+- **Inlining + minification.** At publish time `build-site.py` folds each page's stylesheets into a single inline, minified `<style>` (comments stripped, `url(../…)` rewritten to absolute paths), so pages paint without waiting on separate render-blocking CSS requests. The committed `.css` files stay readable; the published pages no longer ship them as separate files (nor the full Foundation build).
+- **Design tokens.** The repeated brand colors are CSS custom properties on `:root` in `assets/css/site.css` (`--forest`, `--mint`, `--ink`, `--teal`, `--heading`); change a value there to retheme everywhere. Shared inline "arrow" links (About's "View resources"/"Contact us", the issues source links) use the `.link-arrow` treatment defined once in `site.css`.
 
 ## Images
 

@@ -1,20 +1,20 @@
 /* Shared editorial hero scale; layouts remain page-specific. */
 :root { --hero-heading-size: clamp(40px, 4.6vw, 64px); }
 /* Site behavior and responsive adjustments. Keep desktop art direction in design.css. */
-:root { --forest: #0f1f18; --mint: #8fd4bf; --ink: #16281f; }
+:root { --forest: #0f1f18; --mint: #8fd4bf; --ink: #16281f; --teal: #34a184; --heading: #f4faf6; }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { line-height: normal; }
 button, a { -webkit-tap-highlight-color: transparent; }
 a, button { touch-action: manipulation; }
 button { cursor: pointer; font-family: inherit; }
-:focus-visible { outline: 3px solid #34a184; outline-offset: 5px; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }
 svg { flex-shrink: 0; }
 .grid-x > .cell { width: auto; min-width: 0; }
 .grid-container { width: 100%; }
 .site-shell { overflow-x: clip; }
-.skip-link { position: fixed; top: -100px; left: 20px; z-index: 200; background: #fff; color: #16281f; padding: 14px 20px; border-radius: 8px; }
+.skip-link { position: fixed; top: -100px; left: 20px; z-index: 200; background: #fff; color: var(--ink); padding: 14px 20px; border-radius: 8px; }
 .skip-link:focus { top: 12px; }
-.menu-toggle { display: none; background: transparent; border: 1px solid #365847; color: #16281f; padding: 10px 14px; border-radius: 7px; font-size: 14px; font-weight: 700; }
+.menu-toggle { display: none; background: transparent; border: 1px solid #365847; color: var(--ink); padding: 10px 14px; border-radius: 7px; font-size: 14px; font-weight: 700; }
 .draft-note, .scale-note { font-size: 12px; color: #53675b; line-height: 1.6; }
 .scale-visual { margin: 0; min-width: 0; }
 .scale-note { margin: 12px 0 0; text-align: left; }
@@ -23,7 +23,7 @@ svg { flex-shrink: 0; }
 #site-notice h2 { font-family: Newsreader, Georgia, serif; color: #fff; font-size: 30px; line-height: 1.1; margin: 0 0 16px; }
 #site-notice p { line-height: 1.6; }
 .notice-close { position: absolute; right: 14px; top: 10px; color: #c8d8cf; font-size: 30px; width: 36px; height: 36px; }
-.notice-done.button { background: #34a184; color: #07160f; border-radius: 7px; font-weight: 700; margin: 8px 0 0; }
+.notice-done.button { background: var(--teal); color: #07160f; border-radius: 7px; font-weight: 700; margin: 8px 0 0; }
 @media (max-width: 1150px) {
   .header-inner { gap: 12px; padding-inline: 24px; }
   .primary-navigation { order: 3; flex-basis: 100%; justify-content: center; }
@@ -91,7 +91,7 @@ svg { flex-shrink: 0; }
 .scale-labels .scale-style-118 { white-space: normal; }
 .source-note { font-size: 12px; line-height: 1.7; color: #46574d; margin: 20px 0 0; }
 .source-note a { color: #245c45; text-decoration: underline; text-underline-offset: 3px; }
-.source-note a:hover { color: #16281f; }
+.source-note a:hover { color: var(--ink); }
 #facts .scale-style-127 { align-items: flex-start; }
 #facts .scale-style-129 { line-height: 1.2; }
 #facts .scale-style-139 { color: #46574d; }
@@ -123,7 +123,7 @@ svg { flex-shrink: 0; }
 }
 
 /* One selected-page treatment for every shared navigation bar. */
-.primary-navigation [aria-current="page"] { border-radius: 0; box-shadow: 0 2px #34a184; font-weight: 700; }
+.primary-navigation [aria-current="page"] { border-radius: 0; box-shadow: 0 2px var(--teal); font-weight: 700; }
 
 /* Keep the closing headline in two intentional phrases. */
 .closing-style-167 { line-height: 1.16; margin-bottom: 22px; text-wrap: balance; }
@@ -156,14 +156,20 @@ body[class] main a:hover, body[class] main a:focus-visible {text-decoration:none
 /* 404 page (scoped: only affects 404.html via .notfound-* classes).
    Mirrors the interior-page hero treatment used on issues.html. */
 .notfound-hero { position: relative; overflow: hidden;
-  background-image: linear-gradient(180deg, rgba(9,18,13,0.62) 0%, rgba(9,18,13,0.5) 40%, rgba(9,18,13,0.72) 78%, #0f1f18 100%), url('../forest-dark.webp');
+  background-image: linear-gradient(180deg, rgba(9,18,13,0.62) 0%, rgba(9,18,13,0.5) 40%, rgba(9,18,13,0.72) 78%, var(--forest) 100%), url('../forest-dark.webp');
   background-size: cover; background-position: center; }
 .notfound-inner { max-width: var(--page-width, 1240px); margin-inline: auto;
   padding: var(--hero-top, 72px) var(--page-gutter, 40px) 72px; }
-.notfound-eyebrow { margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #8fd4bf; }
-.notfound-title { max-width: 740px; margin: 0 0 24px; font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-weight: 500; font-size: var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); line-height: 1.03; letter-spacing: -0.01em; color: #f4faf6; text-wrap: balance; }
+.notfound-eyebrow { margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--mint); }
+.notfound-title { max-width: 740px; margin: 0 0 24px; font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-weight: 500; font-size: var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); line-height: 1.03; letter-spacing: -0.01em; color: var(--heading); text-wrap: balance; }
 .notfound-lead { max-width: 650px; margin: 0 0 32px; font-size: 17px; line-height: 1.65; color: #c8d8cf; }
 .notfound-actions { margin: 0 0 40px; }
-.notfound-home { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 8px; background: #34a184; color: #07160f; font-weight: 700; text-decoration: none; }
+.notfound-home { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 8px; background: var(--teal); color: #07160f; font-weight: 700; text-decoration: none; }
 .notfound-links { display: flex; flex-wrap: wrap; gap: 12px 28px; max-width: 740px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); }
 .notfound-links a { font-weight: 600; }
+
+/* Shared inline arrow link: About "View resources"/"Contact us" + issues source links. */
+.link-arrow, .issue-sources a { color: var(--mint); font-weight: 600; text-decoration: none; }
+.link-arrow:hover, .link-arrow:focus-visible,
+.issue-sources a:hover, .issue-sources a:focus-visible { color: #fff; }
+.link-arrow { display: inline-flex; align-items: center; gap: 8px; }

@@ -8,15 +8,20 @@ and GitHub Pages keep serving the generated static HTML with no build step at re
     python3 scripts/render-partials.py --check     # fail if any page is out of sync (CI)
 
 Partials
+    partials/head.html          document <head>: meta, base CSS/JS links, font preloads
     partials/site-header.html   site header: logo, mobile menu button, navigation, CTA
     partials/primary-nav.html   the navigation links, shown as the top bar on desktop and,
                                 when the menu button is toggled, as the mobile menu drawer
     partials/footer.html        site footer
+    partials/notice.html        the shared "not ready yet" dialog
 
-Only two things vary between pages, so they are the only template variables:
-    {{home_href}}   the logo and footer "Home" target ("#top" on the homepage,
-                    "index.html#top" elsewhere)
-    {{active_*}}    " aria-current=\"page\"" on the current page's navigation link
+Per-page values are read back out of each page (title/description stay authored in the
+HTML) or come from the PAGES table:
+    {{title}} {{description}}   the page's <title> and meta description, preserved as-is
+    {{page_css}} {{page_js}}    the page's own stylesheet/script, if any (e.g. news.css)
+    {{home_href}}               the logo and footer "Home" target ("#top" on the homepage,
+                                "index.html#top" elsewhere)
+    {{active_*}}                " aria-current=\"page\"" on the current page's nav link
 """
 import argparse
 import re
@@ -39,16 +44,37 @@ PAGES = {
 }
 NAV_KEYS = ['news', 'issues', 'projects', 'resources', 'faq']
 
-# The single site header and footer on each page; leading indentation is matched so the
-# rendered block drops in exactly where the original stood.
+# Single shared regions on each page; leading indentation is matched so the rendered
+# block drops in exactly where the original stood.
+HEAD = re.compile(r'[ \t]*<head>.*?</head>', re.S)
 HEADER = re.compile(r'[ \t]*<header class="site-header.*?</header>', re.S)
 FOOTER = re.compile(r'[ \t]*<footer class="layout-style-170".*?</footer>', re.S)
+NOTICE = re.compile(r'[ \t]*<dialog aria-labelledby="notice-title".*?</dialog>', re.S)
+BASE_CSS = {'foundation-subset', 'design', 'site', 'layout', 'fonts'}
+BASE_JS = {'site', 'analytics'}
 
 
 def context(home_href, active):
     values = {'home_href': home_href}
     for key in NAV_KEYS:
         values['active_' + key] = ' aria-current="page"' if active == key else ''
+    return values
+
+
+def head_values(page):
+    """Read the per-page title, description and any page-specific CSS/JS back out of the
+    page, so those stay authored in the HTML while the head structure lives in the partial."""
+    values = {
+        'title': re.search(r'<title>\s*(.*?)\s*</title>', page, re.S)[1],
+        'description': re.search(r'<meta content="([^"]*)" name="description"', page)[1],
+        'page_css': '', 'page_js': '',
+    }
+    for name in re.findall(r'<link href="assets/css/([\w-]+)\.css" rel="stylesheet"', page):
+        if name not in BASE_CSS:
+            values['page_css'] = f' <link href="assets/css/{name}.css" rel="stylesheet"/>\n'
+    for name in re.findall(r'src="assets/js/([\w-]+)\.js"', page):
+        if name not in BASE_JS:
+            values['page_js'] = f' <script defer src="assets/js/{name}.js"></script>\n'
     return values
 
 
@@ -67,12 +93,17 @@ def render(name, values):
 
 def assemble(page, home_href, active):
     values = context(home_href, active)
+    head = render('head', head_values(page)).rstrip('\n')
     header = render('site-header', values).rstrip('\n')
     footer = render('footer', values).rstrip('\n')
+    notice = render('notice', {}).rstrip('\n')
+    page, heads = HEAD.subn(lambda _: head, page, count=1)
     page, headers = HEADER.subn(lambda _: header, page, count=1)
     page, footers = FOOTER.subn(lambda _: footer, page, count=1)
-    if headers != 1 or footers != 1:
-        raise ValueError(f'Expected one header and one footer (found {headers} and {footers})')
+    page, notices = NOTICE.subn(lambda _: notice, page, count=1)
+    if not (heads == headers == footers == notices == 1):
+        raise ValueError(f'Expected one of each region (head={heads} header={headers} '
+                         f'footer={footers} notice={notices})')
     return page
 
 
@@ -90,9 +121,9 @@ def main():
             if not args.check:
                 path.write_text(after)
     if args.check and stale:
-        parser.exit(1, 'Shared header/footer is stale in ' + ', '.join(stale)
+        parser.exit(1, 'Shared page regions are stale in ' + ', '.join(stale)
                     + '. Run python3 scripts/render-partials.py and commit the results.\n')
-    print('Shared header and footer aligned.' if not stale else 'Rendered partials into: ' + ', '.join(stale))
+    print('Shared page regions aligned.' if not stale else 'Rendered partials into: ' + ', '.join(stale))
 
 
 if __name__ == '__main__':

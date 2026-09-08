@@ -20,20 +20,19 @@ class PublicBuildTests(unittest.TestCase):
     def test_css_foundation_subset_and_minification(self):
         for route in build.PAGES.values():
             page = (build.OUT / route.strip('/') / 'index.html').read_text()
-            # CSS is inlined (no render-blocking stylesheet links); the subset ships in it.
+            # CSS is inlined (no render-blocking stylesheet links) and minified.
             self.assertNotIn('rel="stylesheet"', page)
-            self.assertIn('<style>', page)
-            self.assertIn('.grid-container', page)
+            style = re.search(r'<style>(.*?)</style>', page, re.S)[1]
+            self.assertIn('.grid-container', style)  # the Foundation subset ships inline
+            self.assertNotIn('/*', style)            # comments stripped
             self.assertNotIn('vendor/foundation.min.css', page)
-        subset = (build.OUT / 'assets/css/foundation-subset.css').read_text()
+        subset = (build.ROOT / 'assets/css/foundation-subset.css').read_text()
         self.assertIn('.grid-container', subset)
         self.assertIn('.button{', subset)
         for dropped in ['.reveal', '.dropdown', '.accordion', '.small-6', '.grid-margin']:
             self.assertNotIn(dropped, subset)
-        for name in ['design', 'resources']:
-            built = (build.OUT / f'assets/css/{name}.css').read_text()
-            self.assertNotIn('/*', built)
-            self.assertLess(len(built), len((build.ROOT / f'assets/css/{name}.css').read_text()))
+        # The inlined stylesheets are not also shipped as files.
+        self.assertFalse((build.OUT / 'assets/css').exists())
 
     def test_routes_metadata_and_internal_targets(self):
         for route in build.PAGES.values():
@@ -128,10 +127,10 @@ class PublicBuildTests(unittest.TestCase):
         self.assertNotIn('href="assets/', page)
         self.assertNotIn('src="./assets', page)
         # the 404 hero reuses the interior-page treatment (serif heading, forest background)
-        site_css = (build.OUT / 'assets/css/site.css').read_text()
-        self.assertIn('.notfound-hero', site_css)
-        self.assertIn('Newsreader', site_css)
-        self.assertIn('forest-dark.webp', site_css)
+        style = re.search(r'<style>(.*?)</style>', page, re.S)[1]
+        self.assertIn('.notfound-hero', style)
+        self.assertIn('Newsreader', style)
+        self.assertIn('forest-dark.webp', style)
 
     def test_sitemap_and_redirects(self):
         locs = [n.text for n in ET.parse(build.OUT / 'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]

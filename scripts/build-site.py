@@ -59,10 +59,12 @@ OUT = ROOT / '_site'
 def minify_css(text):
     """Conservatively minify CSS: drop comments and collapse whitespace, leaving
     string literals and combinators intact so values like calc() are unchanged."""
+    # Strip comments before protecting strings, so a quote inside a comment (e.g. "site's")
+    # can't swallow the closing */ and leave the comment behind.
+    text = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
     literals = []
     text = re.sub(r'"(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\'',
                   lambda m: literals.append(m[0]) or f'\x00{len(literals) - 1}\x00', text)
-    text = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
     text = re.sub(r'\s+', ' ', text)
     text = re.sub(r'\s*([{};,])\s*', r'\1', text)
     text = re.sub(r';\}', '}', text).strip()
@@ -144,8 +146,10 @@ def build_feed():
 def build():
     OUT.mkdir(exist_ok=True)
     shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
-    for stylesheet in (OUT / 'assets/css').glob('*.css'):
-        stylesheet.write_text(minify_css(stylesheet.read_text()))
+    # Every page inlines its stylesheets (see inline_stylesheets), so the copied CSS files
+    # and the full Foundation build are unreferenced in the output; drop them.
+    shutil.rmtree(OUT / 'assets/css')
+    (OUT / 'assets/vendor/foundation.min.css').unlink()
     (OUT / '.nojekyll').touch()
     shutil.copy2(ROOT / 'llms.txt', OUT / 'llms.txt')
     (OUT / 'CNAME').write_text('protectourpoconos.com\n')

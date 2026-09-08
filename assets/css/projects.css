@@ -43,7 +43,7 @@
 #clear-filters { padding: 5px 8px; border: 0; min-height: 32px; background: transparent; text-decoration: underline; }
 .tracker-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; align-items: start; }
 .tracker-card { background: #fff; border: 1px solid #e2e9e4; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px #0c342909; scroll-margin-top: 130px; }
-.tracker-card:target { outline: 3px solid #34a184; outline-offset: 3px; }
+.tracker-card:target { outline: 3px solid var(--teal); outline-offset: 3px; }
 .tracker-card-image { height: 150px; position: relative; background: #e7eee8; overflow: hidden; }
 .tracker-card-image img { width: 100%; height: 100%; object-fit: cover; }
 .tracker-card-image.illustration img { object-fit: contain; padding: 8px 24px 24px; mix-blend-mode: multiply; }
