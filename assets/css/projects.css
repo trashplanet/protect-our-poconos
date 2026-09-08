@@ -18,7 +18,7 @@
 .tracker-overview strong { font-size: 34px; font-weight: 600; }
 .tracker-overview span { max-width: 150px; font-size: 13px; line-height: 1.4; }
 .tracker-overview a:hover { color: #a6deca; }
-.tracker-content { padding-top: 22px; padding-bottom: 64px; }
+.tracker-content { padding-top: 22px; padding-bottom: 0; }
 .project-legend { border-radius: 10px; background: #e8f1eb; padding: 24px; margin-bottom: 28px; }
 .project-legend h2 { font-family: 'Public Sans',sans-serif; font-weight: 700; font-size: 17px; margin-bottom: 20px; }
 .legend-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 20px; }
@@ -92,7 +92,7 @@
 .transmission-context p { font-size: 13px; line-height: 1.6; }
 .transmission-context a { color: #9ad8b8; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
 .local-rules { scroll-margin-top: 120px; }
-.local-rules > h2, .tip-panel h2 { font-size: 34px; font-weight: 500; line-height: 1.2; margin: 0 0 12px; }
+.local-rules > h2 { font-size: 34px; font-weight: 500; line-height: 1.2; margin: 0 0 12px; }
 .local-rules > p:not(.eyebrow) { color: #526e5e; max-width: 720px; font-size: 14px; }
 .policy-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-top: 24px; }
 .policy-grid article { background: #fff; border: 1px solid #d9e5dc; border-radius: 9px; padding: 22px; display: flex; flex-direction: column; }
@@ -100,12 +100,8 @@
 .policy-grid h3 { font-size: 15px; line-height: 1.4; font-weight: 700; margin: 0 0 12px; }
 .policy-grid p:not(.eyebrow) { color: #526e5e; font-size: 12px; line-height: 1.6; }
 .policy-grid a { margin-top: auto; font-size: 11px; color: #286247; text-decoration: underline; text-underline-offset: 3px; }
-.tip-panel { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center; margin-top: 40px; padding: 32px; border-radius: 12px; background: #e5f0e8; border: 1px solid #cadfd1; }
-.tip-panel p { color: #466453; font-size: 14px; line-height: 1.6; margin: 0; }
-.tip-panel .eyebrow { margin-bottom: 12px; font-size: 10px; }
-.tip-panel .button, .empty-results .button { border-radius: 8px; background: #173d2c; color: #fff; font-weight: 700; font-size: 12px; padding: 15px 22px; }
-.tip-panel .button { display: flex; justify-content: center; gap: 12px; }
-.tip-panel > div:last-child p { font-size: 12px; }
+.empty-results .button { border-radius: 8px; background: #173d2c; color: #fff; font-weight: 700; font-size: 12px; padding: 15px 22px; }
+.editorial-closing { margin-top: 64px; }
 .empty-results { text-align: center; padding: 48px 24px; border-radius: 10px; background: #e8f1eb; }
 .empty-results h2 { font-size: 28px; }
 .no-js .tracker-controls, .no-js .tracker-results { display: none; }
@@ -133,7 +129,6 @@
  .tracker-card h2 { font-size: 17px; }
  .transmission-context { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
  .transmission-context p { margin-bottom: 8px; }
- .tip-panel { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
 }
 @media (max-width: 560px) {
  .tracker-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -149,7 +144,7 @@
  .project-location, .project-milestone, .project-details p, .project-details dd, .project-sources a { font-size: 13px; }
  .project-details summary { min-height: 48px; }
  .policy-grid { grid-template-columns: 1fr; }
- .local-rules > h2, .tip-panel h2 { font-size: 30px; }
+ .local-rules > h2 { font-size: 30px; }
 }
 /* Let the final rumor entry use the row rather than leave two empty card columns. */
 @media (min-width: 761px) {
