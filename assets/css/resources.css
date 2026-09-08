@@ -6,7 +6,7 @@
 .resources-page .research-design-4 {position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:72px 40px;width:100%;}
 .resources-page .research-design-5 {max-width:640px;}
 .resources-page .research-design-6 {font-size:12px;letter-spacing:0.22em;font-weight:600;color:var(--mint);margin:0 0 16px;}
-.resources-page .research-design-7 {font-family:'Newsreader';font-weight:500;font-size:56px;line-height:1.0;letter-spacing:-0.01em;margin:0 0 20px;color:var(--heading);}
+.resources-page .research-design-7 {font-family:'Newsreader';font-weight:500;font-size:var(--hero-heading-size);line-height:1.0;letter-spacing:-0.01em;margin:0 0 20px;color:var(--heading);}
 .resources-page .research-design-8 {font-size:17px;line-height:1.62;color:var(--text-soft);max-width:560px;margin:0 0 26px;}
 .resources-page .research-design-9 {display:flex;gap:14px;flex-wrap:wrap;}
 .resources-page .research-design-11, .resources-page .research-design-13, .resources-page .research-design-139, .resources-page .research-design-224 { font-size:16px; }
@@ -19,13 +19,13 @@
 .resources-page .research-design-22 {position:absolute;top:0;left:0;width:100%;height:420px;object-fit:cover;object-position:center top;opacity:0.24;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent);}
 .resources-page .research-design-23 {position:relative;max-width:1200px;margin:0 auto;padding:64px 40px 24px;}
 .resources-page .research-design-24, .resources-page .research-design-142, .resources-page .research-design-179 { font-size:12px;letter-spacing:0.2em;font-weight:600;color:#52675a;margin:0 0 8px; }
-.resources-page .research-design-25, .resources-page .research-design-143, .resources-page .research-design-180, .resources-page .homeowner-design-3 { font-family:'Newsreader';font-weight:500;font-size:34px;margin:0 0 8px;color:var(--ink); }
+.resources-page .research-design-25, .resources-page .research-design-143, .resources-page .research-design-180, .resources-page .homeowner-design-3 { font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);margin:0 0 8px;color:var(--ink); }
 .resources-page .research-design-26 {font-size:15px;line-height:1.6;color:var(--text-muted);max-width:640px;margin:0 0 34px;}
 .resources-page .research-design-27 {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
 .resources-page .research-design-28, .resources-page .research-design-55, .resources-page .research-design-82, .resources-page .research-design-109 { background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,30,0.06);display:flex;flex-direction:column; }
 .resources-page .research-design-29, .resources-page .research-design-56 { padding:22px 24px;background:linear-gradient(135deg,#1c4636,#123024);display:flex;align-items:flex-start;justify-content:space-between;gap:12px; }
 .resources-page .research-design-30, .resources-page .research-design-57 { font-size:11px;letter-spacing:0.1em;font-weight:700;color:var(--mint);margin-bottom:4px; }
-.resources-page .research-design-31, .resources-page .research-design-58, .resources-page .research-design-85, .resources-page .research-design-112 { font-family:'Newsreader';font-weight:600;font-size:22px;margin:0;color:var(--heading); }
+.resources-page .research-design-31, .resources-page .research-design-58, .resources-page .research-design-85, .resources-page .research-design-112 { font-family:'Newsreader';font-weight:600;font-size:var(--fs-card);margin:0;color:var(--heading); }
 .resources-page .research-design-32, .resources-page .research-design-59 { font-size:10px;font-weight:700;letter-spacing:0.04em;color:var(--ink-btn);background:var(--mint);border-radius:999px;padding:5px 11px;white-space:nowrap; }
 .resources-page .research-design-33, .resources-page .research-design-60, .resources-page .research-design-87, .resources-page .research-design-114 { padding:8px 24px 12px;display:flex;flex-direction:column;flex:1; }
 .resources-page .research-design-34, .resources-page .research-design-38, .resources-page .research-design-42, .resources-page .research-design-46, .resources-page .research-design-61, .resources-page .research-design-65, .resources-page .research-design-69, .resources-page .research-design-73, .resources-page .research-design-88, .resources-page .research-design-92, .resources-page .research-design-96, .resources-page .research-design-100, .resources-page .research-design-115, .resources-page .research-design-119, .resources-page .research-design-123, .resources-page .research-design-127 { display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #eef2ee;color:var(--text-strong); }
@@ -54,7 +54,7 @@
 .resources-page .research-design-147 {position:absolute;top:0;right:0;width:52%;height:100%;object-fit:cover;opacity:0.1;pointer-events:none;-webkit-mask-image:linear-gradient(to left,#000,transparent);mask-image:linear-gradient(to left,#000,transparent);}
 .resources-page .research-design-148 {position:relative;max-width:1100px;margin:0 auto;padding:64px 40px;}
 .resources-page .research-design-149 {font-size:12px;letter-spacing:0.2em;font-weight:600;color:#9fc2d4;margin:0 0 8px;}
-.resources-page .research-design-150 {font-family:'Newsreader';font-weight:500;font-size:34px;margin:0 0 8px;color:var(--heading);}
+.resources-page .research-design-150 {font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);margin:0 0 8px;color:var(--heading);}
 .resources-page .research-design-151 {font-size:15px;line-height:1.6;color:var(--muted-light);max-width:600px;margin:0 0 34px;}
 .resources-page .research-design-152 {display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;}
 .resources-page .research-design-153, .resources-page .research-design-156, .resources-page .research-design-159, .resources-page .research-design-162, .resources-page .research-design-165, .resources-page .research-design-168, .resources-page .research-design-171, .resources-page .research-design-174 { border-left:2px solid rgba(143,212,191,0.4);padding-left:16px; }
@@ -73,7 +73,7 @@
 .resources-page .research-design-217 {position:relative;max-width:1200px;margin:0 auto;padding:56px 40px;display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;}
 .resources-page .research-design-218 {max-width:660px;}
 .resources-page .research-design-219 {font-size:12px;letter-spacing:0.2em;font-weight:700;color:var(--mint);margin:0 0 12px;}
-.resources-page .research-design-220 {font-family:'Newsreader';font-weight:500;font-size:31px;line-height:1.12;margin:0 0 10px;color:#fff;}
+.resources-page .research-design-220 {font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);line-height:1.12;margin:0 0 10px;color:#fff;}
 .resources-page .research-design-221 {font-size:14px;line-height:1.55;color:#bcd2c8;margin:0 0 8px;}
 .resources-page .research-design-222 {font-size:12px;line-height:1.5;color:#7f998c;margin:0;font-style:italic;}
 
@@ -104,7 +104,7 @@
 .resources-page .homeowner-design-9, .resources-page .homeowner-design-15, .resources-page .homeowner-design-21, .resources-page .homeowner-design-27, .resources-page .homeowner-design-33, .resources-page .homeowner-design-47 { background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05); }
 .resources-page .homeowner-design-10, .resources-page .homeowner-design-16, .resources-page .homeowner-design-22, .resources-page .homeowner-design-28, .resources-page .homeowner-design-34, .resources-page .homeowner-design-48 { width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:var(--link);margin-bottom:16px; }
 .resources-page .homeowner-design-11, .resources-page .homeowner-design-17, .resources-page .homeowner-design-23, .resources-page .homeowner-design-29, .resources-page .homeowner-design-35, .resources-page .homeowner-design-49 { font-size:11px;letter-spacing:0.08em;font-weight:700;color:var(--muted);margin-bottom:6px; }
-.resources-page .homeowner-design-12, .resources-page .homeowner-design-18, .resources-page .homeowner-design-24, .resources-page .homeowner-design-30, .resources-page .homeowner-design-36, .resources-page .homeowner-design-50 { font-family:'Newsreader';font-weight:600;font-size:20px;line-height:1.2;margin:0 0 10px;color:var(--ink); }
+.resources-page .homeowner-design-12, .resources-page .homeowner-design-18, .resources-page .homeowner-design-24, .resources-page .homeowner-design-30, .resources-page .homeowner-design-36, .resources-page .homeowner-design-50 { font-family:'Newsreader';font-weight:600;font-size:var(--fs-card);line-height:1.2;margin:0 0 10px;color:var(--ink); }
 .resources-page .homeowner-design-13, .resources-page .homeowner-design-19, .resources-page .homeowner-design-25, .resources-page .homeowner-design-31, .resources-page .homeowner-design-51 { font-size:14px;line-height:1.6;color:var(--text-muted);margin:0 0 18px;flex:1; }
 .resources-page .homeowner-design-14, .resources-page .homeowner-design-20, .resources-page .homeowner-design-26, .resources-page .homeowner-design-32, .resources-page .homeowner-design-45, .resources-page .homeowner-design-52 { font-size:12px;font-weight:700;letter-spacing:0.03em;color:var(--link);display:inline-flex;align-items:center;gap:6px; }
 .resources-page .homeowner-design-14:is(:hover,:focus-visible), .resources-page .homeowner-design-20:is(:hover,:focus-visible), .resources-page .homeowner-design-26:is(:hover,:focus-visible), .resources-page .homeowner-design-32:is(:hover,:focus-visible), .resources-page .homeowner-design-45:is(:hover,:focus-visible), .resources-page .homeowner-design-52:is(:hover,:focus-visible) { color:#266a54; }

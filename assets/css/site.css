@@ -1,5 +1,5 @@
 /* Shared editorial hero scale; layouts remain page-specific. */
-:root { --hero-heading-size: clamp(40px, 4.6vw, 64px); }
+:root { --hero-heading-size: clamp(40px, 4.6vw, 58px); }
 /* Site behavior and responsive adjustments. Keep desktop art direction in design.css. */
 :root {
   --forest: #0f1f18; --mint: #8fd4bf; --ink: #16281f; --teal: #34a184; --heading: #f4faf6;
@@ -18,6 +18,11 @@
   --bg-dark: #12241d;     /* dark page / section background */
   --green-dark: #1c3a2c;  /* dark green surface / border */
   --ink-btn: #07160f;     /* dark button label */
+  /* Newsreader heading scale (Phase 3). Hero uses --hero-heading-size. */
+  --fs-h2-lg: 40px;       /* prominent section heading */
+  --fs-h2: 34px;          /* standard section heading */
+  --fs-h3: 24px;          /* subsection heading */
+  --fs-card: 20px;        /* card / feature title */
 }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { line-height: normal; }
@@ -37,7 +42,7 @@ svg { flex-shrink: 0; }
 .scale-note { margin: 12px 0 0; text-align: left; }
 #site-notice { border: 1px solid #48745e; border-radius: 18px; padding: 40px; max-width: 500px; width: calc(100% - 32px); background: var(--bg-dark); color: #dbe7e0; box-shadow: 0 24px 80px #0007; }
 #site-notice::backdrop { background: #06110bcc; backdrop-filter: blur(4px); }
-#site-notice h2 { font-family: Newsreader, Georgia, serif; color: #fff; font-size: 30px; line-height: 1.1; margin: 0 0 16px; }
+#site-notice h2 { font-family: Newsreader, Georgia, serif; color: #fff; font-size: var(--fs-h2); line-height: 1.1; margin: 0 0 16px; }
 #site-notice p { line-height: 1.6; }
 .notice-close { position: absolute; right: 14px; top: 10px; color: var(--text-soft); font-size: 30px; width: 36px; height: 36px; }
 .notice-done.button { background: var(--teal); color: var(--ink-btn); border-radius: 7px; font-weight: 700; margin: 8px 0 0; }
@@ -166,7 +171,7 @@ footer .resources-style-182:focus-visible { outline:2px solid #b8e8d8; outline-o
 .editorial-closing-inner { max-width:1200px; padding-inline:40px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap; }
 .editorial-closing-copy { max-width:640px; }
 .editorial-closing-eyebrow { font-size:12px; letter-spacing:.2em; font-weight:600; color:var(--mint); margin:0 0 14px; }
-.editorial-closing h2 { font-family:'Newsreader'; font-weight:500; font-size:38px; color:#fff; margin:0 0 14px; line-height:1.08; }
+.editorial-closing h2 { font-family:'Newsreader'; font-weight:500; font-size:var(--fs-h2-lg); color:#fff; margin:0 0 14px; line-height:1.08; }
 .editorial-closing-copy > p:last-child { font-size:15.5px; line-height:1.6; color:#dceae2; max-width:520px; margin:0; }
 .editorial-closing-actions { display:flex; flex-direction:column; gap:12px; flex-shrink:0; }
 .editorial-closing-primary { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--teal); color:var(--ink-btn); font-family:'Public Sans',system-ui,sans-serif; font-size:15px; font-weight:700; line-height:1.55; text-align:center; padding:16px 32px; border-radius:9px; box-shadow:0 12px 30px rgba(52,161,132,.35); border:0; text-decoration:none; }
