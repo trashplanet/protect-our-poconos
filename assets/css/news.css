@@ -23,7 +23,6 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .section-deck { color: #52675a; max-width: 750px; margin-bottom: 28px; }
 .featured-grid,.coverage-grid,.series-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
 .story-card { background: #fff; border: 1px solid #d5e0d8; border-radius: 14px; padding: 26px; display: flex; flex-direction: column; min-width: 0; box-shadow: 0 5px 18px #1b372607; }
-.featured-story { border-top: 4px solid #37896b; }
 .featured-story:first-child { background: #193a2e; color: #e4efe8; border-color: #335e4b; }
 .news-page .featured-story:first-child a { color: #c1e8d8; }
 .news-page .featured-story:first-child .story-meta,.news-page .featured-story:first-child .story-type { color: #abd4c0; }

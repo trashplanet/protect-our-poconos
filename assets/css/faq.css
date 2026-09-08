@@ -70,8 +70,8 @@
 .faq-page .faq-jump {top:var(--header-height,93px);}
 @media(max-width:1100px){.faq-page .faq-jump{position:relative;top:auto;}}
 @media(max-width:760px){.faq-page main section>div{padding-left:22px;padding-right:22px;}.faq-page .faq-stance{padding-top:40px;}}
-.faq-page .faq-jump a:hover {background:var(--green-dark);color:#fff;border-color:var(--green-dark);}
-.faq-page .faq-ans a:hover {color:#1c4636;}
+.faq-page .faq-jump a:is(:hover,:focus-visible) {background:var(--green-dark);color:#fff;border-color:var(--green-dark);}
+.faq-page .faq-ans a:is(:hover,:focus-visible) {color:#1c4636;}
 .faq-page .faq-design-12:hover,.faq-page .faq-design-230:hover {background:#5bc5a7;color:var(--ink-btn);}
 .faq-page .faq-design-14:hover,.faq-page .faq-design-232:hover {background:rgba(255,255,255,.16);color:#fff;}
 @media(max-width:760px){.faq-page .faq-closing .faq-design-229{flex-shrink:1;}.faq-page .faq-closing a{padding:14px 20px;}}
