@@ -201,5 +201,5 @@ body[class] main a:hover, body[class] main a:focus-visible {text-decoration:none
 /* Shared inline arrow link: About "View resources"/"Contact us" + issues source links. */
 .link-arrow, .issue-sources a { color: var(--mint); font-weight: 600; text-decoration: none; }
 .link-arrow:hover, .link-arrow:focus-visible,
-.issue-sources a:hover, .issue-sources a:focus-visible { color: #fff; }
+html body.issues-page .issue-sources a:is(:hover,:focus-visible,:active) { color:var(--heading); }
 .link-arrow { display: inline-flex; align-items: center; gap: 8px; }

@@ -132,16 +132,7 @@
 .action-page .action-design-132{background:#0e2018;}
 .action-page .action-design-133{max-width:1100px;margin:0 auto;padding:26px 40px;display:flex;gap:14px;align-items:flex-start;}
 .action-page .action-design-134{font-size:12.5px;line-height:1.6;color:#8ba79b;margin:0;}
-.action-page 
-.action-page 
-.action-page 
-.action-page .action-hover-137:hover{color:#fff;}
-.action-page .action-hover-138:hover{color:#fff;}
-.action-page .action-hover-139:hover{color:#fff;}
-.action-page 
 .action-page .action-hover-141:hover{color:#fff;}
-.action-page 
-.action-page 
 .action-page .action-hover-144:hover{color:#fff;}
 /* Shared shell and responsive layouts for the supplied Take Action design. */
 .action-page { background:#f3f6f2; color:var(--text-strong); font-family:'Public Sans',system-ui,sans-serif; }
@@ -209,3 +200,6 @@
 
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
 @media (max-width:800px) { .action-page .action-design-2 { background-image: linear-gradient(90deg,rgba(9,18,13,0.88) 0%,rgba(9,18,13,0.58) 48%,rgba(12,32,24,0.24) 100%),url('../take-action-hero-mobile.webp'); } }
+
+html body.action-page .action-design-43:is(:hover,:focus-visible,:active) {color:var(--heading);}
+html body.action-page :is(.action-design-55,.action-design-71,.action-design-72):is(:hover,:focus-visible,:active) {color:var(--green-dark);}

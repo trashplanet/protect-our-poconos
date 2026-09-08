@@ -46,8 +46,8 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .deadline time { color: #98432c; font-size: 12px; font-weight: 700; }.past-event { opacity: .75; }
 .news-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 14px; padding: 20px; background: #e5eee7; border-radius: 12px; }
 .news-filters label { flex: 1 1 190px; font-size: 12px; font-weight: 700; color: #365844; }.news-filters select,.news-filters input { margin: 6px 0 0; height: 44px; border: 1px solid #b9ccbf; border-radius: 6px; box-shadow: none; font-size: 13px; }
-.news-filters button { height: 44px; color: #245c45; font-size: 12px; text-decoration: underline; }
-.news-filters button:hover { text-decoration: none; }
+.news-filters button { height: 44px; color: #245c45; font-size: 12px; text-decoration: none; }
+.news-filters button:is(:hover,:focus-visible,:active) { color:var(--green-dark); text-decoration:none; }
 #news-count { margin: 18px 0; color: #52675a; font-size: 12px; }
 .news-button { display: inline-block; background: var(--green-dark); color: #fff; border: 1px solid #446651; border-radius: 9px; padding: 15px 24px; font-size: 13px; font-weight: 700; }
 #news-more { display: block; margin: 28px auto 0; }
@@ -68,3 +68,5 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
 @media (max-width:800px) { .news-hero { background-image: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains-mobile.webp'); } }
+
+.news-button:is(:hover,:focus-visible,:active) {background:var(--link);color:var(--heading);}
