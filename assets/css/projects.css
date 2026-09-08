@@ -33,15 +33,17 @@
 .status-legal { background: #a5283a; color: #fff; }
 .tracker-controls { display: flex; gap: 20px; justify-content: space-between; align-items: flex-end; margin: 0; }
 .type-filters { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 7px; }
-.type-filters button, #clear-filters { font-size: 12px; font-weight: 600; line-height: 1.4; padding: 10px 13px; border: 1px solid #bdcfc4; border-radius: 9px; background: #fff; color: #18342a; min-height: 42px; }
-.type-filters button[aria-pressed="true"] { background: #183b2c; border-color: #183b2c; color: #fff; }
-.type-filters button:hover { border-color: #27785b; }
+.type-filters button, #clear-filters { font-size: 12px; font-weight: 600; line-height: 1.4; padding: 10px 13px; border: 1px solid #bdcfc4; border-radius: 9px; background: #fff; color: #18342a; min-height: 44px; }
+.type-filters button[aria-pressed="true"] { background:var(--green-dark); border-color:var(--green-dark); color:var(--heading); }
+.type-filters button:is(:hover,:focus-visible,:active) { border-color:var(--link); color:var(--link); }
+.type-filters button[aria-pressed="true"]:is(:hover,:focus-visible,:active) { background:var(--link); color:var(--heading); }
 .filter-selects { display: flex; gap: 12px; flex-shrink: 0; }
 .filter-selects label { font-size: 11px; color: #436153; font-weight: 600; }
-.filter-selects select { font-size: 12px; border: 1px solid #bdcfc4; border-radius: 9px; color: #18342a; background-color: #fff; margin: 3px 0 0; min-width: 135px; height: 42px; padding: 8px 28px 8px 12px; }
-.tracker-results { display: flex; align-items: center; gap: 14px; min-height: 42px; margin-bottom: 12px; }
+.filter-selects select { font-size: 12px; border: 1px solid #bdcfc4; border-radius: 9px; color: #18342a; background-color: #fff; margin: 3px 0 0; min-width: 135px; height: 44px; padding: 8px 28px 8px 12px; }
+.tracker-results { display: flex; align-items: center; gap: 14px; min-height: 44px; margin-bottom: 12px; }
 .tracker-results p { font-size: 12px; color: var(--text-muted); margin: 0; }
-#clear-filters { padding: 5px 8px; border: 0; min-height: 32px; background: transparent; text-decoration: underline; }
+#clear-filters { padding: 5px 8px; border: 0; min-height: 44px; background: transparent; color:var(--link); text-decoration:none; }
+#clear-filters:is(:hover,:focus-visible,:active) { color:var(--green-dark); }
 .tracker-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; align-items: start; }
 .tracker-card { background: #fff; border: 1px solid #e2e9e4; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px #0c342909; scroll-margin-top: 130px; }
 .tracker-card:target { outline: 3px solid var(--teal); outline-offset: 3px; }
