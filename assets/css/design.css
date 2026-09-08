@@ -18,7 +18,7 @@
 .top-style-8:hover, .top-style-8:focus-visible { background:rgba(28,58,44,0.09);color:var(--ink); }
 .top-style-9 { display:flex;align-items:center;gap:12px;flex-shrink:0; }
 .top-style-10 { width:1px;height:26px;background:rgba(28,58,44,0.16); }
-.top-style-11 { display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#07160f;font-size:13px;font-weight:700;letter-spacing:0.02em;padding:11px 20px;border-radius:8px; }
+.top-style-11 { display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#07160f;font-size:13px;font-weight:700;line-height:normal;letter-spacing:0.02em;padding:11px 20px;border-radius:8px; }
 .top-style-11:hover, .top-style-11:focus-visible { background:#4bb99a; }
 .top-style-12 { font-size:14px; }
 .layout-style-13 { position:relative;overflow:hidden; }
