@@ -172,9 +172,9 @@ footer .resources-style-182:focus-visible { outline:2px solid #b8e8d8; outline-o
 .editorial-closing-copy { max-width:640px; }
 .editorial-closing-eyebrow { font-size:12px; letter-spacing:.2em; font-weight:600; color:var(--mint); margin:0 0 14px; }
 .editorial-closing h2 { font-family:'Newsreader'; font-weight:500; font-size:var(--fs-h2-lg); color:#fff; margin:0 0 14px; line-height:1.08; }
-.editorial-closing-copy > p:last-child { font-size:15.5px; line-height:1.6; color:#dceae2; max-width:520px; margin:0; }
+.editorial-closing-copy > p:last-child { font-size:16px; line-height:1.6; color:#dceae2; max-width:520px; margin:0; }
 .editorial-closing-actions { display:flex; flex-direction:column; gap:12px; flex-shrink:0; }
-.editorial-closing-primary { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--teal); color:var(--ink-btn); font-family:'Public Sans',system-ui,sans-serif; font-size:15px; font-weight:700; line-height:1.55; text-align:center; padding:16px 32px; border-radius:9px; box-shadow:0 12px 30px rgba(52,161,132,.35); border:0; text-decoration:none; }
+.editorial-closing-primary { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--teal); color:var(--ink-btn); font-family:'Public Sans',system-ui,sans-serif; font-size:16px; font-weight:700; line-height:1.55; text-align:center; padding:16px 32px; border-radius:9px; box-shadow:0 12px 30px rgba(52,161,132,.35); border:0; text-decoration:none; }
 .editorial-closing-primary:hover,.editorial-closing-primary:focus-visible { background:#4bb99a; color:var(--ink-btn); text-decoration:none; }
 
 /* A single measured offset prevents section margins from doubling the jump. */

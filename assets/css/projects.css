@@ -95,7 +95,7 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 .transmission-context a { color: #9ad8b8; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
 .local-rules { scroll-margin-top: 120px; }
 .local-rules > h2 { font-size: 34px; font-weight: 500; line-height: 1.2; margin: 0 0 12px; }
-.local-rules > p:not(.eyebrow) { color: #526e5e; max-width: 720px; font-size: 14px; }
+.local-rules > p:not(.eyebrow) { color: #526e5e; max-width: 720px; font-size: 16px; }
 .policy-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-top: 24px; }
 .policy-grid article { background: #fff; border: 1px solid #d9e5dc; border-radius: 9px; padding: 22px; display: flex; flex-direction: column; }
 .policy-grid .eyebrow { font-size: 10px; }

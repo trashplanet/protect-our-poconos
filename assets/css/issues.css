@@ -21,11 +21,11 @@
 .issues-page .issue-design-21{width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28);}
 .issues-page .issue-design-22{font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);line-height:1.05;color:var(--heading-soft);margin:0;}
 .issues-page .issue-design-23{font-family:'Public Sans',system-ui,sans-serif;font-weight:700;font-size:20px;line-height:1.3;margin:0 0 16px;color:var(--heading-soft);}
-.issues-page .issue-design-24{font-size:15px;line-height:1.68;color:var(--muted-light);margin:0 0 24px;max-width:480px;}
+.issues-page .issue-design-24{font-size:16px;line-height:1.68;color:var(--muted-light);margin:0 0 24px;max-width:480px;}
 .issues-page .issue-design-25{display:flex;flex-direction:column;gap:16px;margin:0 0 26px;max-width:490px;}
 .issues-page .issue-design-26{border-left:2px solid var(--link-dark);padding-left:14px;}
 .issues-page .issue-design-27{font-size:12px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:4px;}
-.issues-page .issue-design-28{font-size:14px;line-height:1.5;color:#c2d4ca;}
+.issues-page .issue-design-28{font-size:16px;line-height:1.5;color:#c2d4ca;}
 .issues-page .issue-design-29{border-left:2px solid #d9ad55;padding-left:14px;}
 .issues-page .issue-design-30{font-size:12px;letter-spacing:0.12em;font-weight:700;color:#d9ad55;margin-bottom:4px;}
 .issues-page .issue-design-31{border-left:2px solid #9fc2d4;padding-left:14px;}
@@ -46,11 +46,11 @@
 .issues-page .issue-design-46{max-width:720px;margin:0 auto 36px;text-align:center;}
 .issues-page .issue-design-47{font-size:12px;letter-spacing:0.2em;font-weight:600;color:#9fc2d4;margin:0 0 14px;}
 .issues-page .issue-design-48{font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2-lg);line-height:1.08;margin:0 0 18px;color:var(--heading-soft);}
-.issues-page .issue-design-49{font-size:15px;line-height:1.7;color:var(--muted-light);margin:0;}
+.issues-page .issue-design-49{font-size:16px;line-height:1.7;color:var(--muted-light);margin:0;}
 .issues-page .issue-design-50{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
 .issues-page .issue-design-51{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:24px;}
 .issues-page .issue-design-52{font-size:11px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:10px;}
-.issues-page .issue-design-53{font-size:14px;line-height:1.55;color:#c2d4ca;}
+.issues-page .issue-design-53{font-size:16px;line-height:1.55;color:#c2d4ca;}
 .issues-page .issue-design-54{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:24px;}
 .issues-page .issue-design-55{font-size:11px;letter-spacing:0.12em;font-weight:700;color:#d9ad55;margin-bottom:10px;}
 .issues-page .issue-design-56{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:24px;}
@@ -60,7 +60,7 @@
 .issues-page .issue-design-60{max-width:640px;}
 .issues-page .issue-design-61{font-size:12px;letter-spacing:0.2em;font-weight:600;color:var(--mint);margin:0 0 14px;}
 .issues-page .issue-design-62{font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2-lg);color:#fff;margin:0 0 14px;line-height:1.08;}
-.issues-page .issue-design-63{font-size:15.5px;line-height:1.6;color:#dceae2;max-width:520px;margin:0;}
+.issues-page .issue-design-63{font-size:16px;line-height:1.6;color:#dceae2;max-width:520px;margin:0;}
 .issues-page .issue-design-64{display:flex;flex-direction:column;gap:12px;flex-shrink:0;}
 .issues-page 
 .issues-page .issue-design-66{font-size:16px;}

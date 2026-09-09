@@ -54,7 +54,7 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .series-band { background: linear-gradient(#10291eed,#10291eed),url('../forest-dark.webp') center/cover; color: #e2eee6; }
 .series-band .eyebrow,.elsewhere-band .eyebrow { color: #9bd2bb; }.series-band .section-deck { color: #b4cfc0; }
 .series-grid article { border-top: 1px solid #64846e; padding: 26px 20px 8px 0; }.series-number { font: italic 54px Newsreader,serif; color: #84bda5; display: block; margin-bottom: 20px; }
-.series-grid p { font-size: 14px; color: #b4cfc0; }.series-grid .eyebrow { display: none; }
+.series-grid p { font-size: 16px; color: #b4cfc0; }.series-grid .eyebrow { display: none; }
 .news-page .series-band a,.news-page .elsewhere-band a { color: #b4e2cc; }.series-grid > article > a { font-size: 13px; font-weight: 700; }
 .elsewhere-band { background: #192e25; color: #e5eee8; border-top: 1px solid #3b5345; }
 .elsewhere-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }.elsewhere-grid h2 { font-size: clamp(40px,4vw,58px); }.elsewhere-grid p { color: #b7cdbf; }.location-label { font-size: 11px; letter-spacing: .1em; }
