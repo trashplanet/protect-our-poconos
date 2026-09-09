@@ -17,9 +17,7 @@
 .faq-page .faq-design-25 {position:absolute;top:0;left:0;width:100%;height:400px;object-fit:cover;object-position:center top;opacity:0.20;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent);}
 .faq-page .faq-design-26 {position:relative;max-width:940px;margin:0 auto;padding:64px 40px 40px;}
 .faq-page .faq-design-27, .faq-page .faq-design-83, .faq-page .faq-design-117, .faq-page .faq-design-160, .faq-page .faq-design-180 { display:flex;align-items:center;gap:16px;margin:0 0 26px; }
-.faq-page .faq-design-28, .faq-page .faq-design-118, .faq-page .faq-design-181 { width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28); }
-.faq-page .faq-design-29, .faq-page .faq-design-85, .faq-page .faq-design-119, .faq-page .faq-design-162, .faq-page .faq-design-182 { font-size:12px;letter-spacing:0.2em;font-weight:700;color:var(--muted);margin:0 0 4px; }
-.faq-page .faq-design-30, .faq-page .faq-design-86, .faq-page .faq-design-120, .faq-page .faq-design-163, .faq-page .faq-design-183 { font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);margin:0;color:var(--ink);line-height:1.05; }
+.faq-page .faq-design-28, .faq-page .faq-design-118, .faq-page .faq-design-181 { width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28); }.faq-page .faq-design-30, .faq-page .faq-design-86, .faq-page .faq-design-120, .faq-page .faq-design-163, .faq-page .faq-design-183 { font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);margin:0;color:var(--ink);line-height:1.05; }
 .faq-page .faq-design-31, .faq-page .faq-design-87, .faq-page .faq-design-121, .faq-page .faq-design-164, .faq-page .faq-design-184 { display:flex;flex-direction:column;gap:12px; }
 .faq-page .faq-design-33, .faq-page .faq-design-38, .faq-page .faq-design-47, .faq-page .faq-design-52, .faq-page .faq-design-57, .faq-page .faq-design-62, .faq-page .faq-design-69, .faq-page .faq-design-76, .faq-page .faq-design-89, .faq-page .faq-design-96, .faq-page .faq-design-103, .faq-page .faq-design-108, .faq-page .faq-design-123, .faq-page .faq-design-130, .faq-page .faq-design-135, .faq-page .faq-design-140, .faq-page .faq-design-147, .faq-page .faq-design-152, .faq-page .faq-design-166, .faq-page .faq-design-173, .faq-page .faq-design-186, .faq-page .faq-design-191, .faq-page .faq-design-199, .faq-page .faq-design-204, .faq-page .faq-design-210 { padding:0 26px 24px; }
 .faq-page .faq-design-34, .faq-page .faq-design-39, .faq-page .faq-design-48, .faq-page .faq-design-53, .faq-page .faq-design-58, .faq-page .faq-design-63, .faq-page .faq-design-70, .faq-page .faq-design-77, .faq-page .faq-design-90, .faq-page .faq-design-97, .faq-page .faq-design-104, .faq-page .faq-design-109, .faq-page .faq-design-124, .faq-page .faq-design-131, .faq-page .faq-design-136, .faq-page .faq-design-141, .faq-page .faq-design-148, .faq-page .faq-design-153, .faq-page .faq-design-167, .faq-page .faq-design-174, .faq-page .faq-design-187, .faq-page .faq-design-192, .faq-page .faq-design-200, .faq-page .faq-design-211 { font-size:16px;line-height:1.7;color:var(--text);margin:0 0 14px; }
@@ -70,10 +68,7 @@
 @media(max-width:1100px){.faq-page .faq-jump{position:relative;top:auto;}}
 @media(max-width:760px){.faq-page main section>div{padding-left:22px;padding-right:22px;}.faq-page .faq-stance{padding-top:40px;}}
 .faq-page .faq-jump a:is(:hover,:focus-visible) {background:var(--green-dark);color:#fff;border-color:var(--green-dark);}
-.faq-page .faq-ans a:is(:hover,:focus-visible) {color:var(--green-dark);}
-.faq-page .faq-design-12:hover,.faq-page .faq-design-230:hover {background:#5bc5a7;color:var(--ink-btn);}
-.faq-page .faq-design-14:hover,.faq-page .faq-design-232:hover {background:rgba(255,255,255,.16);color:#fff;}
-@media(max-width:760px){.faq-page .faq-closing .faq-design-229{flex-shrink:1;}.faq-page .faq-closing a{padding:14px 20px;}}
+.faq-page .faq-ans a:is(:hover,:focus-visible) {color:var(--green-dark);}media(max-width:760px){.faq-page .faq-closing .faq-design-229{flex-shrink:1;}.faq-page .faq-closing a{padding:14px 20px;}}
 
 /* One pale surface across the FAQ topics; fade scenery at both section edges. */
 .faq-page #main-content > section[id] {background:#eef4ef;}
