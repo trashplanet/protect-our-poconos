@@ -22,7 +22,6 @@
 .resources-page .research-design-25, .resources-page .research-design-143, .resources-page .research-design-180, .resources-page .homeowner-design-3 { font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);margin:0 0 8px;color:var(--ink); }
 .resources-page .research-design-26 {font-size:16px;line-height:1.6;color:var(--text-muted);max-width:640px;margin:0 0 34px;}
 .resources-page .research-design-27 {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
-.resources-page .research-design-28, .resources-page .research-design-55, .resources-page .research-design-82, .resources-page .research-design-109 { background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,30,0.06);display:flex;flex-direction:column; }
 .resources-page .research-design-29, .resources-page .research-design-56 { padding:22px 24px;background:linear-gradient(135deg,#1c4636,#123024);display:flex;align-items:flex-start;justify-content:space-between;gap:12px; }
 .resources-page .research-design-30, .resources-page .research-design-57 { font-size:12px;letter-spacing:0.1em;font-weight:700;color:var(--mint);margin-bottom:4px; }
 .resources-page .research-design-31, .resources-page .research-design-58, .resources-page .research-design-85, .resources-page .research-design-112 { font-family:'Newsreader';font-weight:600;font-size:var(--fs-card);margin:0;color:var(--heading); }
@@ -101,7 +100,6 @@
 .resources-page .homeowner-design-6 {flex-shrink:0;margin-top:2px;}
 .resources-page .homeowner-design-7 {font-size:12.5px;line-height:1.55;color:var(--text-muted);}
 .resources-page .homeowner-design-8 {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
-.resources-page .homeowner-design-9, .resources-page .homeowner-design-15, .resources-page .homeowner-design-21, .resources-page .homeowner-design-27, .resources-page .homeowner-design-33, .resources-page .homeowner-design-47 { background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;box-shadow:0 5px 15px rgba(20,40,30,0.05); }
 .resources-page .homeowner-design-10, .resources-page .homeowner-design-16, .resources-page .homeowner-design-22, .resources-page .homeowner-design-28, .resources-page .homeowner-design-34, .resources-page .homeowner-design-48 { width:44px;height:44px;border-radius:11px;background:#e6efe9;display:inline-flex;align-items:center;justify-content:center;color:var(--link);margin-bottom:16px; }
 .resources-page .homeowner-design-11, .resources-page .homeowner-design-17, .resources-page .homeowner-design-23, .resources-page .homeowner-design-29, .resources-page .homeowner-design-35, .resources-page .homeowner-design-49 { font-size:11px;letter-spacing:0.08em;font-weight:700;color:var(--muted);margin-bottom:6px; }
 .resources-page .homeowner-design-12, .resources-page .homeowner-design-18, .resources-page .homeowner-design-24, .resources-page .homeowner-design-30, .resources-page .homeowner-design-36, .resources-page .homeowner-design-50 { font-family:'Newsreader';font-weight:600;font-size:var(--fs-card);line-height:1.2;margin:0 0 10px;color:var(--ink); }
