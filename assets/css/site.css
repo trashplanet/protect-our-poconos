@@ -36,7 +36,7 @@ svg { flex-shrink: 0; }
 .site-shell { overflow-x: clip; }
 .skip-link { position: fixed; top: -100px; left: 20px; z-index: 200; background: #fff; color: var(--ink); padding: 14px 20px; border-radius: 9px; }
 .skip-link:focus { top: 12px; }
-.menu-toggle { display: none; background: transparent; border: 1px solid #365847; color: var(--ink); padding: 10px 14px; border-radius: 7px; font-size: 14px; font-weight: 700; }
+.menu-toggle { min-height:44px; display: none; background: transparent; border: 1px solid #365847; color: var(--ink); padding: 10px 14px; border-radius: 7px; font-size: 14px; font-weight: 700; }
 .draft-note, .scale-note { font-size: 12px; color: #52675a; line-height: 1.6; }
 .scale-visual { margin: 0; min-width: 0; }
 .scale-note { margin: 12px 0 0; text-align: left; }
@@ -213,3 +213,10 @@ html body.issues-page .issue-sources a:is(:hover,:focus-visible,:active) { color
 /* Newsreader’s visible letterforms sit high in its line box. Apply the same
    proportional optical correction to headings paired with centered icons. */
 .serif-icon-label {position:relative;top:.1em;}
+
+/* Native disclosures share feedback and a font-independent plus/minus indicator. */
+:is(.faq-item,.project-details,.resource-disclosure) > summary {display:flex;align-items:center;justify-content:space-between;gap:20px;list-style:none;}
+:is(.faq-item,.project-details,.resource-disclosure) > summary::-webkit-details-marker {display:none;}
+:is(.faq-item,.project-details,.resource-disclosure) > summary::after {content:"";flex:0 0 16px;width:16px;height:16px;color:var(--link);background:linear-gradient(currentColor,currentColor) center/12px 2px no-repeat,linear-gradient(currentColor,currentColor) center/2px 12px no-repeat;}
+:is(.faq-item,.project-details,.resource-disclosure)[open] > summary::after {background-size:12px 2px,0 0;}
+:is(.faq-item,.project-details,.resource-disclosure) > summary:is(:hover,:focus-visible) {background:var(--heading);}
