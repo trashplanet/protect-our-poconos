@@ -14,7 +14,7 @@
 html body.news-page main a:is(:hover,:focus-visible,:active) { color:var(--green-dark); }
 html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.elsewhere-band) a:is(:hover,:focus-visible,:active) { color:var(--heading); }
 .news-page [hidden] { display: none !important; }
-.news-hero { color: #fff; background: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains.webp') center 48%/cover; }
+.news-hero { min-height: var(--hero-min); color: #fff; background: linear-gradient(90deg,#10291feb,#153629ab 60%,#17392b59),url('../misty-mountains.webp') center 48%/cover; }
 .news-hero .news-wrap { padding-block: 68px 34px; }
 .news-hero h1 { font-size: var(--hero-heading-size, clamp(40px, 4.6vw, 64px)); margin: 0 0 24px; letter-spacing: -.035em;  text-wrap:balance;}
 .news-hero h1 em { color: #b7dfcb; }
