@@ -48,7 +48,7 @@
 .about-page .about-lead {
   max-width: 660px;
   margin: 0 0 18px;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.65;
   color: #d3e2d9;
 }
@@ -83,7 +83,7 @@
 .about-page .about-prose { max-width: 640px; }
 .about-page .about-prose p {
   margin: 0 0 18px;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--text-soft);
 }
