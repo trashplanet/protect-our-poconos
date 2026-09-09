@@ -16,7 +16,7 @@ WIDTH = 1024
 QUALITY = 72
 # Above-the-fold page hero backgrounds. forest-dark (~27 KB) is already small; skipped.
 SOURCES = ['hero-waterfall', 'faq-hero', 'take-action-hero', 'resources-hero',
-           'mountains-sunset', 'misty-mountains', 'misty-forest']
+           'mountains-sunset', 'misty-mountains', 'misty-forest', 'forest-silhouette']
 
 
 def main():

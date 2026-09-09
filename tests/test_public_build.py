@@ -17,6 +17,14 @@ class PublicBuildTests(unittest.TestCase):
     def setUpClass(cls):
         build.build()
 
+    def test_numbered_css_pruning_is_scoped(self):
+        css = '.hero-style-1{color:red}.hero-style-2{color:blue}.cta-teal{color:green}.hero-style-3,.hero-style-4{color:white}'
+        result = build.trim_unused_numbered_rules(css, '<div class="hero-style-1"></div>')
+        self.assertIn('.hero-style-1{', result)
+        self.assertNotIn('.hero-style-2{', result)
+        self.assertIn('.cta-teal{', result)
+        self.assertIn('.hero-style-3,.hero-style-4{', result)
+
     def test_css_foundation_subset_and_minification(self):
         for route in build.PAGES.values():
             page = (build.OUT / route.strip('/') / 'index.html').read_text()

@@ -203,3 +203,5 @@
 
 html body.action-page .action-design-43:is(:hover,:focus-visible,:active) {color:var(--heading);}
 html body.action-page :is(.action-design-55,.action-design-71,.action-design-72):is(:hover,:focus-visible,:active) {color:var(--green-dark);}
+
+@media(max-width:760px){.action-page .action-design-122{background-image:linear-gradient(rgba(9,18,13,0.4) 0%,rgba(9,18,13,0.6) 55%,rgba(9,18,13,0.8) 100%),url('../mountains-sunset-mobile.webp');}}

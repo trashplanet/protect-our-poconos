@@ -87,6 +87,16 @@ def link_icons(page):
     return re.sub(r'<a\b[^>]*>.*?</a>', anchor, page, flags=re.S)
 
 
+def trim_unused_numbered_rules(css, page):
+    """Only remove standalone static numbered-class rules absent from this page.
+
+    Keep compound selectors and all semantic/JS-driven classes.
+    """
+    classes = set(' '.join(re.findall(r'class="([^"]*)"', page)).split())
+    return re.sub(r'(?:(?<=})|^)\.([a-z][\w-]*-(?:style|design)-\d+)\s*\{[^{}]*\}',
+                  lambda m: m[0] if m[1] in classes else '', css)
+
+
 def inline_stylesheets(page):
     """Replace the render-blocking <link rel="stylesheet"> tags with one inline <style>.
     The page then paints without waiting on separate CSS requests. Relative url(../…)
@@ -98,8 +108,21 @@ def inline_stylesheets(page):
     for link in links:
         href = re.search(r'href="([^"]+)"', link[0])[1]
         source = minify_css((ROOT / href.lstrip('/')).read_text())
+        if href.endswith('design.css'):
+            source = trim_unused_numbered_rules(source, page)
         css += re.sub(r"url\((['\"]?)\.\./", r'url(\1/assets/', source)
     page = page[:links[0].start()] + '<style>' + css + '</style>\n' + page[links[0].end():]
+    def responsive_image(match):
+        tag = match[0]
+        if 'srcset=' in tag:
+            return tag
+        src = re.search(r'src="(?:\./)?assets/(forest-silhouette|misty-forest|misty-mountains|mountains-sunset)\.webp"', tag)
+        if not src:
+            return tag
+        stem = src[1]
+        width = 1448 if stem == 'forest-silhouette' else 2172
+        return re.sub(r'(?<![\w-])src=', f'sizes="(max-width:760px) 100vw, {width}px" srcset="/assets/{stem}-mobile.webp 1024w, /assets/{stem}.webp {width}w" src=', tag, count=1)
+    page = re.sub(r'<img\b[^>]*>', responsive_image, page)
     return link_icons(STYLESHEET.sub('', page))
 
 
