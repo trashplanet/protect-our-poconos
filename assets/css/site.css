@@ -24,6 +24,14 @@
   --fs-h3: 24px;          /* subsection heading */
   --fs-card: 20px;        /* card / feature title */
 }
+
+/* Link hover colour is context-driven: dark surfaces brighten toward
+   --heading; light-bodied pages darken toward --green-dark; dark sections
+   inside those light pages brighten again. One base rule reads it. */
+:root { --link-hover: var(--heading); }
+body:is(.tracker-page,.resources-page,.faq-page,.news-page,.about-page,.action-page) { --link-hover: var(--green-dark); }
+:is(.tracker-hero,.news-hero,.about-hero,.action-hero,.issue-hero,.about-cta,.editorial-closing,.faq-stance,.faq-closing),
+.news-page :is(.series-band,.elsewhere-band,.featured-story:first-child) { --link-hover: var(--heading); }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { line-height: normal; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -188,8 +196,6 @@ body main [id] {scroll-margin-top:0!important;}
    findable in running text; standalone links stay underline-free. Colour-only
    on hover (the underline is kept). Buttons and arrow links are excluded. */
 main p a:not(.cta-teal):not(.cta-ghost):not(.link-arrow) { text-decoration: underline; text-underline-offset: 3px; }
-/* Text links (paragraphs, list items, footer) show an underline on hover on any background; buttons/pills live outside p/li so they are untouched. */
-:is(main p, main li, .about-prose, footer) a:not([class*="cta-"]):not(.link-arrow):not(.resources-style-182):hover { text-decoration: underline; text-underline-offset: 3px; }
 @media(min-width:1101px){body.resources-page nav.research-design-14 {top:var(--header-height,93px);}}
 
 /* 404 page (scoped: only affects 404.html via .notfound-* classes).
