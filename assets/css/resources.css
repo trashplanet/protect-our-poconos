@@ -6,7 +6,7 @@
 .resources-page .research-design-4 {position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:72px 40px;width:100%;}
 .resources-page .research-design-5 {max-width:640px;}
 .resources-page .research-design-6 {font-size:12px;letter-spacing:0.22em;font-weight:600;color:var(--mint);margin:0 0 16px;}
-.resources-page .research-design-7 {font-family:'Newsreader';font-weight:500;font-size:var(--hero-heading-size);line-height:1.0;letter-spacing:-0.01em;margin:0 0 20px;color:var(--heading);}
+.resources-page .research-design-7 {font-family:'Newsreader';font-weight:500;font-size:var(--hero-heading-size);line-height:1.0;letter-spacing:-0.01em;margin:0 0 20px;color:var(--heading);text-wrap:balance;}
 .resources-page .research-design-8 {font-size:18px;line-height:1.62;color:var(--text-soft);max-width:560px;margin:0 0 26px;}
 .resources-page .research-design-9 {display:flex;gap:14px;flex-wrap:wrap;}
 .resources-page .research-design-11, .resources-page .research-design-13, .resources-page .research-design-139, .resources-page .research-design-224 { font-size:16px; }
