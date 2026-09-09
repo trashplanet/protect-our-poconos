@@ -2,7 +2,7 @@
 :root {--page-width:1240px;--page-gutter:40px;--hero-top:72px;}
 @media(max-width:1000px){:root{--page-gutter:28px;}}
 @media(max-width:760px){:root{--page-gutter:20px;--hero-top:48px;}}
-body :is(.section-inner,.tracker-container,.news-wrap,.action-page .action-design-3,.action-page .action-design-17,.action-page .action-design-46,.action-page .action-design-60,.action-page .action-design-123,.resources-page .research-design-4,.resources-page .research-design-15,.resources-page .research-design-23,.resources-page .research-design-178,.resources-page .research-design-217,.resources-page .homeowner-design-1,.issues-page .issue-design-2,.issues-page .issue-design-12,.issues-page .issue-design-19,.issues-page .issue-design-39,.issues-page .issue-design-59,.faq-page .faq-design-4,.faq-page .faq-design-17,.faq-page .faq-design-224) {
+body :is(.section-inner,.tracker-container,.news-wrap,.issues-page .issue-inner,.action-page .action-wrap,.resources-page .research-container,.resources-page .homeowner-container,.faq-page .faq-wrap) {
   width:100%;max-width:var(--page-width);margin-inline:auto;
   padding-left:var(--page-gutter);padding-right:var(--page-gutter);
 }
