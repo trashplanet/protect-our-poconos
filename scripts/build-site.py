@@ -74,6 +74,19 @@ def minify_css(text):
 STYLESHEET = re.compile(r'[ \t]*<link\b[^>]*rel="stylesheet"[^>]*>\n?')
 
 
+def link_icons(page):
+    """Render link arrows consistently without font or emoji presentation changes."""
+    paths = {'→': 'M4 12h16m-6-6 6 6-6 6', '↗': 'M6 18 18 6M6 6h12v12', '↓': 'M12 4v16m-6-6 6 6 6-6'}
+    def anchor(match):
+        def text_node(node):
+            text = node[0]
+            for glyph, path in paths.items():
+                text = text.replace(glyph, '<svg class="link-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="' + path + '"/></svg>')
+            return text
+        return re.sub(r'(?<=>)[^<>]+(?=<)', text_node, match[0])
+    return re.sub(r'<a\b[^>]*>.*?</a>', anchor, page, flags=re.S)
+
+
 def inline_stylesheets(page):
     """Replace the render-blocking <link rel="stylesheet"> tags with one inline <style>.
     The page then paints without waiting on separate CSS requests. Relative url(../…)
@@ -87,7 +100,7 @@ def inline_stylesheets(page):
         source = minify_css((ROOT / href.lstrip('/')).read_text())
         css += re.sub(r"url\((['\"]?)\.\./", r'url(\1/assets/', source)
     page = page[:links[0].start()] + '<style>' + css + '</style>\n' + page[links[0].end():]
-    return STYLESHEET.sub('', page)
+    return link_icons(STYLESHEET.sub('', page))
 
 
 def rewrite(match):

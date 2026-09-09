@@ -56,7 +56,7 @@
 .status-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
 .status { display: inline-block; padding: 4px 9px; border-radius: 20px; font-size: 9px; letter-spacing: .025em; font-weight: 700; text-transform: uppercase; line-height: 1.4; }
 .tracker-card h2 { font-family: 'Public Sans',sans-serif; font-size: 18px; line-height: 1.3; font-weight: 700; margin: 0 0 9px; }
-.tracker-card h2 a { color: #17372a; }
+.tracker-card h2 a { color:var(--link); }
 html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--green-dark); }
 .project-location { color: #527062; font-size: 12px; line-height: 1.4; margin-bottom: 14px; }
 .project-summary { color: #3c5147; font-size: 13px; line-height: 1.6; margin-bottom: 20px; }
@@ -155,3 +155,6 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
 @media (max-width:800px) { .tracker-hero { background-image: linear-gradient(90deg,rgba(8,32,23,.87),rgba(8,32,23,.32)),url('../misty-forest-mobile.webp'); } }
+
+/* Light-surface project links use the shared dark-green interaction color. */
+html body .tracker-card :is(.project-sources,.project-milestone,.project-details) a:is(:hover,:focus-visible,:active){color:var(--green-dark);}

@@ -64,7 +64,7 @@
 @media(max-width:1100px){.faq-page .faq-jump{position:relative;top:auto;}}
 @media(max-width:760px){.faq-page main section>div{padding-left:22px;padding-right:22px;}.faq-page .faq-stance{padding-top:40px;}}
 .faq-page .faq-jump a:is(:hover,:focus-visible) {background:var(--green-dark);color:#fff;border-color:var(--green-dark);}
-.faq-page .faq-ans a:is(:hover,:focus-visible) {color:var(--green-dark);}media(max-width:760px){.faq-page .faq-closing .faq-design-229{flex-shrink:1;}.faq-page .faq-closing a{padding:14px 20px;}}
+.faq-page .faq-ans a:is(:hover,:focus-visible) {color:var(--green-dark);}@media(max-width:760px){.faq-page .faq-closing .faq-design-229{flex-shrink:1;}.faq-page .faq-closing a{padding:14px 20px;}}
 
 /* One pale surface across the FAQ topics; fade scenery at both section edges. */
 .faq-page #main-content > section[id] {background:#eef4ef;}
@@ -95,3 +95,5 @@
 
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
 @media (max-width:800px) { .faq-page .faq-design-1 { background-image: linear-gradient(88deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.2) 100%),url('../faq-hero-mobile.webp'); } }
+
+@media(max-width:760px){html body.faq-page #main-content section[id]>div{padding-inline:20px;} .faq-page .faq-closing .faq-design-229{width:100%;min-width:0;}}
