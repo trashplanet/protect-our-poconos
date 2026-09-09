@@ -189,7 +189,7 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 .updates-style-157 { font-size:16px;line-height:1.6;color:#bcd2c8;margin:0 0 24px; }
 .updates-style-158 { display:flex;flex-direction:column;gap:10px; }
 .updates-style-159 { display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.13);border-radius:12px;padding:13px 15px;color:#eaf3ec;font-size:14px;font-weight:600; }
-.updates-style-159:hover, .updates-style-159:focus-visible { background:rgba(255,255,255,0.13);border-color:rgba(143,212,191,0.5); }
+.updates-style-159:hover, .updates-style-159:focus-visible { color:var(--heading); background:rgba(255,255,255,0.13);border-color:rgba(143,212,191,0.5); }
 .updates-style-160 { flex-shrink:0;width:38px;height:38px;flex-shrink:0;border-radius:10px;background:rgba(143,212,191,0.14);display:inline-flex;align-items:center;justify-content:center;color:#a7dcc9; }
 .updates-style-161 { flex:1; }
 .updates-style-162 { color:#7fbfa9;font-size:18px; }
@@ -225,3 +225,5 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
 @media (max-width:800px) { .hero-style-14 { background-image: linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.28) 100%),url('../hero-waterfall-mobile.webp'); } }
+
+html body .updates-style-159:is(:hover,:focus-visible,:active){color:var(--heading);}
