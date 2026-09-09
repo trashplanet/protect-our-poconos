@@ -4,7 +4,6 @@
     html, body { margin: 0; padding: 0; }
     body { font-family: 'Public Sans', system-ui, sans-serif; color: #dbe7e0; background: var(--forest); -webkit-font-smoothing: antialiased; }
     a { color: var(--link-dark); text-decoration: none; }
-    a:hover { color: var(--heading); }
     ::selection { background: var(--teal); color: #08130e; }
 
 /* ---- Canonical button system (Phase 1) ----
