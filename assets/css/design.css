@@ -20,6 +20,9 @@ html body a.cta-ghost:is(:hover,:focus,:active) { background:rgba(255,255,255,0.
 .cta-teal.cta-lg { box-shadow:0 12px 30px rgba(52,161,132,0.35); }
 .cta-teal.cta-sm { box-shadow:none; }
 
+/* Shared content card shell (Phase 4). */
+.card { background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 4px 12px rgba(20,40,30,0.04); }
+
 .layout-style-1 { width:100%;min-height:100vh;background:var(--forest);overflow-x:hidden; }
 .layout-style-2 { position:sticky;top:0;z-index:100;background:rgba(235,244,239,0.82);backdrop-filter:blur(18px) saturate(120%);border-bottom:1px solid rgba(28,58,44,0.1); }
 .top-style-3 { max-width:1240px;margin:0 auto;padding:12px 40px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;row-gap:6px; }
