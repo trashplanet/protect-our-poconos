@@ -49,12 +49,12 @@
 .issues-page .issue-design-49{font-size:16px;line-height:1.7;color:var(--muted-light);margin:0;}
 .issues-page .issue-design-50{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
 .issues-page .issue-design-51{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:24px;}
-.issues-page .issue-design-52{font-size:11px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:10px;}
+.issues-page .issue-design-52{font-size:12px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:10px;}
 .issues-page .issue-design-53{font-size:16px;line-height:1.55;color:#c2d4ca;}
 .issues-page .issue-design-54{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:24px;}
-.issues-page .issue-design-55{font-size:11px;letter-spacing:0.12em;font-weight:700;color:#d9ad55;margin-bottom:10px;}
+.issues-page .issue-design-55{font-size:12px;letter-spacing:0.12em;font-weight:700;color:#d9ad55;margin-bottom:10px;}
 .issues-page .issue-design-56{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:24px;}
-.issues-page .issue-design-57{font-size:11px;letter-spacing:0.12em;font-weight:700;color:#aebdb3;margin-bottom:10px;}
+.issues-page .issue-design-57{font-size:12px;letter-spacing:0.12em;font-weight:700;color:#aebdb3;margin-bottom:10px;}
 .issues-page .issue-design-58{position:relative;background-image:linear-gradient(rgba(9,18,13,0.34) 0%,rgba(9,18,13,0.55) 55%,rgba(9,18,13,0.78) 100%),url('../mountains-sunset.webp');background-size:cover;background-position:center 30%;padding:104px 40px 92px;}
 .issues-page .issue-design-59{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
 .issues-page .issue-design-60{max-width:640px;}
@@ -77,7 +77,7 @@
 /* Shared site behavior plus responsive versions of the supplied issues design. */
 .issues-page { background:var(--forest); color:#dbe7e0; font-family:'Public Sans',system-ui,sans-serif; }
 .issues-page main { color:#dbe7e0; background:var(--forest); }
-.issues-page main a:not(.cta-teal):not(.cta-ghost) { color:var(--mint); text-underline-offset:4px; }
+.issues-page main a:not(.cta-teal):not(.cta-ghost) { color:var(--link-dark); text-underline-offset:4px; }
 .issues-page main a:not(.cta-teal):not(.cta-ghost):is(:hover,:focus-visible) { text-decoration:none; }
 .issues-page .issue-columns > * { min-width:0; }
 .issues-page .issue-image { position:relative; margin:0; }

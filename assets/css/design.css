@@ -212,7 +212,7 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 .resources-style-175 { font-weight:700;font-size:16px;letter-spacing:0.05em;color:#fff;line-height:1.12; }
 .resources-style-176 { font-size:16px;line-height:1.65;color:#8ba79b;max-width:330px;margin:0; }
 .resources-style-177 { flex:0 1 150px;display:flex;flex-direction:column;gap:14px; }
-.resources-style-178 { font-size:11px;letter-spacing:0.16em;font-weight:700;color:var(--mint);margin:0 0 4px; }
+.resources-style-178 { font-size:12px;letter-spacing:0.16em;font-weight:700;color:var(--mint);margin:0 0 4px; }
 .resources-style-179 { color:var(--muted-dark);font-size:14px; }
 .resources-style-179:hover, .resources-style-179:focus-visible { color:var(--heading) }
 .resources-style-180 { flex:1 1 240px;min-width:220px; }
