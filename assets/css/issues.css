@@ -58,12 +58,12 @@
 .issues-page .issue-design-63{font-size:16px;line-height:1.6;color:#dceae2;max-width:520px;margin:0;}
 .issues-page .issue-design-64{display:flex;flex-direction:column;gap:12px;flex-shrink:0;}
 .issues-page 
-.issues-page .issue-design-66{font-size:16px;}.issues-page .issue-hover-68:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
-.issues-page .issue-hover-69:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
-.issues-page .issue-hover-70:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
-.issues-page .issue-hover-71:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
-.issues-page .issue-hover-72:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
-.issues-page .issue-hover-73:hover{background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45);}
+.issues-page .issue-design-66{font-size:16px;}
+
+
+
+
+
 .issues-page 
 .issues-page 
 /* Shared site behavior plus responsive versions of the supplied issues design. */
@@ -116,10 +116,10 @@
  background:linear-gradient(150deg,#ffffff07,var(--mint)07);
  border-color:var(--mint)30;
  box-shadow:0 10px 28px #0000000d;
- transition:background .2s,border-color .2s,transform .2s;
+ transition:background .2s,border-color .2s;
 }
 .issues-page .issue-jump-grid > a > span { margin-top:auto; padding-top:8px; }
-.issues-page .issue-jump-grid > a:hover { transform:translateY(-3px); border-color:var(--mint)80; text-decoration:none; }
+
 @media(max-width:800px) {
  .issues-page .issue-hero .issue-inner { padding-top:40px; padding-bottom:24px; }
  .issues-page .issue-overview .issue-inner { padding-top:24px; padding-bottom:56px; }
@@ -150,3 +150,5 @@
 
 /* Source links: shared color/hover is .link-arrow in site.css; just the size here. */
 .issue-sources a { font-size: 14px; }
+
+@media(max-width:760px){.issues-page .issue-design-58{background-image:linear-gradient(rgba(9,18,13,0.34) 0%,rgba(9,18,13,0.55) 55%,rgba(9,18,13,0.78) 100%),url('../mountains-sunset-mobile.webp');}.issues-page #health::before{background:url('../forest-silhouette-mobile.webp') bottom center/cover no-repeat;}.issues-page .issue-closing{background-image:linear-gradient(rgba(9,18,13,0.34) 0%,rgba(9,18,13,0.55) 55%,rgba(9,18,13,0.78) 100%),url('../mountains-sunset-mobile.webp');}}

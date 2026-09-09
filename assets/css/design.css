@@ -111,7 +111,7 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 .risks-style-82:hover, .risks-style-82:focus-visible { color:var(--heading); }
 .risks-style-83 { display:grid;grid-template-columns:repeat(6,1fr);gap:16px; }
 .risks-style-84 { border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:32px 18px 26px;text-align:center;display:flex;flex-direction:column;align-items:center;color:inherit;background:rgba(255,255,255,0.02); }
-.risks-style-84:hover, .risks-style-84:focus-visible { background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45); }
+html body :is(.risks-style-84,.issue-jump-grid > a):is(:hover,:focus-visible,:active) { color:var(--heading); background:rgba(255,255,255,0.06);border-color:rgba(143,212,191,0.45); }
 .risks-style-85 { width:76px;height:76px;border-radius:50%;background:rgba(111,196,172,0.1);border:1px solid rgba(143,212,191,0.24);display:flex;align-items:center;justify-content:center;color:#a7dcc9;margin-bottom:20px; }
 .risks-style-86 { font-size:14px;font-weight:600;color:var(--heading-soft);line-height:1.3;margin-bottom:14px; }
 .risks-style-87 { font-size:12px;font-weight:600;color:#7fbfa9;display:inline-flex;align-items:center;gap:5px; }
@@ -176,8 +176,8 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 .updates-style-144 { font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);margin:0 0 10px;color:var(--heading-soft); }
 .updates-style-145 { font-size:16px;line-height:1.6;color:var(--muted-light);max-width:460px;margin:0 0 26px; }
 .updates-style-146 { display:flex;flex-direction:column;gap:14px; }
-.updates-style-147 { display:flex;gap:18px;align-items:center;background:rgba(255,255,255,0.045);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:14px;color:inherit;transition:transform .2s; }
-.updates-style-147:hover, .updates-style-147:focus-visible { transform:translateY(-3px);border-color:rgba(143,212,191,0.4); }.updates-style-149 { flex:1;min-width:0; }
+.updates-style-147 { display:flex;gap:18px;align-items:center;background:rgba(255,255,255,0.045);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:14px;color:inherit;transition:border-color .2s; }
+html body .updates-style-147:is(:hover,:focus-visible,:active) { color:var(--heading); border-color:rgba(143,212,191,0.4); }.updates-style-149 { flex:1;min-width:0; }
 .updates-style-150 { font-size:12px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:6px; }
 .updates-style-151 { font-family:'Newsreader';font-weight:600;font-size:var(--fs-card);line-height:1.2;margin:0 0 8px;color:var(--heading-soft); }
 .updates-style-152 { display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--mint); }
@@ -189,7 +189,7 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 .updates-style-157 { font-size:16px;line-height:1.6;color:#bcd2c8;margin:0 0 24px; }
 .updates-style-158 { display:flex;flex-direction:column;gap:10px; }
 .updates-style-159 { display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.13);border-radius:12px;padding:13px 15px;color:#eaf3ec;font-size:14px;font-weight:600; }
-.updates-style-159:hover, .updates-style-159:focus-visible { color:var(--heading); background:rgba(255,255,255,0.13);border-color:rgba(143,212,191,0.5); }
+html body .updates-style-159:is(:hover,:focus-visible,:active) { color:var(--heading); background:rgba(255,255,255,0.13);border-color:rgba(143,212,191,0.5); }
 .updates-style-160 { flex-shrink:0;width:38px;height:38px;flex-shrink:0;border-radius:10px;background:rgba(143,212,191,0.14);display:inline-flex;align-items:center;justify-content:center;color:#a7dcc9; }
 .updates-style-161 { flex:1; }
 .updates-style-162 { color:#7fbfa9;font-size:18px; }
@@ -226,4 +226,5 @@ html body .projects-style-70:is(:hover,:focus-visible,:active) { color:var(--gre
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
 @media (max-width:800px) { .hero-style-14 { background-image: linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.28) 100%),url('../hero-waterfall-mobile.webp'); } }
 
-html body .updates-style-159:is(:hover,:focus-visible,:active){color:var(--heading);}
+
+@media(max-width:760px){.layout-style-163{background-image:linear-gradient(rgba(9,18,13,0.28) 0%,rgba(9,18,13,0.5) 55%,rgba(9,18,13,0.72) 100%),url('../mountains-sunset-mobile.webp');}}
