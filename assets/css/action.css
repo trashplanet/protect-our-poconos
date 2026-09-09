@@ -182,7 +182,7 @@
 }
 
 /* Background treatments from the approved September 7 design export. */
-.action-page .action-hero {min-height:var(--hero-min);overflow:hidden;}
+.action-page .action-hero {min-height:var(--hero-min);display:flex;flex-direction:column;justify-content:center;overflow:hidden;}
 .action-page #attention {background:var(--bg-dark);overflow:hidden;}
 .action-page #help {background:radial-gradient(130% 58% at 80% 34%,rgba(122,196,168,0.13),transparent 60%),#eef3ef;overflow:hidden;}
 .action-page #help::before {content:"";position:absolute;top:0;left:0;width:100%;height:340px;opacity:0.22;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent);background:url('../misty-forest.webp') center top/cover no-repeat;}
