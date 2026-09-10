@@ -18,7 +18,7 @@ html body a.cta-teal span {color:inherit;}
 html body .faq-design-1 {padding-inline:0!important;}
 /* Enough room for the intended desktop titles with the actual Newsreader font. */
 @media(min-width:1101px){
-  .hero-content > .hero-style-16 {max-width:600px;}
+  .hero-content > .hero-copy {max-width:600px;}
   .faq-page .faq-design-5 {max-width:800px;}
 }
 /* Below the sticky-desktop breakpoint the topic nav is a compact, swipeable
