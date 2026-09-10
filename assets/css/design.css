@@ -66,9 +66,9 @@ html body a.cta-ghost:is(:hover,:focus,:active) { background:rgba(255,255,255,0.
 .projects-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px; }
 .project-card-media { position:relative;height:178px; }
 .project-status-confirmed { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:var(--link);color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
-.project-status-adopted { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#bf8a2e;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
-.project-status-related { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#5c86a0;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
-.project-status-rumor { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#647f70;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
+.project-status-adopted { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#c9932f;color:#332708;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
+.project-status-related { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#4a7089;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
+.project-status-rumor { position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;background:#556c5f;color:#fff;box-shadow:0 3px 12px rgba(7,22,15,0.4);pointer-events:none; }
 .risks-frame { position:relative;background-image:linear-gradient(180deg,rgba(9,18,13,0.55) 0%,rgba(9,18,13,0.42) 34%,rgba(9,18,13,0.6) 74%,rgba(14,29,22,0.94) 100%),url('../forest-dark.webp');background-size:cover;background-position:center;background-color:#0e1d16;overflow:hidden; }
 .risks-fade { position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(to top,#0e1d16,transparent);pointer-events:none; }
 .risks-inner { position:relative;max-width:1200px;margin:0 auto;padding:100px 40px 128px; }
