@@ -1,6 +1,7 @@
 /* Project tracker. Shared header, footer and Foundation base stay in the site styles. */
-/* Near-white behind the top cards so their edges read, fading down into the green base. */
+/* Keep the tracker content on the same light editorial wash as News. */
 .tracker-page { background: linear-gradient(180deg, #f7faf8 0px, #f7faf8 1400px, #eef3ef 2300px); background-repeat: no-repeat; color: #18342a; line-height: 1.55; }
+.tracker-page main { background: linear-gradient(180deg, #f7faf8 0px, #f7faf8 1400px, #eef3ef 2300px); background-repeat: no-repeat; }
 .tracker-container { max-width: 1240px; padding-inline: 32px; }
 .tracker-page [hidden] { display: none !important; }
 .tracker-page h1, .tracker-page h2 { font-family: Newsreader, Georgia, serif; }
