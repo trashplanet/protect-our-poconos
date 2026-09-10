@@ -28,20 +28,20 @@ html body a.cta-ghost:is(:hover,:focus,:active) { background:rgba(255,255,255,0.
 .topic-pill { font-size:13px; font-weight:600; color:#3a4a41; padding:6px 14px; border-radius:999px; border:1px solid #d3ded6; }
 .topic-pill:is(:hover,:focus-visible) { background:var(--green-dark); color:#fff; border-color:var(--green-dark); }
 
-.layout-style-1 { width:100%;min-height:100vh;background:var(--forest);overflow-x:hidden; }
-.layout-style-2 { position:sticky;top:0;z-index:100;background:rgba(235,244,239,0.82);backdrop-filter:blur(18px) saturate(120%);border-bottom:1px solid rgba(28,58,44,0.1); }
-.top-style-3 { max-width:1240px;margin:0 auto;padding:12px 40px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;row-gap:6px; }
-.top-style-4 { display:flex;align-items:center;gap:10px;flex-shrink:0; }
-.top-style-5 { width:92px;height:92px;object-fit:contain;margin:-12px 0; }
-.top-style-6 { display:block;font-weight:700;font-size:18px;letter-spacing:0.05em;line-height:1.1;color:var(--ink); }
-.top-style-7 { display:flex;align-items:center;gap:2px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end; }
-.top-style-8 { font-size:14px;font-weight:500;color:#274a3b;padding:8px 12px;border-radius:9px;white-space:nowrap; }
-.top-style-8:hover, .top-style-8:focus-visible { background:rgba(28,58,44,0.09);color:var(--ink); }
-.top-style-9 { display:flex;align-items:center;gap:12px;flex-shrink:0; }
-.top-style-10 { width:1px;height:26px;background:rgba(28,58,44,0.16); }
-.top-style-11 { display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--ink-btn);font-size:13px;font-weight:700;line-height:normal;letter-spacing:0.02em;padding:11px 20px;border-radius:9px;box-shadow:none; }
-.top-style-11:hover, .top-style-11:focus-visible { background:#4bb99a; }
-.top-style-12 { font-size:14px; }
+.site-shell { width:100%;min-height:100vh;background:var(--forest);overflow-x:hidden; }
+.site-header { position:sticky;top:0;z-index:100;background:rgba(235,244,239,0.82);backdrop-filter:blur(18px) saturate(120%);border-bottom:1px solid rgba(28,58,44,0.1); }
+.header-inner { max-width:1240px;margin:0 auto;padding:12px 40px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;row-gap:6px; }
+.site-logo { display:flex;align-items:center;gap:10px;flex-shrink:0; }
+.site-logo-img { width:92px;height:92px;object-fit:contain;margin:-12px 0; }
+.site-logo-text { display:block;font-weight:700;font-size:18px;letter-spacing:0.05em;line-height:1.1;color:var(--ink); }
+.primary-navigation { display:flex;align-items:center;gap:2px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end; }
+.nav-link { font-size:14px;font-weight:500;color:#274a3b;padding:8px 12px;border-radius:9px;white-space:nowrap; }
+.nav-link:hover, .nav-link:focus-visible { background:rgba(28,58,44,0.09);color:var(--ink); }
+.header-actions { display:flex;align-items:center;gap:12px;flex-shrink:0; }
+.header-divider { width:1px;height:26px;background:rgba(28,58,44,0.16); }
+.nav-cta { display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--ink-btn);font-size:13px;font-weight:700;line-height:normal;letter-spacing:0.02em;padding:11px 20px;border-radius:9px;box-shadow:none; }
+.nav-cta:hover, .nav-cta:focus-visible { background:#4bb99a; }
+.nav-cta-arrow { font-size:14px; }
 .hero-frame { position:relative;overflow:hidden; }
 .hero-scene-media { position:relative;min-height:640px;display:flex;align-items:center;background-image:linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.28) 100%),url('../hero-waterfall.webp');background-size:cover;background-position:center; }
 .hero-inner { position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:84px 40px 72px;width:100%; }
@@ -55,7 +55,7 @@ html body a.cta-ghost:is(:hover,:focus,:active) { background:rgba(255,255,255,0.
 .happening-grid { position:relative;max-width:1200px;margin:0 auto;padding:76px 40px;display:grid;grid-template-columns:1.02fr 1.3fr;gap:44px;align-items:center; }
 .happening-cta { display:inline-flex;align-items:center;gap:9px;background:var(--teal);color:var(--ink-btn);font-size:13px;font-weight:700;padding:13px 24px;border-radius:9px;box-shadow:0 10px 24px rgba(52,161,132,0.25); }
 .happening-cta:hover, .happening-cta:focus-visible { background:#4bb99a; }
-.happening-style-40 { font-size:15px; }
+.text-cta-arrow { font-size:15px; }
 .happening-stat-grid { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
 .happening-stat-accent { background:var(--teal);border:1px solid var(--teal);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 14px 30px rgba(52,161,132,0.25); }
 .projects-frame { position:relative;background:linear-gradient(to bottom,#eef4f0 0%,rgba(238,244,240,0.74) 30%,rgba(238,244,240,0.22) 60%,rgba(238,244,240,0) 92%),url('../misty-forest.webp') bottom center/cover;overflow:hidden; }
@@ -113,27 +113,27 @@ html body a.cta-ghost:is(:hover,:focus,:active) { background:rgba(255,255,255,0.
 .closing-heading { font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2-lg);color:#fff;margin:0 0 14px;line-height:1.08; }
 .closing-cta { flex-shrink:0; }
 .closing-cta:hover, .closing-cta:focus-visible { background:#4bb99a; }
-.layout-style-170 { position:relative;background:#0a1712;color:var(--muted-dark); }
-.resources-style-171 { max-width:1200px;margin:0 auto;padding:68px 40px 44px;display:flex;flex-wrap:wrap;gap:48px 60px; }
-.resources-style-172 { flex:1 1 300px;min-width:240px; }
-.resources-style-173 { display:flex;align-items:center;gap:13px;margin-bottom:18px; }
-.resources-style-174 { width:52px;height:52px;object-fit:contain; }
-.resources-style-175 { font-weight:700;font-size:16px;letter-spacing:0.05em;color:#fff;line-height:1.12; }
-.resources-style-176 { font-size:16px;line-height:1.65;color:#8ba79b;max-width:330px;margin:0; }
-.resources-style-177 { flex:0 1 150px;display:flex;flex-direction:column;gap:14px; }
-.resources-style-178 { font-size:12px;letter-spacing:0.16em;font-weight:700;color:var(--mint);margin:0 0 4px; }
-.resources-style-179 { color:var(--muted-dark);font-size:14px; }
-.resources-style-179:hover, .resources-style-179:focus-visible { color:var(--heading) }
-.resources-style-180 { flex:1 1 240px;min-width:220px; }
-.resources-style-181 { font-family:'Newsreader';font-style:italic;font-size:var(--fs-card);line-height:1.3;color:#e6f2ea;margin:0 0 20px; }
-.resources-style-182 { display:inline-flex;align-items:center;gap:9px;background:var(--mint);color:#0a1712;font-size:13px;font-weight:700;letter-spacing:0.02em;padding:13px 22px;border-radius:9px;transition:background .2s; }
-.resources-style-182:hover, .resources-style-182:focus-visible { background:#a7dcc9 }
-.resources-style-183 { border-top:1px solid rgba(255,255,255,0.08); }
-.resources-style-184 { max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap; }
-.resources-style-185 { font-size:12px;color:#5f7a6d; }
-.resources-style-187 { font-size:12px;color:#5f7a6d; }
-.resources-style-186 { display:flex;gap:22px; }
-.resources-style-185:hover, .resources-style-185:focus-visible { color:var(--heading) }
+.site-footer { position:relative;background:#0a1712;color:var(--muted-dark); }
+.footer-inner { max-width:1200px;margin:0 auto;padding:68px 40px 44px;display:flex;flex-wrap:wrap;gap:48px 60px; }
+.footer-brand { flex:1 1 300px;min-width:240px; }
+.footer-brand-head { display:flex;align-items:center;gap:13px;margin-bottom:18px; }
+.footer-logo { width:52px;height:52px;object-fit:contain; }
+.footer-brand-name { font-weight:700;font-size:16px;letter-spacing:0.05em;color:#fff;line-height:1.12; }
+.footer-brand-text { font-size:16px;line-height:1.65;color:#8ba79b;max-width:330px;margin:0; }
+.footer-nav { flex:0 1 150px;display:flex;flex-direction:column;gap:14px; }
+.footer-nav-title { font-size:12px;letter-spacing:0.16em;font-weight:700;color:var(--mint);margin:0 0 4px; }
+.footer-link { color:var(--muted-dark);font-size:14px; }
+.footer-link:hover, .footer-link:focus-visible { color:var(--heading) }
+.footer-cta-col { flex:1 1 240px;min-width:220px; }
+.footer-cta-text { font-family:'Newsreader';font-style:italic;font-size:var(--fs-card);line-height:1.3;color:#e6f2ea;margin:0 0 20px; }
+.footer-cta { display:inline-flex;align-items:center;gap:9px;background:var(--mint);color:#0a1712;font-size:13px;font-weight:700;letter-spacing:0.02em;padding:13px 22px;border-radius:9px;transition:background .2s; }
+.footer-cta:hover, .footer-cta:focus-visible { background:#a7dcc9 }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.08); }
+.footer-bottom-inner { max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap; }
+.footer-legal-link { font-size:12px;color:#5f7a6d; }
+.footer-copyright { font-size:12px;color:#5f7a6d; }
+.footer-legal-links { display:flex;gap:22px; }
+.footer-legal-link:hover, .footer-legal-link:focus-visible { color:var(--heading) }
 
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
 @media (max-width:800px) { .hero-scene-media { background-image: linear-gradient(90deg,rgba(9,18,13,0.9) 0%,rgba(9,18,13,0.62) 44%,rgba(12,32,24,0.28) 100%),url('../hero-waterfall-mobile.webp'); } }

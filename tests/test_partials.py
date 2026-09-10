@@ -21,7 +21,7 @@ class PartialsTests(unittest.TestCase):
     def test_active_navigation_and_home_target_per_page(self):
         for filename, (home_href, active) in partials.PAGES.items():
             page = (ROOT / filename).read_text()
-            self.assertIn(f'class="top-style-4" href="{home_href}"', page, filename)
+            self.assertIn(f'class="site-logo" href="{home_href}"', page, filename)
             self.assertEqual(page.count('aria-current="page"'), 1 if active else 0, filename)
             if active:
                 self.assertIn(f'href="{active}.html" aria-current="page"', page, filename)

@@ -177,7 +177,7 @@ class PublicBuildTests(unittest.TestCase):
         for route in build.PAGES.values():
             html = (build.OUT / route.strip('/') / 'index.html').read_text()
             self.assertIn('href="/faq/"', html)
-            self.assertRegex(html, r'class="top-style-11[^"]*" href="/take-action/"')
+            self.assertRegex(html, r'class="nav-cta[^"]*" href="/take-action/"')
         issues = (build.OUT / 'issues/index.html').read_text()
         self.assertNotIn('class="issue-design-3"', issues)
         self.assertIn('BreadcrumbList', issues)

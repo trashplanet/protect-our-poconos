@@ -159,17 +159,17 @@ svg { flex-shrink: 0; }
 .closing-heading > span + span { margin-top: 4px; }
 
 /* Shared CTA states: preserve dark labels against mint backgrounds. */
-.site-header .top-style-11,
+.site-header .nav-cta,
 .closing .closing-cta,
-footer .resources-style-182 { transition: background-color .18s ease, box-shadow .18s ease; }
+footer .footer-cta { transition: background-color .18s ease, box-shadow .18s ease; }
 .closing .closing-cta:hover,
 .closing .closing-cta:focus-visible,
-.site-header .top-style-11:hover,
-.site-header .top-style-11:focus-visible { color:var(--ink-btn); background:#5bc5a7; box-shadow:0 3px 10px #123e2926; text-decoration:none; }
-footer .resources-style-182:hover,
-footer .resources-style-182:focus-visible { color:#0a1712; background:#b8e8d8; box-shadow:0 3px 12px #0003; text-decoration:none; }
-.site-header .top-style-11:focus-visible { outline:2px solid #123e29; outline-offset:3px; }
-footer .resources-style-182:focus-visible { outline:2px solid #b8e8d8; outline-offset:4px; }
+.site-header .nav-cta:hover,
+.site-header .nav-cta:focus-visible { color:var(--ink-btn); background:#5bc5a7; box-shadow:0 3px 10px #123e2926; text-decoration:none; }
+footer .footer-cta:hover,
+footer .footer-cta:focus-visible { color:#0a1712; background:#b8e8d8; box-shadow:0 3px 12px #0003; text-decoration:none; }
+.site-header .nav-cta:focus-visible { outline:2px solid #123e29; outline-offset:3px; }
+footer .footer-cta:focus-visible { outline:2px solid #b8e8d8; outline-offset:4px; }
 
 .closing .closing-cta:focus-visible { outline:2px solid #b8e8d8; outline-offset:4px; }
 

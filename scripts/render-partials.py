@@ -48,7 +48,7 @@ NAV_KEYS = ['news', 'issues', 'projects', 'resources', 'faq']
 # block drops in exactly where the original stood.
 HEAD = re.compile(r'[ \t]*<head>.*?</head>', re.S)
 HEADER = re.compile(r'[ \t]*<header class="site-header.*?</header>', re.S)
-FOOTER = re.compile(r'[ \t]*<footer class="layout-style-170".*?</footer>', re.S)
+FOOTER = re.compile(r'[ \t]*<footer class="site-footer".*?</footer>', re.S)
 NOTICE = re.compile(r'[ \t]*<dialog aria-labelledby="notice-title".*?</dialog>', re.S)
 BASE_CSS = {'foundation-subset', 'design', 'site', 'layout', 'fonts'}
 BASE_JS = {'site', 'analytics'}
