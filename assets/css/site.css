@@ -10,7 +10,7 @@
   --text: #46584e;        /* body text on light */
   --text-strong: #26382f; /* strong dark text */
   --text-soft: #c8d8cf;   /* soft light text on dark */
-  --muted: #6a8579;       /* muted text on light */
+  --muted: #5f786d;       /* muted text on light (darkened for AA) */
   --text-muted: #5c6d63;  /* secondary muted text on light */
   --muted-dark: #9db3a8;  /* muted text on dark surfaces */
   --muted-light: #a9c1b6; /* light muted text on dark */
@@ -28,10 +28,10 @@
 /* Link hover colour is context-driven: dark surfaces brighten toward
    --heading; light-bodied pages darken toward --green-dark; dark sections
    inside those light pages brighten again. One base rule reads it. */
-:root { --link-hover: var(--heading); }
-body:is(.tracker-page,.resources-page,.faq-page,.news-page,.about-page,.action-page) { --link-hover: var(--green-dark); }
+:root { --link-hover: var(--heading); --link-rest: var(--link-dark); }
+body:is(.tracker-page,.resources-page,.faq-page,.news-page,.about-page,.action-page) { --link-hover: var(--green-dark); --link-rest: var(--link); }
 :is(.tracker-hero,.news-hero,.about-hero,.action-hero,.issue-hero,.about-cta,.editorial-closing,.faq-stance,.faq-closing),
-.news-page :is(.series-band,.elsewhere-band,.featured-story:first-child) { --link-hover: var(--heading); }
+.news-page :is(.series-band,.elsewhere-band,.featured-story:first-child) { --link-hover: var(--heading); --link-rest: var(--link-dark); }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { line-height: normal; }
 button, a { -webkit-tap-highlight-color: transparent; }

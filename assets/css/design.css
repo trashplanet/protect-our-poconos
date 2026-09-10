@@ -3,7 +3,7 @@
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
     body { font-family: 'Public Sans', system-ui, sans-serif; color: #dbe7e0; background: var(--forest); -webkit-font-smoothing: antialiased; }
-    a { color: var(--link-dark); text-decoration: none; }
+    a { color: var(--link-rest); text-decoration: none; }
     a:hover, a:focus-visible { color: var(--link-hover); }
     ::selection { background: var(--teal); color: #08130e; }
 
