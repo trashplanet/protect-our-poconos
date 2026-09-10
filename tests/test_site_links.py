@@ -31,5 +31,5 @@ class SiteLinksTests(unittest.TestCase):
 
     def test_home_issue_cards_link_to_all_six_sections(self):
         nodes = sync.Document((ROOT / 'index.html').read_text()).root.descendants()
-        targets = {n.attrs['href'] for n in nodes if n.has_class('risks-style-84')}
+        targets = {n.attrs['href'] for n in nodes if n.has_class('home-risk-pill')}
         self.assertEqual(targets, {'issues.html#i-' + topic for topic in ['forests','water','power','noise','community','jobs']})

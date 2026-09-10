@@ -103,7 +103,7 @@ svg { flex-shrink: 0; }
   .happening .columns-2 .columns-2 > div { padding: 18px; }
   .scale-visual .scale-style-99 { padding: 24px 14px; }
   .scale-visual .scale-labels div { white-space: normal; }
-  .news-card { gap: 12px; }
+  .home-news-row.news-card { gap: 12px; }
   #action { padding: 26px 20px; }
   footer nav { gap: 18px; }
 }
@@ -117,7 +117,7 @@ svg { flex-shrink: 0; }
 /* Longer sourced copy: retain the mockup's cards without crowding their labels. */
 .local-scale-callout { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
 .local-scale-callout .scale-style-96 { font-size: clamp(30px, 3vw, 40px); line-height: 1.05; }
-.local-scale-detail { margin-bottom: 20px; }
+.home-scale-text.local-scale-detail { margin-bottom: 20px; }
 .scale-labels .scale-style-118 { white-space: normal; }
 .source-note { font-size: 12px; line-height: 1.7; color: var(--text); margin: 20px 0 0; }
 .source-note a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
@@ -131,7 +131,7 @@ svg { flex-shrink: 0; }
 .home-project-image.is-illustration img { object-fit: contain; padding: 30px 16px 22px; mix-blend-mode: multiply; }
 .home-project-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 4px 9px; background: #112b22d9; color: #e4f2e9; font-size: 9px; line-height: 1.4; }
 .home-project-image.is-illustration .home-project-caption { background: #dde9e2; color: var(--text); }
-.news-card { padding: 20px 22px; }
+.home-news-row.news-card { padding: 20px 22px; }
 
 /* Ease into the next section over a longer distance, with soft endpoints. */
 .scale-style-90 {
