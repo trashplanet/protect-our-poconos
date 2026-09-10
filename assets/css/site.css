@@ -196,7 +196,7 @@ body main [id] {scroll-margin-top:0!important;}
    findable in running text; standalone links stay underline-free. Colour-only
    on hover (the underline is kept). Buttons and arrow links are excluded. */
 main p a:not(.cta-teal):not(.cta-ghost):not(.link-arrow) { text-decoration: underline; text-underline-offset: 3px; }
-@media(min-width:1101px){body.resources-page nav.research-design-14 {top:var(--header-height,93px);}}
+@media(min-width:1101px){body.resources-page nav.resources-jump-nav {top:var(--header-height,93px);}}
 
 /* 404 page (scoped: only affects 404.html via .notfound-* classes).
    Mirrors the interior-page hero treatment used on issues.html. */
