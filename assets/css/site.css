@@ -4,7 +4,7 @@
 :root {
   --forest: #0f1f18; --mint: #8fd4bf; --ink: #16281f; --teal: #34a184; --heading: #f4faf6;
   /* Reused brand palette (Phase 2). One token per literal colour. */
-  --link: #2f7d63;        /* primary green link / accent on light */
+  --link: #2c775e;        /* primary green link / accent on light (AA on tinted panels) */
   --link-dark: #6fc4ac;   /* green link on dark surfaces */
   --line: #dbe6de;        /* light hairline / border */
   --text: #46584e;        /* body text on light */

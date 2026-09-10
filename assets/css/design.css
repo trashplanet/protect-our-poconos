@@ -130,8 +130,8 @@ html body a.cta-ghost:is(:hover,:focus,:active) { background:rgba(255,255,255,0.
 .footer-cta:hover, .footer-cta:focus-visible { background:#a7dcc9 }
 .footer-bottom { border-top:1px solid rgba(255,255,255,0.08); }
 .footer-bottom-inner { max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap; }
-.footer-legal-link { font-size:12px;color:#5f7a6d; }
-.footer-copyright { font-size:12px;color:#5f7a6d; }
+.footer-legal-link { font-size:12px;color:#788f83; }
+.footer-copyright { font-size:12px;color:#788f83; }
 .footer-legal-links { display:flex;gap:22px; }
 .footer-legal-link:hover, .footer-legal-link:focus-visible { color:var(--heading) }
 
