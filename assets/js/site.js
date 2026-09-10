@@ -45,7 +45,7 @@ notice.addEventListener('click', (event) => {
 
 // Share the actual sticky heights with native anchor navigation.
 const stickyHeader = document.querySelector('.site-header');
-const jumpBar = document.querySelector('.research-design-14, .faq-jump');
+const jumpBar = document.querySelector('.resources-jump-nav, .faq-jump');
 function measureStickyAreas() {
   // Read both heights before writing either custom property, so setting the first
   // does not force a synchronous reflow before the second is measured.

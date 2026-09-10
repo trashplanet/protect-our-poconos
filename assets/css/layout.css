@@ -7,35 +7,35 @@ body :is(.section-inner,.tracker-container,.news-wrap,.issues-page .issue-inner,
   padding-left:var(--page-gutter);padding-right:var(--page-gutter);
 }
 /* Override page-specific responsive hero rules at the shared layout boundary. */
-body :is(.hero-content,.tracker-hero > div,.news-hero .news-wrap,.issue-hero .issue-inner,.action-design-3,.research-design-4,.faq-design-4){padding-top:var(--hero-top)!important;}
-body :is(.hero-scene,.action-design-2,.research-design-1,.faq-design-1){align-items:flex-start!important;padding-inline:0;}
+body :is(.hero-content,.tracker-hero > div,.news-hero .news-wrap,.issue-hero .issue-inner,.action-hero-inner,.resources-hero-inner,.faq-hero-inner){padding-top:var(--hero-top)!important;}
+body :is(.hero-scene,.action-hero-media,.resources-hero-scene,.faq-hero-scene){align-items:flex-start!important;padding-inline:0;}
 
 /* The same pale green header on every page, independent of the page beneath it. */
 html body .site-header {background:#c3cfc8;}
 html body a:focus, html body a:active {color:var(--link-dark);}
 html body a.cta-teal:is(:hover,:focus,:active) {color:var(--ink-btn)!important;background:#5bc5a7;text-decoration:none;}
 html body a.cta-teal span {color:inherit;}
-html body .faq-design-1 {padding-inline:0!important;}
+html body .faq-hero-scene {padding-inline:0!important;}
 /* Enough room for the intended desktop titles with the actual Newsreader font. */
 @media(min-width:1101px){
-  .hero-content > .hero-style-16 {max-width:600px;}
-  .faq-page .faq-design-5 {max-width:800px;}
+  .hero-content > .hero-copy {max-width:600px;}
+  .faq-page .faq-hero-copy {max-width:800px;}
 }
 /* Below the sticky-desktop breakpoint the topic nav is a compact, swipeable
    strip (not sticky). Pills get a white fill + firmer border so they read
    against the section background, and stay on one scrollable row. */
 @media(max-width:1100px){
-  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14){display:block;position:relative;top:auto;}
-  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14)>div {
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.resources-jump-nav){display:block;position:relative;top:auto;}
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.resources-jump-nav)>div {
     display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding:12px 20px;
     scrollbar-width:none;-webkit-overflow-scrolling:touch;
   }
-  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14)>div::-webkit-scrollbar{display:none;}
-  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14) a {
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.resources-jump-nav)>div::-webkit-scrollbar{display:none;}
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.resources-jump-nav) a {
     flex:0 0 auto;white-space:nowrap;min-height:38px;display:inline-flex;align-items:center;
     font-size:12.5px;padding:7px 14px;background:#fff;border-color:#c2d2c9;
   }
-  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.research-design-14)>div>span{flex:0 0 auto;white-space:nowrap;}
+  html body:is(.faq-page,.resources-page) :is(.faq-jump,nav.resources-jump-nav)>div>span{flex:0 0 auto;white-space:nowrap;}
 }
 @media(max-width:760px){
   .hero .home-hero-context {position:relative;isolation:isolate;text-shadow:0 2px 5px #07160fcc;}
@@ -54,7 +54,7 @@ html body .faq-design-1 {padding-inline:0!important;}
 
 /* Paired hero/closing actions share the same phone layout. */
 @media(max-width:760px){
-  body main :is(.hero,.hero-scene,.faq-design-1,.research-design-1,.issue-closing,.faq-closing,.closing,.editorial-closing,.about-cta) :is(.cta-teal,.cta-ghost){width:100%;justify-content:center;box-sizing:border-box;}
-  body :is(.faq-design-11,.faq-design-229,.research-design-9){width:100%;min-width:0;flex-direction:column;}
+  body main :is(.hero,.hero-scene,.faq-hero-scene,.resources-hero-scene,.issue-closing,.faq-closing,.closing,.editorial-closing,.about-cta) :is(.cta-teal,.cta-ghost){width:100%;justify-content:center;box-sizing:border-box;}
+  body :is(.faq-hero-cta-row,.faq-closing-cta-group,.resources-hero-cta-row){width:100%;min-width:0;flex-direction:column;}
 }
 .link-icon{display:inline-block;width:16px;height:16px;vertical-align:-.12em;flex-shrink:0;}
