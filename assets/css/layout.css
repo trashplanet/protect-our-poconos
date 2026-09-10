@@ -7,19 +7,19 @@ body :is(.section-inner,.tracker-container,.news-wrap,.issues-page .issue-inner,
   padding-left:var(--page-gutter);padding-right:var(--page-gutter);
 }
 /* Override page-specific responsive hero rules at the shared layout boundary. */
-body :is(.hero-content,.tracker-hero > div,.news-hero .news-wrap,.issue-hero .issue-inner,.action-hero-inner,.resources-hero-inner,.faq-design-4){padding-top:var(--hero-top)!important;}
-body :is(.hero-scene,.action-hero-media,.resources-hero-scene,.faq-design-1){align-items:flex-start!important;padding-inline:0;}
+body :is(.hero-content,.tracker-hero > div,.news-hero .news-wrap,.issue-hero .issue-inner,.action-hero-inner,.resources-hero-inner,.faq-hero-inner){padding-top:var(--hero-top)!important;}
+body :is(.hero-scene,.action-hero-media,.resources-hero-scene,.faq-hero-scene){align-items:flex-start!important;padding-inline:0;}
 
 /* The same pale green header on every page, independent of the page beneath it. */
 html body .site-header {background:#c3cfc8;}
 html body a:focus, html body a:active {color:var(--link-dark);}
 html body a.cta-teal:is(:hover,:focus,:active) {color:var(--ink-btn)!important;background:#5bc5a7;text-decoration:none;}
 html body a.cta-teal span {color:inherit;}
-html body .faq-design-1 {padding-inline:0!important;}
+html body .faq-hero-scene {padding-inline:0!important;}
 /* Enough room for the intended desktop titles with the actual Newsreader font. */
 @media(min-width:1101px){
   .hero-content > .hero-copy {max-width:600px;}
-  .faq-page .faq-design-5 {max-width:800px;}
+  .faq-page .faq-hero-copy {max-width:800px;}
 }
 /* Below the sticky-desktop breakpoint the topic nav is a compact, swipeable
    strip (not sticky). Pills get a white fill + firmer border so they read
@@ -54,7 +54,7 @@ html body .faq-design-1 {padding-inline:0!important;}
 
 /* Paired hero/closing actions share the same phone layout. */
 @media(max-width:760px){
-  body main :is(.hero,.hero-scene,.faq-design-1,.resources-hero-scene,.issue-closing,.faq-closing,.closing,.editorial-closing,.about-cta) :is(.cta-teal,.cta-ghost){width:100%;justify-content:center;box-sizing:border-box;}
-  body :is(.faq-design-11,.faq-design-229,.resources-hero-cta-row){width:100%;min-width:0;flex-direction:column;}
+  body main :is(.hero,.hero-scene,.faq-hero-scene,.resources-hero-scene,.issue-closing,.faq-closing,.closing,.editorial-closing,.about-cta) :is(.cta-teal,.cta-ghost){width:100%;justify-content:center;box-sizing:border-box;}
+  body :is(.faq-hero-cta-row,.faq-closing-cta-group,.resources-hero-cta-row){width:100%;min-width:0;flex-direction:column;}
 }
 .link-icon{display:inline-block;width:16px;height:16px;vertical-align:-.12em;flex-shrink:0;}
