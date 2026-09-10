@@ -7,8 +7,8 @@ body :is(.section-inner,.tracker-container,.news-wrap,.issues-page .issue-inner,
   padding-left:var(--page-gutter);padding-right:var(--page-gutter);
 }
 /* Override page-specific responsive hero rules at the shared layout boundary. */
-body :is(.hero-content,.tracker-hero > div,.news-hero .news-wrap,.issue-hero .issue-inner,.action-design-3,.resources-hero-inner,.faq-design-4){padding-top:var(--hero-top)!important;}
-body :is(.hero-scene,.action-design-2,.resources-hero-scene,.faq-design-1){align-items:flex-start!important;padding-inline:0;}
+body :is(.hero-content,.tracker-hero > div,.news-hero .news-wrap,.issue-hero .issue-inner,.action-hero-inner,.resources-hero-inner,.faq-design-4){padding-top:var(--hero-top)!important;}
+body :is(.hero-scene,.action-hero-media,.resources-hero-scene,.faq-design-1){align-items:flex-start!important;padding-inline:0;}
 
 /* The same pale green header on every page, independent of the page beneath it. */
 html body .site-header {background:#c3cfc8;}
