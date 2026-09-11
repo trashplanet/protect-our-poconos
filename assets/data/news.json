@@ -1,5 +1,39 @@
 [
   {
+    "id": "story-18",
+    "title": "Smithfield Gateway conditional-use hearing postponed",
+    "source": "NoticeRegistry (public notice)",
+    "date": "2026-09-06",
+    "type": "Public Notice",
+    "categories": [
+      "Local Projects",
+      "Monroe County",
+      "Smithfield",
+      "Meetings & Hearings"
+    ],
+    "relatedProject": "smithfield-gateway",
+    "summary": "Smithfield Township postponed the previously advertised September 9 conditional-use hearing for the Gateway data center. A replacement date will be separately advertised; September 23 is a regular Board meeting, not a continuation hearing.",
+    "contextNote": "Public-notice source. Check Smithfield Township’s current notices before making plans; the replacement hearing date is pending.",
+    "url": "https://www.noticeregistry.com/pennsylvania/notice/public-hearing-east-stroudsburg-2461015"
+  },
+  {
+    "id": "story-19",
+    "title": "Data center proposed in Lower Towamensing Township",
+    "source": "Times News Online",
+    "date": "2026-09-09",
+    "type": "External Reporting",
+    "categories": [
+      "Wider Poconos",
+      "Carbon County",
+      "Local Projects",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "summary": "Property owners filed a curative amendment seeking to allow a data center at the Blue Shamrock Golf Course / DTA Alliance property in Lower Towamensing Township, Carbon County. This wider-Poconos proposal is outside the core Pike and Monroe project tracker.",
+    "contextNote": "Wider Poconos reporting. The filing is evidence of a proposed land-use change, not a confirmed project approval or a core tracker entry.",
+    "url": "https://www.tnonline.com/20260909/data-center-proposed-in-l-tow/"
+  },
+  {
     "id": "story-1",
     "title": "Coming to some of Pennsylvania’s most picturesque places: data centers",
     "source": "Spotlight PA / Inside Climate News",

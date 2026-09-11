@@ -189,7 +189,7 @@ footer .footer-cta:focus-visible { outline:2px solid #b8e8d8; outline-offset:4px
 html {scroll-padding-top:calc(var(--header-height,93px) + var(--jump-height,0px));}
 body main [id] {scroll-margin-top:0!important;}
 .mobile-action {display:none!important;}
-@media(max-width:800px){.mobile-action{display:inline-flex!important;}}
+@media(max-width:800px){.mobile-action{display:inline-flex!important;align-items:center;gap:6px;}.mobile-action-arrow{display:inline-flex;align-items:center;line-height:1;transform:translateY(1px);}}
 @media(max-width:800px){.editorial-closing{padding:56px 24px;}.editorial-closing .editorial-closing-inner{padding-inline:0;display:block;}.editorial-closing-actions{margin-top:28px;}.editorial-closing-primary{width:100%;}}
 @media(max-width:480px){.editorial-closing{padding-inline:20px;}.editorial-closing h2{font-size:34px;}}
 /* Prose links (inside body paragraphs) are underlined at rest so they're
