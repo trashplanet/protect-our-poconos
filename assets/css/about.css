@@ -27,6 +27,7 @@
   background-position: center;
 }
 .about-page .about-hero .about-inner {
+  width: 100%;
   padding-top: var(--hero-top, 72px);
   padding-bottom: 60px;
 }
