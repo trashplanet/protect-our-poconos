@@ -6,18 +6,15 @@
 .issues-page .issue-design-11{position:relative;background:var(--forest);}
 .issues-page .issue-design-12{max-width:1200px;margin:0 auto;padding:56px 40px 24px;}
 .issues-page .issue-design-13{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;}
-.issues-page .issue-pill{border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:30px 16px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;color:inherit;background:rgba(255,255,255,0.02);}
-.issues-page .issue-pill-icon{width:72px;height:72px;border-radius:50%;background:rgba(111,196,172,0.1);border:1px solid rgba(143,212,191,0.22);display:flex;align-items:center;justify-content:center;color:#a7dcc9;margin-bottom:18px;}
-.issues-page .issue-pill-label{font-size:14px;font-weight:600;color:var(--heading-soft);line-height:1.3;margin-bottom:12px;}
-.issues-page .issue-pill-link{font-size:12px;font-weight:600;color:#7fbfa9;display:inline-flex;align-items:center;gap:5px;}
+/* .issue-pill (icon/label/link) is the shared topic card; see design.css. */
 .issues-page .issue-design-18{position:relative;background:var(--bg-dark);scroll-margin-top:88px;}
 .issues-page .issue-design-19{max-width:1200px;margin:0 auto;padding:66px 40px;display:grid;grid-template-columns:1.05fr 1fr;gap:52px;align-items:center;}
 .issues-page .issue-icon-row{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
 .issues-page .issue-icon-badge{width:52px;height:52px;flex-shrink:0;border-radius:14px;background:#1c4636;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);box-shadow:0 8px 22px rgba(28,70,54,0.28);}
 .issues-page .issue-icon-title{font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2);line-height:1.05;color:var(--heading-soft);margin:0;}
 .issues-page .issue-headline{font-family:'Public Sans',system-ui,sans-serif;font-weight:700;font-size:20px;line-height:1.3;margin:0 0 16px;color:var(--heading-soft);}
-.issues-page .issue-intro{font-size:16px;line-height:1.68;color:var(--muted-light);margin:0 0 24px;max-width:480px;}
-.issues-page .issue-fact-list{display:flex;flex-direction:column;gap:16px;margin:0 0 26px;max-width:490px;}
+.issues-page .issue-intro{font-size:16px;line-height:1.68;color:var(--muted-light);margin:0 0 24px;}
+.issues-page .issue-fact-list{display:flex;flex-direction:column;gap:16px;margin:0 0 26px;}
 .issues-page .issue-fact--know{border-left:2px solid var(--link-dark);padding-left:14px;}
 .issues-page .issue-fact-label--know{font-size:12px;letter-spacing:0.12em;font-weight:700;color:var(--link-dark);margin-bottom:4px;}
 .issues-page .issue-fact-text{font-size:16px;line-height:1.5;color:#c2d4ca;}
@@ -107,14 +104,6 @@
 .issues-page .issue-hero .issue-design-10 { max-width:650px; }
 .issues-page .issue-overview .issue-inner { padding-top:32px; padding-bottom:76px; }
 .issues-page .issue-jump-grid { gap:18px; }
-.issues-page .issue-jump-grid > a {
- padding:30px 16px 32px;
- background:linear-gradient(150deg,#ffffff07,var(--mint)07);
- border-color:var(--mint)30;
- box-shadow:0 10px 28px #0000000d;
- transition:background .2s,border-color .2s;
-}
-.issues-page .issue-jump-grid > a > span { margin-top:auto; padding-top:8px; }
 
 @media(max-width:800px) {
  .issues-page .issue-hero .issue-inner { padding-top:40px; padding-bottom:24px; }
