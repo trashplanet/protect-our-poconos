@@ -57,4 +57,5 @@ html body .faq-hero-scene {padding-inline:0!important;}
   body main :is(.hero,.hero-scene,.faq-hero-scene,.resources-hero-scene,.issue-closing,.faq-closing,.closing,.editorial-closing,.about-cta) :is(.cta-teal,.cta-ghost){width:100%;justify-content:center;box-sizing:border-box;}
   body :is(.faq-hero-cta-row,.faq-closing-cta-group,.resources-hero-cta-row){width:100%;min-width:0;flex-direction:column;}
 }
+/* Inline arrow/external-link glyphs replaced with SVGs at build time (build-site.py). */
 .link-icon{display:inline-block;width:16px;height:16px;vertical-align:-.12em;flex-shrink:0;}

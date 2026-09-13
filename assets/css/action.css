@@ -25,14 +25,9 @@
 .action-page .action-primary-badge-row{display:inline-flex;align-items:center;gap:8px;background:rgba(224,113,62,0.16);border:1px solid rgba(224,113,62,0.4);border-radius:999px;padding:5px 13px;margin-bottom:18px;}
 .action-page .action-primary-badge{font-size:12px;letter-spacing:0.1em;font-weight:700;color:#f0a884;}
 .action-page .action-primary-row{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start;}
-.action-page .action-primary-date{flex:0 0 auto;text-align:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:14px 20px;}
-.action-page .action-primary-date-month{font-size:12px;letter-spacing:0.1em;font-weight:700;color:var(--mint);}
-.action-page .action-primary-date-day{font-family:'Newsreader';font-size:40px;font-weight:600;color:#fff;line-height:1;}
-.action-page .action-primary-date-year{font-size:11px;color:var(--muted-light);margin-top:2px;}
 .action-page .action-primary-copy{flex:1;min-width:220px;}
 .action-page .action-primary-title{font-family:'Newsreader';font-weight:600;font-size:var(--fs-h3);line-height:1.15;margin:0 0 10px;color:var(--heading);}
 .action-page .action-primary-meta{font-size:13px;color:#c2d4ca;line-height:1.55;margin-bottom:12px;}
-.action-page .action-primary-time{color:#eaf3ec;}
 .action-page .action-emphasis{color:#c2d4ca;}
 .action-page .action-primary-text{font-size:16px;line-height:1.6;color:var(--muted-light);margin:0 0 16px;}
 

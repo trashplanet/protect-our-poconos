@@ -90,7 +90,6 @@
 @media(max-width:760px) {
  .resources-page .research-grid { grid-template-columns:minmax(0,1fr); }
  .resources-page .research-container { padding:44px 20px; }
- .resources-page .research-card-heading { flex-wrap:wrap; gap:12px; }
  .resources-page main a { overflow-wrap:anywhere; }
 }
 
