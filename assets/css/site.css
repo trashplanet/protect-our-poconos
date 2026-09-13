@@ -53,7 +53,8 @@ svg { flex-shrink: 0; }
 #site-notice h2 { font-family: Newsreader, Georgia, serif; color: #fff; font-size: var(--fs-h2); line-height: 1.1; margin: 0 0 16px; }
 #site-notice p { line-height: 1.6; }
 .notice-close { position: absolute; right: 14px; top: 10px; color: var(--text-soft); font-size: 30px; width: 36px; height: 36px; }
-.notice-done.button { background: var(--teal); color: var(--ink-btn); border-radius: 7px; font-weight: 700; margin: 8px 0 0; }
+.notice-done.button { background: var(--teal); color: var(--ink-btn); border-radius: 7px; font-weight: 700; margin: 8px 0 0; transition:background-color .18s ease,box-shadow .18s ease; }
+.notice-done.button:is(:hover,:focus-visible) { background:#4bb99a; color:var(--ink-btn); box-shadow:0 8px 18px rgba(52,161,132,.28); }
 @media (max-width: 1150px) {
   .header-inner { gap: 12px; padding-inline: 24px; }
   .primary-navigation { order: 3; flex-basis: 100%; justify-content: center; }
