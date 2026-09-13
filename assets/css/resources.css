@@ -84,7 +84,8 @@
 .resources-page main > nav { position:relative; top:auto; }
 .resource-disclosure { background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
 .resource-disclosure summary { padding:20px 24px; cursor:pointer; font:600 21px/1.4 Newsreader,Georgia,serif; color:var(--ink); transition:background-color .18s ease; }
-.resource-disclosure a { display:block; margin:0 24px; padding:12px 0; border-top:1px solid #eef2ee; color:var(--link); font-size:14px; }
+.resource-disclosure a { display:block; margin:0 16px; padding:12px 8px; border-top:1px solid #eef2ee; border-radius:8px; color:var(--link); font-size:14px; transition:background-color .18s ease,color .18s ease; }
+.resource-disclosure a:is(:hover,:focus-visible) { background:#eaf2ec; color:var(--green-dark); }
 .resource-disclosure a:last-child { margin-bottom:12px; }
 @media(max-width:760px) {
  .resources-page .research-grid { grid-template-columns:minmax(0,1fr); }
