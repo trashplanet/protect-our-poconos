@@ -31,7 +31,9 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .news-page .story-meta { color: var(--text-muted); font-size: 13px; margin: 12px 0; }
 .news-page .story-meta time { font-weight: 700; }
 .story-card h3 { margin: 0 0 16px; font-size: 24px; }
-.news-page .story-card h3 a { color: inherit; }
+.news-page .story-card h3 a { color: inherit; transition:color .18s ease; }
+.news-page .story-card h3 a:is(:hover,:focus-visible) { color:var(--link); }
+.news-page .featured-story:first-child h3 a:is(:hover,:focus-visible) { color:var(--mint); }
 .story-summary { font-size: 14px; margin-bottom: 20px; }
 .news-page .context-note { font-size: 12px; background: #faf1d9; color: #624915; border-left: 3px solid #c49538; padding: 12px; margin-bottom: 18px; }
 .story-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
