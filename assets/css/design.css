@@ -113,7 +113,7 @@ html body :is(.home-risk-pill,.issues-page .issue-pill):is(:hover,:focus-visible
 .scale-library-cta:hover, .scale-library-cta:focus-visible { background:#2f5d3f; }
 .updates-bg-image { position:absolute;bottom:0;left:0;width:100%;height:60%;object-fit:cover;opacity:0.1;pointer-events:none;-webkit-mask-image:linear-gradient(to top,#000,transparent);mask-image:linear-gradient(to top,#000,transparent); }
 .updates-grid { position:relative;max-width:1200px;margin:0 auto;padding:66px 40px;display:grid;grid-template-columns:1.32fr 1fr;gap:48px;align-items:start; }
-.action-panel { position:relative;background:linear-gradient(160deg,#1c4636,#123024);border:1px solid rgba(143,212,191,0.2);border-radius:20px;padding:34px;box-shadow:0 16px 40px rgba(6,14,10,0.4); }
+.action-panel { position:relative;background:linear-gradient(160deg,var(--panel),var(--panel-deep));border:1px solid rgba(143,212,191,0.2);border-radius:20px;padding:34px;box-shadow:0 16px 40px rgba(6,14,10,0.4); }
 .closing-frame { position:relative;background-image:linear-gradient(rgba(9,18,13,0.28) 0%,rgba(9,18,13,0.5) 55%,rgba(9,18,13,0.72) 100%),url('../mountains-sunset.webp');background-size:cover;background-position:center 22%;padding:130px 40px 96px; }
 .closing-row { max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap; }
 .closing-heading { font-family:'Newsreader';font-weight:500;font-size:var(--fs-h2-lg);color:#fff;margin:0 0 14px;line-height:1.08; }

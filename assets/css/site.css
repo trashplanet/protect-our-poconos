@@ -17,6 +17,8 @@
   --heading-soft: #f2f8f4;/* near-white heading on dark */
   --bg-dark: #12241d;     /* dark page / section background */
   --green-dark: #1c3a2c;  /* dark green surface / border */
+  --panel: #1c4636;       /* dark-green feature panel / icon badge */
+  --panel-deep: #123024;  /* deep end of the panel gradient */
   --ink-btn: #07160f;     /* dark button label */
   /* Newsreader heading scale (Phase 3). Hero uses --hero-heading-size. */
   --fs-h2-lg: 40px;       /* prominent section heading */
