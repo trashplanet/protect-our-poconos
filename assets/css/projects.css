@@ -91,7 +91,8 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 .transmission-context h2 { color: #fff; font-size: 28px; line-height: 1.2; margin: 0; }
 .transmission-context h3 { color: #e1f0e6; font-size: 14px; font-weight: 700; }
 .transmission-context p { font-size: 13px; line-height: 1.6; }
-.transmission-context a { color: #9ad8b8; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.transmission-context a { color: #9ad8b8; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; transition: color .18s ease; }
+.transmission-context a:is(:hover,:focus-visible,:active) { color: var(--heading); }
 .local-rules { scroll-margin-top: 120px; }
 .local-rules > h2 { font-size: 34px; font-weight: 500; line-height: 1.2; margin: 0 0 12px; }
 .local-rules > p:not(.eyebrow) { color: #526e5e; max-width: 720px; font-size: 16px; }
@@ -100,7 +101,8 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 .policy-grid .eyebrow { font-size: 10px; }
 .policy-grid h3 { font-size: 15px; line-height: 1.4; font-weight: 700; margin: 0 0 12px; }
 .policy-grid p:not(.eyebrow) { color: #526e5e; font-size: 12px; line-height: 1.6; }
-.policy-grid a { margin-top: auto; font-size: 11px; color: #286247; text-decoration: underline; text-underline-offset: 3px; }
+.policy-grid a { margin-top: auto; font-size: 11px; color: #286247; text-decoration: underline; text-underline-offset: 3px; transition: color .18s ease; }
+.policy-grid a:is(:hover,:focus-visible,:active) { color: var(--green-dark); }
 .empty-results .button { border-radius: 9px; background: #173d2c; color: #fff; font-weight: 700; font-size: 12px; padding: 15px 22px; }
 .editorial-closing { margin-top: 64px; }
 .empty-results { text-align: center; padding: 48px 24px; border-radius: 10px; background: #e8f1eb; }
