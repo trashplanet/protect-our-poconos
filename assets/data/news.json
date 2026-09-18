@@ -1,5 +1,22 @@
 [
   {
+    "id": "story-20",
+    "title": "U.S. House advances data-center grid-cost protections",
+    "source": "Associated Press",
+    "date": "2026-09-16",
+    "type": "Federal Policy",
+    "categories": [
+      "Policy & Zoning",
+      "Transmission & Grid",
+      "Pennsylvania",
+      "Federal"
+    ],
+    "relatedProject": null,
+    "summary": "The U.S. House passed the Ratepayer Protection Act 417–3. The bill would require state utility commissions to consider standards intended to make data centers larger than 100 MW cover the incremental electricity-generation and transmission costs needed to serve them.",
+    "contextNote": "The measure has passed the House but is not yet law. It preserves state regulators’ authority and would require consideration of a federal standard rather than automatically setting electricity rates.",
+    "url": "https://apnews.com/article/f073380caa61b720fa424590b5bc7c87"
+  },
+  {
     "id": "story-18",
     "title": "Smithfield Gateway conditional-use hearing postponed",
     "source": "NoticeRegistry (public notice)",

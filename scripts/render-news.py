@@ -35,6 +35,7 @@ sections = {
     'FEATURED': '\n'.join(card(i, True) for i in items[:3]),
     'COVERAGE': '\n'.join(card(i) for i in sorted(items, key=lambda i: i['date'], reverse=True)),
     'TOPICS': ''.join(f'<option>{e(t)}</option>' for t in sorted({t for i in items for t in i['categories']})),
+    'TYPES': ''.join(f'<option>{e(t)}</option>' for t in sorted({i['type'] for i in items})),
     'SERIES': '\n'.join(f'<article><span class="series-number">0{n}</span><p class="eyebrow">{e(i["seriesPart"])}</p><h3>{external(i, i["seriesPart"])}</h3><p>{e(i["summary"])}</p>{external(i,"Read part "+str(n))}</article>' for n,i in enumerate([i for i in items if i.get('series')],1)),
     'ELSEWHERE': meta(items[-1])+f'<p>{e(items[-1]["summary"])}</p>'+external(items[-1],'Read the feature at The Verge')
 }
@@ -44,5 +45,7 @@ for name, content in sections.items():
     pattern = rf'(<!-- {name}:START -->).*?(<!-- {name}:END -->)'
     text, count = re.subn(pattern, lambda m: m[1]+'\n'+content+'\n'+m[2], text, flags=re.S)
     assert count == 1, f'Missing or duplicate {name} markers'
+text = re.sub(r'Browse all \d+ selected articles', f'Browse all {len(items)} selected articles', text)
+text = re.sub(r'\d+ articles · Newest first', f'{len(items)} articles · Newest first', text)
 page.write_text(text)
 print(f'Rendered {len(items)} articles into news.html')
