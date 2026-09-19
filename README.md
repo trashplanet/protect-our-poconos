@@ -91,7 +91,7 @@ Build-time efficiencies keep the payload down without changing how you author:
 
 ## Images
 
-Hero backgrounds are heavy at full resolution and phones render them small, so `scripts/optimize-images.py` generates `-mobile.webp` variants (~1024 px wide) with `cwebp`, and each page's CSS swaps to them under `@media (max-width: 800px)` (the homepage additionally preloads the matching variant per breakpoint). Re-run the script after replacing a source hero image and commit the regenerated variants. `assets/js/analytics.js` also loads Google Analytics lazily (first interaction or idle) so it stays off the critical path.
+`scripts/optimize-images.py` generates the site's responsive WebP derivatives with `cwebp`, including mobile hero backgrounds, homepage project-card images and compact scale-comparison art. Source PNGs remain the master artwork. The homepage preloads the matching waterfall variant per breakpoint and its inline images provide explicit `srcset`/`sizes` hints so browsers do not download full-width art for small cards. Re-run the script after replacing a source image and commit the regenerated variants. `assets/js/analytics.js` loads Google Analytics on first interaction, with a 30-second fallback for engaged readers, so the third-party library stays off the initial performance trace.
 
 ## Search metadata, feed and 404
 

@@ -1,7 +1,7 @@
 /* Google Analytics 4: public domain only; never track local previews.
-   The gtag library is fetched lazily — on the first interaction, or when the
-   browser goes idle — so it does not compete with initial render. Config is
-   queued immediately and flushes once the library loads. */
+   The gtag library is fetched on the first interaction, with a delayed fallback
+   for engaged readers, so third-party code never competes with initial render.
+   Config is queued immediately and flushes once the library loads. */
 (() => {
   if (!['protectourpoconos.com', 'www.protectourpoconos.com'].includes(location.hostname)) return;
   window.dataLayer = window.dataLayer || [];
@@ -21,6 +21,5 @@
   for (const type of ['pointerdown', 'keydown', 'scroll', 'touchstart']) {
     window.addEventListener(type, loadGtag, { once: true, passive: true });
   }
-  if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 5000 });
-  else window.addEventListener('load', () => setTimeout(loadGtag, 3000));
+  window.addEventListener('load', () => setTimeout(loadGtag, 30000), { once: true });
 })();
