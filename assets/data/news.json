@@ -1,5 +1,24 @@
 [
   {
+    "id": "story-23",
+    "title": "Smithfield posts new engineering reviews for Gateway data-center application",
+    "source": "Smithfield Township",
+    "date": "2026-09-21",
+    "type": "Official Project Update",
+    "categories": [
+      "Smithfield",
+      "Monroe County",
+      "Local Projects",
+      "Water & Wells",
+      "Transmission & Grid",
+      "Noise & Generators"
+    ],
+    "relatedProject": "smithfield-gateway",
+    "summary": "Smithfield Township’s Gateway project hub now includes a second township-engineer review and a Monroe County Planning Commission courtesy review. The documents raise unresolved questions involving water capacity, grid reinforcement, acoustical-model compliance, screening, lighting and emergency planning. These are technical review comments, not a decision on the pending conditional-use application, and no replacement hearing date has been announced.",
+    "contextNote": "Official township source. Review comments are not a decision; check the township project hub for hearing notices.",
+    "url": "https://smithfieldtownship.com/odp/gatewaydc/"
+  },
+  {
     "id": "story-20",
     "title": "U.S. House advances data-center grid-cost protections",
     "source": "Associated Press",
@@ -15,6 +34,23 @@
     "summary": "The U.S. House passed the Ratepayer Protection Act 417–3. The bill would require state utility commissions to consider standards intended to make data centers larger than 100 MW cover the incremental electricity-generation and transmission costs needed to serve them.",
     "contextNote": "The measure has passed the House but is not yet law. It preserves state regulators’ authority and would require consideration of a federal standard rather than automatically setting electricity rates.",
     "url": "https://apnews.com/article/f073380caa61b720fa424590b5bc7c87"
+  },
+  {
+    "id": "story-19",
+    "title": "Data center proposed in Lower Towamensing Township",
+    "source": "Times News Online",
+    "date": "2026-09-09",
+    "type": "External Reporting",
+    "categories": [
+      "Wider Poconos",
+      "Carbon County",
+      "Local Projects",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "summary": "Property owners filed a curative amendment seeking to allow a data center at the Blue Shamrock Golf Course / DTA Alliance property in Lower Towamensing Township, Carbon County. This wider-Poconos proposal is outside the core Pike and Monroe project tracker.",
+    "contextNote": "Wider Poconos reporting. The filing is evidence of a proposed land-use change, not a confirmed project approval or a core tracker entry.",
+    "url": "https://www.tnonline.com/20260909/data-center-proposed-in-l-tow/"
   },
   {
     "id": "story-18",
@@ -34,21 +70,38 @@
     "url": "https://www.noticeregistry.com/pennsylvania/notice/public-hearing-east-stroudsburg-2461015"
   },
   {
-    "id": "story-19",
-    "title": "Data center proposed in Lower Towamensing Township",
-    "source": "Times News Online",
-    "date": "2026-09-09",
-    "type": "External Reporting",
+    "id": "story-21",
+    "title": "Pennsylvania Farm Bureau calls for pause on data-center development",
+    "source": "PA Environment Digest",
+    "date": "2026-09-25",
+    "type": "Policy / Advocacy Position",
     "categories": [
-      "Wider Poconos",
-      "Carbon County",
-      "Local Projects",
-      "Policy & Zoning"
+      "Policy & Zoning",
+      "Forests & Land Use",
+      "Transmission & Grid",
+      "Pennsylvania"
     ],
     "relatedProject": null,
-    "summary": "Property owners filed a curative amendment seeking to allow a data center at the Blue Shamrock Golf Course / DTA Alliance property in Lower Towamensing Township, Carbon County. This wider-Poconos proposal is outside the core Pike and Monroe project tracker.",
-    "contextNote": "Wider Poconos reporting. The filing is evidence of a proposed land-use change, not a confirmed project approval or a core tracker entry.",
-    "url": "https://www.tnonline.com/20260909/data-center-proposed-in-l-tow/"
+    "summary": "Pennsylvania Farm Bureau released a policy paper arguing for a pause on data-center development to give policymakers and communities time to study the impacts of data centers and their supporting infrastructure, including farmland loss, resources for rural municipalities, and an equitable share of benefits for local communities and ratepayers. This is an advocacy organization’s policy position, not enacted state policy.",
+    "contextNote": "Advocacy position, not law. The Farm Bureau board voted in July to support a statewide moratorium; the September policy paper explains its reasoning.",
+    "url": "https://paenvironmentdaily.blogspot.com/2026/09/pa-farm-bureau-supports-pause-on-ai.html"
+  },
+  {
+    "id": "story-22",
+    "title": "Salem Planning Commission again recommends 4,000-acre data-center overlay expansion",
+    "source": "Times Leader",
+    "date": "2026-09-24",
+    "type": "Local Reporting / Zoning",
+    "categories": [
+      "Northeast PA",
+      "Luzerne County",
+      "Policy & Zoning",
+      "Local Development"
+    ],
+    "relatedProject": null,
+    "summary": "Salem Township’s Planning Commission again recommended expanding its Special Data Center Overlay District by more than 4,000 acres for the proposed 4-3 Glenbrook Group project. The matter now moves to the township Board of Supervisors, expected to consider it in October. The Planning Commission recommendation is not final construction approval.",
+    "contextNote": "Northeast PA reporting outside the Pike and Monroe project tracker. A planning-commission recommendation is advisory; the Board of Supervisors decides.",
+    "url": "https://www.timesleader.com/news/1760686/salem-twp-planning-commission-again-recommends-data-center-overlay-expansion"
   },
   {
     "id": "story-1",
