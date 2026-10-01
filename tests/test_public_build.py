@@ -124,6 +124,11 @@ class PublicBuildTests(unittest.TestCase):
         news_page = self.graph((build.OUT / 'news/index.html').read_text())[2]
         self.assertEqual(news_page['mainEntity']['@type'], 'ItemList')
         self.assertTrue(news_page['mainEntity']['itemListElement'])
+        projects_page = self.graph((build.OUT / 'projects/index.html').read_text())[2]
+        self.assertEqual(projects_page['mainEntity']['@type'], 'ItemList')
+        self.assertEqual(projects_page['mainEntity']['numberOfItems'], 8)
+        hazelnut = [item for item in projects_page['mainEntity']['itemListElement'] if item['name'] == 'Project Hazelnut Data Center']
+        self.assertEqual(hazelnut[0]['url'], build.BASE + '/projects/#project-hazelnut')
 
     def test_custom_404(self):
         page = (build.OUT / '404.html').read_text()

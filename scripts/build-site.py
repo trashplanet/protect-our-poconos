@@ -23,15 +23,16 @@ DATA_CENTER = {'@type': 'Thing', 'name': 'Data center', 'sameAs': 'https://en.wi
 POCONOS = {'@type': 'Place', 'name': 'Pocono Mountains', 'sameAs': 'https://en.wikipedia.org/wiki/Pocono_Mountains'}
 PIKE = {'@type': 'AdministrativeArea', 'name': 'Pike County, Pennsylvania', 'sameAs': 'https://en.wikipedia.org/wiki/Pike_County,_Pennsylvania'}
 MONROE = {'@type': 'AdministrativeArea', 'name': 'Monroe County, Pennsylvania', 'sameAs': 'https://en.wikipedia.org/wiki/Monroe_County,_Pennsylvania'}
+LUZERNE = {'@type': 'AdministrativeArea', 'name': 'Luzerne County, Pennsylvania', 'sameAs': 'https://en.wikipedia.org/wiki/Luzerne_County,_Pennsylvania'}
 PENNSYLVANIA = {'@type': 'State', 'name': 'Pennsylvania', 'sameAs': 'https://en.wikipedia.org/wiki/Pennsylvania'}
-ABOUT_ENTITIES = [DATA_CENTER, POCONOS, PIKE, MONROE, PENNSYLVANIA]
+ABOUT_ENTITIES = [DATA_CENTER, POCONOS, PIKE, MONROE, LUZERNE, PENNSYLVANIA]
 ORGANIZATION = {
     '@type': 'Organization', '@id': BASE + '/#organization', 'name': 'Protect Our Poconos',
     'url': BASE + '/', 'logo': BASE + '/assets/logo.svg',
     'description': 'Community information about data-center proposals, transmission projects, '
                    'and land-use decisions in the Pocono region of Pennsylvania, focused on '
-                   'Pike and Monroe counties.',
-    'areaServed': [PIKE, MONROE, POCONOS],
+                   'Pike and Monroe counties, with selected documented projects in wider Northeast Pennsylvania.',
+    'areaServed': [PIKE, MONROE, LUZERNE, POCONOS],
     'knowsAbout': [DATA_CENTER,
                    {'@type': 'Thing', 'name': 'Land-use planning', 'sameAs': 'https://en.wikipedia.org/wiki/Land-use_planning'},
                    {'@type': 'Thing', 'name': 'Electric power transmission', 'sameAs': 'https://en.wikipedia.org/wiki/Electric_power_transmission'}],
@@ -214,6 +215,15 @@ def build():
             schema['@graph'][2]['mainEntity'] = {'@type': 'ItemList', 'itemListElement': [
                 {'@type': 'ListItem', 'position': position, 'url': story['url'], 'name': story['title']}
                 for position, story in enumerate(stories, 1)]}
+        if source == 'projects.html':
+            spec = importlib.util.spec_from_file_location('projects_content', ROOT / 'scripts/sync-projects.py')
+            projects_content = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(projects_content)
+            project_doc = projects_content.Document(page)
+            project_cards = [node for node in project_doc.root.descendants() if node.has_class('tracker-card')]
+            schema['@graph'][2]['mainEntity'] = {'@type': 'ItemList', 'numberOfItems': len(project_cards), 'itemListElement': [
+                {'@type': 'ListItem', 'position': position, 'url': canonical + '#' + card.attrs['id'], 'name': card.first(tag='h2').text()}
+                for position, card in enumerate(project_cards, 1)]}
         if source == 'faq.html':
             spec = importlib.util.spec_from_file_location('content', ROOT / 'scripts/sync-projects.py')
             content = importlib.util.module_from_spec(spec)

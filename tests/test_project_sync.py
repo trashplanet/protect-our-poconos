@@ -45,10 +45,28 @@ class ProjectSyncTests(unittest.TestCase):
     def test_categories_change_derived_totals(self):
         changed = self.tracker.replace('data-category="rumors"', 'data-category="data-centers"')
         values = sync.values_from(sync.Document(changed))
-        self.assertEqual(values['counts.data-centers'], '4')
+        self.assertEqual(values['counts.data-centers'], '5')
         self.assertEqual(values['counts.other'], '3')
         self.assertEqual(values['counts.rumors'], '0')
-        self.assertEqual(values['counts.all'], '7')
+        self.assertEqual(values['counts.all'], '8')
+
+    def test_hazelnut_is_a_documented_luzerne_proposal(self):
+        document = sync.Document(self.tracker)
+        values = sync.values_from(document)
+        self.assertEqual(values['counts.data-centers'], '4')
+        self.assertEqual(values['counts.infrastructure'], '2')
+        self.assertEqual(values['counts.watched'], '2')
+        self.assertEqual(values['counts.all'], '8')
+        cards = [node for node in document.root.descendants() if node.has_class('tracker-card')]
+        ids = [card.attrs['id'] for card in cards]
+        self.assertEqual(ids[ids.index('pocono-manor-data-center') + 1], 'project-hazelnut')
+        self.assertEqual(ids[ids.index('project-hazelnut') + 1], 'shawnee-walker')
+        hazelnut = cards[ids.index('project-hazelnut')]
+        self.assertEqual(hazelnut.attrs['data-category'], 'data-centers')
+        self.assertEqual(hazelnut.attrs['data-county'], 'luzerne')
+        self.assertIn('Confirmed Proposal', values['project-hazelnut.status'])
+        self.assertIn('Appeal Pending', values['project-hazelnut.status'])
+        self.assertNotIn('300 MW', hazelnut.text())
 
     def test_missing_project_fails(self):
         changed = self.tracker.replace('id="shawnee-walker"', 'id="renamed-project"')

@@ -1,5 +1,23 @@
 [
   {
+    "id": "story-24",
+    "title": "Project Hazelnut draws new attention over $10,000 household offer",
+    "source": "The Keystone Newsroom",
+    "date": "2026-09-30",
+    "type": "External Reporting",
+    "categories": [
+      "Wider Poconos",
+      "Luzerne County",
+      "Local Projects",
+      "Community Response",
+      "Jobs & Economy"
+    ],
+    "relatedProject": "project-hazelnut",
+    "summary": "Recent coverage has brought renewed attention to Project Hazelnut, NorthPoint Development’s proposed 15-building data-center campus on roughly 1,300 acres in Hazle Township, Luzerne County. NorthPoint says its $165 million community-benefit package would include $10,000 grants for eligible township households. Hazle Township previously denied the land-development plan, and the developer’s appeal remains in litigation.",
+    "contextNote": "Wider Northeast Pennsylvania / Pocono foothills reporting. The $10,000 grant is part of a developer commitment tied to the proposed project; it is not an existing public benefit. The township denial remains under appeal and is not final construction approval.",
+    "url": "https://keystonenewsroom.com/news/data-center-developer-offers-10k-to-luzerne-county-residents-are-they-trying-to-bribe-us/"
+  },
+  {
     "id": "story-23",
     "title": "Smithfield posts new engineering reviews for Gateway data-center application",
     "source": "Smithfield Township",

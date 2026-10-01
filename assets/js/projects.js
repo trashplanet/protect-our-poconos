@@ -9,7 +9,7 @@
   const clear = document.querySelector('#clear-filters');
   let category = 'all';
   const categories = new Set(buttons.map(button => button.dataset.filter));
-  const countyNames = { all: 'all counties', pike: 'Pike County', monroe: 'Monroe County' };
+  const countyNames = { all: 'all counties', pike: 'Pike County', monroe: 'Monroe County', luzerne: 'Luzerne County' };
   const categoryNames = { all: 'projects and sites', 'data-centers': 'data-center proposals', infrastructure: 'infrastructure projects', watchlist: 'watchlist sites', rumors: 'community rumors', watched: 'watchlist / rumor sites' };
 
   function matchesCategory(card) {
@@ -34,7 +34,7 @@
       if (button.dataset.filter === 'watched') button.hidden = category !== 'watched';
     });
     const visible = cards.filter(card => !card.hidden).length;
-    count.textContent = category === 'all' && county.value === 'all' ? 'Showing all 7 projects and sites' : `Showing ${visible} ${categoryNames[category]} · ${countyNames[county.value]}`;
+    count.textContent = category === 'all' && county.value === 'all' ? `Showing all ${cards.length} projects and sites` : `Showing ${visible} ${categoryNames[category]} · ${countyNames[county.value]}`;
     clear.hidden = category === 'all' && county.value === 'all' && sort.value === 'relevance';
     document.querySelector('.empty-results').hidden = visible > 0;
     if (updateURL) {
@@ -53,7 +53,7 @@
   function readURL() {
     const params = new URLSearchParams(location.search);
     category = categories.has(params.get('type')) ? params.get('type') : 'all';
-    county.value = ['all', 'pike', 'monroe'].includes(params.get('county')) ? params.get('county') : 'all';
+    county.value = ['all', 'pike', 'monroe', 'luzerne'].includes(params.get('county')) ? params.get('county') : 'all';
     sort.value = ['relevance', 'deadline', 'name'].includes(params.get('sort')) ? params.get('sort') : 'relevance';
     applyFilters(false);
   }
