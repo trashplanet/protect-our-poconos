@@ -160,7 +160,8 @@ def page_dates(source):
 
 def build_feed():
     """RSS 2.0 feed of the curated news items, for readers and freshness discovery."""
-    items = json.loads((ROOT / 'assets/data/news.json').read_text())
+    items = sorted(json.loads((ROOT / 'assets/data/news.json').read_text()),
+                   key=lambda item: item['date'], reverse=True)
     rss = ET.Element('rss', version='2.0')
     channel = ET.SubElement(rss, 'channel')
     ET.SubElement(channel, 'title').text = 'Protect Our Poconos — News & Updates'
@@ -211,7 +212,8 @@ def build():
             # The About page is about the organization itself.
             schema['@graph'][2]['mainEntity'] = {'@id': BASE + '/#organization'}
         if source == 'news.html':
-            stories = json.loads((ROOT / 'assets/data/news.json').read_text())
+            stories = sorted(json.loads((ROOT / 'assets/data/news.json').read_text()),
+                             key=lambda story: story['date'], reverse=True)
             schema['@graph'][2]['mainEntity'] = {'@type': 'ItemList', 'itemListElement': [
                 {'@type': 'ListItem', 'position': position, 'url': story['url'], 'name': story['title']}
                 for position, story in enumerate(stories, 1)]}

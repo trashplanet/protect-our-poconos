@@ -1,6 +1,7 @@
 """Validate the published artifact, not just the authoring pages."""
 import importlib.util
 import json
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 import re
 import unittest
@@ -107,8 +108,21 @@ class PublicBuildTests(unittest.TestCase):
             self.assertRegex(url.find(ns + 'lastmod').text, r'^\d{4}-\d{2}-\d{2}$')
         stories = json.loads((build.ROOT / 'assets/data/news.json').read_text())
         feed = ET.parse(build.OUT / 'feed.xml').getroot()
-        self.assertEqual(len(feed.findall('./channel/item')), len(stories))
+        feed_items = feed.findall('./channel/item')
+        self.assertEqual(len(feed_items), len(stories))
+        feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
+        self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
+        self.assertEqual(feed_items[0].find('title').text, 'Residents organize ahead of Lower Towamensing data-center hearing')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
+
+    def test_october_four_news_update_preserves_claim_status(self):
+        page = (build.OUT / 'news/index.html').read_text()
+        self.assertIn('OCT 27, 2026 · 6:00 PM', page)
+        self.assertIn('Aquashicola Volunteer Fire Company', page)
+        self.assertIn('was not an official township hearing', page)
+        self.assertIn('Committee action, not enacted law', page)
+        self.assertIn('tentative order, not a final regulation', page)
+        self.assertIn('short of the 60 votes required', page)
 
     def test_entity_grounding(self):
         graph = self.graph((build.OUT / 'index.html').read_text())

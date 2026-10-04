@@ -37,6 +37,58 @@
     "url": "https://smithfieldtownship.com/odp/gatewaydc/"
   },
   {
+    "id": "story-25",
+    "title": "Residents organize ahead of Lower Towamensing data-center hearing",
+    "source": "Times News",
+    "date": "2026-10-02",
+    "type": "Local Reporting",
+    "categories": [
+      "Wider Poconos",
+      "Carbon County",
+      "Local Projects",
+      "Policy & Zoning",
+      "Community Response"
+    ],
+    "relatedProject": null,
+    "summary": "About 100 people attended an October 1 community meeting ahead of Lower Towamensing Township’s October 27 public hearing on a proposed data-center zoning amendment. The gathering was organized by Save Carbon County and was not an official township hearing. The proposal discussed in current reporting involves the Blue Shamrock Golf Course / DTA Alliance property and a potential large data-center campus.",
+    "contextNote": "Community organizing meeting, not the township hearing. The October 27 curative-amendment hearing concerns proposed zoning provisions; it is not project approval.",
+    "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
+  },
+  {
+    "id": "story-26",
+    "title": "Pa. House committee advances bills targeting data-center energy costs",
+    "source": "WITF",
+    "date": "2026-10-01",
+    "type": "Policy / State Government",
+    "categories": [
+      "Pennsylvania",
+      "Policy & Regulation",
+      "Electricity & Grid",
+      "Data Center Policy"
+    ],
+    "relatedProject": null,
+    "summary": "The Pennsylvania House Energy Committee advanced several data-center measures, including proposals addressing when developers must secure electric service, responsibility for grid-related infrastructure costs, and curtailment during power emergencies. HB 2775 would require certain large-load developers to apply for electric service and pay associated fees before seeking zoning approval. HB 2828 addresses infrastructure-cost responsibility and emergency curtailment of data centers.",
+    "contextNote": "Committee action, not enacted law. The measures advanced from committee and would require additional legislative action before becoming law.",
+    "url": "https://www.witf.org/2026/10/01/pa-house-committee-advances-bills-targeting-data-centers-electricity-costs/"
+  },
+  {
+    "id": "story-27",
+    "title": "Pennsylvania PUC moves to keep data centers subject to grid-emergency curtailment",
+    "source": "Pennsylvania Public Utility Commission",
+    "date": "2026-10-01",
+    "type": "Official Regulatory Proceeding",
+    "categories": [
+      "Pennsylvania",
+      "Electricity & Grid",
+      "Policy & Regulation",
+      "Utilities"
+    ],
+    "relatedProject": null,
+    "summary": "The Pennsylvania Public Utility Commission issued a tentative order seeking comment on proposed changes intended to prevent large data centers from being automatically treated as protected critical load during electricity emergencies. The PUC is also planning a November 17 technical conference on cost allocation for large electric loads.",
+    "contextNote": "Official regulatory proceeding and tentative order, not a final regulation or an order requiring every data center to shut down during an emergency.",
+    "url": "https://www.puc.pa.gov/press-release/2026/puc-advances-tentative-data-center-curtailment-safeguards/"
+  },
+  {
     "id": "story-20",
     "title": "U.S. House advances data-center grid-cost protections",
     "source": "Associated Press",
@@ -50,7 +102,7 @@
     ],
     "relatedProject": null,
     "summary": "The U.S. House passed the Ratepayer Protection Act 417–3. The bill would require state utility commissions to consider standards intended to make data centers larger than 100 MW cover the incremental electricity-generation and transmission costs needed to serve them.",
-    "contextNote": "The measure has passed the House but is not yet law. It preserves state regulators’ authority and would require consideration of a federal standard rather than automatically setting electricity rates.",
+    "contextNote": "Update — Sept. 30: The Senate voted 57–43 to advance the House-passed measure, short of the 60 votes required. The bill therefore failed to advance in the Senate. The proposal would have required consideration of a federal standard rather than automatically setting electricity rates.",
     "url": "https://apnews.com/article/f073380caa61b720fa424590b5bc7c87"
   },
   {
