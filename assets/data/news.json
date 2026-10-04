@@ -1,5 +1,23 @@
 [
   {
+    "id": "story-25",
+    "title": "Residents organize ahead of Lower Towamensing data-center hearing",
+    "source": "Times News",
+    "date": "2026-10-02",
+    "type": "Local Reporting",
+    "categories": [
+      "Wider Poconos",
+      "Carbon County",
+      "Local Projects",
+      "Policy & Zoning",
+      "Community Response"
+    ],
+    "relatedProject": null,
+    "summary": "About 100 people attended an October 1 community meeting ahead of Lower Towamensing Township’s October 27 public hearing on a proposed data-center zoning amendment. The gathering was organized by Save Carbon County and was not an official township hearing. The proposal discussed in current reporting involves the Blue Shamrock Golf Course / DTA Alliance property and a potential large data-center campus.",
+    "contextNote": "Community organizing meeting, not the township hearing. The October 27 curative-amendment hearing concerns proposed zoning provisions; it is not project approval.",
+    "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
+  },
+  {
     "id": "story-24",
     "title": "Project Hazelnut draws new attention over $10,000 household offer",
     "source": "The Keystone Newsroom",
@@ -35,24 +53,6 @@
     "summary": "Smithfield Township’s Gateway project hub now includes a second township-engineer review and a Monroe County Planning Commission courtesy review. The documents raise unresolved questions involving water capacity, grid reinforcement, acoustical-model compliance, screening, lighting and emergency planning. These are technical review comments, not a decision on the pending conditional-use application, and no replacement hearing date has been announced.",
     "contextNote": "Official township source. Review comments are not a decision; check the township project hub for hearing notices.",
     "url": "https://smithfieldtownship.com/odp/gatewaydc/"
-  },
-  {
-    "id": "story-25",
-    "title": "Residents organize ahead of Lower Towamensing data-center hearing",
-    "source": "Times News",
-    "date": "2026-10-02",
-    "type": "Local Reporting",
-    "categories": [
-      "Wider Poconos",
-      "Carbon County",
-      "Local Projects",
-      "Policy & Zoning",
-      "Community Response"
-    ],
-    "relatedProject": null,
-    "summary": "About 100 people attended an October 1 community meeting ahead of Lower Towamensing Township’s October 27 public hearing on a proposed data-center zoning amendment. The gathering was organized by Save Carbon County and was not an official township hearing. The proposal discussed in current reporting involves the Blue Shamrock Golf Course / DTA Alliance property and a potential large data-center campus.",
-    "contextNote": "Community organizing meeting, not the township hearing. The October 27 curative-amendment hearing concerns proposed zoning provisions; it is not project approval.",
-    "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
   },
   {
     "id": "story-26",
