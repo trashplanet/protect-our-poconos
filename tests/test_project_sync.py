@@ -26,21 +26,21 @@ class ProjectSyncTests(unittest.TestCase):
         self.assertNotIn('Updated &amp;amp;', result)
 
     def test_figures_and_hearing_update_follow_tracker(self):
-        changed = self.tracker.replace('250,000', '275,000').replace('A replacement date will be announced by separate public notice.', 'Watch for the newly advertised hearing notice.')
+        changed = self.tracker.replace('250,000', '275,000').replace('Both meetings are at J.T. Lambert Intermediate School and remain subject to postponement.', 'Both meetings are at J.T. Lambert Intermediate School; check the official page before attending.')
         result = self.render(changed)
         self.assertIn('275,000 SQ FT', result)
         self.assertIn('275,000 sq ft', result)
         action = sync.synchronize((ROOT / 'take-action.html').read_text(), sync.values_from(sync.Document(changed)))
-        self.assertIn('Watch for the newly advertised hearing notice.', action)
+        self.assertIn('check the official page before attending.', action)
         self.assertNotIn('data-event-date="2026-09-09"', action)
         self.assertNotIn('data-event-date="2026-09-23"', action)
 
-    def test_postponed_hearing_has_no_deadline(self):
+    def test_scheduled_hearing_has_current_deadline(self):
         values = sync.values_from(sync.Document(self.tracker))
-        self.assertNotIn('smithfield-gateway.deadline-iso', values)
-        self.assertIn('postponed', values['smithfield.hearing-update'])
-        future = self.tracker.replace('id="smithfield-gateway"', 'id="smithfield-gateway" data-deadline="2026-10-14"')
-        self.assertEqual(sync.values_from(sync.Document(future))['smithfield-gateway.deadline-label'], 'OCT 14, 2026')
+        self.assertEqual(values['smithfield-gateway.deadline-iso'], '2026-10-28')
+        self.assertEqual(values['smithfield-gateway.deadline-label'], 'OCT 28, 2026')
+        self.assertIn('October 21 at 7:00 p.m.', values['smithfield.hearing-update'])
+        self.assertIn('October 28 at 6:00 p.m.', values['smithfield.hearing-update'])
 
     def test_categories_change_derived_totals(self):
         changed = self.tracker.replace('data-category="rumors"', 'data-category="data-centers"')

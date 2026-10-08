@@ -1,5 +1,39 @@
 [
   {
+    "id": "story-28",
+    "title": "Smithfield Gateway hearings scheduled for October 21 and 28",
+    "source": "Smithfield Township",
+    "date": "2026-10-07",
+    "type": "Official Township Update",
+    "categories": [
+      "Smithfield",
+      "Monroe County",
+      "Local Projects",
+      "Meetings & Hearings"
+    ],
+    "relatedProject": "smithfield-gateway",
+    "summary": "Smithfield Township scheduled Planning Commission review of the Gateway data-center application for October 21 at 7:00 p.m. and the formal Board of Supervisors conditional-use hearing for October 28 at 6:00 p.m. Both meetings are at J.T. Lambert Intermediate School. Party-status requests will be considered at the October 28 hearing, not the October 21 review.",
+    "contextNote": "Official township update. Both meetings remain subject to cancellation or postponement. Conditional-use approval would not be construction approval.",
+    "url": "https://smithfieldtownship.com/odp/gatewaydc/"
+  },
+  {
+    "id": "story-29",
+    "title": "Lower Towamensing data-center hearing postponed until December",
+    "source": "Times News",
+    "date": "2026-10-07",
+    "type": "Local Reporting",
+    "categories": [
+      "Wider Poconos",
+      "Carbon County",
+      "Local Projects",
+      "Meetings & Hearings"
+    ],
+    "relatedProject": null,
+    "summary": "The October 27 Lower Towamensing curative-amendment hearing was postponed at the applicant’s request. Township officials are considering dates during the week of December 14, but no replacement date, time or venue has been confirmed.",
+    "contextNote": "The December 14, 16 and 17 dates are possibilities, not confirmed hearing dates. Check Lower Towamensing Township before making plans.",
+    "url": "https://www.tnonline.com/20261007/data-center-hearing-on-hold/"
+  },
+  {
     "id": "story-25",
     "title": "Residents organize ahead of Lower Towamensing data-center hearing",
     "source": "Times News",
@@ -14,7 +48,7 @@
     ],
     "relatedProject": null,
     "summary": "About 100 people attended an October 1 community meeting ahead of Lower Towamensing Township’s October 27 public hearing on a proposed data-center zoning amendment. The gathering was organized by Save Carbon County and was not an official township hearing. The proposal discussed in current reporting involves the Blue Shamrock Golf Course / DTA Alliance property and a potential large data-center campus.",
-    "contextNote": "Community organizing meeting, not the township hearing. The October 27 curative-amendment hearing concerns proposed zoning provisions; it is not project approval.",
+    "contextNote": "Historical coverage of the October 1 community organizing meeting, which was not the township hearing. The October 27 curative-amendment hearing was subsequently postponed; no December replacement date is confirmed.",
     "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
   },
   {
@@ -50,7 +84,7 @@
       "Noise & Generators"
     ],
     "relatedProject": "smithfield-gateway",
-    "summary": "Smithfield Township’s Gateway project hub now includes a second township-engineer review and a Monroe County Planning Commission courtesy review. The documents raise unresolved questions involving water capacity, grid reinforcement, acoustical-model compliance, screening, lighting and emergency planning. These are technical review comments, not a decision on the pending conditional-use application, and no replacement hearing date has been announced.",
+    "summary": "Smithfield Township’s Gateway project hub now includes a second township-engineer review and a Monroe County Planning Commission courtesy review. The documents raise unresolved questions involving water capacity, grid reinforcement, acoustical-model compliance, screening, lighting and emergency planning. These are technical review comments, not a decision on the pending conditional-use application, and, at the time, no replacement hearing date had been announced.",
     "contextNote": "Official township source. Review comments are not a decision; check the township project hub for hearing notices.",
     "url": "https://smithfieldtownship.com/odp/gatewaydc/"
   },
@@ -136,7 +170,7 @@
     ],
     "relatedProject": "smithfield-gateway",
     "summary": "Smithfield Township postponed the previously advertised September 9 conditional-use hearing for the Gateway data center. A replacement date will be separately advertised; September 23 is a regular Board meeting, not a continuation hearing.",
-    "contextNote": "Public-notice source. Check Smithfield Township’s current notices before making plans; the replacement hearing date is pending.",
+    "contextNote": "Historical public notice documenting the September postponement. Smithfield Township subsequently scheduled Planning Commission review for October 21 and the conditional-use hearing for October 28.",
     "url": "https://www.noticeregistry.com/pennsylvania/notice/public-hearing-east-stroudsburg-2461015"
   },
   {

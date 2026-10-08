@@ -112,17 +112,30 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'Residents organize ahead of Lower Towamensing data-center hearing')
+        self.assertEqual(feed_items[0].find('title').text, 'Smithfield Gateway hearings scheduled for October 21 and 28')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
-    def test_october_four_news_update_preserves_claim_status(self):
+    def test_october_eight_schedule_update_preserves_claim_status(self):
         page = (build.OUT / 'news/index.html').read_text()
-        self.assertIn('OCT 27, 2026 · 6:00 PM', page)
-        self.assertIn('Aquashicola Volunteer Fire Company', page)
+        self.assertIn('OCT 21, 2026 · 7:00 PM', page)
+        self.assertIn('OCT 28, 2026 · 6:00 PM', page)
+        deadlines = re.search(r'<div class="deadline-strip">.*?</section>', page, re.S)[0]
+        self.assertEqual(deadlines.count('J.T. Lambert Intermediate School'), 2)
+        self.assertIn('Party-status requests will not be considered at this meeting', page)
+        self.assertIn('email submissions should arrive by October 27', page)
+        self.assertNotIn('OCT 27, 2026 · 6:00 PM', page)
+        self.assertIn('DATE PENDING · DECEMBER 2026', page)
+        self.assertIn('no replacement date, time or venue has been confirmed', page)
         self.assertIn('was not an official township hearing', page)
         self.assertIn('Committee action, not enacted law', page)
         self.assertIn('tentative order, not a final regulation', page)
         self.assertIn('short of the 60 votes required', page)
+
+        graph = self.graph(page)
+        events = [node for node in graph if node.get('@type') == 'Event']
+        self.assertEqual([event['startDate'] for event in events], [
+            '2026-10-21T19:00:00-04:00', '2026-10-28T18:00:00-04:00'])
+        self.assertTrue(all(event['location']['name'] == 'J.T. Lambert Intermediate School' for event in events))
 
     def test_entity_grounding(self):
         graph = self.graph((build.OUT / 'index.html').read_text())
