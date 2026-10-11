@@ -112,7 +112,7 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'Smithfield Gateway hearings scheduled for October 21 and 28')
+        self.assertEqual(feed_items[0].find('title').text, 'Luzerne County advances revised data-center zoning ordinance')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
     def test_october_eight_schedule_update_preserves_claim_status(self):
