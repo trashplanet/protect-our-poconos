@@ -112,7 +112,7 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'Luzerne County advances revised data-center zoning ordinance')
+        self.assertEqual(feed_items[0].find('title').text, 'Newport Township data-center developer schedules October 28 public meeting')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
     def test_october_eight_schedule_update_preserves_claim_status(self):
@@ -136,6 +136,17 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual([event['startDate'] for event in events], [
             '2026-10-21T19:00:00-04:00', '2026-10-28T18:00:00-04:00'])
         self.assertTrue(all(event['location']['name'] == 'J.T. Lambert Intermediate School' for event in events))
+
+    def test_october_fourteen_newport_session_is_developer_hosted(self):
+        page = (build.OUT / 'news/index.html').read_text()
+        deadlines = re.search(r'<div class="deadline-strip">.*?</section>', page, re.S)[0]
+        self.assertEqual(deadlines.count('OCT 28, 2026 · 6:00 PM'), 2)
+        self.assertIn('Smithfield Gateway Conditional-Use Hearing', deadlines)
+        self.assertIn('Newport Township Data Center — Developer Information Session', deadlines)
+        self.assertIn('developer-hosted open house, not a township approval hearing', deadlines)
+        self.assertIn('No finalized benefits agreement or construction approval has been established', page)
+        self.assertIn('Luzerne County advances revised data-center zoning ordinance', page)
+        self.assertNotIn('Newport', (build.OUT / 'projects/index.html').read_text())
 
     def test_entity_grounding(self):
         graph = self.graph((build.OUT / 'index.html').read_text())

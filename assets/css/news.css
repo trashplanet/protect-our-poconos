@@ -43,6 +43,8 @@ html body.news-page :is(.news-hero,.featured-story:first-child,.series-band,.els
 .deadline-strip { border: 1px solid #cadfd1; border-radius: 16px; background: #e4efe7; padding: 28px; display: grid; grid-template-columns: 1.15fr 1fr 1fr 1fr; gap: 24px; }
 .deadline-strip h2 { font-size: 25px; }.deadline-strip h3 { font: 700 14px/1.4 'Public Sans',sans-serif; margin: 8px 0; }
 .deadline-strip p,.deadline-strip a { font-size: 12px; }.deadline-strip p { color: #52675a; margin-bottom: 8px; }
+/* With more than three meetings, keep the heading in its own column on desktop instead of letting an entry wrap beneath it. */
+@media(min-width:1001px) { .deadline-strip:has(> .deadline:nth-child(5)) > :first-child { grid-row: span 2; } }
 .deadline { border-left: 2px solid #c3d6c9; padding-left: 20px; }
 .deadline time { color: #98432c; font-size: 12px; font-weight: 700; }.past-event { opacity: .75; }
 .news-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 14px; padding: 20px; background: #e5eee7; border-radius: 12px; }
