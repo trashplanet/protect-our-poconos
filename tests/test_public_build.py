@@ -112,7 +112,7 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'Newport Township data-center developer schedules October 28 public meeting')
+        self.assertEqual(feed_items[0].find('title').text, 'Governor Shapiro seeks to intervene in PPL data-center electricity cost case')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
     def test_october_eight_schedule_update_preserves_claim_status(self):

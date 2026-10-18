@@ -52,6 +52,23 @@
     "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
   },
   {
+    "id": "story-32",
+    "title": "Governor Shapiro seeks to intervene in PPL data-center electricity cost case",
+    "source": "Pennsylvania Governor's Office / Pennsylvania PUC",
+    "date": "2026-10-16",
+    "type": "Official Regulatory Filing",
+    "categories": [
+      "Pennsylvania",
+      "Electricity & Grid",
+      "Policy & Regulation",
+      "Ratepayers"
+    ],
+    "relatedProject": null,
+    "summary": "Governor Josh Shapiro filed an October 15 petition seeking to intervene in a Pennsylvania Public Utility Commission proceeding concerning how PPL Electric allocates costs and reliability risks associated with large data centers. The petition supports an October 2 complaint from the Pennsylvania Office of Consumer Advocate and calls for stronger protections against shifting data-center-related infrastructure costs to existing electricity customers.",
+    "contextNote": "The administration supports separate rate classifications for large data centers, stronger requirements for allocating transmission and regional reliability costs, and safeguards against electricity supply disruptions. PPL already maintains a large-load rate schedule, but the Consumer Advocate argues its protections are insufficient. The proceeding remains active; no PUC ruling on the complaint has been established. The petition seeks party status; no grant of intervention or new customer charges or rate changes is established by this filing.",
+    "url": "https://www.pa.gov/governor/newsroom/2026-press-releases/gov--shapiro-protects-customers-and-holds-data-center-developers"
+  },
+  {
     "id": "story-31",
     "title": "Newport Township data-center developer schedules October 28 public meeting",
     "source": "Times Leader / Fit Energy",
