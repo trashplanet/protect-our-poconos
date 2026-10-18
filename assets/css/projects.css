@@ -79,8 +79,6 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 .project-details dt, .project-details h3 { font-size: 12px; font-weight: 700; color: #244a37; margin: 0 0 4px; }
 .project-details dd { margin: 0; }
 .project-details .project-issues { font-size: 11px; }
-.project-sources { padding-top: 15px; }
-.project-sources h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: #637b6d; margin-bottom: 9px; }
 .project-sources ul { list-style: none; margin: 0; }
 .project-sources li { margin-bottom: 9px; }
 .project-sources li > span { display: block; font-size: 9px; text-transform: uppercase; letter-spacing: .04em; color: #637b6d; }
@@ -148,12 +146,6 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
  .project-details summary { min-height: 48px; }
  .policy-grid { grid-template-columns: 1fr; }
  .local-rules > h2 { font-size: 30px; }
-}
-/* Let the final rumor entry use the row rather than leave two empty card columns. */
-@media (min-width: 761px) {
- .tracker-card[data-category="rumors"] { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 2fr; }
- .tracker-card[data-category="rumors"] .tracker-card-image { height: 100%; min-height: 260px; }
- .tracker-card[data-category="rumors"] .project-stats { max-width: 400px; }
 }
 
 /* Serve a smaller hero image on phones (see scripts/optimize-images.py). */
