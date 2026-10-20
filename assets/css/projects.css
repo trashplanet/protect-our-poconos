@@ -73,6 +73,7 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 .project-stats > div:last-child { border: 0; padding: 0; }
 .project-stats dt { font-size: 10px; line-height: 1.4; font-weight: 400; margin: 4px 0 0; color: var(--text-muted); }
 .project-stats dd { overflow-wrap: anywhere; hyphens: auto; font-size: 15px; line-height: 1.25; font-weight: 700; margin: 0; }
+#eagle-village .project-stats > div:last-child dd { font-size: 12px; hyphens: none; }
 .project-milestone { border-radius: 7px; background: #edf4ef; padding: 14px; margin-bottom: 6px; font-size: 12px; }
 .project-milestone strong { color: #215b43; font-size: 12px; }
 .project-milestone p { margin: 5px 0 0; line-height: 1.55; }
