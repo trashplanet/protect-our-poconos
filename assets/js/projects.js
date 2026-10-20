@@ -12,6 +12,47 @@
   const countyNames = { all: 'all counties', pike: 'Pike County', monroe: 'Monroe County', luzerne: 'Luzerne County' };
   const categoryNames = { all: 'projects and sites', 'data-centers': 'data-center proposals', infrastructure: 'infrastructure projects', watchlist: 'watchlist sites', rumors: 'community rumors', watched: 'watchlist / rumor sites' };
 
+  // Enhance existing copy only after JS loads; without JS all content stays visible.
+  const previews = [];
+  function addPreview(text, extraPanels = []) {
+    const card = text.closest('.tracker-card');
+    const button = document.createElement('button');
+    const id = `${card.id}-preview-${previews.length}`;
+    text.id = id;
+    button.type = 'button';
+    button.className = 'project-read-more';
+    button.setAttribute('aria-controls', [id, ...extraPanels.map((panel, index) => {
+      panel.id = `${id}-extra-${index}`;
+      return panel.id;
+    })].join(' '));
+    const label = text.classList.contains('project-summary') ? 'description' : 'updates';
+    let expanded = false;
+    function render() {
+      text.classList.toggle('project-preview', !expanded);
+      extraPanels.forEach(panel => { panel.hidden = !expanded; });
+      button.textContent = expanded ? 'Read less' : 'Read more';
+      button.setAttribute('aria-expanded', String(expanded));
+      button.setAttribute('aria-label', `${button.textContent}: ${card.querySelector('h2').textContent.trim()} ${label}`);
+    }
+    text.after(button);
+    button.addEventListener('click', () => { expanded = !expanded; render(); });
+    render();
+    previews.push(() => {
+      if (card.hidden) return;
+      button.hidden = !expanded && !extraPanels.length && text.scrollHeight <= text.clientHeight + 1;
+    });
+  }
+  cards.forEach(card => {
+    addPreview(card.querySelector('.project-summary'));
+    const milestones = [...card.querySelectorAll('.project-milestone')];
+    // One disclosure controls a project's updates, including Hazelnut's second panel.
+    if (milestones.length) addPreview(milestones[0].querySelector('p'), milestones.slice(1));
+  });
+  function measurePreviews() { previews.forEach(measure => measure()); }
+  const previewObserver = new ResizeObserver(measurePreviews);
+  previewObserver.observe(grid);
+  document.fonts.ready.then(measurePreviews);
+
   function matchesCategory(card) {
     return category === 'all' || card.dataset.category === category ||
       (category === 'watched' && ['watchlist', 'rumors'].includes(card.dataset.category));
@@ -29,6 +70,7 @@
       card.hidden = !matchesCategory(card) || (county.value !== 'all' && !card.dataset.county.split(' ').includes(county.value));
       grid.append(card);
     });
+    measurePreviews();
     buttons.forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.filter === category));
       if (button.dataset.filter === 'watched') button.hidden = category !== 'watched';
