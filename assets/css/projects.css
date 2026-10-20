@@ -61,11 +61,18 @@
 html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--green-dark); }
 .project-location { color: #527062; font-size: 12px; line-height: 1.4; margin-bottom: 14px; }
 .project-summary { color: #3c5147; font-size: 13px; line-height: 1.6; margin-bottom: 20px; }
+/* Shared three-line previews for card introductions and status updates. */
+.project-preview { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.project-summary:has(+ .project-read-more:not([hidden])) { margin-bottom: 0; }
+.project-read-more { display: block; border: 0; background: transparent; padding: 8px 0; min-height: 44px; color: var(--link); font: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.project-summary + .project-read-more { margin-bottom: 12px; }
+.project-read-more:is(:hover, :focus-visible) { color: var(--green-dark); }
+.project-read-more[hidden], .project-milestone[hidden] { display: none; }
 .project-stats { display: flex; gap: 12px; margin: 0 0 20px; }
 .project-stats > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; flex: 1; border-right: 1px solid #dae5de; padding-right: 8px; min-width: 0; }
 .project-stats > div:last-child { border: 0; padding: 0; }
 .project-stats dt { font-size: 10px; line-height: 1.4; font-weight: 400; margin: 4px 0 0; color: var(--text-muted); }
-.project-stats dd { font-size: 15px; line-height: 1.25; font-weight: 700; margin: 0; }
+.project-stats dd { overflow-wrap: anywhere; hyphens: auto; font-size: 15px; line-height: 1.25; font-weight: 700; margin: 0; }
 .project-milestone { border-radius: 7px; background: #edf4ef; padding: 14px; margin-bottom: 6px; font-size: 12px; }
 .project-milestone strong { color: #215b43; font-size: 12px; }
 .project-milestone p { margin: 5px 0 0; line-height: 1.55; }
@@ -107,6 +114,14 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 .empty-results h2 { font-size: 28px; }
 .no-js .tracker-controls, .no-js .tracker-results { display: none; }
 .no-js-note { font-size: 14px; padding: 18px; background: #e8f1eb; color: #173d2c; }
+/* Equal row heights; spare space separates the overview from disclosures. */
+@media (min-width: 561px) {
+ .tracker-grid { align-items: stretch; }
+ .tracker-card:not([hidden]) { display: flex; flex-direction: column; }
+ .tracker-card-image { flex-shrink: 0; }
+ .tracker-card-body { display: flex; flex-direction: column; flex: 1; }
+ .tracker-card-body > .project-details:first-of-type { margin-top: auto; }
+}
 @media (max-width: 1100px) {
  .tracker-controls { flex-wrap: wrap; align-items: center; gap: 12px; }
  .legend-grid { gap: 12px; }
@@ -153,11 +168,3 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 
 /* Light-surface project links use the shared dark-green interaction color. */
 html body .tracker-card :is(.project-sources,.project-milestone,.project-details) a:is(:hover,:focus-visible,:active){color:var(--green-dark);}
-
-/* Shared three-line previews for card introductions and status updates. */
-.project-preview { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
-.project-summary:has(+ .project-read-more:not([hidden])) { margin-bottom: 0; }
-.project-read-more { display: block; border: 0; background: transparent; padding: 8px 0; min-height: 44px; color: var(--link); font: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
-.project-summary + .project-read-more { margin-bottom: 12px; }
-.project-read-more:is(:hover, :focus-visible) { color: var(--green-dark); }
-.project-read-more[hidden], .project-milestone[hidden] { display: none; }
