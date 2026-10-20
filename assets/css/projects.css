@@ -64,7 +64,7 @@ html body .tracker-card h2 a:is(:hover,:focus-visible,:active) { color:var(--gre
 /* Shared three-line previews for card introductions and status updates. */
 .project-preview { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
 .project-summary:has(+ .project-read-more:not([hidden])) { margin-bottom: 0; }
-.project-read-more { display: block; border: 0; background: transparent; padding: 8px 0; min-height: 44px; color: var(--link); font: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.project-read-more { display: block; border: 0; background: transparent; padding: 8px 0; min-height: 44px; color: var(--link); font: inherit; font-size: 14px; line-height: 1.55; font-weight: 700; text-align: left; align-self: flex-start; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .project-summary + .project-read-more { margin-bottom: 12px; }
 .project-read-more:is(:hover, :focus-visible) { color: var(--green-dark); }
 .project-read-more[hidden], .project-milestone[hidden] { display: none; }
