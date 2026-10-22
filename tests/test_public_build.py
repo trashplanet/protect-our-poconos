@@ -112,16 +112,16 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'October 29 hearing listed in Pennsylvania Glacial Till zoning challenge')
+        self.assertEqual(feed_items[0].find('title').text, 'Smithfield Gateway October 28 hearing will focus on party status')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
-    def test_october_eight_schedule_update_preserves_claim_status(self):
+    def test_october_twenty_two_schedule_update_preserves_claim_status(self):
         page = (build.OUT / 'news/index.html').read_text()
-        self.assertIn('OCT 21, 2026 · 7:00 PM', page)
+        self.assertNotIn('OCT 21, 2026 · 7:00 PM', page)
         self.assertIn('OCT 28, 2026 · 6:00 PM', page)
         deadlines = re.search(r'<div class="deadline-strip">.*?</section>', page, re.S)[0]
-        self.assertEqual(deadlines.count('J.T. Lambert Intermediate School'), 2)
-        self.assertIn('Party-status requests will not be considered at this meeting', page)
+        self.assertEqual(deadlines.count('J.T. Lambert Intermediate School'), 1)
+        self.assertIn('proceedings will be limited to party-status matters', deadlines)
         self.assertIn('email submissions should arrive by October 27', page)
         self.assertNotIn('OCT 27, 2026 · 6:00 PM', page)
         self.assertIn('DATE PENDING · DECEMBER 2026', page)
@@ -134,14 +134,14 @@ class PublicBuildTests(unittest.TestCase):
         graph = self.graph(page)
         events = [node for node in graph if node.get('@type') == 'Event']
         self.assertEqual([event['startDate'] for event in events], [
-            '2026-10-21T19:00:00-04:00', '2026-10-28T18:00:00-04:00'])
+            '2026-10-28T18:00:00-04:00'])
         self.assertTrue(all(event['location']['name'] == 'J.T. Lambert Intermediate School' for event in events))
 
     def test_october_fourteen_newport_session_is_developer_hosted(self):
         page = (build.OUT / 'news/index.html').read_text()
         deadlines = re.search(r'<div class="deadline-strip">.*?</section>', page, re.S)[0]
         self.assertEqual(deadlines.count('OCT 28, 2026 · 6:00 PM'), 2)
-        self.assertIn('Smithfield Gateway Conditional-Use Hearing', deadlines)
+        self.assertIn('Smithfield Gateway — Conditional-Use Hearing / Party Status', deadlines)
         self.assertIn('Newport Township Data Center — Developer Information Session', deadlines)
         self.assertIn('developer-hosted open house, not a township approval hearing', deadlines)
         self.assertIn('No finalized benefits agreement or construction approval has been established', page)

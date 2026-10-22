@@ -58,23 +58,8 @@ OUT = ROOT / '_site'
 
 SMITHFIELD_EVENTS = [
     {
-        '@type': 'Event', '@id': BASE + '/news/#smithfield-planning-review-2026-10-21',
-        'name': 'Smithfield Gateway Planning Commission Review',
-        'startDate': '2026-10-21T19:00:00-04:00',
-        'eventStatus': 'https://schema.org/EventScheduled',
-        'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
-        'location': {'@type': 'Place', 'name': 'J.T. Lambert Intermediate School',
-                     'address': {'@type': 'PostalAddress', 'streetAddress': '2000 Milford Road',
-                                 'addressLocality': 'East Stroudsburg', 'addressRegion': 'PA',
-                                 'postalCode': '18301', 'addressCountry': 'US'}},
-        'organizer': {'@type': 'GovernmentOrganization', 'name': 'Smithfield Township',
-                      'url': 'https://smithfieldtownship.com/'},
-        'url': 'https://smithfieldtownship.com/odp/gatewaydc/',
-        'description': 'Planning Commission review of the Smithfield Gateway conditional-use application. Party-status requests will not be considered at this meeting. The meeting remains subject to postponement.'
-    },
-    {
         '@type': 'Event', '@id': BASE + '/news/#smithfield-conditional-use-hearing-2026-10-28',
-        'name': 'Smithfield Gateway Conditional-Use Hearing',
+        'name': 'Smithfield Gateway — Conditional-Use Hearing / Party Status',
         'startDate': '2026-10-28T18:00:00-04:00',
         'eventStatus': 'https://schema.org/EventScheduled',
         'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
@@ -85,7 +70,7 @@ SMITHFIELD_EVENTS = [
         'organizer': {'@type': 'GovernmentOrganization', 'name': 'Smithfield Township',
                       'url': 'https://smithfieldtownship.com/'},
         'url': 'https://smithfieldtownship.com/odp/gatewaydc/',
-        'description': 'Formal Board of Supervisors conditional-use hearing for Smithfield Gateway. Party-status requests will be considered at this hearing. Conditional-use approval is not construction approval, and the hearing remains subject to postponement.'
+        'description': 'The Board will open the conditional-use hearing, limited to party-status matters under the October 21 agreement. A subsequent substantive hearing is anticipated after revised plans and engineering review; no continuation date is confirmed. Applications may be submitted in advance or at the hearing; email submissions should arrive by October 27.'
     },
 ]
 

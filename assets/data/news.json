@@ -1,9 +1,9 @@
 [
   {
-    "id": "story-28",
-    "title": "Smithfield Gateway hearings scheduled for October 21 and 28",
+    "id": "story-34",
+    "title": "Smithfield Gateway October 28 hearing will focus on party status",
     "source": "Smithfield Township",
-    "date": "2026-10-07",
+    "date": "2026-10-21",
     "type": "Official Township Update",
     "categories": [
       "Smithfield",
@@ -12,9 +12,9 @@
       "Meetings & Hearings"
     ],
     "relatedProject": "smithfield-gateway",
-    "summary": "Smithfield Township scheduled Planning Commission review of the Gateway data-center application for October 21 at 7:00 p.m. and the formal Board of Supervisors conditional-use hearing for October 28 at 6:00 p.m. Both meetings are at J.T. Lambert Intermediate School. Party-status requests will be considered at the October 28 hearing, not the October 21 review.",
-    "contextNote": "Official township update. Both meetings remain subject to cancellation or postponement. Conditional-use approval would not be construction approval.",
-    "url": "https://smithfieldtownship.com/odp/gatewaydc/"
+    "summary": "Smithfield Township and the Smithfield Gateway applicant reached an October 21 agreement concerning the pending conditional-use proceedings. The October 28 Board hearing will open as scheduled but will be limited to party-status matters. The applicant will submit revised plans for additional engineering review before a subsequent hearing. No continuation date has been confirmed.",
+    "contextNote": "Official township correspondence. October 28 remains scheduled for 6 PM at J.T. Lambert Intermediate School. This procedural agreement does not establish a Planning Commission recommendation or grant conditional-use or construction approval.",
+    "url": "https://smithfieldtownship.com/wp-content/uploads/2026/10/2026.10.21-Response-to-Applicant.pdf"
   },
   {
     "id": "story-29",
@@ -67,6 +67,23 @@
     "summary": "A continued public hearing challenging Tobyhanna Township's data-center overlay ordinance is listed for October 29 at 5 p.m. at Kalahari Resorts & Conventions in Pocono Manor. The challenge concerns Ordinance No. 580, which established an overlay district associated with the Pennsylvania Glacial Till proposal. The date appears in a regional event notice and an update from the resident organization pursuing the challenge. Attendees should verify arrangements directly with the township.",
     "contextNote": "October 19 is this site's editorial update date, not the notice issuance date. MonroeCountyPA.com is independent regional media; Protect Rural Tobyhanna Township is a resident organization pursuing the challenge. Allegations of unlawful spot zoning are not legal findings. The zoning challenge remains pending; this is not a project approval hearing.",
     "url": "https://monroecountypa.com/event/2026/10/tobyhanna-township-zoning-hearing-board"
+  },
+  {
+    "id": "story-28",
+    "title": "Smithfield Gateway hearings scheduled for October 21 and 28",
+    "source": "Smithfield Township",
+    "date": "2026-10-07",
+    "type": "Official Township Update",
+    "categories": [
+      "Smithfield",
+      "Monroe County",
+      "Local Projects",
+      "Meetings & Hearings"
+    ],
+    "relatedProject": "smithfield-gateway",
+    "summary": "Smithfield Township scheduled Planning Commission review of the Gateway data-center application for October 21 at 7:00 p.m. and the formal Board of Supervisors conditional-use hearing for October 28 at 6:00 p.m. Both meetings are at J.T. Lambert Intermediate School. Party-status requests will be considered at the October 28 hearing, not the October 21 review.",
+    "contextNote": "Official township update. Both meetings remain subject to cancellation or postponement. Conditional-use approval would not be construction approval.",
+    "url": "https://smithfieldtownship.com/odp/gatewaydc/"
   },
   {
     "id": "story-32",

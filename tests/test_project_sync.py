@@ -26,7 +26,7 @@ class ProjectSyncTests(unittest.TestCase):
         self.assertNotIn('Updated &amp;amp;', result)
 
     def test_figures_and_hearing_update_follow_tracker(self):
-        changed = self.tracker.replace('250,000', '275,000').replace('Both meetings are at J.T. Lambert Intermediate School and remain subject to postponement.', 'Both meetings are at J.T. Lambert Intermediate School; check the official page before attending.')
+        changed = self.tracker.replace('250,000', '275,000').replace('No continuation date has been confirmed.', 'No continuation date has been confirmed; check the official page before attending.')
         result = self.render(changed)
         self.assertIn('275,000 SQ FT', result)
         self.assertIn('275,000 sq ft', result)
@@ -39,8 +39,8 @@ class ProjectSyncTests(unittest.TestCase):
         values = sync.values_from(sync.Document(self.tracker))
         self.assertEqual(values['smithfield-gateway.deadline-iso'], '2026-10-28')
         self.assertEqual(values['smithfield-gateway.deadline-label'], 'OCT 28, 2026')
-        self.assertIn('October 21 at 7:00 p.m.', values['smithfield.hearing-update'])
-        self.assertIn('October 28 at 6:00 p.m.', values['smithfield.hearing-update'])
+        self.assertIn('limited to party-status matters', values['smithfield.hearing-update'])
+        self.assertIn('October 28 Board hearing will open at 6:00 p.m.', values['smithfield.hearing-update'])
 
     def test_categories_change_derived_totals(self):
         changed = self.tracker.replace('data-category="rumors"', 'data-category="data-centers"')
