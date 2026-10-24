@@ -52,6 +52,28 @@
     "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
   },
   {
+    "id": "story-35",
+    "date": "2026-10-23",
+    "source": "Times Leader",
+    "type": "Local Reporting / Municipal Zoning Decision",
+    "title": "Plains Township rejects proposed data-center overlay expansion",
+    "summary": "Plains Township's Board of Commissioners voted October 22 to reject a proposed technology and energy overlay district that would have allowed data-center development on land currently zoned for conservation. Commissioners instead plan to draft a revised ordinance allowing data centers within the existing Industrial District through conditional-use review. A public hearing on the replacement ordinance will be scheduled, but no date has been announced.",
+    "contextNote": "The decision rejects the proposed zoning expansion, not data-center development throughout the township. The replacement regulations have not been enacted. No specific data-center application was identified in the reporting.",
+    "categories": [
+      "Luzerne County",
+      "Wider Northeast PA",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "url": "https://www.timesleader.com/news/1763283/residents-cheer-as-plains-twp-scraps-data-center-overlay-plan",
+    "supportingSources": [
+      {
+        "label": "Township zoning records · proposal background",
+        "url": "https://www.plainstownship.org/departments/zoning-ordinance/"
+      }
+    ]
+  },
+  {
     "id": "story-33",
     "title": "October 29 hearing listed in Pennsylvania Glacial Till zoning challenge",
     "source": "MonroeCountyPA.com / Protect Rural Tobyhanna Township",

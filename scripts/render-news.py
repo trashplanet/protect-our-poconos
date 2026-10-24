@@ -11,6 +11,8 @@ assert len({item['id'] for item in items}) == len(items), 'Story IDs must be uni
 for item in items:
     date.fromisoformat(item['date'])
     assert item['url'].startswith('https://'), 'Source links must use HTTPS'
+    for source in item.get('supportingSources', []):
+        assert source['url'].startswith('https://'), 'Supporting links must use HTTPS'
 
 def e(value):
     return escape(str(value), quote=True)
@@ -28,8 +30,9 @@ def card(item, featured=False):
     label = 'Community report · Unverified' if item['type'] == 'Community Report' else item['type']
     note = f'<p class="context-note">{e(item["contextNote"])}</p>' if item['contextNote'] else ''
     project = f'<a class="project-reference" href="projects.html#{e(item["relatedProject"])}">Current project record →</a>' if item['relatedProject'] else ''
+    supporting = ''.join(external(source, source['label']) for source in item.get('supportingSources', []))
     tags = ''.join(f'<span>{e(t)}</span>' for t in item['categories'][:3])
-    return f'<article class="{classes}"{attrs}><span class="story-type">{e(label)}</span>{meta(item)}<h3>{external(item,item["title"])}</h3><p class="story-summary">{e(item["summary"])}</p>{note}<div class="story-tags">{tags}</div><div class="story-links">{external(item,"Read at source")}{project}</div></article>'
+    return f'<article class="{classes}"{attrs}><span class="story-type">{e(label)}</span>{meta(item)}<h3>{external(item,item["title"])}</h3><p class="story-summary">{e(item["summary"])}</p>{note}<div class="story-tags">{tags}</div><div class="story-links">{external(item,"Read at source")}{supporting}{project}</div></article>'
 
 sections = {
     'FEATURED': '\n'.join(card(i, True) for i in items[:3]),
