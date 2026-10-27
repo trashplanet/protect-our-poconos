@@ -52,6 +52,97 @@
     "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
   },
   {
+    "id": "story-39",
+    "title": "Luzerne County Council to discuss proposed data-center zoning ordinance October 27",
+    "date": "2026-10-26",
+    "source": "Luzerne County",
+    "type": "Official County Update",
+    "summary": "Luzerne County Council will introduce and discuss a proposed data-center zoning amendment during its October 27 work session. The proposal would establish special-exception review and operating standards for data centers in 19 municipalities governed by county zoning. The Planning Commission recommended the revised ordinance October 8. Council adoption remains pending.",
+    "contextNote": "The work session follows the 6:01 PM voting session at the courthouse, with remote attendance available. The separate 5:55 PM public hearing concerns a different ordinance; it is not the data-center ordinance's required public hearing.",
+    "url": "https://www.luzernecounty.org/1554/Data-Centers",
+    "categories": [
+      "Luzerne County",
+      "Wider Northeast PA",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "supportingSources": [
+      {
+        "label": "County Council online attendance",
+        "url": "https://www.luzernecounty.org/1279/Council-Meetings-Online"
+      },
+      {
+        "label": "Times Leader · October 26 reporting",
+        "url": "https://www.timesleader.com/news/1763488/luzerne-county-council-set-to-discuss-data-center-zoning-ordinance"
+      }
+    ]
+  },
+  {
+    "id": "story-38",
+    "title": "Salem Township schedules October 27 data-center overlay hearings",
+    "date": "2026-10-25",
+    "source": "Salem Township",
+    "type": "Official Township Notice",
+    "summary": "Salem Township lists public hearings on proposed data-center overlay applications for October 27 at 5:30 PM at Berwick Assembly of God, 801 E. Fifth Street, Berwick. The Board of Supervisors meeting will follow immediately. The proposed zoning changes have not been adopted.",
+    "contextNote": "October 25 is this site's editorial update date. These hearings concern proposed overlay changes; a hearing notice does not establish adoption or construction approval. Confirm arrangements with Salem Township before attending.",
+    "url": "https://www.salemtwp.org/",
+    "categories": [
+      "Luzerne County",
+      "Wider Northeast PA",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "supportingSources": [
+      {
+        "label": "Official October 27 hearing notices · PDF",
+        "url": "https://www.salemtwp.org/_files/ugd/9bfdbd_3a150684fd284236a9fca52e29e1afd9.pdf"
+      }
+    ]
+  },
+  {
+    "id": "story-37",
+    "title": "Hazle Township reviewing proposed data-center zoning regulations; meeting date requires confirmation",
+    "date": "2026-10-25",
+    "source": "Hazle Township / published special-meeting notice",
+    "type": "Official Draft / Meeting Notice",
+    "summary": "Hazle Township is reviewing proposed zoning amendments concerning data centers, battery storage and related power infrastructure. A published special-meeting notice lists October 27 at 6 PM at the Hazle Township Commons Building, 99 West 27th Street. The township calendar lists October 28 as rescheduled to October 29. Confirm the date, time and venue directly with the township at 570-455-2039 before attending.",
+    "contextNote": "October 25 is this site's editorial update date, not the notice's publication date. The published notice and township calendar conflict. The regulations remain proposed; this process does not resolve NorthPoint Development's pending land-development appeal.",
+    "url": "https://www.hazletownship.com/documents/data-center-ordinance",
+    "categories": [
+      "Luzerne County",
+      "Wider Northeast PA",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "supportingSources": [
+      {
+        "label": "Published special-meeting notice · independent reproduction",
+        "url": "https://www.noticeregistry.com/pennsylvania/notice/public-hearing-hazle-township-2485203"
+      },
+      {
+        "label": "Township meeting calendar · confirm rescheduling",
+        "url": "https://www.hazletownship.com/municipal-government/cass-township-public-meeting-dates"
+      }
+    ]
+  },
+  {
+    "id": "story-36",
+    "title": "Archbald Borough denies Wildcat Ridge data-center application",
+    "date": "2026-10-21",
+    "source": "WVIA",
+    "type": "Local Reporting / Conditional-Use Decision",
+    "summary": "Archbald Borough Council unanimously denied the conditional-use application for Cornell Realty Management's proposed 14-building Wildcat Ridge Data Center Campus on approximately 578 acres. The October 21 decision followed nine hearings. A potential appeal has not been confirmed.",
+    "contextNote": "Lackawanna County reporting. This is a decision on the Wildcat Ridge application; it does not establish a borough-wide data-center ban or confirm an appeal.",
+    "url": "https://www.wvia.org/news/local/2026-10-21/archbald-council-unanimously-denies-zoning-for-hyperscale-data-center-campus-in-borough",
+    "categories": [
+      "Lackawanna County",
+      "Wider Northeast PA",
+      "Policy & Zoning"
+    ],
+    "relatedProject": null,
+    "supportingSources": []
+  },
+  {
     "id": "story-35",
     "date": "2026-10-23",
     "source": "Times Leader",

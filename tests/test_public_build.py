@@ -112,7 +112,7 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'Plains Township rejects proposed data-center overlay expansion')
+        self.assertEqual(feed_items[0].find('title').text, 'Luzerne County Council to discuss proposed data-center zoning ordinance October 27')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
     def test_october_twenty_two_schedule_update_preserves_claim_status(self):
