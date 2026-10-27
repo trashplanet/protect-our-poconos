@@ -12,7 +12,7 @@ body :is(.hero-scene,.action-hero-media,.resources-hero-scene,.faq-hero-scene) {
 
 /* The same pale green header on every page, independent of the page beneath it. */
 html body .site-header { background:#c3cfc8; }
-html body a:focus, html body a:active { color:var(--link-dark); }
+html body a:focus, html body a:active { color:var(--link-hover); }
 html body a.cta-teal:is(:hover,:focus,:active) { color:var(--ink-btn)!important; background:#5bc5a7; text-decoration:none; }
 html body a.cta-teal span { color:inherit; }
 html body .faq-hero-scene { padding-inline:0!important; }

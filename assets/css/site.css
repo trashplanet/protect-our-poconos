@@ -32,7 +32,7 @@
    inside those light pages brighten again. One base rule reads it. */
 :root { --link-hover: var(--heading); --link-rest: var(--link-dark); }
 body:is(.tracker-page,.resources-page,.faq-page,.news-page,.about-page,.action-page) { --link-hover: var(--green-dark); --link-rest: var(--link); }
-:is(.tracker-hero,.news-hero,.about-hero,.action-hero,.issue-hero,.about-cta,.editorial-closing,.faq-stance,.faq-closing),
+:is(.tracker-hero,.news-hero,.about-hero,.action-hero,.issue-hero,.about-cta,.editorial-closing,.faq-stance,.faq-closing,.faq-closing-frame,.action-attention-frame),
 .news-page :is(.series-band,.elsewhere-band,.featured-story:first-child) { --link-hover: var(--heading); --link-rest: var(--link-dark); }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { line-height: normal; }
