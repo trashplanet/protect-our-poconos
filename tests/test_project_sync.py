@@ -26,7 +26,7 @@ class ProjectSyncTests(unittest.TestCase):
         self.assertNotIn('Updated &amp;amp;', result)
 
     def test_figures_and_hearing_update_follow_tracker(self):
-        changed = self.tracker.replace('250,000', '275,000').replace('No continuation date has been confirmed.', 'No continuation date has been confirmed; check the official page before attending.')
+        changed = self.tracker.replace('250,000', '275,000').replace('no subsequent substantive hearing date has been confirmed in the reviewed official records.', 'check the official page before attending.')
         result = self.render(changed)
         self.assertIn('275,000 SQ FT', result)
         self.assertIn('275,000 sq ft', result)
@@ -35,12 +35,12 @@ class ProjectSyncTests(unittest.TestCase):
         self.assertNotIn('data-event-date="2026-09-09"', action)
         self.assertNotIn('data-event-date="2026-09-23"', action)
 
-    def test_scheduled_hearing_has_current_deadline(self):
+    def test_expired_hearings_have_no_upcoming_deadline(self):
         values = sync.values_from(sync.Document(self.tracker))
-        self.assertEqual(values['smithfield-gateway.deadline-iso'], '2026-10-28')
-        self.assertEqual(values['smithfield-gateway.deadline-label'], 'OCT 28, 2026')
-        self.assertIn('limited to party-status matters', values['smithfield.hearing-update'])
-        self.assertIn('October 28 Board hearing will open at 6:00 p.m.', values['smithfield.hearing-update'])
+        self.assertNotIn('smithfield-gateway.deadline-iso', values)
+        self.assertNotIn('pennsylvania-glacial-till.deadline-iso', values)
+        self.assertIn('was scheduled to address party-status requests', values['smithfield.hearing-update'])
+        self.assertIn('no subsequent substantive hearing date has been confirmed', values['smithfield.hearing-update'])
 
     def test_categories_change_derived_totals(self):
         changed = self.tracker.replace('data-category="rumors"', 'data-category="data-centers"')

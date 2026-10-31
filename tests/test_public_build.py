@@ -112,41 +112,34 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'Luzerne County Council to discuss proposed data-center zoning ordinance October 27')
+        self.assertEqual(feed_items[0].find('title').text, 'Salem Township approves data-center overlay expansions for Salem 3 and Salem 4')
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
-    def test_october_twenty_two_schedule_update_preserves_claim_status(self):
-        page = (build.OUT / 'news/index.html').read_text()
-        self.assertNotIn('OCT 21, 2026 · 7:00 PM', page)
-        self.assertIn('OCT 28, 2026 · 6:00 PM', page)
-        deadlines = re.search(r'<div class="deadline-strip">.*?</section>', page, re.S)[0]
-        self.assertEqual(deadlines.count('J.T. Lambert Intermediate School'), 1)
-        self.assertIn('proceedings will be limited to party-status matters', deadlines)
-        self.assertIn('email submissions should arrive by October 27', page)
-        self.assertNotIn('OCT 27, 2026 · 6:00 PM', page)
-        self.assertIn('DATE PENDING · DECEMBER 2026', page)
-        self.assertIn('no replacement date, time or venue has been confirmed', page)
-        self.assertIn('was not an official township hearing', page)
-        self.assertIn('Committee action, not enacted law', page)
-        self.assertIn('tentative order, not a final regulation', page)
-        self.assertIn('short of the 60 votes required', page)
-
-        graph = self.graph(page)
-        events = [node for node in graph if node.get('@type') == 'Event']
-        self.assertEqual([event['startDate'] for event in events], [
-            '2026-10-28T18:00:00-04:00'])
-        self.assertTrue(all(event['location']['name'] == 'J.T. Lambert Intermediate School' for event in events))
-
-    def test_october_fourteen_newport_session_is_developer_hosted(self):
+    def test_october_thirty_calendar_retires_completed_events(self):
         page = (build.OUT / 'news/index.html').read_text()
         deadlines = re.search(r'<div class="deadline-strip">.*?</section>', page, re.S)[0]
-        self.assertEqual(deadlines.count('OCT 28, 2026 · 6:00 PM'), 2)
-        self.assertIn('Smithfield Gateway — Conditional-Use Hearing / Party Status', deadlines)
-        self.assertIn('Newport Township Data Center — Developer Information Session', deadlines)
-        self.assertIn('developer-hosted open house, not a township approval hearing', deadlines)
+        self.assertNotIn('2026-10-', deadlines)
+        self.assertIn('DATE PENDING · DECEMBER 2026', deadlines)
+        self.assertIn('no replacement date, time or venue has been confirmed', deadlines)
+        self.assertIn('DEC 7, 2026 · REPORTED DEADLINE', deadlines)
+        self.assertIn('not a scheduled public hearing or a guaranteed ordinance adoption date', deadlines)
+        for route in ['news/index.html', 'index.html']:
+            self.assertFalse(any(n.get('@type') == 'Event' for n in self.graph((build.OUT / route).read_text())))
+
+    def test_historical_reporting_and_separate_approval_stages_remain(self):
+        page = (build.OUT / 'news/index.html').read_text()
+        self.assertIn('Smithfield Gateway October 28 hearing will focus on party status', page)
+        self.assertIn('Newport Township data-center developer schedules October 28 public meeting', page)
+        self.assertIn('developer-hosted open house, not a municipal hearing', page)
         self.assertIn('No finalized benefits agreement or construction approval has been established', page)
         self.assertIn('Luzerne County advances revised data-center zoning ordinance', page)
-        self.assertNotIn('Newport', (build.OUT / 'projects/index.html').read_text())
+        self.assertIn('do not constitute land-development or construction approval', page)
+        self.assertIn('Updated October 30 with Times Leader reporting', page)
+        projects = (build.OUT / 'projects/index.html').read_text()
+        self.assertNotIn('Newport', projects)
+        self.assertIn('827 CD 2026', projects)
+        self.assertIn('May 26, 2026', projects)
+        self.assertIn('Appeal Pending', projects)
 
     def test_entity_grounding(self):
         graph = self.graph((build.OUT / 'index.html').read_text())

@@ -56,23 +56,7 @@ BREADCRUMB_NAMES = {'news.html': "News & Updates", 'projects.html': 'Local Proje
                     'faq.html': 'FAQ', 'take-action.html': 'Take Action', 'about.html': 'About'}
 OUT = ROOT / '_site'
 
-SMITHFIELD_EVENTS = [
-    {
-        '@type': 'Event', '@id': BASE + '/news/#smithfield-conditional-use-hearing-2026-10-28',
-        'name': 'Smithfield Gateway — Conditional-Use Hearing / Party Status',
-        'startDate': '2026-10-28T18:00:00-04:00',
-        'eventStatus': 'https://schema.org/EventScheduled',
-        'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
-        'location': {'@type': 'Place', 'name': 'J.T. Lambert Intermediate School',
-                     'address': {'@type': 'PostalAddress', 'streetAddress': '2000 Milford Road',
-                                 'addressLocality': 'East Stroudsburg', 'addressRegion': 'PA',
-                                 'postalCode': '18301', 'addressCountry': 'US'}},
-        'organizer': {'@type': 'GovernmentOrganization', 'name': 'Smithfield Township',
-                      'url': 'https://smithfieldtownship.com/'},
-        'url': 'https://smithfieldtownship.com/odp/gatewaydc/',
-        'description': 'The Board will open the conditional-use hearing, limited to party-status matters under the October 21 agreement. A subsequent substantive hearing is anticipated after revised plans and engineering review; no continuation date is confirmed. Applications may be submitted in advance or at the hearing; email submissions should arrive by October 27.'
-    },
-]
+
 
 
 def minify_css(text):
@@ -235,8 +219,6 @@ def build():
             schema['@graph'][2]['mainEntity'] = {'@type': 'ItemList', 'itemListElement': [
                 {'@type': 'ListItem', 'position': position, 'url': story['url'], 'name': story['title']}
                 for position, story in enumerate(stories, 1)]}
-        if source in {'index.html', 'news.html'}:
-            schema['@graph'].extend(SMITHFIELD_EVENTS)
         if source == 'projects.html':
             spec = importlib.util.spec_from_file_location('projects_content', ROOT / 'scripts/sync-projects.py')
             projects_content = importlib.util.module_from_spec(spec)

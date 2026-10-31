@@ -1,5 +1,69 @@
 [
   {
+    "title": "Salem Township approves data-center overlay expansions for Salem 3 and Salem 4",
+    "source": "Times Leader",
+    "type": "Municipal Zoning Decision",
+    "categories": [
+      "Luzerne County",
+      "Wider Northeast PA",
+      "Policy & Zoning"
+    ],
+    "summary": "Salem Township supervisors approved expansions of the Special Data Center Overlay District on October 27, including changes associated with 4-3 Glennbrook Group's proposed Salem 3 campus and Moores 109 LLC's approximately 185-acre Salem 4 expansion. The decisions authorize zoning changes but do not constitute land-development or construction approval for either project.",
+    "contextNote": "October 30 is this site’s editorial update date; the source report is dated October 27. The Salem 3 proposal involves a planned 4,466-acre campus with developer-projected potential electricity demand of up to 4 GW. These scale and investment figures remain projections, rather than established operating capacity or completed investment.",
+    "url": "https://www.timesleader.com/news/1763673/salem-twp-approves-overlay-district-expansion",
+    "supportingSources": [
+      {
+        "label": "Official Salem Township information",
+        "url": "https://www.salemtwp.org/"
+      },
+      {
+        "label": "Developer · potential acreage and power demand",
+        "url": "https://4-3consulting.com/current-projects/"
+      }
+    ],
+    "id": "story-40",
+    "date": "2026-10-30",
+    "relatedProject": null
+  },
+  {
+    "title": "Newport Township developer presents data-center plans amid zoning lawsuit",
+    "source": "WVIA / Citizens’ Voice reporting",
+    "type": "Confirmed Proposal / Community Update / Legal Challenge",
+    "categories": [
+      "Luzerne County",
+      "Wider Northeast PA",
+      "Local Projects"
+    ],
+    "summary": "Fit Energy hosted an October 28 information session about its proposed 15-building data-center and on-site power campus in Newport Township. The company presented plans and discussed potential community benefits as residents continued to question the project’s scale and impacts. Township zoning permits were issued in August, but additional land-development approvals remain necessary.",
+    "contextNote": "October 30 editorial update based on October 29 WVIA reporting. Separate Citizens’ Voice reporting reproduced by the township documents a lawsuit by three residents challenging the procedures used to adopt the April 2026 zoning ordinance. The allegations have not been established by a court ruling in the reviewed material, and the lawsuit does not itself invalidate the issued zoning permits. Community benefits, jobs and investment remain developer projections; no final tenant or construction approval is established.",
+    "url": "https://www.wvia.org/news/local/2026-10-29/newport-twp-data-center-open-house-leaves-some-residents-with-unanswered-questions",
+    "supportingSources": [
+      {
+        "label": "Citizens’ Voice reporting reproduced by Newport Township",
+        "url": "https://www.newporttownship.org/2026-newport-news"
+      }
+    ],
+    "id": "story-41",
+    "date": "2026-10-30",
+    "relatedProject": null
+  },
+  {
+    "title": "Bowmanstown filing proposes data-center expansion linked to Lower Towamensing",
+    "source": "Times News",
+    "type": "Documented Proposal / Zoning Challenge",
+    "categories": [
+      "Carbon County",
+      "Wider Poconos",
+      "Local Projects"
+    ],
+    "summary": "DTA Alliance and affiliated applicants filed a curative amendment seeking to establish a data-center overlay on approximately 55 acres in Bowmanstown Borough. The proposal includes a 375,000-square-foot building near Ore and Ridge Streets and is related to the larger proposed Lower Towamensing data-center campus. The filing challenges existing zoning restrictions; it does not constitute approval of the requested overlay or construction.",
+    "contextNote": "October 30 is this site’s editorial update date; the reporting was published October 10. The filing proposes an infrastructure connection with the neighboring Lower Towamensing site. Neither zoning approval nor construction authorization is established.",
+    "url": "https://www.tnonline.com/20261010/dta-plans-center-in-bowmanstown375000-square-foot-building-to-be-used-for-cooling-equipment/",
+    "id": "story-42",
+    "date": "2026-10-30",
+    "relatedProject": null
+  },
+  {
     "id": "story-34",
     "title": "Smithfield Gateway October 28 hearing will focus on party status",
     "source": "Smithfield Township",
@@ -13,7 +77,7 @@
     ],
     "relatedProject": "smithfield-gateway",
     "summary": "Smithfield Township and the Smithfield Gateway applicant reached an October 21 agreement concerning the pending conditional-use proceedings. The October 28 Board hearing will open as scheduled but will be limited to party-status matters. The applicant will submit revised plans for additional engineering review before a subsequent hearing. No continuation date has been confirmed.",
-    "contextNote": "Official township correspondence. October 28 remains scheduled for 6 PM at J.T. Lambert Intermediate School. This procedural agreement does not establish a Planning Commission recommendation or grant conditional-use or construction approval.",
+    "contextNote": "Official township correspondence. October 28 remains scheduled for 6 PM at J.T. Lambert Intermediate School. This procedural agreement does not establish a Planning Commission recommendation or grant conditional-use or construction approval. Update October 30: the scheduled hearing date has passed; the reviewed official hub does not establish its outcome or a subsequent substantive-hearing date.",
     "url": "https://smithfieldtownship.com/wp-content/uploads/2026/10/2026.10.21-Response-to-Applicant.pdf"
   },
   {
@@ -84,7 +148,7 @@
     "source": "Salem Township",
     "type": "Official Township Notice",
     "summary": "Salem Township lists public hearings on proposed data-center overlay applications for October 27 at 5:30 PM at Berwick Assembly of God, 801 E. Fifth Street, Berwick. The Board of Supervisors meeting will follow immediately. The proposed zoning changes have not been adopted.",
-    "contextNote": "October 25 is this site's editorial update date. These hearings concern proposed overlay changes; a hearing notice does not establish adoption or construction approval. Confirm arrangements with Salem Township before attending.",
+    "contextNote": "October 25 is this site's editorial update date. These hearings concern proposed overlay changes; a hearing notice does not establish adoption or construction approval. Confirm arrangements with Salem Township before attending. Update October 30: supervisors adopted the Salem 3 and Salem 4 overlay expansions October 27. These zoning changes do not grant land-development or construction approval.",
     "url": "https://www.salemtwp.org/",
     "categories": [
       "Luzerne County",
@@ -96,17 +160,21 @@
       {
         "label": "Official October 27 hearing notices · PDF",
         "url": "https://www.salemtwp.org/_files/ugd/9bfdbd_3a150684fd284236a9fca52e29e1afd9.pdf"
+      },
+      {
+        "label": "October 27 adoption reporting",
+        "url": "https://www.timesleader.com/news/1763673/salem-twp-approves-overlay-district-expansion"
       }
     ]
   },
   {
     "id": "story-37",
-    "title": "Hazle Township reviewing proposed data-center zoning regulations; meeting date requires confirmation",
+    "title": "Hazle Township holds October 29 public meeting on proposed data-center ordinance",
     "date": "2026-10-25",
     "source": "Hazle Township / published special-meeting notice",
     "type": "Official Draft / Meeting Notice",
-    "summary": "Hazle Township is reviewing proposed zoning amendments concerning data centers, battery storage and related power infrastructure. A published special-meeting notice lists October 27 at 6 PM at the Hazle Township Commons Building, 99 West 27th Street. The township calendar lists October 28 as rescheduled to October 29. Confirm the date, time and venue directly with the township at 570-455-2039 before attending.",
-    "contextNote": "October 25 is this site's editorial update date, not the notice's publication date. The published notice and township calendar conflict. The regulations remain proposed; this process does not resolve NorthPoint Development's pending land-development appeal.",
+    "summary": "Hazle Township's Planning Department held a special meeting October 29 at Hazleton Area High School to receive public comments on proposed zoning amendments governing data centers and associated energy infrastructure. The draft would permit data centers by right in the I-1 Industrial District, while some related facilities would require special-exception approval. Residents raised questions about setbacks, environmental safeguards and whether data centers themselves should require special-exception review. The ordinance has not been adopted.",
+    "contextNote": "Updated October 30 with Times Leader reporting. Originally published here October 25 as a meeting announcement; it was rescheduled from earlier dates and ultimately held October 29 at 6 PM in the Hazleton Area High School auditorium, 1601 W. 23rd Street, rather than Hazle Township Commons. The solicitor identified December 7 as the curative-amendment deadline, not a scheduled public hearing or guaranteed adoption date. Commonwealth Court appeal 827 CD 2026 remains Active and is separate from this zoning review.",
     "url": "https://www.hazletownship.com/documents/data-center-ordinance",
     "categories": [
       "Luzerne County",
@@ -116,11 +184,11 @@
     "relatedProject": null,
     "supportingSources": [
       {
-        "label": "Published special-meeting notice · independent reproduction",
-        "url": "https://www.noticeregistry.com/pennsylvania/notice/public-hearing-hazle-township-2485203"
+        "label": "Times Leader · October 30 meeting report",
+        "url": "https://www.timesleader.com/news/1763912/hazle-twp-residents-debate-proposed-data-center-ordinance"
       },
       {
-        "label": "Township meeting calendar · confirm rescheduling",
+        "label": "Official township calendar · final venue",
         "url": "https://www.hazletownship.com/municipal-government/cass-township-public-meeting-dates"
       }
     ]
@@ -178,7 +246,7 @@
     ],
     "relatedProject": "pennsylvania-glacial-till",
     "summary": "A continued public hearing challenging Tobyhanna Township's data-center overlay ordinance is listed for October 29 at 5 p.m. at Kalahari Resorts & Conventions in Pocono Manor. The challenge concerns Ordinance No. 580, which established an overlay district associated with the Pennsylvania Glacial Till proposal. The date appears in a regional event notice and an update from the resident organization pursuing the challenge. Attendees should verify arrangements directly with the township.",
-    "contextNote": "October 19 is this site's editorial update date, not the notice issuance date. MonroeCountyPA.com is independent regional media; Protect Rural Tobyhanna Township is a resident organization pursuing the challenge. Allegations of unlawful spot zoning are not legal findings. The zoning challenge remains pending; this is not a project approval hearing.",
+    "contextNote": "October 19 is this site's editorial update date, not the notice issuance date. MonroeCountyPA.com is independent regional media; Protect Rural Tobyhanna Township is a resident organization pursuing the challenge. Allegations of unlawful spot zoning are not legal findings. The zoning challenge remains pending; this is not a project approval hearing. Update October 30: the listed hearing date has passed; no official ruling or subsequent hearing date has been independently verified.",
     "url": "https://monroecountypa.com/event/2026/10/tobyhanna-township-zoning-hearing-board"
   },
   {
@@ -229,7 +297,7 @@
     ],
     "relatedProject": null,
     "summary": "Fit Energy has scheduled an October 28 public information session for its proposed 15-data-center and power-generation campus in Newport Township, Luzerne County. The meeting begins at 6 p.m. at Greater Nanticoke Area High School in Nanticoke. Residents will be able to review proposed plans and ask questions about infrastructure, site design and environmental considerations.",
-    "contextNote": "Newport Township issued zoning permits in August, but additional approvals are still required. Fit Energy says it is developing a Community Benefits Agreement with Newport Township and finalizing plans for land-development review. No finalized benefits agreement or construction approval has been established. The October 28 session is a developer-hosted open house, not a municipal hearing.",
+    "contextNote": "Newport Township issued zoning permits in August, but additional approvals are still required. Fit Energy says it is developing a Community Benefits Agreement with Newport Township and finalizing plans for land-development review. No finalized benefits agreement or construction approval has been established. The October 28 session is a developer-hosted open house, not a municipal hearing. Update October 30: WVIA reports that the October 28 open house was held. See the newer Newport Township article for the meeting report and separate zoning-lawsuit context.",
     "url": "https://www.timesleader.com/news/1762404/fit-energy-to-host-newport-twp-data-center-information-session-on-oct-28"
   },
   {
@@ -263,8 +331,14 @@
     ],
     "relatedProject": "project-hazelnut",
     "summary": "Recent coverage has brought renewed attention to Project Hazelnut, NorthPoint Development’s proposed 15-building data-center campus on roughly 1,300 acres in Hazle Township, Luzerne County. NorthPoint says its $165 million community-benefit package would include $10,000 grants for eligible township households. Hazle Township previously denied the land-development plan, and the developer’s appeal remains in litigation.",
-    "contextNote": "Wider Northeast Pennsylvania / Pocono foothills reporting. The $10,000 grant is part of a developer commitment tied to the proposed project; it is not an existing public benefit. The township denial remains under appeal and is not final construction approval.",
-    "url": "https://keystonenewsroom.com/news/data-center-developer-offers-10k-to-luzerne-county-residents-are-they-trying-to-bribe-us/"
+    "contextNote": "Wider Northeast Pennsylvania / Pocono foothills reporting. The $10,000 grant is part of a developer commitment tied to the proposed project; it is not an existing public benefit. The township denial remains under appeal and is not final construction approval. Update October 30: the official appellate docket distinguishes the earlier county-court order from the active June 10 appeal by NP Hazleton Holdings 1, LLC, Commonwealth Court 827 CD 2026.",
+    "url": "https://keystonenewsroom.com/news/data-center-developer-offers-10k-to-luzerne-county-residents-are-they-trying-to-bribe-us/",
+    "supportingSources": [
+      {
+        "label": "Official Commonwealth Court docket · 827 CD 2026",
+        "url": "https://ujsportal.pacourts.us/Report/PacDocketSheet?docketNumber=827%20CD%202026&dnh=5mFTkyKeZ8BmbTpUwsKhSQ%3D%3D"
+      }
+    ]
   },
   {
     "id": "story-23",
@@ -401,8 +475,14 @@
     ],
     "relatedProject": null,
     "summary": "Salem Township’s Planning Commission again recommended expanding its Special Data Center Overlay District by more than 4,000 acres for the proposed 4-3 Glenbrook Group project. The matter now moves to the township Board of Supervisors, expected to consider it in October. The Planning Commission recommendation is not final construction approval.",
-    "contextNote": "Northeast PA reporting outside the Pike and Monroe project tracker. A planning-commission recommendation is advisory; the Board of Supervisors decides.",
-    "url": "https://www.timesleader.com/news/1760686/salem-twp-planning-commission-again-recommends-data-center-overlay-expansion"
+    "contextNote": "Northeast PA reporting outside the Pike and Monroe project tracker. A planning-commission recommendation is advisory; the Board of Supervisors decides. Update October 30: supervisors adopted the Salem 3 and Salem 4 overlay expansions October 27. These zoning changes do not grant land-development or construction approval.",
+    "url": "https://www.timesleader.com/news/1760686/salem-twp-planning-commission-again-recommends-data-center-overlay-expansion",
+    "supportingSources": [
+      {
+        "label": "October 27 adoption reporting",
+        "url": "https://www.timesleader.com/news/1763673/salem-twp-approves-overlay-district-expansion"
+      }
+    ]
   },
   {
     "id": "story-1",
