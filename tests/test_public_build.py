@@ -128,7 +128,8 @@ class PublicBuildTests(unittest.TestCase):
 
     def test_historical_reporting_and_separate_approval_stages_remain(self):
         page = (build.OUT / 'news/index.html').read_text()
-        self.assertIn('Smithfield Gateway October 28 hearing will focus on party status', page)
+        self.assertIn('Smithfield Gateway October 28 hearing notice limited agenda to party status', page)
+        self.assertIn('outcome and a continuation date have not been independently verified', page)
         self.assertIn('Newport Township data-center developer schedules October 28 public meeting', page)
         self.assertIn('developer-hosted open house, not a municipal hearing', page)
         self.assertIn('No finalized benefits agreement or construction approval has been established', page)

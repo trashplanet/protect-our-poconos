@@ -57,6 +57,8 @@ Keep these CSS and image files. Split the header/footer into theme templates, mo
 
 ## Checks
 
+Weekly editorial verification: follow [`docs/weekly-source-audit.md`](docs/weekly-source-audit.md) for the Projects and FAQ source checks, event cleanup, separate review dates, and report format.
+
 ```sh
 node --check assets/js/site.js
 python3 scripts/render-partials.py --check

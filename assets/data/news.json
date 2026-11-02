@@ -65,7 +65,7 @@
   },
   {
     "id": "story-34",
-    "title": "Smithfield Gateway October 28 hearing will focus on party status",
+    "title": "Smithfield Gateway October 28 hearing notice limited agenda to party status",
     "source": "Smithfield Township",
     "date": "2026-10-21",
     "type": "Official Township Update",
@@ -76,8 +76,8 @@
       "Meetings & Hearings"
     ],
     "relatedProject": "smithfield-gateway",
-    "summary": "Smithfield Township and the Smithfield Gateway applicant reached an October 21 agreement concerning the pending conditional-use proceedings. The October 28 Board hearing will open as scheduled but will be limited to party-status matters. The applicant will submit revised plans for additional engineering review before a subsequent hearing. No continuation date has been confirmed.",
-    "contextNote": "Official township correspondence. October 28 remains scheduled for 6 PM at J.T. Lambert Intermediate School. This procedural agreement does not establish a Planning Commission recommendation or grant conditional-use or construction approval. Update October 30: the scheduled hearing date has passed; the reviewed official hub does not establish its outcome or a subsequent substantive-hearing date.",
+    "summary": "Smithfield Township and the applicant reached an October 21 agreement limiting the scheduled October 28 Board hearing to party-status matters. The agreement called for revised plans and additional engineering review before a subsequent substantive hearing. The hearing's outcome and a continuation date have not been independently verified.",
+    "contextNote": "Historical township correspondence about the October 28 schedule, not a record of what occurred. The procedural agreement did not establish a Planning Commission recommendation or grant conditional-use or construction approval. Check the township project hub for a verified outcome and any new hearing notice.",
     "url": "https://smithfieldtownship.com/wp-content/uploads/2026/10/2026.10.21-Response-to-Applicant.pdf"
   },
   {
@@ -121,8 +121,8 @@
     "date": "2026-10-26",
     "source": "Luzerne County",
     "type": "Official County Update",
-    "summary": "Luzerne County Council will introduce and discuss a proposed data-center zoning amendment during its October 27 work session. The proposal would establish special-exception review and operating standards for data centers in 19 municipalities governed by county zoning. The Planning Commission recommended the revised ordinance October 8. Council adoption remains pending.",
-    "contextNote": "The work session follows the 6:01 PM voting session at the courthouse, with remote attendance available. The separate 5:55 PM public hearing concerns a different ordinance; it is not the data-center ordinance's required public hearing.",
+    "summary": "Luzerne County Council scheduled discussion of a proposed data-center zoning amendment for its October 27 work session. The proposal would establish special-exception review and operating standards for data centers in 19 municipalities governed by county zoning. The Planning Commission recommended the revised ordinance October 8. No council adoption has been independently verified.",
+    "contextNote": "The October 27 work session was scheduled to follow the 6:01 PM voting session at the courthouse. The separate 5:55 PM public hearing concerned a different ordinance; it was not the data-center ordinance's required public hearing. The county's project page still displays its pre-meeting notice; the discussion's outcome needs verification.",
     "url": "https://www.luzernecounty.org/1554/Data-Centers",
     "categories": [
       "Luzerne County",
@@ -147,8 +147,8 @@
     "date": "2026-10-25",
     "source": "Salem Township",
     "type": "Official Township Notice",
-    "summary": "Salem Township lists public hearings on proposed data-center overlay applications for October 27 at 5:30 PM at Berwick Assembly of God, 801 E. Fifth Street, Berwick. The Board of Supervisors meeting will follow immediately. The proposed zoning changes have not been adopted.",
-    "contextNote": "October 25 is this site's editorial update date. These hearings concern proposed overlay changes; a hearing notice does not establish adoption or construction approval. Confirm arrangements with Salem Township before attending. Update October 30: supervisors adopted the Salem 3 and Salem 4 overlay expansions October 27. These zoning changes do not grant land-development or construction approval.",
+    "summary": "Salem Township scheduled public hearings on proposed data-center overlay applications for October 27 at 5:30 PM at Berwick Assembly of God, 801 E. Fifth Street, Berwick, with a Board of Supervisors meeting to follow. Supervisors subsequently adopted the Salem 3 and Salem 4 overlay expansions that day.",
+    "contextNote": "October 25 is this site's original meeting-notice date. Supervisors adopted the Salem 3 and Salem 4 overlay expansions October 27, as noted in the October 30 update. These zoning changes do not grant land-development or construction approval.",
     "url": "https://www.salemtwp.org/",
     "categories": [
       "Luzerne County",
@@ -262,8 +262,8 @@
       "Meetings & Hearings"
     ],
     "relatedProject": "smithfield-gateway",
-    "summary": "Smithfield Township scheduled Planning Commission review of the Gateway data-center application for October 21 at 7:00 p.m. and the formal Board of Supervisors conditional-use hearing for October 28 at 6:00 p.m. Both meetings are at J.T. Lambert Intermediate School. Party-status requests will be considered at the October 28 hearing, not the October 21 review.",
-    "contextNote": "Official township update. Both meetings remain subject to cancellation or postponement. Conditional-use approval would not be construction approval.",
+    "summary": "Smithfield Township scheduled Planning Commission review of the Gateway data-center application for October 21 and a Board of Supervisors conditional-use hearing for October 28, both at J.T. Lambert Intermediate School. The township notice assigned party-status requests to the October 28 Board hearing, not the October 21 review.",
+    "contextNote": "Historical township scheduling notice. The dates have passed; this notice does not establish either meeting's outcome. Conditional-use approval would not be construction approval.",
     "url": "https://smithfieldtownship.com/odp/gatewaydc/"
   },
   {
@@ -296,7 +296,7 @@
       "Community Response"
     ],
     "relatedProject": null,
-    "summary": "Fit Energy has scheduled an October 28 public information session for its proposed 15-data-center and power-generation campus in Newport Township, Luzerne County. The meeting begins at 6 p.m. at Greater Nanticoke Area High School in Nanticoke. Residents will be able to review proposed plans and ask questions about infrastructure, site design and environmental considerations.",
+    "summary": "Fit Energy scheduled an October 28 public information session for its proposed 15-data-center and power-generation campus in Newport Township, Luzerne County, at Greater Nanticoke Area High School. WVIA subsequently reported that the developer-hosted open house took place.",
     "contextNote": "Newport Township issued zoning permits in August, but additional approvals are still required. Fit Energy says it is developing a Community Benefits Agreement with Newport Township and finalizing plans for land-development review. No finalized benefits agreement or construction approval has been established. The October 28 session is a developer-hosted open house, not a municipal hearing. Update October 30: WVIA reports that the October 28 open house was held. See the newer Newport Township article for the meeting report and separate zoning-lawsuit context.",
     "url": "https://www.timesleader.com/news/1762404/fit-energy-to-host-newport-twp-data-center-information-session-on-oct-28"
   },
@@ -389,9 +389,15 @@
       "Utilities"
     ],
     "relatedProject": null,
-    "summary": "The Pennsylvania Public Utility Commission issued a tentative order seeking comment on proposed changes intended to prevent large data centers from being automatically treated as protected critical load during electricity emergencies. The PUC is also planning a November 17 technical conference on cost allocation for large electric loads.",
-    "contextNote": "Official regulatory proceeding and tentative order, not a final regulation or an order requiring every data center to shut down during an emergency.",
-    "url": "https://www.puc.pa.gov/press-release/2026/puc-advances-tentative-data-center-curtailment-safeguards/"
+    "summary": "The Pennsylvania Public Utility Commission issued a tentative order seeking comment on proposed changes intended to prevent large data centers from being automatically treated as protected critical load during electricity emergencies. A related cost-allocation conference had been scheduled for November 17, but its current schedule requires confirmation.",
+    "contextNote": "Official tentative order, not a final regulation or a requirement that every data center shut down during an emergency. An industry report says the PUC postponed the November 17 conference on October 28; the underlying PUC notice could not be independently opened during this review. Do not plan around that date without confirming with the PUC.",
+    "url": "https://www.puc.pa.gov/press-release/2026/puc-advances-tentative-data-center-curtailment-safeguards/",
+    "supportingSources": [
+      {
+        "label": "Industry report · conference postponement not independently verified",
+        "url": "https://magnifyi.com/puc-postpones-computational-large-load-technical-conference/"
+      }
+    ]
   },
   {
     "id": "story-20",
@@ -440,7 +446,7 @@
       "Meetings & Hearings"
     ],
     "relatedProject": "smithfield-gateway",
-    "summary": "Smithfield Township postponed the previously advertised September 9 conditional-use hearing for the Gateway data center. A replacement date will be separately advertised; September 23 is a regular Board meeting, not a continuation hearing.",
+    "summary": "Smithfield Township postponed the previously advertised September 9 conditional-use hearing for the Gateway data center. September 23 was a regular Board meeting, not a continuation hearing. The township later scheduled an October 28 hearing limited to party-status matters.",
     "contextNote": "Historical public notice documenting the September postponement. Smithfield Township subsequently scheduled Planning Commission review for October 21 and the conditional-use hearing for October 28.",
     "url": "https://www.noticeregistry.com/pennsylvania/notice/public-hearing-east-stroudsburg-2461015"
   },
