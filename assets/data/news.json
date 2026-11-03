@@ -93,9 +93,15 @@
       "Meetings & Hearings"
     ],
     "relatedProject": null,
-    "summary": "The October 27 Lower Towamensing curative-amendment hearing was postponed at the applicant’s request. Township officials are considering dates during the week of December 14, but no replacement date, time or venue has been confirmed.",
-    "contextNote": "The December 14, 16 and 17 dates are possibilities, not confirmed hearing dates. Check Lower Towamensing Township before making plans.",
-    "url": "https://www.tnonline.com/20261007/data-center-hearing-on-hold/"
+    "summary": "The October 27 Lower Towamensing curative-amendment hearing was postponed at the applicant’s request. The township has since confirmed a December 17 continuation; the requested zoning changes and development have not been approved.",
+    "contextNote": "November 3 verification update: Lower Towamensing Township has confirmed the continued hearing for December 17, 2026, at 7 PM at Aquashicola Fire Company.",
+    "url": "https://www.tnonline.com/20261007/data-center-hearing-on-hold/",
+    "supportingSources": [
+      {
+        "label": "Official township hearing update",
+        "url": "https://www.lowertowamensing.org/"
+      }
+    ]
   },
   {
     "id": "story-25",
@@ -112,8 +118,14 @@
     ],
     "relatedProject": null,
     "summary": "About 100 people attended an October 1 community meeting ahead of Lower Towamensing Township’s October 27 public hearing on a proposed data-center zoning amendment. The gathering was organized by Save Carbon County and was not an official township hearing. The proposal discussed in current reporting involves the Blue Shamrock Golf Course / DTA Alliance property and a potential large data-center campus.",
-    "contextNote": "Historical coverage of the October 1 community organizing meeting, which was not the township hearing. The October 27 curative-amendment hearing was subsequently postponed; no December replacement date is confirmed.",
-    "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/"
+    "contextNote": "Historical coverage of the October 1 community organizing meeting, which was not the township hearing. The October 27 curative-amendment hearing was subsequently postponed; the township now lists the continued hearing for December 17, 2026.",
+    "url": "https://www.tnonline.com/20261002/residents-prep-for-data-hearing/",
+    "supportingSources": [
+      {
+        "label": "Official township hearing update",
+        "url": "https://www.lowertowamensing.org/"
+      }
+    ]
   },
   {
     "id": "story-39",
