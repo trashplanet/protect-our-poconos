@@ -112,18 +112,25 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, 'Salem Township approves data-center overlay expansions for Salem 3 and Salem 4')
+        self.assertEqual(feed_items[0].find('title').text, stories[0]['title'])
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
     def test_upcoming_calendar_retires_completed_events(self):
         page = (build.OUT / 'news/index.html').read_text()
         deadlines = re.search(r'<div class="deadline-strip">.*?</section>', page, re.S)[0]
         self.assertNotIn('2026-10-', deadlines)
+        self.assertIn('datetime="2026-11-10T17:00:00-05:00"', deadlines)
         self.assertIn('DEC 7, 2026 · REPORTED DEADLINE', deadlines)
         self.assertIn('not a scheduled public hearing or a guaranteed ordinance adoption date', deadlines)
         self.assertIn('datetime="2026-12-17T19:00:00-05:00"', deadlines)
         self.assertIn('270 Little Gap Road, Palmerton, PA 18071', deadlines)
+        self.assertLess(deadlines.index('NOV 10, 2026'), deadlines.index('DEC 7, 2026'))
         self.assertLess(deadlines.index('DEC 7, 2026'), deadlines.index('DEC 17, 2026'))
+        home = (build.OUT / 'index.html').read_text()
+        next_card = re.search(r'<a class="meeting-card hero-meeting-card".*?</a>', home, re.S)[0]
+        self.assertIn('NEXT HEARING · TUESDAY, NOVEMBER 10 · 5 PM', next_card)
+        self.assertIn('Tobyhanna zoning challenge', next_card)
+        self.assertNotIn('Smithfield Gateway', next_card)
         self.assertNotIn('DATE PENDING · DECEMBER 2026', deadlines)
         for route in ['news/index.html', 'index.html']:
             self.assertFalse(any(n.get('@type') == 'Event' for n in self.graph((build.OUT / route).read_text())))

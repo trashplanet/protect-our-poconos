@@ -1,5 +1,82 @@
 [
   {
+    "id": "story-43",
+    "title": "November 10 hearing set in Pennsylvania Glacial Till zoning challenge",
+    "source": "Tobyhanna Township Zoning Hearing Board / public notice",
+    "date": "2026-11-09",
+    "type": "Official Hearing Notice / Zoning Challenge",
+    "categories": [
+      "Monroe County",
+      "Local Projects",
+      "Meetings & Hearings",
+      "Policy & Zoning"
+    ],
+    "relatedProject": "pennsylvania-glacial-till",
+    "summary": "A published township Zoning Hearing Board notice schedules the continued validity-challenge hearing on Ordinance No. 580 for Tuesday, November 10, 2026, at 5 PM at Pocono Summit Volunteer Fire Company, 5334 Hummingbird Drive, Pocono Summit, PA 18346. The challenge concerns the data-center overlay associated with the Pennsylvania Glacial Till proposal. This is not a project-approval hearing.",
+    "contextNote": "November 9 is this site’s editorial posting date; the public notice appeared November 3. It identifies October 29 as the last scheduled hearing but does not establish that hearing’s outcome or a ruling on the ordinance. Confirm arrangements with the township before attending.",
+    "url": "https://www.poconorecord.com/public-notices/notice/11/03/2026/public-notice-notice-is-hereby-given-2026-11-03-pocono-record-pennsylvania-1a1a27a5e5a"
+  },
+  {
+    "id": "story-44",
+    "title": "Price Township data-center overlay reaches Monroe County planning agenda",
+    "source": "Monroe County Planning Commission",
+    "date": "2026-11-09",
+    "type": "Official County Agenda / Proposed Zoning",
+    "categories": [
+      "Monroe County",
+      "Policy & Zoning",
+      "Meetings & Hearings"
+    ],
+    "relatedProject": null,
+    "summary": "The Monroe County Planning Commission’s November 10 agenda lists Price Township’s proposed Data Center Overlay District for review. The draft would cover two parcels totaling approximately 100 acres along Route 447 south of Snow Road and would make data centers a conditional use within the overlay. It is a proposed zoning change, not an adopted ordinance or approval of a data-center project.",
+    "contextNote": "November 9 is this site’s editorial posting date. The county agenda establishes a scheduled review item, not the commission’s recommendation or a township decision. The time of the county meeting is not stated in the agenda reviewed.",
+    "url": "https://www.monroecountypa.gov/getmedia/f1976493-5673-4c21-afc7-e5ea1d529513/2026-11-10-Planning-Commision-Agenda.pdf"
+  },
+  {
+    "id": "story-45",
+    "title": "Hazle Township posts revised data-center ordinance draft",
+    "source": "Hazle Township / November 5 review draft",
+    "date": "2026-11-09",
+    "type": "Official Draft / Proposed Zoning",
+    "categories": [
+      "Luzerne County",
+      "Wider Northeast PA",
+      "Policy & Zoning"
+    ],
+    "relatedProject": "project-hazelnut",
+    "summary": "Hazle Township posted a revised November 5 review draft that would create an Energy and Technology Overlay District. Within that proposed overlay, the draft would permit data centers and accessory uses by right, subject to the draft’s other requirements. The ordinance has not been adopted, and the zoning process does not approve Project Hazelnut or resolve its separate court appeal.",
+    "contextNote": "November 9 is this site’s editorial posting date; November 5 is the date printed on the township review draft. The draft replaces the earlier zoning description in this site’s October 25 meeting article. The township has not posted an enacted ordinance in the reviewed materials.",
+    "url": "https://www.hazletownship.com/documents/data-center-ordinance",
+    "supportingSources": [
+      {
+        "label": "Official revised review draft · November 5 PDF",
+        "url": "https://www.hazletownship.com/images/Hazle_Twp_Draft_DC_Ordinance_-_REVIEW_DRAFT_11-5-26.pdf"
+      }
+    ]
+  },
+  {
+    "id": "story-46",
+    "title": "Pennsylvania House introduces data-center oversight bill HB 2888",
+    "source": "Pennsylvania General Assembly",
+    "date": "2026-11-09",
+    "type": "Proposed State Legislation",
+    "categories": [
+      "Pennsylvania",
+      "Policy & Regulation",
+      "Data Center Policy"
+    ],
+    "relatedProject": null,
+    "summary": "House Bill 2888 was introduced November 4 and referred to the House Energy Committee. The proposal addresses reporting and plans for energy, water, ratepayer protection and community benefits at hyperscale data centers, with roles for state agencies and municipalities. It has not passed committee or become law.",
+    "contextNote": "November 9 is this site’s editorial posting date. The General Assembly bill page lists referral to Energy as the latest action and shows no votes or committee meetings. Proposed requirements should not be described as current Pennsylvania law.",
+    "url": "https://www.palegis.us/legislation/bills/2025/0/HB2888",
+    "supportingSources": [
+      {
+        "label": "Official bill text · PN 4117",
+        "url": "https://www.palegis.us/legislation/bills/text/PDF/2025/0/HB2888/PN4117"
+      }
+    ]
+  },
+  {
     "title": "Salem Township approves data-center overlay expansions for Salem 3 and Salem 4",
     "source": "Times Leader",
     "type": "Municipal Zoning Decision",
