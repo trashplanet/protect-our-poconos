@@ -185,8 +185,8 @@
     "date": "2026-10-25",
     "source": "Hazle Township / published special-meeting notice",
     "type": "Official Draft / Meeting Notice",
-    "summary": "Hazle Township's Planning Department held a special meeting October 29 at Hazleton Area High School to receive public comments on proposed zoning amendments governing data centers and associated energy infrastructure. The draft would permit data centers by right in the I-1 Industrial District, while some related facilities would require special-exception approval. Residents raised questions about setbacks, environmental safeguards and whether data centers themselves should require special-exception review. The ordinance has not been adopted.",
-    "contextNote": "Updated October 30 with Times Leader reporting. Originally published here October 25 as a meeting announcement; it was rescheduled from earlier dates and ultimately held October 29 at 6 PM in the Hazleton Area High School auditorium, 1601 W. 23rd Street, rather than Hazle Township Commons. The solicitor identified December 7 as the curative-amendment deadline, not a scheduled public hearing or guaranteed adoption date. Commonwealth Court appeal 827 CD 2026 remains Active and is separate from this zoning review.",
+    "summary": "Hazle Township's Planning Department held a special meeting October 29 at Hazleton Area High School to receive public comments on proposed zoning amendments for data centers and associated energy infrastructure. Residents raised questions about setbacks, environmental safeguards and the approval pathway. A revised township review draft dated November 5 would create an Energy and Technology Overlay District where data centers and accessory uses would be permitted by right, subject to the draft's other requirements. The ordinance has not been adopted.",
+    "contextNote": "Updated October 30 with Times Leader reporting. Originally published here October 25 as a meeting announcement; it was rescheduled from earlier dates and ultimately held October 29 at 6 PM in the Hazleton Area High School auditorium, 1601 W. 23rd Street, rather than Hazle Township Commons. The solicitor identified December 7 as the curative-amendment deadline, not a scheduled public hearing or guaranteed adoption date. Commonwealth Court appeal 827 CD 2026 was listed as Active when last checked October 30 and is separate from this zoning review. November 9 verification update: The township posted its November 5 review draft after the meeting. Its proposed overlay and use provisions supersede the earlier draft description in this article; the December 7 date remains a reported curative-amendment deadline, not a hearing or guaranteed adoption date. The Project Hazelnut appeal is separate, and its current docket status could not be independently rechecked in this audit.",
     "url": "https://www.hazletownship.com/documents/data-center-ordinance",
     "categories": [
       "Luzerne County",
@@ -202,6 +202,10 @@
       {
         "label": "Official township calendar · final venue",
         "url": "https://www.hazletownship.com/municipal-government/cass-township-public-meeting-dates"
+      },
+      {
+        "label": "Official township revised review draft · November 5, 2026",
+        "url": "https://www.hazletownship.com/images/Hazle_Twp_Draft_DC_Ordinance_-_REVIEW_DRAFT_11-5-26.pdf"
       }
     ]
   },
