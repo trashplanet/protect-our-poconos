@@ -12,8 +12,8 @@
       "Policy & Zoning"
     ],
     "relatedProject": "pennsylvania-glacial-till",
-    "summary": "A published township Zoning Hearing Board notice schedules the continued validity-challenge hearing on Ordinance No. 580 for Tuesday, November 10, 2026, at 5 PM at Pocono Summit Volunteer Fire Company, 5334 Hummingbird Drive, Pocono Summit, PA 18346. The challenge concerns the data-center overlay associated with the Pennsylvania Glacial Till proposal. This is not a project-approval hearing.",
-    "contextNote": "November 9 is this site’s editorial posting date; the public notice appeared November 3. It identifies October 29 as the last scheduled hearing but does not establish that hearing’s outcome or a ruling on the ordinance. Confirm arrangements with the township before attending.",
+    "summary": "A township Zoning Hearing Board notice scheduled a continued validity-challenge hearing on Ordinance No. 580 for November 10, 2026, at Pocono Summit Volunteer Fire Company. The challenge concerns the data-center overlay associated with the Pennsylvania Glacial Till proposal. The hearing date has passed; an outcome or further continuation has not been independently verified. This was not a project-approval hearing.",
+    "contextNote": "November 9 is this site’s original editorial posting date; the public notice appeared November 3. November 11 verification update: the scheduled hearing date has passed, but no ruling or further hearing date was established in the sources checked. Do not infer an outcome from the notice.",
     "url": "https://www.poconorecord.com/public-notices/notice/11/03/2026/public-notice-notice-is-hereby-given-2026-11-03-pocono-record-pennsylvania-1a1a27a5e5a"
   },
   {
@@ -28,9 +28,15 @@
       "Meetings & Hearings"
     ],
     "relatedProject": null,
-    "summary": "The Monroe County Planning Commission’s November 10 agenda lists Price Township’s proposed Data Center Overlay District for review. The draft would cover two parcels totaling approximately 100 acres along Route 447 south of Snow Road and would make data centers a conditional use within the overlay. It is a proposed zoning change, not an adopted ordinance or approval of a data-center project.",
-    "contextNote": "November 9 is this site’s editorial posting date. The county agenda establishes a scheduled review item, not the commission’s recommendation or a township decision. The time of the county meeting is not stated in the agenda reviewed.",
-    "url": "https://www.monroecountypa.gov/getmedia/f1976493-5673-4c21-afc7-e5ea1d529513/2026-11-10-Planning-Commision-Agenda.pdf"
+    "summary": "The Monroe County Planning Commission’s November 10 agenda listed Price Township’s proposed Data Center Overlay District, covering two parcels totaling approximately 100 acres along Route 447 south of Snow Road. The county subsequently marked the November 10 commission meeting canceled. The draft would make data centers a conditional use within the overlay; it is not an adopted ordinance or project approval.",
+    "contextNote": "November 9 is this site’s original editorial posting date. November 11 verification update: the county planning calendar and commissioners page mark the November 10 meeting and agenda canceled. No commission recommendation from that meeting has been verified. Follow up for a rescheduled review or township action.",
+    "url": "https://www.monroecountypa.gov/getmedia/f1976493-5673-4c21-afc7-e5ea1d529513/2026-11-10-Planning-Commision-Agenda.pdf",
+    "supportingSources": [
+      {
+        "label": "Official county planning calendar · November 10 meeting canceled",
+        "url": "https://www.monroecountypa.gov/departments/planning"
+      }
+    ]
   },
   {
     "id": "story-45",
@@ -112,7 +118,7 @@
       "Local Projects"
     ],
     "summary": "Fit Energy hosted an October 28 information session about its proposed 15-building data-center and on-site power campus in Newport Township. The company presented plans and discussed potential community benefits as residents continued to question the project’s scale and impacts. Township zoning permits were issued in August, but additional land-development approvals remain necessary.",
-    "contextNote": "October 30 editorial update based on October 29 WVIA reporting. Separate Citizens’ Voice reporting reproduced by the township documents a lawsuit by three residents challenging the procedures used to adopt the April 2026 zoning ordinance. The allegations have not been established by a court ruling in the reviewed material, and the lawsuit does not itself invalidate the issued zoning permits. Community benefits, jobs and investment remain developer projections; no final tenant or construction approval is established.",
+    "contextNote": "October 30 editorial update based on October 29 WVIA reporting. Separate Citizens’ Voice reporting reproduced by the township documents a lawsuit by three residents challenging the procedures used to adopt the April 2026 zoning ordinance. The allegations have not been established by a court ruling in the reviewed material, and the lawsuit does not itself invalidate the issued zoning permits. Community benefits, jobs and investment remain developer projections; no final tenant or construction approval is established. November 11 verification update: the township project page now lists a continued conditional-use hearing for December 9, 2026, at 6 PM at J.T. Lambert Intermediate School. The October 28 proceeding’s outcome remains unverified.",
     "url": "https://www.wvia.org/news/local/2026-10-29/newport-twp-data-center-open-house-leaves-some-residents-with-unanswered-questions",
     "supportingSources": [
       {
@@ -153,8 +159,8 @@
       "Meetings & Hearings"
     ],
     "relatedProject": "smithfield-gateway",
-    "summary": "Smithfield Township and the applicant reached an October 21 agreement limiting the scheduled October 28 Board hearing to party-status matters. The agreement called for revised plans and additional engineering review before a subsequent substantive hearing. The hearing's outcome and a continuation date have not been independently verified.",
-    "contextNote": "Historical township correspondence about the October 28 schedule, not a record of what occurred. The procedural agreement did not establish a Planning Commission recommendation or grant conditional-use or construction approval. Check the township project hub for a verified outcome and any new hearing notice.",
+    "summary": "Smithfield Township and the applicant reached an October 21 agreement limiting the scheduled October 28 Board hearing to party-status matters. The township now lists a continued conditional-use hearing for December 9, 2026. The October 28 proceeding’s outcome has not been independently verified.",
+    "contextNote": "Historical township correspondence about the October 28 schedule, not a record of what occurred. The procedural agreement did not establish a Planning Commission recommendation or grant conditional-use or construction approval. Check the township project hub for a verified outcome and any new hearing notice. November 11 verification update: the township project page now lists a continued conditional-use hearing for December 9, 2026, at 6 PM at J.T. Lambert Intermediate School. The October 28 proceeding’s outcome remains unverified.",
     "url": "https://smithfieldtownship.com/wp-content/uploads/2026/10/2026.10.21-Response-to-Applicant.pdf"
   },
   {
@@ -293,7 +299,7 @@
     "source": "WVIA",
     "type": "Local Reporting / Conditional-Use Decision",
     "summary": "Archbald Borough Council unanimously denied the conditional-use application for Cornell Realty Management's proposed 14-building Wildcat Ridge Data Center Campus on approximately 578 acres. The October 21 decision followed nine hearings. A potential appeal has not been confirmed.",
-    "contextNote": "Lackawanna County reporting. This is a decision on the Wildcat Ridge application; it does not establish a borough-wide data-center ban or confirm an appeal.",
+    "contextNote": "Lackawanna County reporting. This is a decision on the Wildcat Ridge application; it does not establish a borough-wide data-center ban or confirm an appeal. November 11 verification update: the November 10 date has passed; a ruling or further continuation has not been independently verified.",
     "url": "https://www.wvia.org/news/local/2026-10-21/archbald-council-unanimously-denies-zoning-for-hyperscale-data-center-campus-in-borough",
     "categories": [
       "Lackawanna County",
@@ -339,7 +345,7 @@
     ],
     "relatedProject": "pennsylvania-glacial-till",
     "summary": "A continued public hearing challenging Tobyhanna Township’s data-center overlay ordinance was listed for October 29 at 5 p.m. at Kalahari Resorts & Conventions in Pocono Manor. The challenge concerns Ordinance No. 580, which established an overlay district associated with the Pennsylvania Glacial Till proposal. That date appeared in a regional event notice and an update from the resident organization pursuing the challenge. A later township-issued public notice schedules continuation for November 10; it does not establish an October 29 ruling.",
-    "contextNote": "October 19 is this site's editorial update date, not the notice issuance date. MonroeCountyPA.com is independent regional media; Protect Rural Tobyhanna Township is a resident organization pursuing the challenge. Allegations of unlawful spot zoning are not legal findings. The zoning challenge remains pending; this is not a project approval hearing. November 7 verification update: A township-issued public notice schedules continuation of the Ordinance No. 580 validity challenge for November 10, 2026, at 5 PM at Pocono Summit Volunteer Fire Company, 5334 Hummingbird Drive, Pocono Summit, PA 18346. The notice identifies October 29 as the last scheduled hearing but does not establish a ruling or resolve the challenge.",
+    "contextNote": "October 19 is this site's editorial update date, not the notice issuance date. MonroeCountyPA.com is independent regional media; Protect Rural Tobyhanna Township is a resident organization pursuing the challenge. Allegations of unlawful spot zoning are not legal findings. The zoning challenge remains pending; this is not a project approval hearing. November 7 verification update: A township-issued public notice schedules continuation of the Ordinance No. 580 validity challenge for November 10, 2026, at 5 PM at Pocono Summit Volunteer Fire Company, 5334 Hummingbird Drive, Pocono Summit, PA 18346. The notice identifies October 29 as the last scheduled hearing but does not establish a ruling or resolve the challenge. November 11 verification update: the November 10 date has passed; a ruling or further continuation has not been independently verified.",
     "url": "https://monroecountypa.com/event/2026/10/tobyhanna-township-zoning-hearing-board",
     "supportingSources": [
       {

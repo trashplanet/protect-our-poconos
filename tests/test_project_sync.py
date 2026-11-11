@@ -26,12 +26,12 @@ class ProjectSyncTests(unittest.TestCase):
         self.assertNotIn('Updated &amp;amp;', result)
 
     def test_figures_and_hearing_update_follow_tracker(self):
-        changed = self.tracker.replace('250,000', '275,000').replace('no subsequent substantive hearing date has been confirmed in the reviewed official records.', 'check the official page before attending.')
+        changed = self.tracker.replace('250,000', '275,000').replace('No conditional-use or construction approval is established.', 'Check the official page before attending.')
         result = self.render(changed)
         self.assertIn('275,000 SQ FT', result)
         self.assertIn('275,000 sq ft', result)
         action = sync.synchronize((ROOT / 'take-action.html').read_text(), sync.values_from(sync.Document(changed)))
-        self.assertIn('check the official page before attending.', action)
+        self.assertIn('Check the official page before attending.', action)
         self.assertNotIn('data-event-date="2026-09-09"', action)
         self.assertNotIn('data-event-date="2026-09-23"', action)
 
@@ -39,8 +39,8 @@ class ProjectSyncTests(unittest.TestCase):
         values = sync.values_from(sync.Document(self.tracker))
         self.assertNotIn('smithfield-gateway.deadline-iso', values)
         self.assertNotIn('pennsylvania-glacial-till.deadline-iso', values)
-        self.assertIn('was scheduled to address party-status requests', values['smithfield.hearing-update'])
-        self.assertIn('no subsequent substantive hearing date has been confirmed', values['smithfield.hearing-update'])
+        self.assertIn('December 9, 2026', values['smithfield.hearing-update'])
+        self.assertIn('October 28 proceeding’s outcome has not been independently verified', values['smithfield.hearing-update'])
 
     def test_categories_change_derived_totals(self):
         changed = self.tracker.replace('data-category="rumors"', 'data-category="data-centers"')
