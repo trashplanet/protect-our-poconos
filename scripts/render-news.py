@@ -35,7 +35,7 @@ def card(item, featured=False):
     return f'<article class="{classes}"{attrs}><span class="story-type">{e(label)}</span>{meta(item)}<h3>{external(item,item["title"])}</h3><p class="story-summary">{e(item["summary"])}</p>{note}<div class="story-tags">{tags}</div><div class="story-links">{external(item,"Read at source")}{supporting}{project}</div></article>'
 
 sections = {
-    'FEATURED': '\n'.join(card(i, True) for i in items[:3]),
+    'FEATURED': '\n'.join(card(i, True) for i in sorted(items, key=lambda i: i['date'], reverse=True)[:3]),
     'COVERAGE': '\n'.join(card(i) for i in sorted(items, key=lambda i: i['date'], reverse=True)),
     'TOPICS': ''.join(f'<option>{e(t)}</option>' for t in sorted({t for i in items for t in i['categories']})),
     'TYPES': ''.join(f'<option>{e(t)}</option>' for t in sorted({i['type'] for i in items})),

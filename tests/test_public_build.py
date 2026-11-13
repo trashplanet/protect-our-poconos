@@ -112,7 +112,7 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(len(feed_items), len(stories))
         feed_dates = [parsedate_to_datetime(item.find('pubDate').text) for item in feed_items]
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
-        self.assertEqual(feed_items[0].find('title').text, stories[0]['title'])
+        self.assertEqual(feed_items[0].find('title').text, max(stories, key=lambda item: item['date'])['title'])
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
 
     def test_upcoming_calendar_retires_completed_events(self):
@@ -122,15 +122,18 @@ class PublicBuildTests(unittest.TestCase):
         self.assertNotIn('datetime="2026-11-10T17:00:00-05:00"', deadlines)
         self.assertIn('DEC 7, 2026 · REPORTED DEADLINE', deadlines)
         self.assertIn('not a scheduled public hearing or a guaranteed ordinance adoption date', deadlines)
+        self.assertIn('datetime="2026-11-16T18:00:00-05:00"', deadlines)
+        self.assertIn('datetime="2026-12-07T18:00:00-05:00"', deadlines)
         self.assertIn('datetime="2026-12-09T18:00:00-05:00"', deadlines)
         self.assertIn('datetime="2026-12-17T19:00:00-05:00"', deadlines)
         self.assertIn('270 Little Gap Road, Palmerton, PA 18071', deadlines)
+        self.assertLess(deadlines.index('NOV 16, 2026'), deadlines.index('DEC 7, 2026'))
         self.assertLess(deadlines.index('DEC 7, 2026'), deadlines.index('DEC 9, 2026'))
         self.assertLess(deadlines.index('DEC 9, 2026'), deadlines.index('DEC 17, 2026'))
         home = (build.OUT / 'index.html').read_text()
         next_card = re.search(r'<a class="meeting-card hero-meeting-card".*?</a>', home, re.S)[0]
-        self.assertIn('NEXT HEARING · WEDNESDAY, DECEMBER 9 · 6 PM', next_card)
-        self.assertIn('Smithfield Gateway conditional use', next_card)
+        self.assertIn('NEXT HEARING · MONDAY, NOVEMBER 16 · 6 PM', next_card)
+        self.assertIn('Price Township data-center zoning hearing', next_card)
         self.assertNotIn('Tobyhanna zoning challenge', next_card)
         self.assertNotIn('DATE PENDING · DECEMBER 2026', deadlines)
         for route in ['news/index.html', 'index.html']:
