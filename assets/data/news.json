@@ -220,8 +220,8 @@
     "date": "2026-10-26",
     "source": "Luzerne County",
     "type": "Official County Update",
-    "summary": "Luzerne County Council scheduled discussion of a proposed data-center zoning amendment for its October 27 work session. The proposal would establish special-exception review and operating standards for data centers in 19 municipalities governed by county zoning. The Planning Commission recommended the revised ordinance October 8. No council adoption has been independently verified.",
-    "contextNote": "The October 27 work session was scheduled to follow the 6:01 PM voting session at the courthouse. The separate 5:55 PM public hearing concerned a different ordinance; it was not the data-center ordinance's required public hearing. The county's project page still displays its pre-meeting notice; the discussion's outcome needs verification.",
+    "summary": "Luzerne County Council discussed a proposed data-center zoning amendment at its October 27 work session. The county Planning Commission recommended revised language November 12 clarifying when a data center could qualify as “essential” for restricted backup-generator operation. The proposal would establish special-exception review and operating standards in 19 county-zoned municipalities; County Council has not adopted it.",
+    "contextNote": "The October 27 work session and separate 5:55 PM public hearing concerned different matters; that public hearing was not on the data-center ordinance. November 14 verification update: the county’s November 12 Planning Commission agenda contains the proposed “essential” definition, and Times Leader reports that the commission recommended the amended draft to County Council. Times Leader reports a council hearing is scheduled for December 8, but a current official council hearing notice has not yet been independently verified. No county ordinance adoption or project approval is established.",
     "url": "https://www.luzernecounty.org/1554/Data-Centers",
     "categories": [
       "Luzerne County",
@@ -237,6 +237,14 @@
       {
         "label": "Times Leader · October 26 reporting",
         "url": "https://www.timesleader.com/news/1763488/luzerne-county-council-set-to-discuss-data-center-zoning-ordinance"
+      },
+      {
+        "label": "Official Planning Commission agenda · November 12",
+        "url": "https://www.luzernecounty.org/AgendaCenter/ViewFile/Agenda/_11122026-5028"
+      },
+      {
+        "label": "Times Leader · November 12 commission decision",
+        "url": "https://www.timesleader.com/news/1765311/backup-generator-use-clarified-in-luzerne-countys-proposed-data-center-zoning-ordinance"
       }
     ]
   },
