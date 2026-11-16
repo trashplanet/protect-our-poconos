@@ -144,8 +144,14 @@
       "Local Projects"
     ],
     "summary": "DTA Alliance and affiliated applicants filed a curative amendment seeking to establish a data-center overlay on approximately 55 acres in Bowmanstown Borough. The proposal includes a 375,000-square-foot building near Ore and Ridge Streets and is related to the larger proposed Lower Towamensing data-center campus. The filing challenges existing zoning restrictions; it does not constitute approval of the requested overlay or construction.",
-    "contextNote": "Times News published this report October 10; this site added it October 30. The filing proposes an infrastructure connection with the neighboring Lower Towamensing site. Neither zoning approval nor construction authorization is established.",
+    "contextNote": "Times News published this report October 10; this site added it October 30. The filing proposes an infrastructure connection with the neighboring Lower Towamensing site. November 16 verification update: Bowmanstown Borough’s November 10 council agenda lists a data-center hearing for December 2, 2026. The agenda says council was considering a larger venue; a final time, venue, or separate hearing notice has not been independently verified. Neither zoning approval nor construction authorization is established.",
     "url": "https://www.tnonline.com/20261010/dta-plans-center-in-bowmanstown375000-square-foot-building-to-be-used-for-cooling-equipment/",
+    "supportingSources": [
+      {
+        "label": "Official Bowmanstown Borough Council agenda · November 10",
+        "url": "https://bowmanstown.org/document/council-agenda-november-10th-2026/"
+      }
+    ],
     "id": "story-42",
     "date": "2026-10-10",
     "relatedProject": null
