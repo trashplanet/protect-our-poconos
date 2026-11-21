@@ -121,7 +121,7 @@ Validated at 1440, 1024, 768, 390 and 320 pixels: no overflow/broken images; cat
 
 ## Maintaining news
 
-Edit `assets/data/news.json`, then run `python3 scripts/render-news.py` and commit both the dataset and `news.html`. This is an authoring helper only: preview and GitHub Pages serve the already-generated HTML with no build or runtime data service. Every article remains available without JavaScript.
+Edit `assets/data/news.json`, then run `python3 scripts/render-news.py` and commit the dataset and any changes to `news.html` and `index.html`. The homepage Stay Informed cards and the featured News cards use the same three newest source publication or issuance dates. Preview and GitHub Pages serve the generated HTML, and every article remains available without JavaScript.
 
 Keep `title`, `source`, ISO `date`, `type`, `categories`, `relatedProject` (tracker ID or null), `summary`, `contextNote`, and `url` together. Source types are distinct from topics. The first three dataset entries are the featured stories; WVIA entries carry `series` and `seriesPart`. The final entry supplies the elsewhere feature. Update the introductory article total if adding or removing entries. Keep summaries concise and preserve the visible stale-plan, proposed-legislation and unverified-community context notes. Article links open at their publishers in new tabs; access or subscriptions are controlled by those publishers.
 

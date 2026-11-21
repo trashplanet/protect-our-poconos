@@ -2,6 +2,7 @@
 import importlib.util
 import json
 from email.utils import parsedate_to_datetime
+from html import unescape
 from pathlib import Path
 import re
 import unittest
@@ -114,6 +115,21 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(feed_dates, sorted(feed_dates, reverse=True))
         self.assertEqual(feed_items[0].find('title').text, max(stories, key=lambda item: item['date'])['title'])
         self.assertIn('application/rss+xml', (build.OUT / 'news/index.html').read_text())
+
+    def test_home_news_matches_latest_news_sources(self):
+        home = (build.OUT / 'index.html').read_text()
+        section = home.split('<!-- HOME_NEWS:START -->', 1)[1].split('<!-- HOME_NEWS:END -->', 1)[0]
+        cards = re.findall(
+            r'class="news-card home-news-row" href="([^"]+)".*?'
+            r'<time datetime="([^"]+)">[^<]+</time>.*?<h3 class="home-news-title">([^<]+)</h3>',
+            section, re.S,
+        )
+        stories = json.loads((ROOT / 'assets/data/news.json').read_text())
+        latest = sorted(stories, key=lambda story: story['date'], reverse=True)[:3]
+        self.assertEqual(
+            [(unescape(url), date, unescape(title)) for url, date, title in cards],
+            [(story['url'], story['date'], story['title']) for story in latest],
+        )
 
     def test_upcoming_calendar_retires_completed_events(self):
         page = (build.OUT / 'news/index.html').read_text()
