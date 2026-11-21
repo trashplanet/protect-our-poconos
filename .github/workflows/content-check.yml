@@ -15,5 +15,7 @@ jobs:
         run: python3 scripts/render-partials.py --check
       - name: Verify shared project content
         run: python3 scripts/sync-projects.py --check
+      - name: Render News and latest homepage stories
+        run: python3 scripts/render-news.py
       - name: Test content, clean URLs, sitemap and metadata
         run: python3 -m unittest discover -s tests
