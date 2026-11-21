@@ -55,12 +55,16 @@
     ],
     "relatedProject": "project-hazelnut",
     "summary": "Hazle Township posted a revised November 5 review draft that would create an Energy and Technology Overlay District. Within that proposed overlay, the draft would permit data centers and accessory uses by right, subject to the draft’s other requirements. The ordinance has not been adopted, and the zoning process does not approve Project Hazelnut or resolve its separate court appeal.",
-    "contextNote": "November 5 is the date printed on the township review draft; this site added it November 9. The draft replaces the earlier zoning description in this site’s October 25 meeting article. The township has not posted an enacted ordinance in the reviewed materials.",
+    "contextNote": "November 5 is the date printed on the township review draft; this site added it November 9. The draft replaces the earlier zoning description in this site’s October 25 meeting article. November 21 verification update: the township also posted proposed overlay maps dated November 11. These depict draft zoning, not Project Hazelnut approval. The township has not posted an enacted ordinance in the reviewed materials.",
     "url": "https://www.hazletownship.com/documents/data-center-ordinance",
     "supportingSources": [
       {
         "label": "Official revised review draft · November 5 PDF",
         "url": "https://www.hazletownship.com/images/Hazle_Twp_Draft_DC_Ordinance_-_REVIEW_DRAFT_11-5-26.pdf"
+      },
+      {
+        "label": "Official proposed overlay with parcel data · November 11 PDF",
+        "url": "https://www.hazletownship.com/images/HZLE-DATA_DataCenterOverlay_WithParcelData_20261111.pdf"
       }
     ]
   },
