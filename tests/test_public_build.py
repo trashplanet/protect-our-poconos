@@ -149,8 +149,8 @@ class PublicBuildTests(unittest.TestCase):
         self.assertLess(deadlines.index('DEC 9, 2026'), deadlines.index('DEC 17, 2026'))
         home = (build.OUT / 'index.html').read_text()
         next_card = re.search(r'<a class="meeting-card hero-meeting-card".*?</a>', home, re.S)[0]
-        self.assertIn('NEXT LISTED HEARING · WEDNESDAY, DECEMBER 2 · TIME PENDING', next_card)
-        self.assertIn('Bowmanstown data-center zoning hearing', next_card)
+        self.assertIn('NOVEMBER 23 · 5:30 PM MEETING · 7:30 PM HEARING', next_card)
+        self.assertIn('Project Atlas DEP permit hearing', next_card)
         self.assertNotIn('Tobyhanna zoning challenge', next_card)
         self.assertNotIn('DATE PENDING · DECEMBER 2026', deadlines)
         for route in ['news/index.html', 'index.html']:
