@@ -1,5 +1,20 @@
 [
   {
+    "id": "story-47",
+    "title": "Pennsylvania DEP sets Project Atlas permit hearing in Lehigh County",
+    "source": "Pennsylvania DEP",
+    "date": "2026-11-20",
+    "type": "Official Permit Hearing Notice",
+    "categories": [
+      "Lehigh County",
+      "Meetings & Hearings"
+    ],
+    "relatedProject": null,
+    "summary": "DEP scheduled a November 23 public meeting at 5:30 PM and a hearing at 7:30 PM at Cedar Crest College’s Alumnae Hall in Allentown. The hearing concerns stormwater and waterway permit applications for the proposed Project Atlas data center in South Whitehall Township.",
+    "contextNote": "The November 20 DEP notice lists December 7 as the written comment deadline. The permits are under review. See the notice for testimony and comment instructions.",
+    "url": "https://www.pa.gov/agencies/dep/newsroom/2026-11-20-dep-to-host-public-meeting-and-hearing-on-proposed-project-atlas-data-center"
+  },
+  {
     "id": "story-43",
     "title": "November 10 hearing set in Pennsylvania Glacial Till zoning challenge",
     "source": "Tobyhanna Township Zoning Hearing Board / public notice",
@@ -13,8 +28,14 @@
     ],
     "relatedProject": "pennsylvania-glacial-till",
     "summary": "A township Zoning Hearing Board notice scheduled a continued validity-challenge hearing on Ordinance No. 580 for November 10, 2026, at Pocono Summit Volunteer Fire Company. The challenge concerns the data-center overlay associated with the Pennsylvania Glacial Till proposal. The hearing date has passed; an outcome or further continuation has not been independently verified. This was not a project-approval hearing.",
-    "contextNote": "The public notice appeared November 3; this site added it November 9. November 11 verification update: the scheduled hearing date has passed, but no ruling or further hearing date was established in the sources checked. Do not infer an outcome from the notice.",
-    "url": "https://www.poconorecord.com/public-notices/notice/11/03/2026/public-notice-notice-is-hereby-given-2026-11-03-pocono-record-pennsylvania-1a1a27a5e5a"
+    "contextNote": "The public notice appeared November 3; this site added it November 9. November 11 verification update: the scheduled hearing date has passed, but no ruling or further hearing date was established in the sources checked. Do not infer an outcome from the notice. November 22 verification update: MonroeCountyPA.com reproduces a notice listing a November 23 continuation at 5 PM at Kalahari Resorts, Kilimanjaro Suite 1. A direct township notice and any ruling remain unverified. Check with the township before attending.",
+    "url": "https://www.poconorecord.com/public-notices/notice/11/03/2026/public-notice-notice-is-hereby-given-2026-11-03-pocono-record-pennsylvania-1a1a27a5e5a",
+    "supportingSources": [
+      {
+        "label": "Regional media · reproduced notice for November 23",
+        "url": "https://monroecountypa.com/news/tobyhanna-township-hearing-challenge-data-center-overlay-ordinance"
+      }
+    ]
   },
   {
     "id": "story-44",
@@ -126,7 +147,7 @@
       "Local Projects"
     ],
     "summary": "Fit Energy hosted an October 28 information session about its proposed 15-building data-center and on-site power campus in Newport Township. The company presented plans and discussed potential community benefits as residents continued to question the project’s scale and impacts. Township zoning permits were issued in August, but additional land-development approvals remain necessary.",
-    "contextNote": "WVIA published this report October 29; this site added it October 30. Separate Citizens’ Voice reporting reproduced by the township documents a lawsuit by three residents challenging the procedures used to adopt the April 2026 zoning ordinance. The allegations have not been established by a court ruling in the reviewed material, and the lawsuit does not itself invalidate the issued zoning permits. Community benefits, jobs and investment remain developer projections; no final tenant or construction approval is established. November 11 verification update: the township project page now lists a continued conditional-use hearing for December 9, 2026, at 6 PM at J.T. Lambert Intermediate School. The October 28 proceeding’s outcome remains unverified.",
+    "contextNote": "WVIA published this report October 29; this site added it October 30. Separate Citizens’ Voice reporting reproduced by the township documents a lawsuit by three residents challenging the procedures used to adopt the April 2026 zoning ordinance. The allegations have not been established by a court ruling in the reviewed material, and the lawsuit does not itself invalidate the issued zoning permits. Community benefits, jobs and investment remain developer projections; no final tenant or construction approval is established.",
     "url": "https://www.wvia.org/news/local/2026-10-29/newport-twp-data-center-open-house-leaves-some-residents-with-unanswered-questions",
     "supportingSources": [
       {
@@ -228,11 +249,11 @@
     "id": "story-39",
     "title": "Luzerne County Council to discuss proposed data-center zoning ordinance October 27",
     "date": "2026-10-26",
-    "source": "Luzerne County",
+    "source": "Times Leader / Luzerne County",
     "type": "Official County Update",
     "summary": "Luzerne County Council discussed a proposed data-center zoning amendment at its October 27 work session. The county Planning Commission recommended revised language November 12 clarifying when a data center could qualify as “essential” for restricted backup-generator operation. The proposal would establish special-exception review and operating standards in 19 county-zoned municipalities; County Council has not adopted it.",
     "contextNote": "The October 27 work session and separate 5:55 PM public hearing concerned different matters; that public hearing was not on the data-center ordinance. November 14 verification update: the county’s November 12 Planning Commission agenda contains the proposed “essential” definition, and Times Leader reports that the commission recommended the amended draft to County Council. Times Leader reports a council hearing is scheduled for December 8, but a current official council hearing notice has not yet been independently verified. No county ordinance adoption or project approval is established.",
-    "url": "https://www.luzernecounty.org/1554/Data-Centers",
+    "url": "https://www.timesleader.com/news/1763488/luzerne-county-council-set-to-discuss-data-center-zoning-ordinance",
     "categories": [
       "Luzerne County",
       "Wider Northeast PA",
@@ -245,8 +266,8 @@
         "url": "https://www.luzernecounty.org/1279/Council-Meetings-Online"
       },
       {
-        "label": "Times Leader · October 26 reporting",
-        "url": "https://www.timesleader.com/news/1763488/luzerne-county-council-set-to-discuss-data-center-zoning-ordinance"
+        "label": "Official county zoning proposal and background",
+        "url": "https://www.luzernecounty.org/1554/Data-Centers"
       },
       {
         "label": "Official Planning Commission agenda · November 12",
@@ -287,12 +308,12 @@
   {
     "id": "story-37",
     "title": "Hazle Township holds October 29 public meeting on proposed data-center ordinance",
-    "date": "2026-10-25",
-    "source": "Hazle Township / published special-meeting notice",
-    "type": "Official Draft / Meeting Notice",
+    "date": "2026-10-30",
+    "source": "Times Leader",
+    "type": "Local Reporting / Proposed Zoning",
     "summary": "Hazle Township's Planning Department held a special meeting October 29 at Hazleton Area High School to receive public comments on proposed zoning amendments for data centers and associated energy infrastructure. Residents raised questions about setbacks, environmental safeguards and the approval pathway. A revised township review draft dated November 5 would create an Energy and Technology Overlay District where data centers and accessory uses would be permitted by right, subject to the draft's other requirements. The ordinance has not been adopted.",
     "contextNote": "Updated October 30 with Times Leader reporting. Originally published here October 25 as a meeting announcement; it was rescheduled from earlier dates and ultimately held October 29 at 6 PM in the Hazleton Area High School auditorium, 1601 W. 23rd Street, rather than Hazle Township Commons. The solicitor identified December 7 as the curative-amendment deadline, not a scheduled public hearing or guaranteed adoption date. Commonwealth Court appeal 827 CD 2026 was listed as Active when last checked October 30 and is separate from this zoning review. November 9 verification update: The township posted its November 5 review draft after the meeting. Its proposed overlay and use provisions supersede the earlier draft description in this article; the December 7 date remains a reported curative-amendment deadline, not a hearing or guaranteed adoption date. The Project Hazelnut appeal is separate, and its current docket status could not be independently rechecked in this audit.",
-    "url": "https://www.hazletownship.com/documents/data-center-ordinance",
+    "url": "https://www.timesleader.com/news/1763912/hazle-twp-residents-debate-proposed-data-center-ordinance",
     "categories": [
       "Luzerne County",
       "Wider Northeast PA",
@@ -301,8 +322,8 @@
     "relatedProject": null,
     "supportingSources": [
       {
-        "label": "Times Leader · October 30 meeting report",
-        "url": "https://www.timesleader.com/news/1763912/hazle-twp-residents-debate-proposed-data-center-ordinance"
+        "label": "Official township ordinance documents",
+        "url": "https://www.hazletownship.com/documents/data-center-ordinance"
       },
       {
         "label": "Official township calendar · final venue",
@@ -321,7 +342,7 @@
     "source": "WVIA",
     "type": "Local Reporting / Conditional-Use Decision",
     "summary": "Archbald Borough Council unanimously denied the conditional-use application for Cornell Realty Management's proposed 14-building Wildcat Ridge Data Center Campus on approximately 578 acres. The October 21 decision followed nine hearings. A potential appeal has not been confirmed.",
-    "contextNote": "Lackawanna County reporting. This is a decision on the Wildcat Ridge application; it does not establish a borough-wide data-center ban or confirm an appeal. November 11 verification update: the November 10 date has passed; a ruling or further continuation has not been independently verified.",
+    "contextNote": "Lackawanna County reporting. This is a decision on the Wildcat Ridge application; it does not establish a borough-wide data-center ban or confirm an appeal.",
     "url": "https://www.wvia.org/news/local/2026-10-21/archbald-council-unanimously-denies-zoning-for-hyperscale-data-center-campus-in-borough",
     "categories": [
       "Lackawanna County",
