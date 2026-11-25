@@ -139,6 +139,8 @@ class PublicBuildTests(unittest.TestCase):
         self.assertIn('DEC 7, 2026 · REPORTED DEADLINE', deadlines)
         self.assertIn('not a scheduled public hearing or a guaranteed ordinance adoption date', deadlines)
         self.assertNotIn('datetime="2026-11-16T18:00:00-05:00"', deadlines)
+        self.assertNotIn('datetime="2026-11-23T17:30:00-05:00"', deadlines)
+        self.assertIn('DEC 7, 2026 · WRITTEN COMMENTS DUE', deadlines)
         self.assertIn('datetime="2026-12-02"', deadlines)
         self.assertIn('datetime="2026-12-07T18:00:00-05:00"', deadlines)
         self.assertIn('datetime="2026-12-09T18:00:00-05:00"', deadlines)
@@ -149,8 +151,8 @@ class PublicBuildTests(unittest.TestCase):
         self.assertLess(deadlines.index('DEC 9, 2026'), deadlines.index('DEC 17, 2026'))
         home = (build.OUT / 'index.html').read_text()
         next_card = re.search(r'<a class="meeting-card hero-meeting-card".*?</a>', home, re.S)[0]
-        self.assertIn('NOVEMBER 23 · 5:30 PM MEETING · 7:30 PM HEARING', next_card)
-        self.assertIn('Project Atlas DEP permit hearing', next_card)
+        self.assertIn('MONDAY, DECEMBER 7 · 6 PM', next_card)
+        self.assertIn('Westfall Township data-center ordinance hearing', next_card)
         self.assertNotIn('Tobyhanna zoning challenge', next_card)
         self.assertNotIn('DATE PENDING · DECEMBER 2026', deadlines)
         for route in ['news/index.html', 'index.html']:
